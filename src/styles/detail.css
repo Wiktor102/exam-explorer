@@ -39,6 +39,7 @@
 }
 
 .part-links button.active {
+  border-color: var(--active-bg);
   background: var(--active-bg);
   color: var(--active-fg);
 }

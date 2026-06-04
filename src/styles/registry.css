@@ -52,7 +52,7 @@
 
 .task-row.selected,
 .exam-line.selected {
-  box-shadow: inset 5px 0 0 var(--red);
+  box-shadow: inset 5px 0 0 var(--selection-accent);
 }
 
 .row-summary {

@@ -7,7 +7,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --paper: #fbfcf7;
-  --paper-strong: #ffffff;
+  --paper-strong: #fbfcf7;
   --ink: #171914;
   --muted: #666b5f;
   --line: #c8d0c1;
@@ -21,17 +21,18 @@
   --shadow: 0 24px 60px rgb(35 45 32 / 14%);
   --grid-line: rgb(23 25 20 / 6%);
   --grid-line-strong: rgb(23 25 20 / 5%);
-  --source-bg: #dce8ec;
-  --focus-bg: #eef6f4;
-  --heading-bg: #f4f8f0;
-  --table-head-bg: #e1e7de;
-  --selected-bg: #fff4d8;
+  --source-bg: #fbfcf7;
+  --focus-bg: #eef1ed;
+  --heading-bg: #fbfcf7;
+  --table-head-bg: #eef1ed;
+  --selected-bg: #e2eeeb;
   --row-text: #30352c;
   --summary-text: #2c3128;
-  --preview-head-bg: #f7f7fb;
+  --preview-head-bg: #fbfcf7;
   --pdf-bg: #313236;
-  --pill-bg: #ffffff;
-  --active-bg: #171914;
+  --pill-bg: #fbfcf7;
+  --selection-accent: #0b7569;
+  --active-bg: var(--selection-accent);
   --active-fg: #ffffff;
   letter-spacing: 0;
 }
@@ -78,12 +79,12 @@ a {
 
 .app-shell.dark {
   color: #ecf0e7;
-  --background: #111814;
-  --paper: #17211c;
-  --paper-strong: #101713;
+  --background: #101713;
+  --paper: #151c18;
+  --paper-strong: #151c18;
   --ink: #f1f4ea;
   --muted: #a8b0a1;
-  --line: #354238;
+  --line: #2f3a33;
   --line-strong: #d7dece;
   --red: #ff6a5c;
   --blue: #71b8df;
@@ -91,21 +92,22 @@ a {
   --amber: #f2b955;
   --olive: #b7ca60;
   --violet: #c3a8f2;
-  --shadow: 0 24px 60px rgb(0 0 0 / 38%);
-  --grid-line: rgb(225 238 216 / 6%);
-  --grid-line-strong: rgb(225 238 216 / 4%);
-  --source-bg: #1e3140;
-  --focus-bg: #172e2b;
-  --heading-bg: #1d2a22;
-  --table-head-bg: #233027;
-  --selected-bg: #31291a;
+  --shadow: 0 18px 42px rgb(0 0 0 / 24%);
+  --grid-line: rgb(225 238 216 / 4%);
+  --grid-line-strong: rgb(225 238 216 / 3%);
+  --source-bg: #151c18;
+  --focus-bg: #1b241f;
+  --heading-bg: #151c18;
+  --table-head-bg: #1b241f;
+  --selected-bg: #172b27;
   --row-text: #d7ddcf;
   --summary-text: #dfe5d8;
-  --preview-head-bg: #1b2030;
+  --preview-head-bg: #151c18;
   --pdf-bg: #0e1110;
-  --pill-bg: #101713;
-  --active-bg: #e9efe2;
-  --active-fg: #101713;
+  --pill-bg: #151c18;
+  --selection-accent: #0b7569;
+  --active-bg: var(--selection-accent);
+  --active-fg: #ffffff;
 }
 
 .eyebrow {
