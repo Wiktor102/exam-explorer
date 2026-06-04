@@ -127,12 +127,12 @@ function solutionUrl(repository: string, folder: string | null) {
   return `${repository}/tree/main/${folder.split('/').map(encodeURIComponent).join('/')}`
 }
 
-function SeasonExamLabel({ exam }: { exam: Exam }) {
+function SeasonExamLabel({ exam, tone = 'default' }: { exam: Exam; tone?: 'default' | 'heading' | 'compact' }) {
   const isSummer = exam.month === '06'
   const SeasonIcon = isSummer ? Sun : Snowflake
 
   return (
-    <span className={clsx('exam-code', isSummer ? 'summer' : 'winter')} title={examFileName(exam)}>
+    <span className={clsx('exam-code', tone, isSummer ? 'summer' : 'winter')} title={examFileName(exam)}>
       <SeasonIcon className="season-icon" aria-hidden="true" />
       <span>{formatExamLabel(exam)}</span>
     </span>
@@ -293,15 +293,6 @@ function App() {
     })
   }, [duplicateTasks, examById, selectedExam, selectedTask])
   const previewPdf = previewMode === 'exam' ? selectedExam?.pdf : selectedTask?.pdf
-  const previewTitle =
-    previewMode === 'exam'
-      ? selectedExam
-        ? formatExamLabel(selectedExam)
-        : undefined
-      : selectedExam
-        ? `${formatExamLabel(selectedExam)} / ${selectedTask?.partLabel}`
-        : selectedTask?.partLabel
-
   const resetFilters = () => {
     setQuery('')
     setYear('all')
@@ -493,7 +484,7 @@ function App() {
             <div>
               <p className="eyebrow">Wybrane</p>
               <h2 title={selectedExam ? examFileName(selectedExam) : undefined}>
-                {selectedExam ? formatExamLabel(selectedExam) : 'Nie wybrano arkusza'}
+                {selectedExam ? <SeasonExamLabel exam={selectedExam} tone="heading" /> : 'Nie wybrano arkusza'}
               </h2>
             </div>
             <span className="page-range">
@@ -564,7 +555,7 @@ function App() {
                         title={exam ? examFileName(exam) : undefined}
                       >
                         <Link2 size={14} />
-                        {exam ? formatExamLabel(exam) : task.examId}
+                        {exam ? <SeasonExamLabel exam={exam} tone="compact" /> : task.examId}
                       </button>
                     )
                   })}
@@ -578,7 +569,16 @@ function App() {
           <div className="preview-toolbar">
             <div>
               <p className="eyebrow">Podgląd PDF</p>
-              <h2>{previewTitle}</h2>
+              <h2>
+                {selectedExam ? (
+                  <span className="preview-title">
+                    <SeasonExamLabel exam={selectedExam} tone="heading" />
+                    {previewMode === 'task' && selectedTask ? <span>/ {selectedTask.partLabel}</span> : null}
+                  </span>
+                ) : (
+                  selectedTask?.partLabel
+                )}
+              </h2>
             </div>
             <div className="segmented-control compact" aria-label="Tryb podglądu">
               <button className={clsx(previewMode === 'task' && 'active')} onClick={() => setPreviewMode('task')}>

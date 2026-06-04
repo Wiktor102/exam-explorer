@@ -405,11 +405,37 @@ h2 {
   line-height: 1.18;
 }
 
+.exam-code.heading,
+.exam-code.compact {
+  display: inline-grid;
+  vertical-align: top;
+}
+
+.exam-code.heading {
+  grid-template-columns: 18px minmax(0, auto);
+}
+
+.exam-code.compact {
+  grid-template-columns: 14px minmax(0, auto);
+  gap: 5px;
+  font-size: 12px;
+}
+
 .season-icon {
   width: 18px;
   height: 2.36em;
   min-height: 28px;
   stroke-width: 2.2;
+}
+
+.exam-code.heading .season-icon,
+.exam-code.compact .season-icon {
+  height: 1.18em;
+  min-height: 0;
+}
+
+.exam-code.compact .season-icon {
+  width: 14px;
 }
 
 .exam-code.summer .season-icon {
@@ -615,6 +641,13 @@ h2 {
 
 .preview-toolbar {
   background: var(--preview-head-bg);
+}
+
+.preview-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
 }
 
 .preview-frame {
