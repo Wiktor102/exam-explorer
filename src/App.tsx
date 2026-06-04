@@ -2,6 +2,7 @@ import {
   ArrowDownAZ,
   CalendarDays,
   Columns3,
+  Download,
   ExternalLink,
   FileText,
   Layers3,
@@ -125,6 +126,15 @@ function solutionUrl(repository: string, folder: string | null) {
   }
 
   return `${repository}/tree/main/${folder.split('/').map(encodeURIComponent).join('/')}`
+}
+
+function repositoryFileUrl(repository: string, path: string) {
+  return `${repository}/raw/main/${path.split('/').map(encodeURIComponent).join('/')}`
+}
+
+function resourceUrl(repository: string, exam: Exam, assetFile: string) {
+  const sourceDirectory = exam.sourcePath.split('/').slice(0, -1).join('/')
+  return repositoryFileUrl(repository, `${sourceDirectory}/${assetFile}`)
 }
 
 function SeasonExamLabel({ exam, tone = 'default' }: { exam: Exam; tone?: 'default' | 'heading' | 'compact' }) {
@@ -527,6 +537,25 @@ function App() {
                 <strong>{examFileName(selectedExam)}</strong>
                 <span>Pliki</span>
                 <strong>{selectedExam.assetFiles.length ? selectedExam.assetFiles.join(', ') : 'brak w katalogu'}</strong>
+                {selectedExam.assetFiles.length > 0 && (
+                  <>
+                    <span>Zasoby</span>
+                    <strong className="resource-links">
+                      {selectedExam.assetFiles.map((assetFile) => (
+                        <a
+                          key={assetFile}
+                          href={resourceUrl(catalog.sourceRepository, selectedExam, assetFile)}
+                          target="_blank"
+                          rel="noreferrer"
+                          download
+                        >
+                          <Download size={13} aria-hidden="true" />
+                          {assetFile}
+                        </a>
+                      ))}
+                    </strong>
+                  </>
+                )}
                 <span>Rozwiązania</span>
                 <strong>
                   <a href={solutionUrl(catalog.sourceRepository, selectedExam.solutionFolder)} target="_blank" rel="noreferrer">
