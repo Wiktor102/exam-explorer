@@ -115,6 +115,10 @@ function examFileName(exam: Exam) {
   return exam.sourcePath.split('/').at(-1) ?? exam.sourcePath
 }
 
+function examSessionKey(exam: Exam) {
+  return `${exam.session}-${exam.number}`
+}
+
 function solutionUrl(repository: string, folder: string | null) {
   if (!folder) {
     return repository
@@ -261,6 +265,33 @@ function App() {
 
   const sameExamTasks = selectedExam?.tasks.map((id) => taskById.get(id)).filter(Boolean) as Task[] | undefined
   const duplicateTasks = selectedTask?.duplicates.map((id) => taskById.get(id)).filter(Boolean) as Task[] | undefined
+  const duplicateTaskRows = useMemo(() => {
+    if (!selectedTask || !selectedExam || !duplicateTasks) {
+      return []
+    }
+
+    const seenSessions = new Set([examSessionKey(selectedExam)])
+
+    return duplicateTasks.map((task, index) => {
+      const exam = examById.get(task.examId)
+      const sessionKey = exam ? examSessionKey(exam) : task.examId
+      const isSameSessionRepeat = seenSessions.has(sessionKey)
+      seenSessions.add(sessionKey)
+
+      return {
+        task,
+        exam,
+        isSameSessionRepeat,
+        index,
+      }
+    }).sort((left, right) => {
+      if (left.isSameSessionRepeat !== right.isSameSessionRepeat) {
+        return left.isSameSessionRepeat ? 1 : -1
+      }
+
+      return left.index - right.index
+    })
+  }, [duplicateTasks, examById, selectedExam, selectedTask])
   const previewPdf = previewMode === 'exam' ? selectedExam?.pdf : selectedTask?.pdf
   const previewTitle =
     previewMode === 'exam'
@@ -520,11 +551,11 @@ function App() {
                     <Layers3 size={16} />
                     <span>To samo zadanie występuje w {duplicateTasks.length + 1} arkuszach</span>
                   </div>
-                  {duplicateTasks.slice(0, 5).map((task) => {
-                    const exam = examById.get(task.examId)
+                  {duplicateTaskRows.slice(0, 5).map(({ task, exam, isSameSessionRepeat }) => {
                     return (
                       <button
                         key={task.id}
+                        className={clsx(isSameSessionRepeat && 'same-session-repeat')}
                         onClick={() => {
                           setSelectedTaskId(task.id)
                           setSelectedExamId(task.examId)

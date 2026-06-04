@@ -596,6 +596,17 @@ h2 {
   font-weight: 900;
 }
 
+.duplicate-strip button.same-session-repeat {
+  border-color: var(--line);
+  color: var(--muted);
+  opacity: 0.62;
+}
+
+.duplicate-strip button.same-session-repeat:hover,
+.duplicate-strip button.same-session-repeat:focus-visible {
+  opacity: 0.86;
+}
+
 .preview-pane {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
