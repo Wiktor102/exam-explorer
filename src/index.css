@@ -205,7 +205,7 @@ h2 {
 
 .control-band {
   display: grid;
-  grid-template-columns: auto repeat(4, minmax(136px, auto)) minmax(260px, 1fr) auto auto;
+  grid-template-columns: auto repeat(3, minmax(136px, auto)) minmax(260px, 1fr) auto auto;
   gap: 0;
   margin-top: 14px;
   border: 2px solid var(--line-strong);
@@ -340,6 +340,28 @@ h2 {
   padding: 13px 14px;
   border-bottom: 2px solid var(--line-strong);
   background: var(--heading-bg);
+}
+
+.pane-heading > div:first-child {
+  min-width: 0;
+}
+
+.pane-actions {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+}
+
+.pane-actions .select-control {
+  min-width: 142px;
+  min-height: 38px;
+  padding: 0 9px;
+  gap: 7px;
+  border: 1px solid var(--line-strong);
+}
+
+.pane-actions .select-control span {
+  font-size: 11px;
 }
 
 .page-range {
@@ -709,10 +731,22 @@ h2 {
 }
 
 .preview-title {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
   gap: 8px;
+  white-space: nowrap;
+}
+
+.preview-title > :first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.preview-title > :last-child {
+  flex: 0 0 auto;
+  color: var(--muted);
 }
 
 .preview-frame {
@@ -731,7 +765,7 @@ h2 {
 
 .open-pdf-link {
   position: absolute;
-  right: 14px;
+  right: 42px;
   bottom: 14px;
   display: inline-flex;
   align-items: center;
@@ -739,9 +773,9 @@ h2 {
   gap: 7px;
   min-height: 40px;
   padding: 0 13px;
-  border: 2px solid var(--line-strong);
-  background: var(--paper-strong);
-  color: var(--ink);
+  border: 2px solid #f1f4ea;
+  background: #101713;
+  color: #f1f4ea;
   box-shadow: 0 12px 28px rgb(0 0 0 / 22%);
   font-size: 13px;
   font-weight: 900;
@@ -750,8 +784,8 @@ h2 {
 
 .open-pdf-link:hover,
 .open-pdf-link:focus-visible {
-  background: var(--active-bg);
-  color: var(--active-fg);
+  background: #171914;
+  color: #ffffff;
 }
 
 .empty-preview,
@@ -820,6 +854,16 @@ h2 {
   .select-control {
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .pane-heading {
+    align-items: flex-start;
+  }
+
+  .pane-actions .select-control {
+    min-width: 142px;
+    min-height: 38px;
+    border: 1px solid var(--line-strong);
   }
 
   .segmented-control button,

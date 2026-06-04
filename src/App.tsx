@@ -121,6 +121,16 @@ function examSessionKey(exam: Exam) {
   return `${exam.session}-${exam.number}`
 }
 
+function formatPartNumber(part: number) {
+  const romanNumerals: Record<number, string> = {
+    1: 'I',
+    2: 'II',
+    3: 'III',
+  }
+
+  return romanNumerals[part] ?? String(part)
+}
+
 function solutionUrl(repository: string, folder: string | null) {
   if (!folder) {
     return repository
@@ -394,18 +404,6 @@ function App() {
             ))}
         </SelectControl>
 
-        <SelectControl
-          icon={<ArrowDownAZ size={16} />}
-          label="Sortuj"
-          value={sortMode}
-          onChange={(value) => setSortMode(value as SortMode)}
-        >
-            <option value="newest">{sortLabels.newest}</option>
-            <option value="oldest">{sortLabels.oldest}</option>
-            <option value="type">{sortLabels.type}</option>
-            <option value="duplicates">{sortLabels.duplicates}</option>
-        </SelectControl>
-
         <label className="search-box">
           <Search size={18} />
           <input
@@ -434,6 +432,20 @@ function App() {
             <div>
               <p className="eyebrow">Katalog</p>
               <h2>{registryMode === 'tasks' ? `${filteredTasks.length} pasujących zadań` : `${filteredExams.length} pasujących arkuszy`}</h2>
+            </div>
+
+            <div className="pane-actions">
+              <SelectControl
+                icon={<ArrowDownAZ size={16} />}
+                label="Sortuj"
+                value={sortMode}
+                onChange={(value) => setSortMode(value as SortMode)}
+              >
+                <option value="newest">{sortLabels.newest}</option>
+                <option value="oldest">{sortLabels.oldest}</option>
+                <option value="type">{sortLabels.type}</option>
+                <option value="duplicates">{sortLabels.duplicates}</option>
+              </SelectControl>
             </div>
           </div>
 
@@ -520,7 +532,7 @@ function App() {
                           setPreviewMode('task')
                         }}
                       >
-                        {task.part}. {typeLabels[task.type]}
+                        {formatPartNumber(task.part)}. {typeLabels[task.type]}
                       </button>
                     ))}
                   </div>
