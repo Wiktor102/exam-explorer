@@ -1,0 +1,109 @@
+.app-shell {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  height: 100vh;
+  padding: 18px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 / 28px 28px,
+    var(--background, #eef1ed);
+}
+
+.topbar {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 18px;
+  border: 2px solid var(--line-strong);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  padding: 18px;
+}
+
+.identity-mark {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border: 2px solid var(--line-strong);
+  background: var(--red);
+  color: white;
+  font-family: "Bahnschrift", "Aptos", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.source-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(96px, auto));
+  align-items: center;
+  border-left: 2px solid var(--line-strong);
+}
+
+.source-strip span,
+.source-strip a {
+  display: grid;
+  height: 100%;
+  min-height: 88px;
+  place-items: center;
+  padding: 14px;
+  border-left: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.source-strip a {
+  background: var(--source-bg);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(380px, 1.04fr) minmax(270px, 0.68fr) minmax(420px, 1.08fr);
+  gap: 14px;
+  min-height: 0;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.registry-pane,
+.detail-pane,
+.preview-pane {
+  min-width: 0;
+  min-height: 0;
+  border: 2px solid var(--line-strong);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.pane-heading,
+.preview-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 68px;
+  padding: 13px 14px;
+  border-bottom: 2px solid var(--line-strong);
+  background: var(--heading-bg);
+}
+
+.pane-heading > div:first-child {
+  min-width: 0;
+}
+
+.pane-actions {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+}

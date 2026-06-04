@@ -1,0 +1,204 @@
+.control-band {
+  display: grid;
+  grid-template-columns: auto repeat(3, minmax(136px, auto)) minmax(260px, 1fr) auto auto;
+  gap: 0;
+  margin-top: 14px;
+  border: 2px solid var(--line-strong);
+  background: var(--paper-strong);
+}
+
+.search-box,
+.select-control {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 52px;
+  padding: 0 12px;
+  border-right: 1px solid var(--line);
+}
+
+.select-control {
+  cursor: pointer;
+}
+
+.search-box input,
+.select-control select {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.select-control select {
+  cursor: pointer;
+}
+
+.select-control select option {
+  background: var(--paper-strong);
+  color: var(--ink);
+}
+
+.search-box:focus-within,
+.select-control:hover,
+.select-control:focus-within {
+  background: var(--focus-bg);
+}
+
+.select-control span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.segmented-control {
+  display: flex;
+  align-items: stretch;
+  border-right: 1px solid var(--line);
+}
+
+.segmented-control button,
+.icon-command {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 52px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.segmented-control button + button,
+.icon-command {
+  border-left: 1px solid var(--line);
+}
+
+.segmented-control button {
+  min-width: 86px;
+  padding: 0 13px;
+}
+
+.segmented-control button.active {
+  background: var(--active-bg);
+  color: var(--active-fg);
+}
+
+.segmented-control.compact button {
+  min-height: 42px;
+}
+
+.icon-command {
+  width: 52px;
+}
+
+.pane-actions .select-control {
+  min-width: 142px;
+  min-height: 38px;
+  padding: 0 9px;
+  gap: 7px;
+  border: 1px solid var(--line-strong);
+}
+
+.pane-actions .select-control span {
+  font-size: 11px;
+}
+
+.exam-code {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: start;
+  gap: 7px;
+  color: var(--ink);
+  font-family: "Bahnschrift", "Aptos", sans-serif;
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+.exam-code.heading,
+.exam-code.compact {
+  display: inline-grid;
+  vertical-align: top;
+}
+
+.exam-code.heading {
+  grid-template-columns: 18px minmax(0, auto);
+}
+
+.exam-code.compact {
+  grid-template-columns: 14px minmax(0, auto);
+  gap: 5px;
+  font-size: 12px;
+}
+
+.season-icon {
+  width: 18px;
+  height: 2.36em;
+  min-height: 28px;
+  stroke-width: 2.2;
+}
+
+.exam-code.heading .season-icon,
+.exam-code.compact .season-icon {
+  height: 1.18em;
+  min-height: 0;
+}
+
+.exam-code.compact .season-icon {
+  width: 14px;
+}
+
+.exam-code.summer .season-icon {
+  color: #d98405;
+}
+
+.exam-code.winter .season-icon {
+  color: #2f91c9;
+}
+
+.type-pill {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 8px;
+  border: 1px solid currentcolor;
+  border-radius: 8px;
+  background: var(--pill-bg);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.type-pill.ink {
+  color: var(--ink);
+}
+
+.type-pill.blue {
+  color: var(--blue);
+}
+
+.type-pill.teal {
+  color: var(--teal);
+}
+
+.type-pill.amber {
+  color: var(--amber);
+}
+
+.type-pill.olive {
+  color: var(--olive);
+}
+
+.type-pill.red {
+  color: var(--red);
+}
+
+.type-pill.violet {
+  color: var(--violet);
+}

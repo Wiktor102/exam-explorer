@@ -1,0 +1,162 @@
+:root {
+  font-family: "Aptos", "Bahnschrift", "Segoe UI", sans-serif;
+  color: #171914;
+  background: #eef1ed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --paper: #fbfcf7;
+  --paper-strong: #ffffff;
+  --ink: #171914;
+  --muted: #666b5f;
+  --line: #c8d0c1;
+  --line-strong: #1f261f;
+  --red: #b7352b;
+  --blue: #1d5f86;
+  --teal: #0b7569;
+  --amber: #bb7a12;
+  --olive: #697b27;
+  --violet: #765aa1;
+  --shadow: 0 24px 60px rgb(35 45 32 / 14%);
+  --grid-line: rgb(23 25 20 / 6%);
+  --grid-line-strong: rgb(23 25 20 / 5%);
+  --source-bg: #dce8ec;
+  --focus-bg: #eef6f4;
+  --heading-bg: #f4f8f0;
+  --table-head-bg: #e1e7de;
+  --selected-bg: #fff4d8;
+  --row-text: #30352c;
+  --summary-text: #2c3128;
+  --preview-head-bg: #f7f7fb;
+  --pdf-bg: #313236;
+  --pill-bg: #ffffff;
+  --active-bg: #171914;
+  --active-fg: #ffffff;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  height: 100%;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 / 28px 28px,
+    var(--background, #eef1ed);
+}
+
+body {
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.app-shell.dark {
+  color: #ecf0e7;
+  --background: #111814;
+  --paper: #17211c;
+  --paper-strong: #101713;
+  --ink: #f1f4ea;
+  --muted: #a8b0a1;
+  --line: #354238;
+  --line-strong: #d7dece;
+  --red: #ff6a5c;
+  --blue: #71b8df;
+  --teal: #52cbbb;
+  --amber: #f2b955;
+  --olive: #b7ca60;
+  --violet: #c3a8f2;
+  --shadow: 0 24px 60px rgb(0 0 0 / 38%);
+  --grid-line: rgb(225 238 216 / 6%);
+  --grid-line-strong: rgb(225 238 216 / 4%);
+  --source-bg: #1e3140;
+  --focus-bg: #172e2b;
+  --heading-bg: #1d2a22;
+  --table-head-bg: #233027;
+  --selected-bg: #31291a;
+  --row-text: #d7ddcf;
+  --summary-text: #dfe5d8;
+  --preview-head-bg: #1b2030;
+  --pdf-bg: #0e1110;
+  --pill-bg: #101713;
+  --active-bg: #e9efe2;
+  --active-fg: #101713;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Bahnschrift", "Aptos", sans-serif;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 0.95;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 1.12;
+}
+
+.empty-preview,
+.loading-shell {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.loading-shell {
+  height: 100vh;
+  gap: 12px;
+}
+
+.loading-mark {
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--line);
+  border-top-color: var(--red);
+  border-radius: 50%;
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
