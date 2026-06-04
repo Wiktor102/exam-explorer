@@ -31,6 +31,7 @@ class HeadingHit:
     part_id: str
     label: str
     page: int
+    page_start: int
     start: int
     end: int
 
@@ -38,11 +39,12 @@ class HeadingHit:
 def normalize_hash_text(text: str) -> str:
     text = unicodedata.normalize("NFKD", text).lower()
     text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    text = text.replace("ł", "l")
     text = re.sub(r"strona\s+\d+\s+z\s+\d+", " ", text)
     text = re.sub(r"inf\.?04[-_\s\d.a-z]+", " ", text)
     text = re.sub(r"\d{4}", " ", text)
-    text = re.sub(r"\s+", " ", text)
-    return text.strip()
+    text = re.sub(r"[^0-9a-z]+", "", text)
+    return text
 
 
 def compact_text(text: str) -> str:
@@ -155,15 +157,41 @@ def find_headings(pages: list[str]) -> tuple[str, list[HeadingHit]]:
         if not match:
             continue
         page = 1
+        page_start = 0
         for page_number, page_offset in page_offsets:
             if page_offset <= match.start():
                 page = page_number
+                page_start = page_offset
             else:
                 break
-        hits.append(HeadingHit(part_id, label, page, match.start(), match.end()))
+        hits.append(HeadingHit(part_id, label, page, page_start, match.start(), match.end()))
 
     hits.sort(key=lambda item: item.start)
     return full_text, hits
+
+
+def has_task_content_before_heading(page_prefix: str) -> bool:
+    page_prefix = re.sub(r"\bStrona\s+\d+\s+z\s+\d+\b", " ", page_prefix, flags=re.IGNORECASE)
+    page_prefix = re.sub(r"\bINF\.?04[-_\s\d.a-z]*\b", " ", page_prefix, flags=re.IGNORECASE)
+    page_prefix = re.sub(r"\s+", " ", page_prefix).strip()
+    return len(page_prefix) >= 40 and bool(
+        re.search(r"[A-Za-zĄĆĘŁŃÓŚŹŻąćęłńóśźż]", page_prefix)
+    )
+
+
+def task_end_page(
+    hit: HeadingHit, next_hit: HeadingHit | None, page_count: int, full_text: str
+) -> int:
+    if not next_hit:
+        return page_count
+
+    end_page = next_hit.page
+    if next_hit.page > hit.page:
+        page_prefix = full_text[next_hit.page_start:next_hit.start]
+        if not has_task_content_before_heading(page_prefix):
+            end_page = next_hit.page - 1
+
+    return max(hit.page, min(end_page, page_count))
 
 
 def split_pdf(source_pdf: Path, destination_pdf: Path, start_page: int, end_page: int) -> None:
@@ -221,10 +249,7 @@ def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path) -> dict[str, 
         task_type, type_label, tags = classify_part(task_index, title_line, task_text)
 
         start_page = hit.page
-        end_page = (next_hit.page if next_hit else page_count)
-        if next_hit and next_hit.page > hit.page:
-            end_page = next_hit.page - 1
-        end_page = max(start_page, min(end_page, page_count))
+        end_page = task_end_page(hit, next_hit, page_count, full_text)
 
         task_id = f"{exam_id}-task-{task_index}"
         task_pdf_public = Path("pdfs") / "tasks" / f"{task_id}.pdf"

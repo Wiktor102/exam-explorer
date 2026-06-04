@@ -115,6 +115,14 @@ function examFileName(exam: Exam) {
   return exam.sourcePath.split('/').at(-1) ?? exam.sourcePath
 }
 
+function solutionUrl(repository: string, folder: string | null) {
+  if (!folder) {
+    return repository
+  }
+
+  return `${repository}/tree/main/${folder.split('/').map(encodeURIComponent).join('/')}`
+}
+
 function SeasonExamLabel({ exam }: { exam: Exam }) {
   const isSummer = exam.month === '06'
   const SeasonIcon = isSummer ? Sun : Snowflake
@@ -498,7 +506,12 @@ function App() {
                 <span>Pliki</span>
                 <strong>{selectedExam.assetFiles.length ? selectedExam.assetFiles.join(', ') : 'brak w katalogu'}</strong>
                 <span>Rozwiązania</span>
-                <strong>{selectedExam.solutionFolder ?? 'brak w repozytorium'}</strong>
+                <strong>
+                  <a href={solutionUrl(catalog.sourceRepository, selectedExam.solutionFolder)} target="_blank" rel="noreferrer">
+                    {selectedExam.solutionFolder ?? 'repozytorium źródłowe'}
+                    <ExternalLink size={13} aria-hidden="true" />
+                  </a>
+                </strong>
               </div>
 
               {duplicateTasks && duplicateTasks.length > 0 && (

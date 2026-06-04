@@ -565,6 +565,18 @@ h2 {
   font-weight: 700;
 }
 
+.metadata-grid a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.metadata-grid a:hover {
+  color: var(--accent);
+}
+
 .duplicate-strip {
   display: grid;
   gap: 9px;
