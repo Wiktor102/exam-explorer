@@ -1,50 +1,50 @@
-# INF.04 Task Explorer
+# Przeglądarka zadań INF.04
 
-A local React/Vite explorer for previous Polish INF.04 practical technical exams.
+Lokalna aplikacja React/Vite do przeglądania archiwalnych polskich egzaminów praktycznych INF.04.
 
-The app catalogs exam sheets from:
+Aplikacja kataloguje arkusze egzaminacyjne z repozytorium:
 https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania
 
-It includes:
+Zawiera:
 
-- 29 whole exam PDFs from `_arkusze`
-- 87 separately catalogued task records
-- generated task-only PDF previews for parts I, II, and III
-- search, year filter, task-type filter, sorting, task/exam views
-- duplicate-task grouping for mixed-and-matched sheets
-- links between the three parts of the currently selected exam
+- 29 pełnych plików PDF z egzaminami z katalogu `_arkusze`
+- 87 osobno skatalogowanych rekordów zadań
+- wygenerowane podglądy PDF zawierające tylko zadania dla części I, II i III
+- wyszukiwanie, filtrowanie po roku, filtrowanie po typie zadania, sortowanie oraz widoki zadań i egzaminów
+- grupowanie powtarzających się zadań w arkuszach składanych z różnych części
+- linki między trzema częściami aktualnie wybranego egzaminu
 
-## Run
+## Uruchomienie
 
 ```bash
 npm install
 npm run dev
 ```
 
-The local dev URL is usually:
+Lokalny adres środowiska deweloperskiego to zwykle:
 
 ```text
 http://localhost:5173
 ```
 
-## Build
+## Budowanie
 
 ```bash
 npm run build
 ```
 
-## Regenerate The Catalog
+## Regenerowanie katalogu
 
-Install Python dependency if needed:
+W razie potrzeby zainstaluj zależność Pythona:
 
 ```bash
 python -m pip install pypdf
 ```
 
-Then run:
+Następnie uruchom:
 
 ```bash
 npm run generate:catalog -- --source "path/to/INF.04-rozwiazania" --public public
 ```
 
-This rewrites `public/data/catalog.json`, copies whole PDFs into `public/pdfs/exams`, and creates page-range task PDFs in `public/pdfs/tasks`.
+Polecenie nadpisuje `public/data/catalog.json`, kopiuje pełne pliki PDF do `public/pdfs/exams` i tworzy pliki PDF z zakresami stron dla zadań w `public/pdfs/tasks`.
