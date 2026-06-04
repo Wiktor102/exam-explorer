@@ -277,6 +277,10 @@ function App() {
         : filteredExams[0] ?? null
 
   const sameExamTasks = selectedExam?.tasks.map((id) => taskById.get(id)).filter(Boolean) as Task[] | undefined
+  const selectedSummary =
+    registryMode === 'exams'
+      ? sameExamTasks?.map((task) => task.summary).filter(Boolean).join(' ')
+      : selectedTask?.summary
   const duplicateTasks = selectedTask?.duplicates.map((id) => taskById.get(id)).filter(Boolean) as Task[] | undefined
   const duplicateTaskRows = useMemo(() => {
     if (!selectedTask || !selectedExam || !duplicateTasks) {
@@ -504,23 +508,25 @@ function App() {
 
           {selectedTask && selectedExam && (
             <>
-              <div className="task-switch-line">
-                <div className="part-links">
-                  {sameExamTasks?.map((task) => (
-                    <button
-                      key={task.id}
-                      className={clsx(selectedTask.id === task.id && 'active')}
-                      onClick={() => {
-                        setSelectedTaskId(task.id)
-                        setPreviewMode('task')
-                      }}
-                    >
-                      {task.part}. {typeLabels[task.type]}
-                    </button>
-                  ))}
+              {registryMode === 'tasks' && (
+                <div className="task-switch-line">
+                  <div className="part-links">
+                    {sameExamTasks?.map((task) => (
+                      <button
+                        key={task.id}
+                        className={clsx(selectedTask.id === task.id && 'active')}
+                        onClick={() => {
+                          setSelectedTaskId(task.id)
+                          setPreviewMode('task')
+                        }}
+                      >
+                        {task.part}. {typeLabels[task.type]}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <p className="task-summary">{selectedTask.summary}</p>
+              )}
+              <p className="task-summary">{selectedSummary}</p>
 
               <div className="metadata-grid metadata-grid-primary">
                 <span>Zasoby</span>
