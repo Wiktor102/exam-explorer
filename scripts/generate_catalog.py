@@ -1,0 +1,291 @@
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+import shutil
+import unicodedata
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+from pypdf import PdfReader, PdfWriter
+
+
+EXAM_RE = re.compile(
+    r"inf_04_(?P<year>\d{4})_(?P<month>\d{2})_(?P<number>\d{2})_(?P<variant>[A-Z]{2})(?:_kolor)?\.pdf$",
+    re.IGNORECASE,
+)
+
+HEADINGS = [
+    ("part-1", "Część I", re.compile(r"Część\s+I\.?\s*", re.IGNORECASE)),
+    ("part-2", "Część II", re.compile(r"Część\s+II\.?\s*", re.IGNORECASE)),
+    ("part-3", "Część III", re.compile(r"Część\s+III\.?\s*", re.IGNORECASE)),
+]
+
+
+@dataclass
+class HeadingHit:
+    part_id: str
+    label: str
+    page: int
+    start: int
+    end: int
+
+
+def normalize_hash_text(text: str) -> str:
+    text = unicodedata.normalize("NFKD", text).lower()
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    text = re.sub(r"strona\s+\d+\s+z\s+\d+", " ", text)
+    text = re.sub(r"inf\.?04[-_\s\d.a-z]+", " ", text)
+    text = re.sub(r"\d{4}", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def compact_text(text: str) -> str:
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
+def first_sentenceish(text: str, limit: int = 260) -> str:
+    text = re.sub(r"\s+", " ", text).strip()
+    if len(text) <= limit:
+        return text
+    cut = text[:limit].rsplit(" ", 1)[0]
+    return f"{cut}..."
+
+
+def classify_part(part: int, heading_line: str, text: str) -> tuple[str, str, list[str]]:
+    lower = f"{heading_line} {text[:1800]}".lower()
+    if part == 1:
+        return ("console", "Aplikacja konsolowa", ["console", "cli"])
+
+    if part == 2:
+        if "mobiln" in lower:
+            return ("mobile", "Aplikacja mobilna", ["mobile"])
+        if "desktop" in lower:
+            return ("desktop", "Aplikacja desktopowa", ["desktop"])
+        if "web" in lower or "internetow" in lower:
+            tags = ["web"]
+            if "front-end" in lower or "frontend" in lower or "react" in lower or "angular" in lower:
+                tags.append("frontend")
+            if "php" in lower or "baza danych" in lower or "backend" in lower or "serwer" in lower:
+                tags.append("backend")
+            return ("web", "Aplikacja webowa", tags)
+        return ("application", "Aplikacja", ["application"])
+
+    if "jednostkow" in lower:
+        return ("unit-testing", "Testy jednostkowe", ["unit-tests", "testing"])
+    if "test" in lower:
+        return ("testing", "Testowanie", ["testing"])
+    return ("documentation", "Dokumentacja", ["documentation"])
+
+
+def heading_line(text: str) -> str:
+    for line in text.splitlines():
+        if line.strip():
+            return line.strip()
+    return ""
+
+
+def find_headings(pages: list[str]) -> tuple[str, list[HeadingHit]]:
+    joined_parts: list[str] = []
+    page_offsets: list[tuple[int, int]] = []
+    offset = 0
+    for index, page_text in enumerate(pages, start=1):
+        page_offsets.append((index, offset))
+        joined_parts.append(page_text)
+        offset += len(page_text) + 1
+    full_text = "\n".join(joined_parts)
+
+    hits: list[HeadingHit] = []
+    for part_id, label, pattern in HEADINGS:
+        match = pattern.search(full_text)
+        if not match:
+            continue
+        page = 1
+        for page_number, page_offset in page_offsets:
+            if page_offset <= match.start():
+                page = page_number
+            else:
+                break
+        hits.append(HeadingHit(part_id, label, page, match.start(), match.end()))
+
+    hits.sort(key=lambda item: item.start)
+    return full_text, hits
+
+
+def split_pdf(source_pdf: Path, destination_pdf: Path, start_page: int, end_page: int) -> None:
+    reader = PdfReader(str(source_pdf))
+    writer = PdfWriter()
+    for page_number in range(start_page, end_page + 1):
+        writer.add_page(reader.pages[page_number - 1])
+    destination_pdf.parent.mkdir(parents=True, exist_ok=True)
+    with destination_pdf.open("wb") as output:
+        writer.write(output)
+
+
+def match_solution_folder(repo_root: Path, year: int, month: str, number: str, variant: str) -> str | None:
+    short_year = str(year)[2:]
+    relative = Path(f"INF.04-{short_year}.{month}") / f"INF.04-{number}-{short_year}.{month}-{variant}"
+    absolute = repo_root / relative
+    if absolute.exists():
+        return relative.as_posix()
+    return None
+
+
+def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path) -> dict[str, Any] | None:
+    match = EXAM_RE.match(pdf_path.name)
+    if not match:
+        return None
+
+    year = int(match.group("year"))
+    month = match.group("month")
+    number = match.group("number")
+    variant = match.group("variant").upper()
+    session = f"{year}-{month}"
+    exam_id = f"inf04-{year}-{month}-{number}-{variant.lower()}"
+    code = f"INF.04-{number}-{str(year)[2:]}.{month}-{variant}"
+
+    reader = PdfReader(str(pdf_path))
+    pages = [page.extract_text() or "" for page in reader.pages]
+    full_text, hits = find_headings(pages)
+    page_count = len(reader.pages)
+
+    if len(hits) < 3:
+        print(f"Warning: expected 3 section headings in {pdf_path.name}, found {len(hits)}")
+
+    exam_pdf_public = Path("pdfs") / "exams" / f"{exam_id}.pdf"
+    target_exam_pdf = public_root / exam_pdf_public
+    target_exam_pdf.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(pdf_path, target_exam_pdf)
+
+    tasks: list[dict[str, Any]] = []
+    for task_index, hit in enumerate(hits[:3], start=1):
+        next_hit = hits[task_index] if task_index < len(hits) else None
+        text_start = hit.start
+        text_end = next_hit.start if next_hit else len(full_text)
+        task_text = compact_text(full_text[text_start:text_end])
+        title_line = heading_line(task_text)
+        task_type, type_label, tags = classify_part(task_index, title_line, task_text)
+
+        start_page = hit.page
+        end_page = (next_hit.page if next_hit else page_count)
+        if next_hit and next_hit.page > hit.page:
+            end_page = next_hit.page - 1
+        end_page = max(start_page, min(end_page, page_count))
+
+        task_id = f"{exam_id}-task-{task_index}"
+        task_pdf_public = Path("pdfs") / "tasks" / f"{task_id}.pdf"
+        split_pdf(pdf_path, public_root / task_pdf_public, start_page, end_page)
+        duplicate_hash = hashlib.sha1(normalize_hash_text(task_text).encode("utf-8")).hexdigest()[:12]
+
+        tasks.append(
+            {
+                "id": task_id,
+                "examId": exam_id,
+                "part": task_index,
+                "partLabel": hit.label,
+                "title": type_label,
+                "heading": title_line,
+                "type": task_type,
+                "typeLabel": type_label,
+                "tags": tags,
+                "pageStart": start_page,
+                "pageEnd": end_page,
+                "pdf": f"/{task_pdf_public.as_posix()}",
+                "text": task_text,
+                "summary": first_sentenceish(task_text.replace(title_line, "", 1)),
+                "duplicateGroup": duplicate_hash,
+            }
+        )
+
+    solution_folder = match_solution_folder(repo_root, year, month, number, variant)
+    related_assets = sorted(
+        item.name
+        for item in (pdf_path.parent).iterdir()
+        if item.is_file() and item.suffix.lower() in {".zip", ".7z"}
+    )
+
+    return {
+        "id": exam_id,
+        "code": code,
+        "year": year,
+        "month": month,
+        "session": session,
+        "number": number,
+        "variant": variant,
+        "pdf": f"/{exam_pdf_public.as_posix()}",
+        "sourcePath": pdf_path.relative_to(repo_root).as_posix(),
+        "solutionFolder": solution_folder,
+        "pageCount": page_count,
+        "tasks": [task["id"] for task in tasks],
+        "taskRecords": tasks,
+        "assetFiles": related_assets,
+    }
+
+
+def build_catalog(repo_root: Path, public_root: Path) -> dict[str, Any]:
+    arkusze = repo_root / "_arkusze"
+    pdfs = [
+        pdf
+        for pdf in arkusze.rglob("*.pdf")
+        if "_zo" not in pdf.name.lower() and EXAM_RE.match(pdf.name)
+    ]
+    exams: list[dict[str, Any]] = []
+    tasks: list[dict[str, Any]] = []
+
+    for pdf in sorted(pdfs):
+        exam = parse_exam(repo_root, pdf, public_root)
+        if not exam:
+            continue
+        tasks.extend(exam.pop("taskRecords"))
+        exams.append(exam)
+
+    duplicates: dict[str, list[str]] = {}
+    for task in tasks:
+        duplicates.setdefault(task["duplicateGroup"], []).append(task["id"])
+    for task in tasks:
+        task["duplicates"] = [
+            task_id for task_id in duplicates.get(task["duplicateGroup"], []) if task_id != task["id"]
+        ]
+
+    task_types = sorted({task["type"] for task in tasks})
+    years = sorted({exam["year"] for exam in exams}, reverse=True)
+
+    return {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "sourceRepository": "https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania",
+        "sourceFolder": "_arkusze",
+        "examCount": len(exams),
+        "taskCount": len(tasks),
+        "years": years,
+        "taskTypes": task_types,
+        "exams": sorted(exams, key=lambda exam: (exam["year"], exam["month"], exam["number"], exam["variant"]), reverse=True),
+        "tasks": sorted(tasks, key=lambda task: (task["examId"], task["part"]), reverse=True),
+    }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source", required=True, type=Path, help="Path to INF.04-rozwiazania repo")
+    parser.add_argument("--public", default=Path("public"), type=Path, help="Vite public directory")
+    args = parser.parse_args()
+
+    source = args.source.resolve()
+    public = args.public.resolve()
+    data_dir = public / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+
+    catalog = build_catalog(source, public)
+    with (data_dir / "catalog.json").open("w", encoding="utf-8") as output:
+        json.dump(catalog, output, ensure_ascii=False, indent=2)
+    print(f"Generated {catalog['examCount']} exams and {catalog['taskCount']} tasks")
+
+
+if __name__ == "__main__":
+    main()

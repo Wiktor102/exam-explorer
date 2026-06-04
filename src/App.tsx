@@ -1,0 +1,502 @@
+import {
+  ArrowDownAZ,
+  CalendarDays,
+  Columns3,
+  FileText,
+  Layers3,
+  Link2,
+  ListFilter,
+  Moon,
+  Monitor,
+  RotateCcw,
+  Search,
+  Sun,
+} from 'lucide-react'
+import { useEffect, useMemo, useState } from 'react'
+import clsx from 'clsx'
+
+type TaskType =
+  | 'console'
+  | 'desktop'
+  | 'documentation'
+  | 'mobile'
+  | 'testing'
+  | 'unit-testing'
+  | 'web'
+  | 'application'
+
+type Exam = {
+  id: string
+  code: string
+  year: number
+  month: string
+  session: string
+  number: string
+  variant: string
+  pdf: string
+  sourcePath: string
+  solutionFolder: string | null
+  pageCount: number
+  tasks: string[]
+  assetFiles: string[]
+}
+
+type Task = {
+  id: string
+  examId: string
+  part: number
+  partLabel: string
+  title: string
+  heading: string
+  type: TaskType
+  typeLabel: string
+  tags: string[]
+  pageStart: number
+  pageEnd: number
+  pdf: string
+  text: string
+  summary: string
+  duplicateGroup: string
+  duplicates: string[]
+}
+
+type Catalog = {
+  generatedAt: string
+  sourceRepository: string
+  examCount: number
+  taskCount: number
+  years: number[]
+  taskTypes: TaskType[]
+  exams: Exam[]
+  tasks: Task[]
+}
+
+type PreviewMode = 'task' | 'exam'
+type RegistryMode = 'tasks' | 'exams'
+type SortMode = 'newest' | 'oldest' | 'type' | 'duplicates'
+
+const typeLabels: Record<string, string> = {
+  console: 'Konsola',
+  desktop: 'Desktop',
+  documentation: 'Dokumentacja',
+  mobile: 'Mobilna',
+  testing: 'Testowanie',
+  'unit-testing': 'Testy jednostkowe',
+  web: 'Web',
+  application: 'Aplikacja',
+}
+
+const typeAccent: Record<string, string> = {
+  console: 'ink',
+  desktop: 'blue',
+  documentation: 'olive',
+  mobile: 'teal',
+  testing: 'amber',
+  'unit-testing': 'red',
+  web: 'violet',
+  application: 'ink',
+}
+
+const sessionLabels: Record<string, string> = {
+  '01': 'ZIMA',
+  '06': 'LATO',
+}
+
+function formatExamLabel(exam: Exam) {
+  const session = sessionLabels[exam.month] ?? exam.session
+  const sheetNumber = String(Number(exam.number))
+  return `${session} ${exam.year} arkusz ${sheetNumber} ${exam.variant.toLowerCase()}`
+}
+
+function examFileName(exam: Exam) {
+  return exam.sourcePath.split('/').at(-1) ?? exam.sourcePath
+}
+
+function App() {
+  const [catalog, setCatalog] = useState<Catalog | null>(null)
+  const [query, setQuery] = useState('')
+  const [year, setYear] = useState('all')
+  const [taskType, setTaskType] = useState('all')
+  const [sortMode, setSortMode] = useState<SortMode>('newest')
+  const [registryMode, setRegistryMode] = useState<RegistryMode>('tasks')
+  const [previewMode, setPreviewMode] = useState<PreviewMode>('task')
+  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+  const [selectedTaskId, setSelectedTaskId] = useState<string | null>(null)
+  const [selectedExamId, setSelectedExamId] = useState<string | null>(null)
+
+  useEffect(() => {
+    fetch('/data/catalog.json')
+      .then((response) => response.json())
+      .then((data: Catalog) => {
+        setCatalog(data)
+        setSelectedTaskId(data.tasks[0]?.id ?? null)
+        setSelectedExamId(data.exams[0]?.id ?? null)
+      })
+  }, [])
+
+  const examById = useMemo(() => {
+    return new Map(catalog?.exams.map((exam) => [exam.id, exam]) ?? [])
+  }, [catalog])
+
+  const taskById = useMemo(() => {
+    return new Map(catalog?.tasks.map((task) => [task.id, task]) ?? [])
+  }, [catalog])
+
+  const filteredTasks = useMemo(() => {
+    if (!catalog) return []
+    const needle = query.trim().toLowerCase()
+
+    const result = catalog.tasks.filter((task) => {
+      const exam = examById.get(task.examId)
+      if (!exam) return false
+      const matchesYear = year === 'all' || String(exam.year) === year
+      const matchesType = taskType === 'all' || task.type === taskType
+      const haystack =
+        `${exam.code} ${formatExamLabel(exam)} ${examFileName(exam)} ${exam.session} ${task.typeLabel} ${task.heading} ${task.summary} ${task.tags.join(' ')} ${task.text}`.toLowerCase()
+      const matchesQuery = !needle || haystack.includes(needle)
+      return matchesYear && matchesType && matchesQuery
+    })
+
+    return result.sort((left, right) => {
+      const leftExam = examById.get(left.examId)
+      const rightExam = examById.get(right.examId)
+      if (!leftExam || !rightExam) return 0
+      if (sortMode === 'oldest') {
+        return `${leftExam.session}-${leftExam.number}-${left.part}`.localeCompare(`${rightExam.session}-${rightExam.number}-${right.part}`)
+      }
+      if (sortMode === 'type') {
+        return `${left.type}-${leftExam.session}-${left.part}`.localeCompare(`${right.type}-${rightExam.session}-${right.part}`)
+      }
+      if (sortMode === 'duplicates') {
+        return right.duplicates.length - left.duplicates.length
+      }
+      return `${rightExam.session}-${rightExam.number}-${right.part}`.localeCompare(`${leftExam.session}-${leftExam.number}-${left.part}`)
+    })
+  }, [catalog, examById, query, sortMode, taskType, year])
+
+  const filteredExams = useMemo(() => {
+    if (!catalog) return []
+    const visibleExamIds = new Set(filteredTasks.map((task) => task.examId))
+    return catalog.exams.filter((exam) => visibleExamIds.has(exam.id))
+  }, [catalog, filteredTasks])
+
+  const selectedTaskCandidate = selectedTaskId ? taskById.get(selectedTaskId) ?? null : null
+  const selectedTask =
+    selectedTaskCandidate && filteredTasks.some((task) => task.id === selectedTaskCandidate.id)
+      ? selectedTaskCandidate
+      : filteredTasks[0] ?? null
+  const selectedExamCandidate = selectedExamId ? examById.get(selectedExamId) ?? null : null
+  const selectedExam =
+    selectedExamCandidate && filteredExams.some((exam) => exam.id === selectedExamCandidate.id)
+      ? selectedExamCandidate
+      : selectedTask
+        ? examById.get(selectedTask.examId) ?? null
+        : filteredExams[0] ?? null
+
+  const sameExamTasks = selectedExam?.tasks.map((id) => taskById.get(id)).filter(Boolean) as Task[] | undefined
+  const duplicateTasks = selectedTask?.duplicates.map((id) => taskById.get(id)).filter(Boolean) as Task[] | undefined
+  const previewPdf = previewMode === 'exam' ? selectedExam?.pdf : selectedTask?.pdf
+  const previewTitle =
+    previewMode === 'exam'
+      ? selectedExam
+        ? formatExamLabel(selectedExam)
+        : undefined
+      : selectedExam
+        ? `${formatExamLabel(selectedExam)} / ${selectedTask?.partLabel}`
+        : selectedTask?.partLabel
+
+  const resetFilters = () => {
+    setQuery('')
+    setYear('all')
+    setTaskType('all')
+    setSortMode('newest')
+  }
+
+  const sortLabels: Record<SortMode, string> = {
+    newest: 'Od najnowszych',
+    oldest: 'Od najstarszych',
+    type: 'Typ zadania',
+    duplicates: 'Najczęściej powtarzane',
+  }
+
+  if (!catalog) {
+    return (
+      <main className="loading-shell">
+        <div className="loading-mark" />
+        <p>Wczytywanie archiwum INF.04...</p>
+      </main>
+    )
+  }
+
+  return (
+    <main className={clsx('app-shell', theme === 'dark' && 'dark')}>
+      <header className="topbar">
+        <div className="identity">
+          <span className="identity-mark">04</span>
+          <div>
+            <p className="eyebrow">Archiwum egzaminów zawodowych</p>
+            <h1>Eksplorator zadań INF.04</h1>
+          </div>
+        </div>
+        <div className="source-strip">
+          <span>{catalog.examCount} arkuszy</span>
+          <span>{catalog.taskCount} zadań</span>
+          <a href={catalog.sourceRepository} target="_blank" rel="noreferrer">
+            Repozytorium
+          </a>
+        </div>
+      </header>
+
+      <section className="control-band" aria-label="Filtry">
+        <label className="select-control">
+          <CalendarDays size={16} />
+          <span>Rok</span>
+          <select value={year} onChange={(event) => setYear(event.target.value)}>
+            <option value="all">Wszystkie</option>
+            {catalog.years.map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="select-control">
+          <ListFilter size={16} />
+          <span>Typ</span>
+          <select value={taskType} onChange={(event) => setTaskType(event.target.value)}>
+            <option value="all">Wszystkie</option>
+            {catalog.taskTypes.map((item) => (
+              <option key={item} value={item}>
+                {typeLabels[item] ?? item}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="select-control">
+          <ArrowDownAZ size={16} />
+          <span>Sortuj</span>
+          <select value={sortMode} onChange={(event) => setSortMode(event.target.value as SortMode)}>
+            <option value="newest">{sortLabels.newest}</option>
+            <option value="oldest">{sortLabels.oldest}</option>
+            <option value="type">{sortLabels.type}</option>
+            <option value="duplicates">{sortLabels.duplicates}</option>
+          </select>
+        </label>
+
+        <label className="search-box">
+          <Search size={18} />
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Szukaj treści zadania, kodu arkusza, technologii, testów..."
+          />
+        </label>
+
+        <div className="segmented-control" aria-label="Tryb katalogu">
+          <button className={clsx(registryMode === 'tasks' && 'active')} onClick={() => setRegistryMode('tasks')}>
+            <Columns3 size={16} />
+            Zadania
+          </button>
+          <button className={clsx(registryMode === 'exams' && 'active')} onClick={() => setRegistryMode('exams')}>
+            <FileText size={16} />
+            Arkusze
+          </button>
+        </div>
+
+        <button
+          className="icon-command"
+          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          title={theme === 'dark' ? 'Tryb jasny' : 'Tryb ciemny'}
+        >
+          {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
+        </button>
+
+        <button className="icon-command" onClick={resetFilters} title="Resetuj filtry">
+          <RotateCcw size={17} />
+        </button>
+      </section>
+
+      <section className="workspace">
+        <div className="registry-pane">
+          <div className="pane-heading">
+            <div>
+              <p className="eyebrow">Katalog</p>
+              <h2>{registryMode === 'tasks' ? `${filteredTasks.length} pasujących zadań` : `${filteredExams.length} pasujących arkuszy`}</h2>
+            </div>
+          </div>
+
+          {registryMode === 'tasks' ? (
+            <div className="task-table" role="table" aria-label="Zadania">
+              <div className="table-head" role="row">
+                <span>Arkusz</span>
+                <span>Cz.</span>
+                <span>Typ</span>
+                <span>Sygnał zadania</span>
+                <span>Powtórki</span>
+              </div>
+              {filteredTasks.map((task) => {
+                const exam = examById.get(task.examId)
+                if (!exam) return null
+                return (
+                  <button
+                    key={task.id}
+                    className={clsx('task-row', selectedTaskId === task.id && 'selected')}
+                    onClick={() => {
+                      setSelectedTaskId(task.id)
+                      setSelectedExamId(task.examId)
+                      setPreviewMode('task')
+                    }}
+                    role="row"
+                    title={examFileName(exam)}
+                  >
+                    <span className="exam-code" title={examFileName(exam)}>
+                      {formatExamLabel(exam)}
+                    </span>
+                    <span>{task.partLabel.replace('Część ', '')}</span>
+                    <span className={clsx('type-pill', typeAccent[task.type])}>{typeLabels[task.type] ?? task.type}</span>
+                    <span className="row-summary">{task.summary}</span>
+                    <span>{task.duplicates.length ? `${task.duplicates.length + 1} ark.` : 'unikat'}</span>
+                  </button>
+                )
+              })}
+            </div>
+          ) : (
+            <div className="exam-list">
+              {filteredExams.map((exam) => {
+                const examTasks = exam.tasks.map((id) => taskById.get(id)).filter(Boolean) as Task[]
+                return (
+                  <button
+                    key={exam.id}
+                    className={clsx('exam-line', selectedExamId === exam.id && 'selected')}
+                    onClick={() => {
+                      setSelectedExamId(exam.id)
+                      setSelectedTaskId(exam.tasks[0] ?? null)
+                      setPreviewMode('exam')
+                    }}
+                    title={examFileName(exam)}
+                  >
+                    <span className="exam-code" title={examFileName(exam)}>
+                      {formatExamLabel(exam)}
+                    </span>
+                    <span>{exam.pageCount} str.</span>
+                    <span>{exam.variant}</span>
+                    <span>{examTasks.map((task) => typeLabels[task.type]).join(' / ')}</span>
+                  </button>
+                )
+              })}
+            </div>
+          )}
+        </div>
+
+        <aside className="detail-pane" aria-label="Szczegóły wybranego zadania">
+          <div className="pane-heading">
+            <div>
+              <p className="eyebrow">Wybrane</p>
+              <h2 title={selectedExam ? examFileName(selectedExam) : undefined}>
+                {selectedExam ? formatExamLabel(selectedExam) : 'Nie wybrano arkusza'}
+              </h2>
+            </div>
+            <span className="page-range">
+              {selectedTask ? `s. ${selectedTask.pageStart}-${selectedTask.pageEnd}` : ''}
+            </span>
+          </div>
+
+          {selectedTask && selectedExam && (
+            <>
+              <div className="task-title-line">
+                <span className={clsx('type-pill', typeAccent[selectedTask.type])}>{selectedTask.typeLabel}</span>
+                <strong>{selectedTask.partLabel}</strong>
+              </div>
+              <p className="task-summary">{selectedTask.summary}</p>
+
+              <div className="link-stack">
+                <p className="eyebrow">Powiązane części arkusza</p>
+                <div className="part-links">
+                  {sameExamTasks?.map((task) => (
+                    <button
+                      key={task.id}
+                      className={clsx(selectedTask.id === task.id && 'active')}
+                      onClick={() => {
+                        setSelectedTaskId(task.id)
+                        setPreviewMode('task')
+                      }}
+                    >
+                      {task.part}. {typeLabels[task.type]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="metadata-grid">
+                <span>Sesja</span>
+                <strong>{selectedExam.session}</strong>
+                <span>Wersja</span>
+                <strong>{selectedExam.variant}</strong>
+                <span>Plik arkusza</span>
+                <strong>{examFileName(selectedExam)}</strong>
+                <span>Pliki</span>
+                <strong>{selectedExam.assetFiles.length ? selectedExam.assetFiles.join(', ') : 'brak w katalogu'}</strong>
+                <span>Rozwiązania</span>
+                <strong>{selectedExam.solutionFolder ?? 'brak w repozytorium'}</strong>
+              </div>
+
+              {duplicateTasks && duplicateTasks.length > 0 && (
+                <div className="duplicate-strip">
+                  <div>
+                    <Layers3 size={16} />
+                    <span>To samo zadanie występuje w {duplicateTasks.length + 1} arkuszach</span>
+                  </div>
+                  {duplicateTasks.slice(0, 5).map((task) => {
+                    const exam = examById.get(task.examId)
+                    return (
+                      <button
+                        key={task.id}
+                        onClick={() => {
+                          setSelectedTaskId(task.id)
+                          setSelectedExamId(task.examId)
+                          setPreviewMode('task')
+                        }}
+                        title={exam ? examFileName(exam) : undefined}
+                      >
+                        <Link2 size={14} />
+                        {exam ? formatExamLabel(exam) : task.examId}
+                      </button>
+                    )
+                  })}
+                </div>
+              )}
+            </>
+          )}
+        </aside>
+
+        <div className="preview-pane">
+          <div className="preview-toolbar">
+            <div>
+              <p className="eyebrow">Podgląd PDF</p>
+              <h2>{previewTitle}</h2>
+            </div>
+            <div className="segmented-control compact" aria-label="Tryb podglądu">
+              <button className={clsx(previewMode === 'task' && 'active')} onClick={() => setPreviewMode('task')}>
+                <Monitor size={16} />
+                Zadanie
+              </button>
+              <button className={clsx(previewMode === 'exam' && 'active')} onClick={() => setPreviewMode('exam')}>
+                <FileText size={16} />
+                Arkusz
+              </button>
+            </div>
+          </div>
+          {previewPdf ? (
+            <iframe title="Podgląd PDF" src={`${previewPdf}#toolbar=1&navpanes=0`} />
+          ) : (
+            <div className="empty-preview">Nie wybrano pliku PDF</div>
+          )}
+        </div>
+      </section>
+    </main>
+  )
+}
+
+export default App
