@@ -205,7 +205,7 @@ h2 {
 
 .control-band {
   display: grid;
-  grid-template-columns: repeat(4, minmax(136px, auto)) minmax(260px, 1fr) auto auto auto;
+  grid-template-columns: auto repeat(4, minmax(136px, auto)) minmax(260px, 1fr) auto auto;
   gap: 0;
   margin-top: 14px;
   border: 2px solid var(--line-strong);
@@ -260,6 +260,7 @@ h2 {
 .segmented-control {
   display: flex;
   align-items: stretch;
+  border-right: 1px solid var(--line);
 }
 
 .segmented-control button,
@@ -270,11 +271,15 @@ h2 {
   gap: 7px;
   min-height: 52px;
   border: 0;
-  border-left: 1px solid var(--line);
   background: transparent;
   cursor: pointer;
   font-size: 13px;
   font-weight: 800;
+}
+
+.segmented-control button + button,
+.icon-command {
+  border-left: 1px solid var(--line);
 }
 
 .segmented-control button {

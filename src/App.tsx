@@ -354,6 +354,17 @@ function App() {
       </header>
 
       <section className="control-band" aria-label="Filtry">
+        <div className="segmented-control" aria-label="Tryb katalogu">
+          <button className={clsx(registryMode === 'tasks' && 'active')} onClick={() => setRegistryMode('tasks')}>
+            <Columns3 size={16} />
+            Zadania
+          </button>
+          <button className={clsx(registryMode === 'exams' && 'active')} onClick={() => setRegistryMode('exams')}>
+            <FileText size={16} />
+            Arkusze
+          </button>
+        </div>
+
         <SelectControl icon={<CalendarDays size={16} />} label="Rok" value={year} onChange={setYear}>
             <option value="all">Wszystkie</option>
             {catalog.years.map((item) => (
@@ -403,17 +414,6 @@ function App() {
             placeholder="Szukaj treści zadania, kodu arkusza, technologii, testów..."
           />
         </label>
-
-        <div className="segmented-control" aria-label="Tryb katalogu">
-          <button className={clsx(registryMode === 'tasks' && 'active')} onClick={() => setRegistryMode('tasks')}>
-            <Columns3 size={16} />
-            Zadania
-          </button>
-          <button className={clsx(registryMode === 'exams' && 'active')} onClick={() => setRegistryMode('exams')}>
-            <FileText size={16} />
-            Arkusze
-          </button>
-        </div>
 
         <button
           className="icon-command"
