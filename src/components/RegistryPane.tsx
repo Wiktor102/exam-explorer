@@ -55,6 +55,7 @@ export function RegistryPane({
             <option value="newest">{sortLabels.newest}</option>
             <option value="oldest">{sortLabels.oldest}</option>
             <option value="type">{sortLabels.type}</option>
+            <option value="part">{sortLabels.part}</option>
             <option value="duplicates">{sortLabels.duplicates}</option>
           </SelectControl>
         </div>

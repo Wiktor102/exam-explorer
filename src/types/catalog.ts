@@ -56,5 +56,5 @@ export type Catalog = {
 
 export type PreviewMode = 'task' | 'exam'
 export type RegistryMode = 'tasks' | 'exams'
-export type SortMode = 'newest' | 'oldest' | 'type' | 'duplicates'
+export type SortMode = 'newest' | 'oldest' | 'type' | 'part' | 'duplicates'
 export type SeasonFilter = 'all' | 'winter' | 'summer'

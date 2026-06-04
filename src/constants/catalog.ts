@@ -24,6 +24,7 @@ export const sortLabels = {
   newest: 'Od najnowszych',
   oldest: 'Od najstarszych',
   type: 'Typ zadania',
+  part: 'Część egzaminu',
   duplicates: 'Najczęściej powtarzane',
 } as const
 

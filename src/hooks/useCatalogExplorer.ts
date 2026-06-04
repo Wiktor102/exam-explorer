@@ -189,20 +189,30 @@ function sortTasks(left: Task, right: Task, examById: Map<string, Exam>, sortMod
   const leftExam = examById.get(left.examId)
   const rightExam = examById.get(right.examId)
   if (!leftExam || !rightExam) return 0
+
+  const partOrder = left.part - right.part
+  const newestOrder = compareExamTime(rightExam, leftExam)
+  const oldestOrder = compareExamTime(leftExam, rightExam)
+
+  if (sortMode === 'part') {
+    return partOrder || newestOrder
+  }
+
   if (sortMode === 'oldest') {
-    return `${leftExam.session}-${leftExam.number}-${left.part}`.localeCompare(
-      `${rightExam.session}-${rightExam.number}-${right.part}`,
-    )
+    return oldestOrder || partOrder
   }
+
   if (sortMode === 'type') {
-    return `${left.type}-${leftExam.session}-${left.part}`.localeCompare(
-      `${right.type}-${rightExam.session}-${right.part}`,
-    )
+    return left.type.localeCompare(right.type) || partOrder || newestOrder
   }
+
   if (sortMode === 'duplicates') {
-    return right.duplicates.length - left.duplicates.length
+    return right.duplicates.length - left.duplicates.length || partOrder || newestOrder
   }
-  return `${rightExam.session}-${rightExam.number}-${right.part}`.localeCompare(
-    `${leftExam.session}-${leftExam.number}-${left.part}`,
-  )
+
+  return newestOrder || partOrder
+}
+
+function compareExamTime(left: Exam, right: Exam) {
+  return `${left.session}-${left.number}`.localeCompare(`${right.session}-${right.number}`)
 }
