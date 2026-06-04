@@ -1,6 +1,7 @@
 import {
   ArrowDownAZ,
   CalendarDays,
+  ChevronDown,
   Columns3,
   Download,
   ExternalLink,
@@ -201,6 +202,8 @@ function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(null)
   const [selectedExamId, setSelectedExamId] = useState<string | null>(null)
+  const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false)
+  const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false)
 
   useEffect(() => {
     fetch('/data/catalog.json')
@@ -497,21 +500,11 @@ function App() {
                 {selectedExam ? <SeasonExamLabel exam={selectedExam} tone="heading" /> : 'Nie wybrano arkusza'}
               </h2>
             </div>
-            <span className="page-range">
-              {selectedTask ? `s. ${selectedTask.pageStart}-${selectedTask.pageEnd}` : ''}
-            </span>
           </div>
 
           {selectedTask && selectedExam && (
             <>
-              <div className="task-title-line">
-                <span className={clsx('type-pill', typeAccent[selectedTask.type])}>{selectedTask.typeLabel}</span>
-                <strong>{selectedTask.partLabel}</strong>
-              </div>
-              <p className="task-summary">{selectedTask.summary}</p>
-
-              <div className="link-stack">
-                <p className="eyebrow">Powiązane części arkusza</p>
+              <div className="task-switch-line">
                 <div className="part-links">
                   {sameExamTasks?.map((task) => (
                     <button
@@ -527,21 +520,13 @@ function App() {
                   ))}
                 </div>
               </div>
+              <p className="task-summary">{selectedTask.summary}</p>
 
-              <div className="metadata-grid">
-                <span>Sesja</span>
-                <strong>{selectedExam.session}</strong>
-                <span>Wersja</span>
-                <strong>{selectedExam.variant}</strong>
-                <span>Plik arkusza</span>
-                <strong>{examFileName(selectedExam)}</strong>
-                <span>Pliki</span>
-                <strong>{selectedExam.assetFiles.length ? selectedExam.assetFiles.join(', ') : 'brak w katalogu'}</strong>
-                {selectedExam.assetFiles.length > 0 && (
-                  <>
-                    <span>Zasoby</span>
-                    <strong className="resource-links">
-                      {selectedExam.assetFiles.map((assetFile) => (
+              <div className="metadata-grid metadata-grid-primary">
+                <span>Zasoby</span>
+                <strong className={clsx(selectedExam.assetFiles.length > 0 && 'resource-links')}>
+                  {selectedExam.assetFiles.length > 0
+                    ? selectedExam.assetFiles.map((assetFile) => (
                         <a
                           key={assetFile}
                           href={resourceUrl(catalog.sourceRepository, selectedExam, assetFile)}
@@ -552,10 +537,9 @@ function App() {
                           <Download size={13} aria-hidden="true" />
                           {assetFile}
                         </a>
-                      ))}
-                    </strong>
-                  </>
-                )}
+                      ))
+                    : 'brak w katalogu'}
+                </strong>
                 <span>Rozwiązania</span>
                 <strong>
                   <a href={solutionUrl(catalog.sourceRepository, selectedExam.solutionFolder)} target="_blank" rel="noreferrer">
@@ -565,30 +549,73 @@ function App() {
                 </strong>
               </div>
 
-              {duplicateTasks && duplicateTasks.length > 0 && (
-                <div className="duplicate-strip">
-                  <div>
-                    <Layers3 size={16} />
-                    <span>To samo zadanie występuje w {duplicateTasks.length + 1} arkuszach</span>
+              <section className="collapsible-block">
+                <button
+                  className="collapsible-trigger"
+                  type="button"
+                  aria-expanded={isSheetInfoOpen}
+                  aria-controls="sheet-info"
+                  onClick={() => setIsSheetInfoOpen((isOpen) => !isOpen)}
+                >
+                  <span>
+                    <FileText size={16} aria-hidden="true" />
+                    Informacje o arkuszu
+                  </span>
+                  <ChevronDown className={clsx('collapsible-icon', isSheetInfoOpen && 'open')} size={17} aria-hidden="true" />
+                </button>
+
+                {isSheetInfoOpen && (
+                  <div className="metadata-grid" id="sheet-info">
+                    <span>Sesja</span>
+                    <strong>{selectedExam.session}</strong>
+                    <span>Wersja</span>
+                    <strong>{selectedExam.variant}</strong>
+                    <span>Plik arkusza</span>
+                    <strong>{examFileName(selectedExam)}</strong>
+                    <span>Strony</span>
+                    <strong>{`s. ${selectedTask.pageStart}-${selectedTask.pageEnd}`}</strong>
                   </div>
-                  {duplicateTaskRows.slice(0, 5).map(({ task, exam, isSameSessionRepeat }) => {
-                    return (
-                      <button
-                        key={task.id}
-                        className={clsx(isSameSessionRepeat && 'same-session-repeat')}
-                        onClick={() => {
-                          setSelectedTaskId(task.id)
-                          setSelectedExamId(task.examId)
-                          setPreviewMode('task')
-                        }}
-                        title={exam ? examFileName(exam) : undefined}
-                      >
-                        <Link2 size={14} />
-                        {exam ? <SeasonExamLabel exam={exam} tone="compact" /> : task.examId}
-                      </button>
-                    )
-                  })}
-                </div>
+                )}
+              </section>
+
+              {duplicateTasks && duplicateTasks.length > 0 && (
+                <section className="collapsible-block duplicate-block">
+                  <button
+                    className="collapsible-trigger duplicate-trigger"
+                    type="button"
+                    aria-expanded={isDuplicateInfoOpen}
+                    aria-controls="duplicate-info"
+                    onClick={() => setIsDuplicateInfoOpen((isOpen) => !isOpen)}
+                  >
+                    <span>
+                      <Layers3 size={16} aria-hidden="true" />
+                      To samo zadanie występuje w {duplicateTasks.length + 1} arkuszach
+                    </span>
+                    <ChevronDown className={clsx('collapsible-icon', isDuplicateInfoOpen && 'open')} size={17} aria-hidden="true" />
+                  </button>
+
+                  {isDuplicateInfoOpen && (
+                    <div className="duplicate-strip" id="duplicate-info">
+                      {duplicateTaskRows.slice(0, 5).map(({ task, exam, isSameSessionRepeat }) => {
+                        return (
+                          <button
+                            key={task.id}
+                            className={clsx(isSameSessionRepeat && 'same-session-repeat')}
+                            onClick={() => {
+                              setSelectedTaskId(task.id)
+                              setSelectedExamId(task.examId)
+                              setPreviewMode('task')
+                            }}
+                            title={exam ? examFileName(exam) : undefined}
+                          >
+                            <Link2 size={14} />
+                            {exam ? <SeasonExamLabel exam={exam} tone="compact" /> : task.examId}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  )}
+                </section>
               )}
             </>
           )}

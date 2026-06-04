@@ -520,7 +520,7 @@ h2 {
   padding-bottom: 14px;
 }
 
-.task-title-line {
+.task-switch-line {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -564,11 +564,57 @@ h2 {
   color: var(--active-fg);
 }
 
+.collapsible-block {
+  border-bottom: 1px solid var(--line);
+}
+
+.collapsible-trigger {
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: var(--heading-bg);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.collapsible-trigger:hover,
+.collapsible-trigger:focus-visible {
+  background: var(--focus-bg);
+  outline: 0;
+}
+
+.collapsible-trigger span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.collapsible-icon {
+  flex: 0 0 auto;
+  transition: transform 160ms ease;
+}
+
+.collapsible-icon.open {
+  transform: rotate(180deg);
+}
+
+.duplicate-trigger {
+  color: var(--red);
+}
+
 .metadata-grid {
   display: grid;
   grid-template-columns: 116px minmax(0, 1fr);
   gap: 0;
-  border-bottom: 1px solid var(--line);
 }
 
 .metadata-grid span,
