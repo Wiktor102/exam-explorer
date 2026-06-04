@@ -59,6 +59,53 @@ def first_sentenceish(text: str, limit: int = 260) -> str:
     return f"{cut}..."
 
 
+TOPIC_RULES = [
+    (("szyfr cezara", "kodem cezara", "szyfrowanie"), "szyfr Cezara"),
+    (("gry w kości", "rzut kością", "kości"), "gra w kości i losowanie wyniku"),
+    (("palety rgb", "kolorów z palety rgb", "suwak"), "wybór koloru z palety RGB"),
+    (("loterii liczbowej", "sześciu liczb", "<1, 49>"), "loteria liczbowa"),
+    (("urządzeń domowych", "pralkę", "odkurzacz"), "obsługa urządzeń domowych"),
+    (("quizu", "pytaniezamkniete", "pytanie"), "quiz i pytania zamknięte"),
+    (("gór", "quiz"), "quiz o górach"),
+    (("komentarz", "wzór dokumentacji", "dokumentację"), "komentarze dokumentujące kod"),
+    (("tablic", "sort"), "operacje na tablicach i sortowanie"),
+    (("rejestruj konto", "e-mail", "hasło"), "rejestracja konta i walidacja e-mail"),
+    (("notat",), "notatki"),
+    (("książ", "ksiaz"), "katalog książek"),
+    (("film",), "katalog filmów"),
+    (("samoch",), "obsługa danych samochodów"),
+    (("pracownik",), "obsługa danych pracowników"),
+    (("album", "muzycz"), "albumy muzyczne i liczba pobrań"),
+    (("paszport", "kolor oczu", "odcisk"), "wprowadzanie danych paszportowych"),
+    (("restaur", "kelner", "stolik"), "obsługa zamówień w restauracji"),
+    (("pogod",), "prezentacja danych pogodowych"),
+    (("walut",), "przeliczanie walut"),
+    (("bmi",), "kalkulator BMI"),
+    (("sprawdzanie numeru pesel", "numeru pesel", "data urodzenia"), "walidacja numeru PESEL"),
+]
+
+
+def topic_description(part: int, task_type: str, text: str) -> str:
+    lower = re.sub(r"\s+", " ", text).lower()
+    topic = ""
+    for needles, label in TOPIC_RULES:
+        if any(needle in lower for needle in needles):
+            topic = label
+            break
+
+    if topic:
+        return sentence_case(f"{topic}.")
+    if task_type in {"testing", "unit-testing"}:
+        return "Testy przypadków działania aplikacji."
+    if task_type == "documentation":
+        return "Komentarze opisujące funkcje lub metody."
+    return f"Główny moduł aplikacji z części {part}."
+
+
+def sentence_case(text: str) -> str:
+    return f"{text[:1].upper()}{text[1:]}" if text else text
+
+
 def classify_part(part: int, heading_line: str, text: str) -> tuple[str, str, list[str]]:
     lower = f"{heading_line} {text[:1800]}".lower()
     if part == 1:
@@ -199,7 +246,7 @@ def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path) -> dict[str, 
                 "pageEnd": end_page,
                 "pdf": f"/{task_pdf_public.as_posix()}",
                 "text": task_text,
-                "summary": first_sentenceish(task_text.replace(title_line, "", 1)),
+                "summary": topic_description(task_index, task_type, task_text),
                 "duplicateGroup": duplicate_hash,
             }
         )

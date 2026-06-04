@@ -2,6 +2,7 @@ import {
   ArrowDownAZ,
   CalendarDays,
   Columns3,
+  ExternalLink,
   FileText,
   Layers3,
   Link2,
@@ -10,9 +11,10 @@ import {
   Monitor,
   RotateCcw,
   Search,
+  Snowflake,
   Sun,
 } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import clsx from 'clsx'
 
 type TaskType =
@@ -74,6 +76,7 @@ type Catalog = {
 type PreviewMode = 'task' | 'exam'
 type RegistryMode = 'tasks' | 'exams'
 type SortMode = 'newest' | 'oldest' | 'type' | 'duplicates'
+type SeasonFilter = 'all' | 'winter' | 'summer'
 
 const typeLabels: Record<string, string> = {
   console: 'Konsola',
@@ -112,10 +115,63 @@ function examFileName(exam: Exam) {
   return exam.sourcePath.split('/').at(-1) ?? exam.sourcePath
 }
 
+function SeasonExamLabel({ exam }: { exam: Exam }) {
+  const isSummer = exam.month === '06'
+  const SeasonIcon = isSummer ? Sun : Snowflake
+
+  return (
+    <span className={clsx('exam-code', isSummer ? 'summer' : 'winter')} title={examFileName(exam)}>
+      <SeasonIcon className="season-icon" aria-hidden="true" />
+      <span>{formatExamLabel(exam)}</span>
+    </span>
+  )
+}
+
+type SelectControlProps = {
+  icon: ReactNode
+  label: string
+  children: ReactNode
+  value: string
+  onChange: (value: string) => void
+}
+
+function SelectControl({ icon, label, children, value, onChange }: SelectControlProps) {
+  const selectRef = useRef<HTMLSelectElement>(null)
+
+  function openSelect() {
+    const select = selectRef.current
+
+    if (!select) {
+      return
+    }
+
+    select.focus()
+    select.showPicker?.()
+  }
+
+  return (
+    <label className="select-control" onMouseDown={(event) => {
+      if (event.target === selectRef.current) {
+        return
+      }
+
+      event.preventDefault()
+      openSelect()
+    }}>
+      {icon}
+      <span>{label}</span>
+      <select ref={selectRef} value={value} onChange={(event) => onChange(event.target.value)}>
+        {children}
+      </select>
+    </label>
+  )
+}
+
 function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null)
   const [query, setQuery] = useState('')
   const [year, setYear] = useState('all')
+  const [season, setSeason] = useState<SeasonFilter>('all')
   const [taskType, setTaskType] = useState('all')
   const [sortMode, setSortMode] = useState<SortMode>('newest')
   const [registryMode, setRegistryMode] = useState<RegistryMode>('tasks')
@@ -150,11 +206,13 @@ function App() {
       const exam = examById.get(task.examId)
       if (!exam) return false
       const matchesYear = year === 'all' || String(exam.year) === year
+      const matchesSeason =
+        season === 'all' || (season === 'winter' && exam.month === '01') || (season === 'summer' && exam.month === '06')
       const matchesType = taskType === 'all' || task.type === taskType
       const haystack =
         `${exam.code} ${formatExamLabel(exam)} ${examFileName(exam)} ${exam.session} ${task.typeLabel} ${task.heading} ${task.summary} ${task.tags.join(' ')} ${task.text}`.toLowerCase()
       const matchesQuery = !needle || haystack.includes(needle)
-      return matchesYear && matchesType && matchesQuery
+      return matchesYear && matchesSeason && matchesType && matchesQuery
     })
 
     return result.sort((left, right) => {
@@ -172,7 +230,7 @@ function App() {
       }
       return `${rightExam.session}-${rightExam.number}-${right.part}`.localeCompare(`${leftExam.session}-${leftExam.number}-${left.part}`)
     })
-  }, [catalog, examById, query, sortMode, taskType, year])
+  }, [catalog, examById, query, season, sortMode, taskType, year])
 
   const filteredExams = useMemo(() => {
     if (!catalog) return []
@@ -208,6 +266,7 @@ function App() {
   const resetFilters = () => {
     setQuery('')
     setYear('all')
+    setSeason('all')
     setTaskType('all')
     setSortMode('newest')
   }
@@ -248,42 +307,46 @@ function App() {
       </header>
 
       <section className="control-band" aria-label="Filtry">
-        <label className="select-control">
-          <CalendarDays size={16} />
-          <span>Rok</span>
-          <select value={year} onChange={(event) => setYear(event.target.value)}>
+        <SelectControl icon={<CalendarDays size={16} />} label="Rok" value={year} onChange={setYear}>
             <option value="all">Wszystkie</option>
             {catalog.years.map((item) => (
               <option key={item} value={item}>
                 {item}
               </option>
             ))}
-          </select>
-        </label>
+        </SelectControl>
 
-        <label className="select-control">
-          <ListFilter size={16} />
-          <span>Typ</span>
-          <select value={taskType} onChange={(event) => setTaskType(event.target.value)}>
+        <SelectControl
+          icon={season === 'summer' ? <Sun size={16} /> : <Snowflake size={16} />}
+          label="Sesja"
+          value={season}
+          onChange={(value) => setSeason(value as SeasonFilter)}
+        >
+            <option value="all">Wszystkie</option>
+            <option value="winter">Zima</option>
+            <option value="summer">Lato</option>
+        </SelectControl>
+
+        <SelectControl icon={<ListFilter size={16} />} label="Typ" value={taskType} onChange={setTaskType}>
             <option value="all">Wszystkie</option>
             {catalog.taskTypes.map((item) => (
               <option key={item} value={item}>
                 {typeLabels[item] ?? item}
               </option>
             ))}
-          </select>
-        </label>
+        </SelectControl>
 
-        <label className="select-control">
-          <ArrowDownAZ size={16} />
-          <span>Sortuj</span>
-          <select value={sortMode} onChange={(event) => setSortMode(event.target.value as SortMode)}>
+        <SelectControl
+          icon={<ArrowDownAZ size={16} />}
+          label="Sortuj"
+          value={sortMode}
+          onChange={(value) => setSortMode(value as SortMode)}
+        >
             <option value="newest">{sortLabels.newest}</option>
             <option value="oldest">{sortLabels.oldest}</option>
             <option value="type">{sortLabels.type}</option>
             <option value="duplicates">{sortLabels.duplicates}</option>
-          </select>
-        </label>
+        </SelectControl>
 
         <label className="search-box">
           <Search size={18} />
@@ -333,7 +396,7 @@ function App() {
                 <span>Arkusz</span>
                 <span>Cz.</span>
                 <span>Typ</span>
-                <span>Sygnał zadania</span>
+                <span>Opis</span>
                 <span>Powtórki</span>
               </div>
               {filteredTasks.map((task) => {
@@ -351,9 +414,7 @@ function App() {
                     role="row"
                     title={examFileName(exam)}
                   >
-                    <span className="exam-code" title={examFileName(exam)}>
-                      {formatExamLabel(exam)}
-                    </span>
+                    <SeasonExamLabel exam={exam} />
                     <span>{task.partLabel.replace('Część ', '')}</span>
                     <span className={clsx('type-pill', typeAccent[task.type])}>{typeLabels[task.type] ?? task.type}</span>
                     <span className="row-summary">{task.summary}</span>
@@ -377,9 +438,7 @@ function App() {
                     }}
                     title={examFileName(exam)}
                   >
-                    <span className="exam-code" title={examFileName(exam)}>
-                      {formatExamLabel(exam)}
-                    </span>
+                    <SeasonExamLabel exam={exam} />
                     <span>{exam.pageCount} str.</span>
                     <span>{exam.variant}</span>
                     <span>{examTasks.map((task) => typeLabels[task.type]).join(' / ')}</span>
@@ -489,7 +548,13 @@ function App() {
             </div>
           </div>
           {previewPdf ? (
-            <iframe title="Podgląd PDF" src={`${previewPdf}#toolbar=1&navpanes=0`} />
+            <div className="preview-frame">
+              <iframe title="Podgląd PDF" src={`${previewPdf}#toolbar=1&navpanes=0`} />
+              <a className="open-pdf-link" href={previewPdf} target="_blank" rel="noreferrer" title="Otwórz PDF w nowej karcie">
+                <ExternalLink size={16} />
+                Otwórz
+              </a>
+            </div>
           ) : (
             <div className="empty-preview">Nie wybrano pliku PDF</div>
           )}
