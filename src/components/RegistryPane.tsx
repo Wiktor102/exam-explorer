@@ -110,10 +110,10 @@ function TaskTable({ examById, filteredTasks, selectedTaskId, onTaskSelect }: Ta
             title={examFileName(exam)}
           >
             <SeasonExamLabel exam={exam} />
-            <span>{task.partLabel.replace('Część ', '')}</span>
+            <span className="task-part">{task.partLabel.replace('Część ', '')}</span>
             <span className={clsx('type-pill', typeAccent[task.type])}>{typeLabels[task.type] ?? task.type}</span>
             <span className="row-summary">{task.summary}</span>
-            <span>{task.duplicates.length ? `${task.duplicates.length + 1} ark.` : 'unikat'}</span>
+            <span className="task-repeat">{task.duplicates.length ? `${task.duplicates.length + 1} ark.` : 'unikat'}</span>
           </button>
         )
       })}

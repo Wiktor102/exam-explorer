@@ -1,9 +1,10 @@
 .app-shell {
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
-  height: 100vh;
+  grid-template-rows: auto auto minmax(0, auto);
+  align-content: start;
+  min-height: 100vh;
   padding: 18px;
-  overflow: hidden;
+  overflow: visible;
   background:
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px 28px,
     linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 / 28px 28px,
@@ -74,7 +75,11 @@
   gap: 14px;
   min-height: 0;
   margin-top: 14px;
-  overflow: hidden;
+  overflow: visible;
+}
+
+.workspace.list-only {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .registry-pane,

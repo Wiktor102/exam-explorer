@@ -4,11 +4,12 @@ type SelectControlProps = {
   icon: ReactNode
   label: string
   children: ReactNode
+  className?: string
   value: string
   onChange: (value: string) => void
 }
 
-export function SelectControl({ icon, label, children, value, onChange }: SelectControlProps) {
+export function SelectControl({ icon, label, children, className, value, onChange }: SelectControlProps) {
   const selectRef = useRef<HTMLSelectElement>(null)
 
   function openSelect() {
@@ -24,7 +25,7 @@ export function SelectControl({ icon, label, children, value, onChange }: Select
 
   return (
     <label
-      className="select-control"
+      className={className ? `select-control ${className}` : 'select-control'}
       onMouseDown={(event) => {
         if (event.target === selectRef.current) {
           return
@@ -36,7 +37,7 @@ export function SelectControl({ icon, label, children, value, onChange }: Select
     >
       {icon}
       <span>{label}</span>
-      <select ref={selectRef} value={value} onChange={(event) => onChange(event.target.value)}>
+      <select ref={selectRef} aria-label={label} value={value} onChange={(event) => onChange(event.target.value)}>
         {children}
       </select>
     </label>

@@ -23,8 +23,6 @@ export function useCatalogExplorer() {
       .then((response) => response.json())
       .then((data: Catalog) => {
         setCatalog(data)
-        setSelectedTaskId(data.tasks[0]?.id ?? null)
-        setSelectedExamId(data.exams[0]?.id ?? null)
       })
   }, [])
 
@@ -66,14 +64,14 @@ export function useCatalogExplorer() {
   const selectedTask =
     selectedTaskCandidate && filteredTasks.some((task) => task.id === selectedTaskCandidate.id)
       ? selectedTaskCandidate
-      : filteredTasks[0] ?? null
+      : null
   const selectedExamCandidate = selectedExamId ? examById.get(selectedExamId) ?? null : null
   const selectedExam =
     selectedExamCandidate && filteredExams.some((exam) => exam.id === selectedExamCandidate.id)
       ? selectedExamCandidate
       : selectedTask
         ? examById.get(selectedTask.examId) ?? null
-        : filteredExams[0] ?? null
+        : null
 
   const sameExamTasks = selectedExam?.tasks.map((id) => taskById.get(id)).filter(Boolean) as Task[] | undefined
   const selectedSummary =
@@ -120,13 +118,28 @@ export function useCatalogExplorer() {
     setSortMode('newest')
   }
 
+  function clearSelection() {
+    setSelectedTaskId(null)
+    setSelectedExamId(null)
+  }
+
   function selectTask(task: Task) {
+    if (selectedTaskId === task.id) {
+      clearSelection()
+      return
+    }
+
     setSelectedTaskId(task.id)
     setSelectedExamId(task.examId)
     setPreviewMode('task')
   }
 
   function selectExam(exam: Exam) {
+    if (selectedExamId === exam.id) {
+      clearSelection()
+      return
+    }
+
     setSelectedExamId(exam.id)
     setSelectedTaskId(exam.tasks[0] ?? null)
     setPreviewMode('exam')
@@ -168,6 +181,7 @@ export function useCatalogExplorer() {
       selectedTask,
     },
     actions: {
+      clearSelection,
       resetFilters,
       selectExam,
       selectTask,

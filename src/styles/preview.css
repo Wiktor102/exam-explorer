@@ -8,6 +8,10 @@
   background: var(--preview-head-bg);
 }
 
+.preview-toolbar > div:first-child {
+  min-width: 0;
+}
+
 .preview-title {
   display: inline-flex;
   max-width: 100%;
@@ -25,6 +29,10 @@
 .preview-title > :last-child {
   flex: 0 0 auto;
   color: var(--muted);
+}
+
+.preview-mode-control {
+  flex: 0 0 auto;
 }
 
 .preview-frame {

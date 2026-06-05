@@ -10,6 +10,7 @@ import { useCatalogExplorer } from './hooks/useCatalogExplorer'
 
 function App() {
   const { actions, catalog, detailState, filters, previewState, registryState } = useCatalogExplorer()
+  const hasSelection = Boolean(detailState.selectedExam || detailState.selectedTask)
 
   if (!catalog) {
     return <LoadingShell />
@@ -36,7 +37,7 @@ function App() {
         onYearChange={actions.setYear}
       />
 
-      <section className="workspace">
+      <section className={clsx('workspace', !hasSelection && 'list-only')}>
         <RegistryPane
           examById={registryState.examById}
           filteredExams={registryState.filteredExams}
@@ -51,29 +52,34 @@ function App() {
           onTaskSelect={actions.selectTask}
         />
 
-        <DetailPane
-          catalog={catalog}
-          duplicateTaskRows={detailState.duplicateTaskRows}
-          duplicateTasks={detailState.duplicateTasks}
-          isDuplicateInfoOpen={detailState.isDuplicateInfoOpen}
-          isSheetInfoOpen={detailState.isSheetInfoOpen}
-          registryMode={filters.registryMode}
-          sameExamTasks={detailState.sameExamTasks}
-          selectedExam={detailState.selectedExam}
-          selectedSummary={detailState.selectedSummary}
-          selectedTask={detailState.selectedTask}
-          onDuplicateInfoToggle={() => actions.setIsDuplicateInfoOpen((isOpen) => !isOpen)}
-          onSheetInfoToggle={() => actions.setIsSheetInfoOpen((isOpen) => !isOpen)}
-          onTaskSelect={actions.selectTask}
-        />
+        {hasSelection && (
+          <DetailPane
+            catalog={catalog}
+            duplicateTaskRows={detailState.duplicateTaskRows}
+            duplicateTasks={detailState.duplicateTasks}
+            isDuplicateInfoOpen={detailState.isDuplicateInfoOpen}
+            isSheetInfoOpen={detailState.isSheetInfoOpen}
+            registryMode={filters.registryMode}
+            sameExamTasks={detailState.sameExamTasks}
+            selectedExam={detailState.selectedExam}
+            selectedSummary={detailState.selectedSummary}
+            selectedTask={detailState.selectedTask}
+            onClearSelection={actions.clearSelection}
+            onDuplicateInfoToggle={() => actions.setIsDuplicateInfoOpen((isOpen) => !isOpen)}
+            onSheetInfoToggle={() => actions.setIsSheetInfoOpen((isOpen) => !isOpen)}
+            onTaskSelect={actions.selectTask}
+          />
+        )}
 
-        <PreviewPane
-          previewMode={previewState.previewMode}
-          previewPdf={previewState.previewPdf}
-          selectedExam={previewState.selectedExam}
-          selectedTask={previewState.selectedTask}
-          onPreviewModeChange={actions.setPreviewMode}
-        />
+        {hasSelection && (
+          <PreviewPane
+            previewMode={previewState.previewMode}
+            previewPdf={previewState.previewPdf}
+            selectedExam={previewState.selectedExam}
+            selectedTask={previewState.selectedTask}
+            onPreviewModeChange={actions.setPreviewMode}
+          />
+        )}
       </section>
 
       <CookieConsent />

@@ -1,25 +1,144 @@
-@media (max-width: 1080px) {
+@media (min-width: 1361px) {
+  html,
+  body,
+  #root {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .app-shell {
+    grid-template-rows: auto auto minmax(0, 1fr);
+    height: 100vh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .workspace {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1500px) {
+  .control-band {
+    grid-template-areas:
+      "mode year season type theme reset"
+      "search search search search search search";
+    grid-template-columns: max-content repeat(3, minmax(118px, 1fr)) 52px 52px;
+  }
+
+  .search-box {
+    border-top: 1px solid var(--line);
+    border-right: 0;
+  }
+
   .workspace {
     grid-template-columns: minmax(420px, 1fr) minmax(340px, 0.8fr);
+    grid-auto-rows: minmax(420px, auto);
+  }
+
+  .workspace:not(.list-only) {
+    grid-template-rows: minmax(360px, 48vh) auto;
   }
 
   .preview-pane {
     grid-column: 1 / -1;
+    height: 40vh;
+  }
+
+  .preview-frame,
+  .preview-pane iframe {
+    height: 100%;
   }
 }
 
 @media (max-width: 920px) {
   .app-shell {
-    height: 100vh;
-    overflow: hidden;
     padding: 10px;
   }
 
   .topbar,
   .control-band,
   .workspace {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .topbar,
+  .workspace {
     display: flex;
     flex-direction: column;
+  }
+
+  .topbar {
+    gap: 0;
+  }
+
+  .control-band {
+    display: grid;
+    grid-template-areas:
+      "mode mode filter-toggle"
+      "search search search"
+      "year season season"
+      "type type type"
+      "theme theme reset";
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 52px;
+    margin-top: 10px;
+  }
+
+  .control-band:not(.filters-expanded) .filter-options {
+    display: none;
+  }
+
+  .segmented-control {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-right: 1px solid var(--line);
+    border-bottom: 0;
+  }
+
+  .segmented-control button {
+    min-width: 0;
+    min-height: 48px;
+    padding: 0 10px;
+  }
+
+  .mobile-filter-toggle {
+    display: inline-flex;
+    width: auto;
+    min-height: 48px;
+    border-left: 0;
+  }
+
+  .filters-expanded .segmented-control,
+  .filters-expanded .mobile-filter-toggle {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .search-box {
+    min-height: 54px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .select-control {
+    min-height: 58px;
+    padding: 0 11px;
+  }
+
+  .icon-command {
+    width: auto;
+    min-height: 48px;
+  }
+
+  .theme-toggle {
+    border-left: 0;
+    border-right: 1px solid var(--line);
+  }
+
+  .reset-filters {
+    border-left: 0;
   }
 
   .source-strip {
@@ -30,7 +149,10 @@
 
   .source-strip span,
   .source-strip a {
+    min-width: 0;
     min-height: 46px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .search-box,
@@ -39,19 +161,64 @@
     border-bottom: 1px solid var(--line);
   }
 
+  .year-filter {
+    border-right: 1px solid var(--line);
+  }
+
+  .season-filter,
+  .type-filter {
+    border-right: 0;
+  }
+
   .pane-heading {
+    flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
+  }
+
+  .preview-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .preview-mode-control {
+    width: 100%;
+    border: 1px solid var(--line-strong);
+  }
+
+  .preview-mode-control button {
+    min-height: 40px;
+  }
+
+  .pane-heading > div:first-child,
+  .pane-actions,
+  .pane-actions .select-control {
+    width: 100%;
+  }
+
+  .workspace:not(.list-only) .registry-pane {
+    display: none;
+  }
+
+  .detail-pane .pane-heading {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .detail-close {
+    display: inline-flex;
   }
 
   .pane-actions .select-control {
-    min-width: 142px;
+    min-width: 0;
     min-height: 38px;
     border: 1px solid var(--line-strong);
   }
 
   .segmented-control button,
   .icon-command {
-    border-top: 1px solid var(--line);
+    border-top: 0;
   }
 
   .task-table,
@@ -66,9 +233,54 @@
   }
 
   .task-row {
-    grid-template-columns: 1fr;
-    gap: 7px;
-    padding: 12px;
+    grid-template-areas:
+      "exam exam part"
+      "type summary repeat";
+    grid-template-columns: max-content minmax(0, 1fr) max-content;
+    align-items: center;
+    gap: 6px 8px;
+    min-height: 58px;
+    padding: 8px 10px 8px 12px;
+  }
+
+  .task-row .exam-code {
+    grid-area: exam;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .task-row .exam-code .season-icon {
+    height: 1.18em;
+    min-height: 0;
+  }
+
+  .task-part,
+  .task-repeat {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .task-part {
+    grid-area: part;
+  }
+
+  .task-repeat {
+    grid-area: repeat;
+  }
+
+  .task-row .type-pill {
+    grid-area: type;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 7px;
+  }
+
+  .task-row .row-summary {
+    grid-area: summary;
+    -webkit-line-clamp: 1;
   }
 
   .exam-line {
@@ -76,9 +288,33 @@
     padding: 12px;
   }
 
+  .preview-pane {
+    height: auto;
+  }
+
   .preview-frame,
   .preview-pane iframe {
-    height: 360px;
-    min-height: 0;
+    height: 70vh;
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 360px) {
+  .control-band {
+    grid-template-areas:
+      "mode mode filter-toggle"
+      "search search search"
+      "year year year"
+      "season season season"
+      "type type type"
+      "theme theme reset";
+  }
+
+  .year-filter {
+    border-right: 0;
+  }
+
+  .select-control {
+    min-height: 54px;
   }
 }

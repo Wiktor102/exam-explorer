@@ -1,3 +1,4 @@
+import { Undo2 } from 'lucide-react'
 import type { Catalog, Exam, RegistryMode, Task } from '../types/catalog'
 import { examFileName } from '../utils/catalog'
 import { DuplicateInfoBlock } from './detail/DuplicateInfoBlock'
@@ -20,6 +21,7 @@ type DetailPaneProps = {
   selectedExam: Exam | null
   selectedSummary: string | undefined
   selectedTask: Task | null
+  onClearSelection: () => void
   onDuplicateInfoToggle: () => void
   onSheetInfoToggle: () => void
   onTaskSelect: (task: Task) => void
@@ -36,6 +38,7 @@ export function DetailPane({
   selectedExam,
   selectedSummary,
   selectedTask,
+  onClearSelection,
   onDuplicateInfoToggle,
   onSheetInfoToggle,
   onTaskSelect,
@@ -49,6 +52,9 @@ export function DetailPane({
             {selectedExam ? <SeasonExamLabel exam={selectedExam} tone="heading" /> : 'Nie wybrano arkusza'}
           </h2>
         </div>
+        <button className="detail-close" type="button" aria-label="Wyczyść wybór" onClick={onClearSelection}>
+          <Undo2 size={18} aria-hidden="true" />
+        </button>
       </div>
 
       {selectedTask && selectedExam && (

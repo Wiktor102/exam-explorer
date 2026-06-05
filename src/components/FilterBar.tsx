@@ -1,4 +1,5 @@
-import { CalendarDays, Columns3, FileText, ListFilter, Moon, RotateCcw, Search, Snowflake, Sun } from 'lucide-react'
+import { useState } from 'react'
+import { CalendarDays, Columns3, FileText, ListFilter, Moon, RotateCcw, Search, SlidersHorizontal, Snowflake, Sun } from 'lucide-react'
 import clsx from 'clsx'
 import { typeLabels } from '../constants/catalog'
 import type { Catalog, RegistryMode, SeasonFilter } from '../types/catalog'
@@ -37,8 +38,10 @@ export function FilterBar({
   onThemeChange,
   onYearChange,
 }: FilterBarProps) {
+  const [filtersExpanded, setFiltersExpanded] = useState(false)
+
   return (
-    <section className="control-band" aria-label="Filtry">
+    <section className={clsx('control-band', filtersExpanded && 'filters-expanded')} aria-label="Filtry">
       <div className="segmented-control" aria-label="Tryb katalogu">
         <button className={clsx(registryMode === 'tasks' && 'active')} onClick={() => onRegistryModeChange('tasks')}>
           <Columns3 size={16} />
@@ -50,7 +53,26 @@ export function FilterBar({
         </button>
       </div>
 
-      <SelectControl icon={<CalendarDays size={16} />} label="Rok" value={year} onChange={onYearChange}>
+      <button
+        type="button"
+        className="icon-command mobile-filter-toggle"
+        onClick={() => setFiltersExpanded((current) => !current)}
+        aria-expanded={filtersExpanded}
+        aria-controls="filter-bar-options"
+        aria-label={filtersExpanded ? 'Ukryj filtry' : 'Pokaż filtry'}
+        title={filtersExpanded ? 'Ukryj filtry' : 'Pokaż filtry'}
+      >
+        <SlidersHorizontal size={17} />
+      </button>
+
+      <div id="filter-bar-options" className="filter-options">
+      <SelectControl
+        className="year-filter collapsible-filter"
+        icon={<CalendarDays size={16} />}
+        label="Rok"
+        value={year}
+        onChange={onYearChange}
+      >
         <option value="all">Wszystkie</option>
         {catalog.years.map((item) => (
           <option key={item} value={item}>
@@ -60,6 +82,7 @@ export function FilterBar({
       </SelectControl>
 
       <SelectControl
+        className="season-filter collapsible-filter"
         icon={season === 'summer' ? <Sun size={16} /> : <Snowflake size={16} />}
         label="Sesja"
         value={season}
@@ -70,7 +93,13 @@ export function FilterBar({
         <option value="summer">Lato</option>
       </SelectControl>
 
-      <SelectControl icon={<ListFilter size={16} />} label="Typ" value={taskType} onChange={onTaskTypeChange}>
+      <SelectControl
+        className="type-filter collapsible-filter"
+        icon={<ListFilter size={16} />}
+        label="Typ"
+        value={taskType}
+        onChange={onTaskTypeChange}
+      >
         <option value="all">Wszystkie</option>
         {catalog.taskTypes.map((item) => (
           <option key={item} value={item}>
@@ -79,26 +108,36 @@ export function FilterBar({
         ))}
       </SelectControl>
 
-      <label className="search-box">
+      <label className="search-box collapsible-filter">
         <Search size={18} />
         <input
           value={query}
           onChange={(event) => onQueryChange(event.target.value)}
-          placeholder="Szukaj treści zadania, kodu arkusza, technologii, testów..."
+          aria-label="Szukaj"
+          placeholder="Szukaj zadania, arkusza, technologii..."
         />
       </label>
 
       <button
-        className="icon-command"
+        type="button"
+        className="icon-command theme-toggle collapsible-filter"
         onClick={() => onThemeChange(theme === 'dark' ? 'light' : 'dark')}
+        aria-label={theme === 'dark' ? 'Włącz tryb jasny' : 'Włącz tryb ciemny'}
         title={theme === 'dark' ? 'Tryb jasny' : 'Tryb ciemny'}
       >
         {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
       </button>
 
-      <button className="icon-command" onClick={onResetFilters} title="Resetuj filtry">
+      <button
+        type="button"
+        className="icon-command reset-filters collapsible-filter"
+        onClick={onResetFilters}
+        aria-label="Resetuj filtry"
+        title="Resetuj filtry"
+      >
         <RotateCcw size={17} />
       </button>
+      </div>
     </section>
   )
 }

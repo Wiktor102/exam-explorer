@@ -34,12 +34,20 @@ export function PreviewPane({
             )}
           </h2>
         </div>
-        <div className="segmented-control compact" aria-label="Tryb podglądu">
-          <button className={clsx(previewMode === 'task' && 'active')} onClick={() => onPreviewModeChange('task')}>
+        <div className="segmented-control compact preview-mode-control" aria-label="Tryb podglądu">
+          <button
+            type="button"
+            className={clsx(previewMode === 'task' && 'active')}
+            onClick={() => onPreviewModeChange('task')}
+          >
             <Monitor size={16} />
             Zadanie
           </button>
-          <button className={clsx(previewMode === 'exam' && 'active')} onClick={() => onPreviewModeChange('exam')}>
+          <button
+            type="button"
+            className={clsx(previewMode === 'exam' && 'active')}
+            onClick={() => onPreviewModeChange('exam')}
+          >
             <FileText size={16} />
             Arkusz
           </button>

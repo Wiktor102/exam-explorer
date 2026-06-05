@@ -4,6 +4,28 @@
   padding-bottom: 14px;
 }
 
+.detail-close {
+  display: none;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--line-strong);
+  border-radius: 0;
+  background: var(--heading-bg);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.detail-close:hover,
+.detail-close:focus-visible {
+  background: var(--active-bg);
+  color: var(--active-fg);
+  outline: 2px solid var(--selection-accent);
+  outline-offset: -5px;
+}
+
 .task-switch-line {
   display: flex;
   align-items: center;

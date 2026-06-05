@@ -1,10 +1,20 @@
 .control-band {
   display: grid;
-  grid-template-columns: auto repeat(3, minmax(136px, auto)) minmax(260px, 1fr) auto auto;
+  grid-template-areas: "mode year season type search theme reset";
+  grid-template-columns: max-content minmax(118px, 0.62fr) minmax(120px, 0.62fr) minmax(136px, 0.74fr) minmax(260px, 1.7fr) 52px 52px;
   gap: 0;
   margin-top: 14px;
   border: 2px solid var(--line-strong);
   background: var(--paper-strong);
+  overflow: hidden;
+}
+
+.control-band > * {
+  min-width: 0;
+}
+
+.filter-options {
+  display: contents;
 }
 
 .search-box,
@@ -17,8 +27,31 @@
   border-right: 1px solid var(--line);
 }
 
+.search-box svg,
+.select-control svg,
+.segmented-control svg,
+.icon-command svg {
+  flex: 0 0 auto;
+}
+
+.year-filter {
+  grid-area: year;
+}
+
+.season-filter {
+  grid-area: season;
+}
+
+.type-filter {
+  grid-area: type;
+}
+
 .select-control {
   cursor: pointer;
+}
+
+.search-box {
+  grid-area: search;
 }
 
 .search-box input,
@@ -33,6 +66,7 @@
 
 .select-control select {
   cursor: pointer;
+  text-overflow: ellipsis;
 }
 
 .select-control select option {
@@ -47,12 +81,14 @@
 }
 
 .select-control span {
+  flex: 0 0 auto;
   color: var(--muted);
   font-size: 12px;
   font-weight: 800;
 }
 
 .segmented-control {
+  grid-area: mode;
   display: flex;
   align-items: stretch;
   border-right: 1px solid var(--line);
@@ -87,12 +123,43 @@
   color: var(--active-fg);
 }
 
+.segmented-control button:hover,
+.segmented-control button:focus-visible,
+.icon-command:hover,
+.icon-command:focus-visible {
+  background: var(--focus-bg);
+}
+
+.segmented-control button.active:hover,
+.segmented-control button.active:focus-visible {
+  background: var(--active-bg);
+}
+
+.segmented-control button:focus-visible,
+.icon-command:focus-visible {
+  outline: 2px solid var(--selection-accent);
+  outline-offset: -4px;
+}
+
 .segmented-control.compact button {
   min-height: 42px;
 }
 
 .icon-command {
   width: 52px;
+}
+
+.mobile-filter-toggle {
+  display: none;
+  grid-area: filter-toggle;
+}
+
+.theme-toggle {
+  grid-area: theme;
+}
+
+.reset-filters {
+  grid-area: reset;
 }
 
 .pane-actions .select-control {
