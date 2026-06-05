@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import { AppTopbar } from './components/AppTopbar'
+import { CookieConsent } from './components/CookieConsent'
 import { DetailPane } from './components/DetailPane'
 import { FilterBar } from './components/FilterBar'
 import { LoadingShell } from './components/LoadingShell'
@@ -74,6 +75,8 @@ function App() {
           onPreviewModeChange={actions.setPreviewMode}
         />
       </section>
+
+      <CookieConsent />
     </main>
   )
 }
