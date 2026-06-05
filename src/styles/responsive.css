@@ -51,6 +51,35 @@
   }
 }
 
+@media (min-width: 921px) and (max-width: 1500px) and (max-height: 920px) {
+  html,
+  body,
+  #root {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .app-shell {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .workspace {
+    overflow: visible;
+  }
+
+  .preview-pane {
+    height: auto;
+  }
+
+  .preview-frame,
+  .preview-pane iframe {
+    height: 70vh;
+    min-height: 540px;
+  }
+}
+
 @media (max-width: 920px) {
   .app-shell {
     padding: 10px;
