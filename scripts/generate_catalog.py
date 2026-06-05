@@ -62,45 +62,112 @@ def first_sentenceish(text: str, limit: int = 260) -> str:
 
 
 TOPIC_RULES = [
-    (("szyfr cezara", "kodem cezara", "szyfrowanie"), "szyfr Cezara"),
-    (("gry w kości", "rzut kością", "kości"), "gra w kości i losowanie wyniku"),
-    (("palety rgb", "kolorów z palety rgb", "suwak"), "wybór koloru z palety RGB"),
-    (("loterii liczbowej", "sześciu liczb", "<1, 49>"), "loteria liczbowa"),
-    (("urządzeń domowych", "pralkę", "odkurzacz"), "obsługa urządzeń domowych"),
-    (("quizu", "pytaniezamkniete", "pytanie"), "quiz i pytania zamknięte"),
+    (("szyfr cezara", "kodem cezara", "szyfrowanie"), "szyfrowanie tekstu szyfrem Cezara z kluczem liczbowym i zawijaniem alfabetu"),
+    (("gry w kości", "rzut kością", "kości", "kosc"), "gra w kości z losowaniem wartości i punktacją"),
+    (("samogłosek", "samoglosek", "powtórzenia znaków", "powtorzenia znakow", "typu łańcuchowego"), "narzędzia tekstowe do liczenia samogłosek i usuwania sąsiednich powtórzeń"),
+    (("sprawdzający poprawność numeru pesel", "numeru pesel", "cyfra kontrolna"), "walidacja numeru PESEL z płcią i cyfrą kontrolną"),
+    (("algorytm euklidesa", "nwd"), "algorytm Euklidesa do obliczania NWD dwóch liczb"),
+    (("systemu forum", "klasa osoba", "zarejestrowanych osób"), "klasa Osoba z konstruktorami, licznikiem instancji i komunikatem powitalnym"),
+    (("wizytę u weterynarza", "wizyta u weterynarza"), "formularz wizyty u weterynarza z gatunkiem, wiekiem zwierzęcia i godziną"),
+    (("ustawieniami czcionki", "właściwości czcionki"), "ustawienia czcionki z rozmiarem, stylem i przełączaniem cytatów"),
+    (("kategoryzacji zdjęć", "galerii", "category", "downloads"), "galeria zdjęć z filtrowaniem kategorii i licznikiem pobrań"),
+    (("zapisy na kursy", "zapisz do kursu", "liczba kursów"), "formularz zapisów na kursy z listą kursów i walidacją numeru"),
+    (("album", "muzycz"), "odczyt i prezentacja albumów muzycznych z liczbą pobrań"),
+    (("palety rgb", "kolorów z palety rgb"), "wybór koloru z palety RGB za pomocą suwaków i podglądu zapisanej barwy"),
+    (("loterii liczbowej", "sześciu liczb", "<1, 49>"), "loteria liczbowa z losowaniem sześciu wartości i liczeniem trafień"),
+    (("urządzeń domowych", "pralkę", "odkurzacz"), "model urządzeń domowych z obsługą pralki i odkurzacza"),
+    (("quizu", "pytaniezamkniete", "pytanie"), "quiz z pytaniami zamkniętymi i sprawdzaniem odpowiedzi"),
     (("gór", "quiz"), "quiz o górach"),
-    (("komentarz", "wzór dokumentacji", "dokumentację"), "komentarze dokumentujące kod"),
-    (("tablic", "sort"), "operacje na tablicach i sortowanie"),
-    (("rejestruj konto", "e-mail", "hasło"), "rejestracja konta i walidacja e-mail"),
-    (("notat",), "notatki"),
+    (("wartownik",), "wyszukiwanie wartości w tablicy z wartownikiem"),
+    (("tablica oraz operacje", "operacje na tablicach"), "klasa tablicy z wyświetlaniem, wyszukiwaniem i sortowaniem"),
+    (("tablic", "sort"), "wypełnianie tablicy pseudolosowymi liczbami i sortowanie"),
+    (("rejestruj konto", "e-mail", "hasło"), "formularz rejestracji konta z walidacją e-maila i hasła"),
+    (("notat",), "klasa notatki z identyfikatorem, licznikiem i metodami wyświetlania"),
     (("książ", "ksiaz"), "katalog książek"),
-    (("film",), "katalog filmów"),
+    (("film",), "katalog filmów z danymi wczytywanymi z pliku"),
     (("samoch",), "obsługa danych samochodów"),
     (("pracownik",), "obsługa danych pracowników"),
-    (("album", "muzycz"), "albumy muzyczne i liczba pobrań"),
-    (("paszport", "kolor oczu", "odcisk"), "wprowadzanie danych paszportowych"),
+    (("paszport", "kolor oczu", "odcisk"), "wprowadzanie danych paszportowych z kolorem oczu i odciskiem palca"),
     (("restaur", "kelner", "stolik"), "obsługa zamówień w restauracji"),
     (("pogod",), "prezentacja danych pogodowych"),
     (("walut",), "przeliczanie walut"),
     (("bmi",), "kalkulator BMI"),
-    (("sprawdzanie numeru pesel", "numeru pesel", "data urodzenia"), "walidacja numeru PESEL"),
 ]
+
+
+TYPE_SUMMARY_PREFIXES = {
+    "console": "Aplikacja konsolowa",
+    "desktop": "Aplikacja desktopowa",
+    "mobile": "Aplikacja mobilna",
+    "web": "Aplikacja webowa",
+    "application": "Aplikacja",
+}
+
+
+def documentation_description(text: str) -> str:
+    target = "komentarz dokumentacyjny w kodzie"
+    if "metody sortującej i szukającej" in text:
+        target = "nagłówek metod sortującej i wyszukującej"
+    elif "funkcji przeszukującej" in text:
+        target = "nagłówek funkcji przeszukującej"
+    elif "funkcji wyznaczającej nwd" in text:
+        target = "nagłówek funkcji wyznaczającej NWD"
+    elif "funkcji wypełniającej tablicę" in text:
+        target = "nagłówek funkcji wypełniającej tablicę"
+    elif "metody klasy bazowej" in text:
+        target = "nagłówek metody klasy bazowej"
+    elif "dowolnej metody" in text or "wybranej funkcji" in text:
+        target = "nagłówek wybranej funkcji lub metody"
+    elif "dowolnej funkcji" in text or "funkcji/metody" in text or "funkcji / metody" in text:
+        target = "nagłówek dowolnej funkcji lub metody"
+    elif "komentarz do klasy" in text or "nagłówek klasy" in text:
+        target = "nagłówek klasy"
+
+    requirements = ["zrzuty uruchomienia aplikacji"]
+    if "egzamin" in text:
+        requirements.append("plik egzamin z opisem narzędzi")
+    if "git" in text:
+        requirements.append("zrzuty poleceń Git")
+
+    return f"Dokumentacja: {target}, {', '.join(requirements)}."
+
+
+def testing_description(task_type: str, text: str, topic: str) -> str:
+    if task_type == "unit-testing":
+        if "szyfr cezara" in text:
+            return "Testy jednostkowe: przypadki szyfru Cezara dla przesunięć, zawijania i znaków spoza alfabetu."
+        if "rzut kością" in text or "rzut koscia" in text:
+            return "Testy jednostkowe: zakres wyniku rzutu kością i brak zmiany wartości niedostępnej kości."
+        return f"Testy jednostkowe: sprawdzenie kluczowych przypadków dla: {topic}."
+
+    if "pytaniezamkniete" in text or "pytanie zamknięte" in text:
+        return "Testowanie: klasy Pytanie i PytanieZamkniete, sprawdzenie odpowiedzi, zrzuty aplikacji mobilnej i Git."
+    if "funkcji sortującej" in text:
+        return "Testowanie: kod testu funkcji sortującej na liczbach pseudolosowych i zrzut uruchomienia."
+    if "klasy poprzez" in text and "konstruktora" in text:
+        return "Testowanie: konstruktory klasy Osoba, licznik instancji i metoda wypisująca imię, ze zrzutami i dokumentacją."
+    return f"Testowanie: scenariusze działania aplikacji dla: {topic}, zrzuty ekranów i dokumentacja."
 
 
 def topic_description(part: int, task_type: str, text: str) -> str:
     lower = re.sub(r"\s+", " ", text).lower()
+
+    if task_type == "documentation":
+        return documentation_description(lower)
+
     topic = ""
     for needles, label in TOPIC_RULES:
         if any(needle in lower for needle in needles):
             topic = label
             break
 
-    if topic:
-        return sentence_case(f"{topic}.")
     if task_type in {"testing", "unit-testing"}:
-        return "Testy przypadków działania aplikacji."
-    if task_type == "documentation":
-        return "Komentarze opisujące funkcje lub metody."
+        return testing_description(task_type, lower, topic or "zadanie z części I")
+    if topic:
+        prefix = TYPE_SUMMARY_PREFIXES.get(task_type)
+        if prefix:
+            return sentence_case(f"{prefix}: {topic}.")
+        return sentence_case(f"{topic}.")
     return f"Główny moduł aplikacji z części {part}."
 
 
