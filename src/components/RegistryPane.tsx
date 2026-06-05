@@ -10,9 +10,11 @@ type RegistryPaneProps = {
   examById: Map<string, Exam>
   filteredExams: Exam[]
   filteredTasks: Task[]
+  isSelectedTaskFilteredOut: boolean
   registryMode: RegistryMode
   selectedExamId: string | null
   selectedTaskId: string | null
+  selectedTask: Task | null
   sortMode: SortMode
   taskById: Map<string, Task>
   onExamSelect: (exam: Exam) => void
@@ -24,9 +26,11 @@ export function RegistryPane({
   examById,
   filteredExams,
   filteredTasks,
+  isSelectedTaskFilteredOut,
   registryMode,
   selectedExamId,
   selectedTaskId,
+  selectedTask,
   sortMode,
   taskById,
   onExamSelect,
@@ -65,6 +69,7 @@ export function RegistryPane({
         <TaskTable
           examById={examById}
           filteredTasks={filteredTasks}
+          filteredOutSelectedTask={isSelectedTaskFilteredOut ? selectedTask : null}
           selectedTaskId={selectedTaskId}
           onTaskSelect={onTaskSelect}
         />
@@ -83,11 +88,37 @@ export function RegistryPane({
 type TaskTableProps = {
   examById: Map<string, Exam>
   filteredTasks: Task[]
+  filteredOutSelectedTask: Task | null
   selectedTaskId: string | null
   onTaskSelect: (task: Task) => void
 }
 
-function TaskTable({ examById, filteredTasks, selectedTaskId, onTaskSelect }: TaskTableProps) {
+function TaskTable({ examById, filteredTasks, filteredOutSelectedTask, selectedTaskId, onTaskSelect }: TaskTableProps) {
+  function renderTaskRow(task: Task, isFilteredOutSelection = false) {
+    const exam = examById.get(task.examId)
+    if (!exam) return null
+
+    return (
+      <button
+        key={task.id}
+        className={clsx(
+          'task-row',
+          selectedTaskId === task.id && 'selected',
+          isFilteredOutSelection && 'filtered-out-selected',
+        )}
+        onClick={() => onTaskSelect(task)}
+        role="row"
+        title={isFilteredOutSelection ? `${examFileName(exam)} - wybrane poza filtrami` : examFileName(exam)}
+      >
+        <SeasonExamLabel exam={exam} />
+        <span className="task-part">{task.partLabel.replace('Część ', '')}</span>
+        <span className={clsx('type-pill', typeAccent[task.type])}>{typeLabels[task.type] ?? task.type}</span>
+        <span className="row-summary">{task.summary}</span>
+        <span className="task-repeat">{task.duplicates.length ? `${task.duplicates.length + 1} ark.` : 'unikat'}</span>
+      </button>
+    )
+  }
+
   return (
     <div className="task-table" role="table" aria-label="Zadania">
       <div className="table-head" role="row">
@@ -97,26 +128,8 @@ function TaskTable({ examById, filteredTasks, selectedTaskId, onTaskSelect }: Ta
         <span>Opis</span>
         <span>Powtórki</span>
       </div>
-      {filteredTasks.map((task) => {
-        const exam = examById.get(task.examId)
-        if (!exam) return null
-
-        return (
-          <button
-            key={task.id}
-            className={clsx('task-row', selectedTaskId === task.id && 'selected')}
-            onClick={() => onTaskSelect(task)}
-            role="row"
-            title={examFileName(exam)}
-          >
-            <SeasonExamLabel exam={exam} />
-            <span className="task-part">{task.partLabel.replace('Część ', '')}</span>
-            <span className={clsx('type-pill', typeAccent[task.type])}>{typeLabels[task.type] ?? task.type}</span>
-            <span className="row-summary">{task.summary}</span>
-            <span className="task-repeat">{task.duplicates.length ? `${task.duplicates.length + 1} ark.` : 'unikat'}</span>
-          </button>
-        )
-      })}
+      {filteredTasks.map((task) => renderTaskRow(task))}
+      {filteredOutSelectedTask ? renderTaskRow(filteredOutSelectedTask, true) : null}
     </div>
   )
 }

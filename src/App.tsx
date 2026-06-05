@@ -42,9 +42,11 @@ function App() {
           examById={registryState.examById}
           filteredExams={registryState.filteredExams}
           filteredTasks={registryState.filteredTasks}
+          isSelectedTaskFilteredOut={registryState.isSelectedTaskFilteredOut}
           registryMode={filters.registryMode}
           selectedExamId={registryState.selectedExamId}
           selectedTaskId={registryState.selectedTaskId}
+          selectedTask={registryState.selectedTask}
           sortMode={registryState.sortMode}
           taskById={registryState.taskById}
           onExamSelect={actions.selectExam}

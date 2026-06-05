@@ -60,14 +60,13 @@ export function useCatalogExplorer() {
     return catalog.exams.filter((exam) => visibleExamIds.has(exam.id))
   }, [catalog, filteredTasks])
 
-  const selectedTaskCandidate = selectedTaskId ? taskById.get(selectedTaskId) ?? null : null
-  const selectedTask =
-    selectedTaskCandidate && filteredTasks.some((task) => task.id === selectedTaskCandidate.id)
-      ? selectedTaskCandidate
-      : null
+  const selectedTask = selectedTaskId ? taskById.get(selectedTaskId) ?? null : null
+  const isSelectedTaskFilteredOut = Boolean(
+    selectedTask && !filteredTasks.some((task) => task.id === selectedTask.id),
+  )
   const selectedExamCandidate = selectedExamId ? examById.get(selectedExamId) ?? null : null
   const selectedExam =
-    selectedExamCandidate && filteredExams.some((exam) => exam.id === selectedExamCandidate.id)
+    selectedExamCandidate
       ? selectedExamCandidate
       : selectedTask
         ? examById.get(selectedTask.examId) ?? null
@@ -169,8 +168,10 @@ export function useCatalogExplorer() {
       examById,
       filteredExams,
       filteredTasks,
+      isSelectedTaskFilteredOut,
       selectedExamId,
       selectedTaskId,
+      selectedTask,
       sortMode,
       taskById,
     },

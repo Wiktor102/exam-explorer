@@ -55,6 +55,18 @@
   box-shadow: inset 5px 0 0 var(--selection-accent);
 }
 
+.task-row.filtered-out-selected {
+  border-top: 2px solid var(--line-strong);
+  background: transparent;
+  opacity: 0.72;
+  box-shadow: inset 3px 0 0 var(--selection-accent);
+}
+
+.task-row.filtered-out-selected:hover {
+  background: var(--selected-bg);
+  opacity: 0.9;
+}
+
 .row-summary {
   display: -webkit-box;
   overflow: hidden;
