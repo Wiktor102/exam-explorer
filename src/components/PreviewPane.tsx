@@ -1,11 +1,12 @@
-import { ExternalLink, FileText, Monitor } from 'lucide-react'
+import { ClipboardCheck, ExternalLink, FileText, Monitor } from 'lucide-react'
 import clsx from 'clsx'
-import type { Exam, PreviewMode, Task } from '../types/catalog'
+import type { Exam, PreviewMode, RegistryMode, Task } from '../types/catalog'
 import { SeasonExamLabel } from './SeasonExamLabel'
 
 type PreviewPaneProps = {
   previewMode: PreviewMode
   previewPdf: string | undefined
+  registryMode: RegistryMode
   selectedExam: Exam | null
   selectedTask: Task | null
   onPreviewModeChange: (previewMode: PreviewMode) => void
@@ -14,6 +15,7 @@ type PreviewPaneProps = {
 export function PreviewPane({
   previewMode,
   previewPdf,
+  registryMode,
   selectedExam,
   selectedTask,
   onPreviewModeChange,
@@ -27,7 +29,11 @@ export function PreviewPane({
             {selectedExam ? (
               <span className="preview-title">
                 <SeasonExamLabel exam={selectedExam} tone="heading" />
-                {previewMode === 'task' && selectedTask ? <span>/ {selectedTask.partLabel}</span> : null}
+                {registryMode === 'tasks' && previewMode === 'task' && selectedTask ? (
+                  <span>/ {selectedTask.partLabel}</span>
+                ) : previewMode === 'scoring' ? (
+                  <span>/ Ocenianie</span>
+                ) : null}
               </span>
             ) : (
               selectedTask?.partLabel
@@ -35,14 +41,16 @@ export function PreviewPane({
           </h2>
         </div>
         <div className="segmented-control compact preview-mode-control" aria-label="Tryb podglądu">
-          <button
-            type="button"
-            className={clsx(previewMode === 'task' && 'active')}
-            onClick={() => onPreviewModeChange('task')}
-          >
-            <Monitor size={16} />
-            Zadanie
-          </button>
+          {registryMode === 'tasks' && (
+            <button
+              type="button"
+              className={clsx(previewMode === 'task' && 'active')}
+              onClick={() => onPreviewModeChange('task')}
+            >
+              <Monitor size={16} />
+              Zadanie
+            </button>
+          )}
           <button
             type="button"
             className={clsx(previewMode === 'exam' && 'active')}
@@ -50,6 +58,14 @@ export function PreviewPane({
           >
             <FileText size={16} />
             Arkusz
+          </button>
+          <button
+            type="button"
+            className={clsx(previewMode === 'scoring' && 'active')}
+            onClick={() => onPreviewModeChange('scoring')}
+          >
+            <ClipboardCheck size={16} />
+            Ocenianie
           </button>
         </div>
       </div>
@@ -61,6 +77,8 @@ export function PreviewPane({
             Otwórz
           </a>
         </div>
+      ) : previewMode === 'scoring' ? (
+        <div className="empty-preview">Brak kryteriów oceniania w formacie PDF</div>
       ) : (
         <div className="empty-preview">Nie wybrano pliku PDF</div>
       )}

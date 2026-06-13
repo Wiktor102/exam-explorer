@@ -107,7 +107,7 @@ export function useCatalogExplorer() {
         return left.index - right.index
       })
   }, [duplicateTasks, examById, selectedExam, selectedTask])
-  const previewPdf = previewMode === 'exam' ? selectedExam?.pdf : selectedTask?.pdf
+  const previewPdf = previewMode === 'exam' ? selectedExam?.pdf : previewMode === 'task' ? selectedTask?.pdf : previewMode === 'scoring' ? selectedExam?.scoringPdf ?? undefined : undefined
 
   function resetFilters() {
     setQuery('')
@@ -142,6 +142,13 @@ export function useCatalogExplorer() {
     setSelectedExamId(exam.id)
     setSelectedTaskId(exam.tasks[0] ?? null)
     setPreviewMode('exam')
+  }
+
+  function handleSetRegistryMode(mode: RegistryMode) {
+    setRegistryMode(mode)
+    if (mode === 'exams' && previewMode === 'task') {
+      setPreviewMode('exam')
+    }
   }
 
   return {
@@ -190,7 +197,7 @@ export function useCatalogExplorer() {
       setIsSheetInfoOpen,
       setPreviewMode,
       setQuery,
-      setRegistryMode,
+      setRegistryMode: handleSetRegistryMode,
       setSeason,
       setSortMode,
       setTaskType,

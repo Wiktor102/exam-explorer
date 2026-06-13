@@ -17,6 +17,7 @@ export type Exam = {
   number: string
   variant: string
   pdf: string
+  scoringPdf: string | null
   sourcePath: string
   solutionFolder: string | null
   pageCount: number
@@ -54,7 +55,7 @@ export type Catalog = {
   tasks: Task[]
 }
 
-export type PreviewMode = 'task' | 'exam'
+export type PreviewMode = 'task' | 'exam' | 'scoring'
 export type RegistryMode = 'tasks' | 'exams'
 export type SortMode = 'newest' | 'oldest' | 'type' | 'part' | 'duplicates'
 export type SeasonFilter = 'all' | 'winter' | 'summer'

@@ -77,6 +77,7 @@ function App() {
           <PreviewPane
             previewMode={previewState.previewMode}
             previewPdf={previewState.previewPdf}
+            registryMode={filters.registryMode}
             selectedExam={previewState.selectedExam}
             selectedTask={previewState.selectedTask}
             onPreviewModeChange={actions.setPreviewMode}

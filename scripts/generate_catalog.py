@@ -13,9 +13,22 @@ from typing import Any
 
 from pypdf import PdfReader, PdfWriter
 
+try:
+    from openpyxl import load_workbook
+    from fpdf import FPDF
+
+    XLSX_SUPPORT = True
+except ImportError:
+    XLSX_SUPPORT = False
+
 
 EXAM_RE = re.compile(
     r"inf_04_(?P<year>\d{4})_(?P<month>\d{2})_(?P<number>\d{2})_(?P<variant>[A-Z]{2})(?:_kolor)?\.pdf$",
+    re.IGNORECASE,
+)
+
+ZO_RE = re.compile(
+    r"inf_04_(?P<year>\d{4})_(?P<month>\d{2})_(?P<number>\d{2})_(?P<variant>[A-Z]{2})_zo\.pdf$",
     re.IGNORECASE,
 )
 
@@ -280,7 +293,238 @@ def match_solution_folder(repo_root: Path, year: int, month: str, number: str, v
     return None
 
 
-def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path) -> dict[str, Any] | None:
+def xlsx_to_pdf(xlsx_path: Path, pdf_path: Path) -> None:
+    if not XLSX_SUPPORT:
+        print(f"  Warning: install openpyxl and fpdf2 to convert {xlsx_path.name}")
+        return
+
+    # Import style helpers
+    # indexed color palette
+    _INDEXED_COLORS = [
+        (0, 0, 0), (255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255),
+        (255, 255, 0), (255, 0, 255), (0, 255, 255), (128, 0, 0), (0, 128, 0),
+        (0, 0, 128), (128, 128, 0), (128, 0, 128), (0, 128, 128), (192, 192, 192),
+        (128, 128, 128), (153, 153, 255), (153, 51, 102), (255, 255, 204), (204, 255, 255),
+        (102, 0, 102), (255, 128, 128), (0, 102, 204), (204, 204, 255), (0, 0, 128),
+        (255, 0, 255), (255, 255, 0), (0, 255, 255), (128, 0, 128), (128, 0, 0),
+        (0, 128, 128), (0, 0, 255), (0, 204, 255), (204, 255, 255), (204, 255, 204),
+        (255, 255, 153), (153, 204, 255), (255, 153, 204), (204, 153, 255), (255, 204, 153),
+        (51, 51, 153), (153, 51, 51), (51, 153, 51), (51, 51, 51), (0, 0, 0),
+    ]
+    _THEME_COLORS = {
+        0: (255, 255, 255), 1: (0, 0, 0), 2: (227, 227, 227), 3: (89, 89, 89),
+        4: (68, 114, 196), 5: (237, 125, 49), 6: (165, 165, 165), 7: (255, 192, 0),
+        8: (68, 114, 196), 9: (255, 255, 255),
+    }
+
+    def _resolve_fill(cell):
+        if not cell.fill or not cell.fill.fgColor:
+            return None
+        fc = cell.fill.fgColor
+        if cell.fill.patternType is None or cell.fill.patternType == "none":
+            return None
+        try:
+            if fc.type == "rgb":
+                v = str(fc.rgb)
+                if v and len(v) >= 6:
+                    if v.upper().startswith("FF"): v = v[2:]
+                    if len(v) >= 6: return (int(v[0:2], 16), int(v[2:4], 16), int(v[4:6], 16))
+            elif fc.type == "theme" and fc.theme is not None:
+                base = _THEME_COLORS.get(int(fc.theme))
+                if base:
+                    t = fc.tint or 0
+                    r, g, b = base
+                    if t:
+                        r = int(r + (255 - r) * t) if t > 0 else int(r + r * t)
+                        g = int(g + (255 - g) * t) if t > 0 else int(g + g * t)
+                        b = int(b + (255 - b) * t) if t > 0 else int(b + b * t)
+                    return (max(0, min(255, r)), max(0, min(255, g)), max(0, min(255, b)))
+            elif fc.type == "indexed" and fc.indexed is not None:
+                i = int(fc.indexed)
+                if 0 <= i < len(_INDEXED_COLORS): return _INDEXED_COLORS[i]
+        except (ValueError, TypeError, AttributeError):
+            pass
+        return None
+
+    def _resolve_font_color(cell):
+        if not cell.font or not cell.font.color:
+            return None
+        fc = cell.font.color
+        try:
+            if fc.type == "rgb":
+                v = str(fc.rgb)
+                if v and len(v) >= 6:
+                    if v.upper().startswith("FF"): v = v[2:]
+                    if len(v) >= 6: return (int(v[0:2], 16), int(v[2:4], 16), int(v[4:6], 16))
+            elif fc.type == "theme" and fc.theme is not None:
+                base = _THEME_COLORS.get(int(fc.theme))
+                if base:
+                    t = fc.tint or 0
+                    r, g, b = base
+                    if t:
+                        r = int(r + (255 - r) * t) if t > 0 else int(r + r * t)
+                        g = int(g + (255 - g) * t) if t > 0 else int(g + g * t)
+                        b = int(b + (255 - b) * t) if t > 0 else int(b + b * t)
+                    return (max(0, min(255, r)), max(0, min(255, g)), max(0, min(255, b)))
+            elif fc.type == "indexed" and fc.indexed is not None:
+                i = int(fc.indexed)
+                if 0 <= i < len(_INDEXED_COLORS): return _INDEXED_COLORS[i]
+        except (ValueError, TypeError, AttributeError):
+            pass
+        return None
+
+    def _col_letter(index: int) -> str:
+        letter = ""
+        while index >= 0:
+            letter = chr(index % 26 + 65) + letter
+            index = index // 26 - 1
+        return letter
+
+    def _style_key(bold, italic):
+        if bold and italic: return "BI"
+        if bold: return "B"
+        if italic: return "I"
+        return ""
+
+    wb = load_workbook(xlsx_path, data_only=True)
+    pdf = FPDF(orientation="L", unit="mm", format="A4")
+    pdf.set_auto_page_break(auto=True, margin=12)
+    pdf.add_font("ArialUni", "", r"C:\Windows\Fonts\arial.ttf", uni=True)
+    pdf.add_font("ArialUni", "B", r"C:\Windows\Fonts\arialbd.ttf", uni=True)
+    pdf.add_font("ArialUni", "I", r"C:\Windows\Fonts\ariali.ttf", uni=True)
+    pdf.add_font("ArialUni", "BI", r"C:\Windows\Fonts\arialbi.ttf", uni=True)
+
+    ALIGN_MAP = {"left": "L", "center": "C", "right": "R", "justify": "L"}
+
+    for sheet_name in wb.sheetnames:
+        ws = wb[sheet_name]
+        rows_data = list(ws.iter_rows(values_only=False))
+        if not rows_data:
+            continue
+
+        # Build styled table
+        TableRow = list[dict]
+        table: list[TableRow] = []
+
+        # Detect merged ranges
+        merged_ranges: dict[tuple[int, int], tuple[int, int, int, int]] = {}
+        for mr in ws.merged_cells.ranges:
+            for ri in range(mr.min_row, mr.max_row + 1):
+                for ci in range(mr.min_col, mr.max_col + 1):
+                    merged_ranges[(ri, ci)] = (mr.min_row, mr.min_col, mr.max_row, mr.max_col)
+
+        for ri, row in enumerate(rows_data, start=1):
+            row_data: TableRow = []
+            for ci, cell in enumerate(row, start=1):
+                key = (ri, ci)
+                skip = key in merged_ranges and (ri != merged_ranges[key][0] or ci != merged_ranges[key][1])
+                val = cell.value
+                if val is None:
+                    row_data.append({"v": "", "b": False, "i": False, "bg": None, "fg": None, "al": "L", "sz": 7, "skip": skip})
+                else:
+                    text = str(val).strip()
+                    row_data.append({
+                        "v": text,
+                        "b": bool(cell.font and cell.font.bold),
+                        "i": bool(cell.font and cell.font.italic),
+                        "bg": _resolve_fill(cell),
+                        "fg": _resolve_font_color(cell),
+                        "al": ALIGN_MAP.get(cell.alignment.horizontal if cell.alignment else None, "L"),
+                        "sz": cell.font.size if cell.font and cell.font.size else 10,
+                        "skip": skip,
+                    })
+            table.append(row_data)
+
+        # Detect meaningful columns
+        meaningful: set[int] = set()
+        for row_data in table:
+            for ci, c in enumerate(row_data):
+                if c.get("skip"): continue
+                if c["v"] and c["v"].strip() and c["v"] != "#REF!":
+                    meaningful.add(ci)
+        if not meaningful:
+            continue
+        max_cols = max(meaningful) + 1
+        table = [row[:max_cols] for row in table]
+
+        # Column widths
+        page_width = 277
+        col_widths = [
+            max(14, min(75, max(len(row[ci]["v"]) for row in table) * 3.0 + 4))
+            for ci in range(max_cols)
+        ]
+        total_w = sum(col_widths)
+        if total_w > page_width - 10:
+            scale = (page_width - 10) / total_w
+            col_widths = [w * scale for w in col_widths]
+
+        def draw_row(y, row_data, row_h):
+            x0 = pdf.l_margin
+            for ci, c in enumerate(row_data):
+                if c.get("skip"): continue
+                w = col_widths[ci]
+                x = x0 + sum(col_widths[:ci])
+                if c["bg"]:
+                    pdf.set_fill_color(*c["bg"])
+                    pdf.rect(x, y, w, row_h, style="F")
+                pdf.set_draw_color(180, 180, 180)
+                pdf.rect(x, y, w, row_h, style="D")
+                if c["v"]:
+                    fs = max(5.5, min(9, c["sz"] * 0.35))
+                    sk = _style_key(c["b"], c["i"])
+                    pdf.set_font("ArialUni", sk, fs)
+                    if c["fg"]:
+                        pdf.set_text_color(*c["fg"])
+                    else:
+                        pdf.set_text_color(0, 0, 0) if not c["bg"] or sum(c["bg"]) > 384 else pdf.set_text_color(255, 255, 255)
+                    pdf.set_xy(x + 0.5, y + 0.3)
+                    pdf.multi_cell(w - 1, 3.8, c["v"], align=c["al"])
+                    pdf.set_text_color(0, 0, 0)
+
+        pdf.add_page()
+        pdf.set_font("ArialUni", "B", 13)
+        title = f"Zasady oceniania - {sheet_name}" if len(wb.sheetnames) > 1 else "Zasady oceniania"
+        pdf.cell(0, 10, title, new_x="LMARGIN", new_y="NEXT", align="C")
+        pdf.ln(2)
+
+        for row_data in table:
+            max_lines = 1
+            for c in row_data:
+                if c.get("skip") or not c["v"]: continue
+                w = col_widths[ci_for := row_data.index(c)] - 1 if False else col_widths[min(len(col_widths) - 1, row_data.index(c))]
+                # Find column index
+                ci = next(i for i, cc in enumerate(row_data) if cc is c)
+                w = col_widths[ci] - 1
+                if w > 0:
+                    fs = max(5.5, min(9, c["sz"] * 0.35))
+                    sk = _style_key(c["b"], c["i"])
+                    pdf.set_font("ArialUni", sk, fs)
+                    lines = pdf.multi_cell(w, 3.8, c["v"], dry_run=True, output="LINES")
+                    max_lines = max(max_lines, len(lines))
+            row_h = max(5.5, max_lines * 3.5 + 2)
+
+            if pdf.get_y() + row_h > pdf.h - 18:
+                pdf.add_page()
+
+            y = pdf.get_y()
+            draw_row(y, row_data, row_h)
+            pdf.set_xy(pdf.l_margin, y + row_h)
+
+    pdf.output(str(pdf_path))
+
+
+def zo_exam_id(pdf_path: Path) -> str | None:
+    match = ZO_RE.match(pdf_path.name)
+    if not match:
+        return None
+    year = match.group("year")
+    month = match.group("month")
+    number = match.group("number")
+    variant = match.group("variant").lower()
+    return f"inf04-{year}-{month}-{number}-{variant}"
+
+
+def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path, zo_map: dict[str, Path] | None = None) -> dict[str, Any] | None:
     match = EXAM_RE.match(pdf_path.name)
     if not match:
         return None
@@ -344,6 +588,16 @@ def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path) -> dict[str, 
         )
 
     solution_folder = match_solution_folder(repo_root, year, month, number, variant)
+    scoring_pdf_path = None
+    if zo_map:
+        zo_source = zo_map.get(exam_id)
+        if zo_source:
+            scoring_pdf_public = Path("pdfs") / "scoring" / f"{exam_id}-zo.pdf"
+            target_scoring_pdf = public_root / scoring_pdf_public
+            target_scoring_pdf.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(zo_source, target_scoring_pdf)
+            scoring_pdf_path = f"/{scoring_pdf_public.as_posix()}"
+
     related_assets = sorted(
         item.name
         for item in (pdf_path.parent).iterdir()
@@ -359,6 +613,7 @@ def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path) -> dict[str, 
         "number": number,
         "variant": variant,
         "pdf": f"/{exam_pdf_public.as_posix()}",
+        "scoringPdf": scoring_pdf_path,
         "sourcePath": pdf_path.relative_to(repo_root).as_posix(),
         "solutionFolder": solution_folder,
         "pageCount": page_count,
@@ -375,11 +630,64 @@ def build_catalog(repo_root: Path, public_root: Path) -> dict[str, Any]:
         for pdf in arkusze.rglob("*.pdf")
         if "_zo" not in pdf.name.lower() and EXAM_RE.match(pdf.name)
     ]
+    zo_pdfs = [
+        pdf
+        for pdf in arkusze.rglob("*_zo.pdf")
+        if ZO_RE.match(pdf.name)
+    ]
+    zo_map: dict[str, Path] = {}
+    for zo_pdf in zo_pdfs:
+        eid = zo_exam_id(zo_pdf)
+        if eid:
+            zo_map[eid] = zo_pdf
+
+    # Handle XLSX ZO files: convert to PDF and add to zo_map
+    ag_sg_map = {
+        "inf04-2023-01-01-ag": "inf04-2023-01-01-sg",
+        "inf04-2023-01-02-ag": "inf04-2023-01-02-sg",
+    }
+    for xlsx_path in sorted(arkusze.rglob("*_zo.xlsx")):
+        source_name = xlsx_path.name
+        # Try to match exam ID from filename (strip _zo suffix)
+        zo_name = re.sub(r"_zo(?:_punktacja)?\b", "_zo", source_name, flags=re.IGNORECASE)
+        zo_path = xlsx_path.parent / zo_name
+        match = ZO_RE.match(zo_name)
+        if not match:
+            # Try building exam id from the source name pattern
+            base = re.sub(r"(?:_zo)?(?:_punktacja)?\.xlsx$", "", source_name, flags=re.IGNORECASE)
+            continue
+        eid = zo_exam_id(zo_name if ZO_RE.match(zo_name) else Path(source_name))
+        if not eid:
+            # Fallback: try matching against known exam IDs
+            for exam_id in zo_map:
+                if exam_id.replace("inf04-", "").replace("-", "").upper() in source_name.upper():
+                    eid = exam_id
+                    break
+        if eid:
+            target_pdf = public_root / "pdfs" / "scoring" / f"{eid}-zo.pdf"
+            target_pdf.parent.mkdir(parents=True, exist_ok=True)
+            if not target_pdf.exists() or xlsx_path.stat().st_mtime > target_pdf.stat().st_mtime:
+                try:
+                    xlsx_to_pdf(xlsx_path, target_pdf)
+                except Exception as exc:
+                    print(f"  Failed to convert {xlsx_path.name}: {exc}")
+            zo_map[eid] = target_pdf
+
+    # Link AG exams that share SG scoring
+    for ag_id, sg_id in ag_sg_map.items():
+        if ag_id not in zo_map and sg_id in zo_map:
+            zo_map[ag_id] = zo_map[sg_id]
+            # Copy SG PDF to AG path so both have their own file
+            ag_target = public_root / "pdfs" / "scoring" / f"{ag_id}-zo.pdf"
+            if not ag_target.exists():
+                shutil.copy2(zo_map[sg_id], ag_target)
+            zo_map[ag_id] = ag_target
+
     exams: list[dict[str, Any]] = []
     tasks: list[dict[str, Any]] = []
 
     for pdf in sorted(pdfs):
-        exam = parse_exam(repo_root, pdf, public_root)
+        exam = parse_exam(repo_root, pdf, public_root, zo_map)
         if not exam:
             continue
         tasks.extend(exam.pop("taskRecords"))

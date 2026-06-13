@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T18:40:02.567609+00:00",
+  "generatedAt": "2026-06-04T20:40:02.567609+02:00",
   "sourceRepository": "https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania",
   "sourceFolder": "_arkusze",
   "examCount": 29,
@@ -42,7 +42,8 @@
       "assetFiles": [
         "zad1.7z",
         "zad2.7z"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2026-01-02-sg-zo.pdf"
     },
     {
       "id": "inf04-2026-01-01-sg",
@@ -64,7 +65,8 @@
       "assetFiles": [
         "zad1.7z",
         "zad2.7z"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2026-01-01-sg-zo.pdf"
     },
     {
       "id": "inf04-2025-06-02-sg",
@@ -85,7 +87,8 @@
       ],
       "assetFiles": [
         "pliki4.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2025-06-02-sg-zo.pdf"
     },
     {
       "id": "inf04-2025-06-01-sg",
@@ -106,7 +109,8 @@
       ],
       "assetFiles": [
         "pliki4.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2025-06-01-sg-zo.pdf"
     },
     {
       "id": "inf04-2025-06-01-sd",
@@ -127,7 +131,8 @@
       ],
       "assetFiles": [
         "pliki4.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2025-06-01-sd-zo.pdf"
     },
     {
       "id": "inf04-2025-06-01-ag",
@@ -148,7 +153,8 @@
       ],
       "assetFiles": [
         "pliki4.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2025-06-01-ag-zo.pdf"
     },
     {
       "id": "inf04-2025-01-02-sg",
@@ -170,7 +176,8 @@
       "assetFiles": [
         "pliki3.zip",
         "pliki4.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2025-01-02-sg-zo.pdf"
     },
     {
       "id": "inf04-2025-01-01-sg",
@@ -192,7 +199,8 @@
       "assetFiles": [
         "pliki3.zip",
         "pliki4.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2025-01-01-sg-zo.pdf"
     },
     {
       "id": "inf04-2025-01-01-sd",
@@ -214,7 +222,8 @@
       "assetFiles": [
         "pliki3.zip",
         "pliki4.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2025-01-01-sd-zo.pdf"
     },
     {
       "id": "inf04-2024-06-02-sg",
@@ -236,7 +245,8 @@
       "assetFiles": [
         "pliki1.zip",
         "pliki2.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2024-06-02-sg-zo.pdf"
     },
     {
       "id": "inf04-2024-06-01-sg",
@@ -258,7 +268,8 @@
       "assetFiles": [
         "pliki1.zip",
         "pliki2.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2024-06-01-sg-zo.pdf"
     },
     {
       "id": "inf04-2024-06-01-sd",
@@ -280,7 +291,8 @@
       "assetFiles": [
         "pliki1.zip",
         "pliki2.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2024-06-01-sd-zo.pdf"
     },
     {
       "id": "inf04-2024-01-02-sg",
@@ -301,7 +313,8 @@
       ],
       "assetFiles": [
         "materialy.7z"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2024-01-02-sg-zo.pdf"
     },
     {
       "id": "inf04-2024-01-02-ag",
@@ -322,7 +335,8 @@
       ],
       "assetFiles": [
         "materialy.7z"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2024-01-02-ag-zo.pdf"
     },
     {
       "id": "inf04-2024-01-01-sg",
@@ -343,7 +357,8 @@
       ],
       "assetFiles": [
         "materialy.7z"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2024-01-01-sg-zo.pdf"
     },
     {
       "id": "inf04-2024-01-01-sd",
@@ -364,7 +379,8 @@
       ],
       "assetFiles": [
         "materialy.7z"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2024-01-01-sd-zo.pdf"
     },
     {
       "id": "inf04-2023-06-03-sg",
@@ -385,7 +401,8 @@
       ],
       "assetFiles": [
         "materialy.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2023-06-03-sg-zo.pdf"
     },
     {
       "id": "inf04-2023-06-02-sg",
@@ -406,7 +423,8 @@
       ],
       "assetFiles": [
         "materialy.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2023-06-02-sg-zo.pdf"
     },
     {
       "id": "inf04-2023-06-01-sg",
@@ -427,7 +445,8 @@
       ],
       "assetFiles": [
         "materialy.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2023-06-01-sg-zo.pdf"
     },
     {
       "id": "inf04-2023-06-01-sd",
@@ -448,7 +467,8 @@
       ],
       "assetFiles": [
         "materialy.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2023-06-01-sd-zo.pdf"
     },
     {
       "id": "inf04-2023-01-02-sg",
@@ -467,7 +487,8 @@
         "inf04-2023-01-02-sg-task-2",
         "inf04-2023-01-02-sg-task-3"
       ],
-      "assetFiles": []
+      "assetFiles": [],
+      "scoringPdf": "/pdfs/scoring/inf04-2023-01-02-sg-zo.pdf"
     },
     {
       "id": "inf04-2023-01-02-ag",
@@ -486,7 +507,8 @@
         "inf04-2023-01-02-ag-task-2",
         "inf04-2023-01-02-ag-task-3"
       ],
-      "assetFiles": []
+      "assetFiles": [],
+      "scoringPdf": "/pdfs/scoring/inf04-2023-01-02-sg-zo.pdf"
     },
     {
       "id": "inf04-2023-01-01-sg",
@@ -505,7 +527,8 @@
         "inf04-2023-01-01-sg-task-2",
         "inf04-2023-01-01-sg-task-3"
       ],
-      "assetFiles": []
+      "assetFiles": [],
+      "scoringPdf": "/pdfs/scoring/inf04-2023-01-01-sg-zo.pdf"
     },
     {
       "id": "inf04-2023-01-01-sd",
@@ -524,7 +547,8 @@
         "inf04-2023-01-01-sd-task-2",
         "inf04-2023-01-01-sd-task-3"
       ],
-      "assetFiles": []
+      "assetFiles": [],
+      "scoringPdf": "/pdfs/scoring/inf04-2023-01-01-sd-zo.pdf"
     },
     {
       "id": "inf04-2023-01-01-ag",
@@ -543,7 +567,8 @@
         "inf04-2023-01-01-ag-task-2",
         "inf04-2023-01-01-ag-task-3"
       ],
-      "assetFiles": []
+      "assetFiles": [],
+      "scoringPdf": "/pdfs/scoring/inf04-2023-01-01-sg-zo.pdf"
     },
     {
       "id": "inf04-2022-06-02-sg",
@@ -564,7 +589,8 @@
       ],
       "assetFiles": [
         "zad1.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2022-06-02-sg-zo.pdf"
     },
     {
       "id": "inf04-2022-06-01-sg",
@@ -585,7 +611,8 @@
       ],
       "assetFiles": [
         "zad1.zip"
-      ]
+      ],
+      "scoringPdf": "/pdfs/scoring/inf04-2022-06-01-sg-zo.pdf"
     },
     {
       "id": "inf04-2022-01-01-sg",
@@ -604,7 +631,8 @@
         "inf04-2022-01-01-sg-task-2",
         "inf04-2022-01-01-sg-task-3"
       ],
-      "assetFiles": []
+      "assetFiles": [],
+      "scoringPdf": "/pdfs/scoring/inf04-2022-01-01-sg-zo.pdf"
     },
     {
       "id": "inf04-2021-06-01-sg",
@@ -623,7 +651,8 @@
         "inf04-2021-06-01-sg-task-2",
         "inf04-2021-06-01-sg-task-3"
       ],
-      "assetFiles": []
+      "assetFiles": [],
+      "scoringPdf": "/pdfs/scoring/inf04-2021-06-01-sg-zo.pdf"
     }
   ],
   "tasks": [
