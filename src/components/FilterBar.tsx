@@ -43,13 +43,13 @@ export function FilterBar({
   return (
     <section className={clsx('control-band', filtersExpanded && 'filters-expanded')} aria-label="Filtry">
       <div className="segmented-control" aria-label="Tryb katalogu">
-        <button className={clsx(registryMode === 'tasks' && 'active')} onClick={() => onRegistryModeChange('tasks')}>
-          <Columns3 size={16} />
-          Zadania
-        </button>
         <button className={clsx(registryMode === 'exams' && 'active')} onClick={() => onRegistryModeChange('exams')}>
           <FileText size={16} />
           Arkusze
+        </button>
+        <button className={clsx(registryMode === 'tasks' && 'active')} onClick={() => onRegistryModeChange('tasks')}>
+          <Columns3 size={16} />
+          Zadania
         </button>
       </div>
 

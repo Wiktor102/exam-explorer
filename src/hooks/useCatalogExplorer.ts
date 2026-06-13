@@ -10,7 +10,7 @@ export function useCatalogExplorer() {
   const [season, setSeason] = useState<SeasonFilter>('all')
   const [taskType, setTaskType] = useState('all')
   const [sortMode, setSortMode] = useState<SortMode>('newest')
-  const [registryMode, setRegistryMode] = useState<RegistryMode>('tasks')
+  const [registryMode, setRegistryMode] = useState<RegistryMode>('exams')
   const [previewMode, setPreviewMode] = useState<PreviewMode>('task')
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(null)
