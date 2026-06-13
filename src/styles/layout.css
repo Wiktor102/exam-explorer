@@ -43,9 +43,53 @@
 
 .source-strip {
   display: grid;
-  grid-template-columns: repeat(4, minmax(92px, auto));
+  grid-template-columns: repeat(5, minmax(92px, auto));
   align-items: center;
   border-left: 2px solid var(--line-strong);
+}
+
+.exam-toggle {
+  display: flex;
+  align-items: stretch;
+}
+
+.exam-toggle button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  min-width: 92px;
+  padding: 12px 14px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.exam-toggle button + button {
+  border-left: 1px solid var(--line);
+}
+
+.exam-toggle button.active {
+  background: var(--active-bg);
+  color: var(--active-fg);
+}
+
+.exam-toggle button:hover,
+.exam-toggle button:focus-visible {
+  background: var(--focus-bg);
+}
+
+.exam-toggle button.active:hover,
+.exam-toggle button.active:focus-visible {
+  background: var(--active-bg);
+}
+
+.exam-toggle button:focus-visible {
+  outline: 2px solid var(--selection-accent);
+  outline-offset: -4px;
 }
 
 .source-strip span,

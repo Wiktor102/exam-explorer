@@ -1,14 +1,15 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { DuplicateTaskRow } from '../components/detail/types'
-import type { Catalog, Exam, PreviewMode, RegistryMode, SeasonFilter, SortMode, Task } from '../types/catalog'
+import type { Catalog, Exam, ExamType, PreviewMode, RegistryMode, SeasonFilter, SortMode, Task } from '../types/catalog'
 import { examFileName, examSessionKey, formatExamLabel } from '../utils/catalog'
 
 function getUrlParam(name: string): string | null {
   return new URLSearchParams(window.location.search).get(name)
 }
 
-function syncUrl(taskId: string | null, examId: string | null, registryMode: RegistryMode) {
+function syncUrl(taskId: string | null, examId: string | null, registryMode: RegistryMode, examType: ExamType) {
   const params = new URLSearchParams()
+  params.set('type', examType)
   params.set('mode', registryMode)
   if (examId) params.set('exam', examId)
   if (registryMode === 'tasks' && taskId) params.set('task', taskId)
@@ -18,6 +19,8 @@ function syncUrl(taskId: string | null, examId: string | null, registryMode: Reg
 }
 
 export function useCatalogExplorer() {
+  const urlExamType = getUrlParam('type') as ExamType | null
+  const [examType, setExamType] = useState<ExamType>(urlExamType ?? 'inf04')
   const [catalog, setCatalog] = useState<Catalog | null>(null)
   const [query, setQuery] = useState('')
   const [year, setYear] = useState('all')
@@ -29,21 +32,23 @@ export function useCatalogExplorer() {
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(getUrlParam('task'))
   const [selectedExamId, setSelectedExamId] = useState<string | null>(getUrlParam('exam'))
   const urlMode = getUrlParam('mode') as RegistryMode | null
-  const [registryMode, setRegistryMode] = useState<RegistryMode>(urlMode ?? (getUrlParam('task') ? 'tasks' : 'exams'))
+  const [registryMode, setRegistryMode] = useState<RegistryMode>(
+    urlExamType === 'inf03' ? 'exams' : (urlMode ?? (getUrlParam('task') ? 'tasks' : 'exams')),
+  )
   const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false)
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false)
 
   useEffect(() => {
-    fetch('/data/catalog.json')
+    fetch(`/data/${examType}/catalog.json`)
       .then((response) => response.json())
       .then((data: Catalog) => {
         setCatalog(data)
       })
-  }, [])
+  }, [examType])
 
   useEffect(() => {
-    syncUrl(selectedTaskId, selectedExamId, registryMode)
-  }, [selectedTaskId, selectedExamId, registryMode])
+    syncUrl(selectedTaskId, selectedExamId, registryMode, examType)
+  }, [selectedTaskId, selectedExamId, registryMode, examType])
 
   useEffect(() => {
     if (!catalog) return
@@ -211,6 +216,17 @@ export function useCatalogExplorer() {
     }
   }
 
+  function handleSetExamType(type: ExamType) {
+    if (type === examType) return
+    setSelectedTaskId(null)
+    setSelectedExamId(null)
+    setPreviewMode('exam')
+    if (type === 'inf03') {
+      setRegistryMode('exams')
+    }
+    setExamType(type)
+  }
+
   return {
     catalog,
     detailState: {
@@ -224,6 +240,7 @@ export function useCatalogExplorer() {
       selectedTask,
     },
     filters: {
+      examType,
       query,
       registryMode,
       season,
@@ -255,6 +272,7 @@ export function useCatalogExplorer() {
       selectTask,
       setIsDuplicateInfoOpen,
       setIsSheetInfoOpen,
+      setExamType: handleSetExamType,
       setPreviewMode,
       setQuery,
       setRegistryMode: handleSetRegistryMode,

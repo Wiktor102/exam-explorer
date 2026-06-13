@@ -2,11 +2,12 @@ import { useState } from 'react'
 import { CalendarDays, Columns3, FileText, ListFilter, Moon, RotateCcw, Search, SlidersHorizontal, Snowflake, Sun } from 'lucide-react'
 import clsx from 'clsx'
 import { typeLabels } from '../constants/catalog'
-import type { Catalog, RegistryMode, SeasonFilter } from '../types/catalog'
+import type { Catalog, ExamType, RegistryMode, SeasonFilter } from '../types/catalog'
 import { SelectControl } from './SelectControl'
 
 type FilterBarProps = {
   catalog: Catalog
+  examType: ExamType
   query: string
   registryMode: RegistryMode
   season: SeasonFilter
@@ -24,6 +25,7 @@ type FilterBarProps = {
 
 export function FilterBar({
   catalog,
+  examType,
   query,
   registryMode,
   season,
@@ -47,10 +49,12 @@ export function FilterBar({
           <FileText size={16} />
           Arkusze
         </button>
-        <button className={clsx(registryMode === 'tasks' && 'active')} onClick={() => onRegistryModeChange('tasks')}>
-          <Columns3 size={16} />
-          Zadania
-        </button>
+        {examType === 'inf04' && (
+          <button className={clsx(registryMode === 'tasks' && 'active')} onClick={() => onRegistryModeChange('tasks')}>
+            <Columns3 size={16} />
+            Zadania
+          </button>
+        )}
       </div>
 
       <button

@@ -13,15 +13,16 @@ function App() {
   const hasSelection = Boolean(detailState.selectedExam || detailState.selectedTask)
 
   if (!catalog) {
-    return <LoadingShell />
+    return <LoadingShell examType={filters.examType} />
   }
 
   return (
     <main className={clsx('app-shell', filters.theme === 'dark' && 'dark')}>
-      <AppTopbar catalog={catalog} />
+      <AppTopbar catalog={catalog} examType={filters.examType} onExamTypeChange={actions.setExamType} />
 
       <FilterBar
         catalog={catalog}
+        examType={filters.examType}
         query={filters.query}
         registryMode={filters.registryMode}
         season={filters.season}

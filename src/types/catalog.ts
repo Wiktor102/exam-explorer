@@ -55,6 +55,7 @@ export type Catalog = {
   tasks: Task[]
 }
 
+export type ExamType = 'inf04' | 'inf03'
 export type PreviewMode = 'task' | 'exam' | 'scoring'
 export type RegistryMode = 'tasks' | 'exams'
 export type SortMode = 'newest' | 'oldest' | 'type' | 'part' | 'duplicates'
