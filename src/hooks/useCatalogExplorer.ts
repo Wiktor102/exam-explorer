@@ -3,6 +3,20 @@ import type { DuplicateTaskRow } from '../components/detail/types'
 import type { Catalog, Exam, PreviewMode, RegistryMode, SeasonFilter, SortMode, Task } from '../types/catalog'
 import { examFileName, examSessionKey, formatExamLabel } from '../utils/catalog'
 
+function getUrlParam(name: string): string | null {
+  return new URLSearchParams(window.location.search).get(name)
+}
+
+function syncUrl(taskId: string | null, examId: string | null, registryMode: RegistryMode) {
+  const params = new URLSearchParams()
+  params.set('mode', registryMode)
+  if (examId) params.set('exam', examId)
+  if (registryMode === 'tasks' && taskId) params.set('task', taskId)
+  const search = params.toString()
+  const newUrl = `${window.location.pathname}?${search}`
+  window.history.replaceState(null, '', newUrl)
+}
+
 export function useCatalogExplorer() {
   const [catalog, setCatalog] = useState<Catalog | null>(null)
   const [query, setQuery] = useState('')
@@ -10,11 +24,12 @@ export function useCatalogExplorer() {
   const [season, setSeason] = useState<SeasonFilter>('all')
   const [taskType, setTaskType] = useState('all')
   const [sortMode, setSortMode] = useState<SortMode>('newest')
-  const [registryMode, setRegistryMode] = useState<RegistryMode>('exams')
   const [previewMode, setPreviewMode] = useState<PreviewMode>('task')
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
-  const [selectedTaskId, setSelectedTaskId] = useState<string | null>(null)
-  const [selectedExamId, setSelectedExamId] = useState<string | null>(null)
+  const [selectedTaskId, setSelectedTaskId] = useState<string | null>(getUrlParam('task'))
+  const [selectedExamId, setSelectedExamId] = useState<string | null>(getUrlParam('exam'))
+  const urlMode = getUrlParam('mode') as RegistryMode | null
+  const [registryMode, setRegistryMode] = useState<RegistryMode>(urlMode ?? (getUrlParam('task') ? 'tasks' : 'exams'))
   const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false)
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false)
 
@@ -25,6 +40,51 @@ export function useCatalogExplorer() {
         setCatalog(data)
       })
   }, [])
+
+  useEffect(() => {
+    syncUrl(selectedTaskId, selectedExamId, registryMode)
+  }, [selectedTaskId, selectedExamId, registryMode])
+
+  useEffect(() => {
+    if (!catalog) return
+
+    const taskId = getUrlParam('task')
+    const examId = getUrlParam('exam')
+
+    if (!taskId && !examId) return
+
+    if (taskId && examId) {
+      const task = taskById.get(taskId)
+      const exam = examById.get(examId)
+      if (task && exam && task.examId === exam.id) {
+        setSelectedTaskId(task.id)
+        setSelectedExamId(exam.id)
+        setPreviewMode('task')
+      } else {
+        setSelectedTaskId(null)
+        setSelectedExamId(null)
+      }
+    } else if (taskId) {
+      const task = taskById.get(taskId)
+      if (task) {
+        setSelectedTaskId(task.id)
+        setSelectedExamId(task.examId)
+        setPreviewMode('task')
+      } else {
+        setSelectedTaskId(null)
+        setSelectedExamId(null)
+      }
+    } else {
+      const exam = examById.get(examId!)
+      if (exam) {
+        setSelectedExamId(exam.id)
+        setSelectedTaskId(exam.tasks[0] ?? null)
+        setPreviewMode('exam')
+      } else {
+        setSelectedExamId(null)
+      }
+    }
+  }, [catalog])
 
   const examById = useMemo(() => {
     return new Map(catalog?.exams.map((exam) => [exam.id, exam]) ?? [])
