@@ -15,6 +15,42 @@ function isRegistryMode(value: string | null): value is RegistryMode {
   return value === 'exams' || value === 'tasks'
 }
 
+type UrlSelection = {
+  taskId: string | null
+  examId: string | null
+  previewMode?: PreviewMode
+}
+
+function resolveUrlSelection(catalog: Catalog): UrlSelection | null {
+  const taskId = getUrlParam('task')
+  const examId = getUrlParam('exam')
+
+  if (!taskId && !examId) return null
+
+  const taskById = new Map(catalog.tasks.map((task) => [task.id, task]))
+  const examById = new Map(catalog.exams.map((exam) => [exam.id, exam]))
+
+  if (taskId && examId) {
+    const task = taskById.get(taskId)
+    const exam = examById.get(examId)
+    return task && exam && task.examId === exam.id
+      ? { taskId: task.id, examId: exam.id, previewMode: 'task' }
+      : { taskId: null, examId: null }
+  }
+
+  if (taskId) {
+    const task = taskById.get(taskId)
+    return task
+      ? { taskId: task.id, examId: task.examId, previewMode: 'task' }
+      : { taskId: null, examId: null }
+  }
+
+  const exam = examById.get(examId!)
+  return exam
+    ? { taskId: exam.tasks[0] ?? null, examId: exam.id, previewMode: 'exam' }
+    : { taskId: null, examId: null }
+}
+
 function syncUrl(taskId: string | null, examId: string | null, registryMode: RegistryMode, examType: ExamType) {
   const params = new URLSearchParams()
   params.set('type', examType)
@@ -67,6 +103,15 @@ export function useCatalogExplorer() {
 
         setCatalog(data)
         setCatalogError(null)
+
+        const selection = resolveUrlSelection(data)
+        if (selection) {
+          setSelectedTaskId(selection.taskId)
+          setSelectedExamId(selection.examId)
+          if (selection.previewMode) {
+            setPreviewMode(selection.previewMode)
+          }
+        }
       })
       .catch(() => {
         if (isCancelled) return
@@ -83,47 +128,6 @@ export function useCatalogExplorer() {
   useEffect(() => {
     syncUrl(selectedTaskId, selectedExamId, registryMode, examType)
   }, [selectedTaskId, selectedExamId, registryMode, examType])
-
-  useEffect(() => {
-    if (!catalog) return
-
-    const taskId = getUrlParam('task')
-    const examId = getUrlParam('exam')
-
-    if (!taskId && !examId) return
-
-    if (taskId && examId) {
-      const task = taskById.get(taskId)
-      const exam = examById.get(examId)
-      if (task && exam && task.examId === exam.id) {
-        setSelectedTaskId(task.id)
-        setSelectedExamId(exam.id)
-        setPreviewMode('task')
-      } else {
-        setSelectedTaskId(null)
-        setSelectedExamId(null)
-      }
-    } else if (taskId) {
-      const task = taskById.get(taskId)
-      if (task) {
-        setSelectedTaskId(task.id)
-        setSelectedExamId(task.examId)
-        setPreviewMode('task')
-      } else {
-        setSelectedTaskId(null)
-        setSelectedExamId(null)
-      }
-    } else {
-      const exam = examById.get(examId!)
-      if (exam) {
-        setSelectedExamId(exam.id)
-        setSelectedTaskId(exam.tasks[0] ?? null)
-        setPreviewMode('exam')
-      } else {
-        setSelectedExamId(null)
-      }
-    }
-  }, [catalog])
 
   const examById = useMemo(() => {
     return new Map(catalog?.exams.map((exam) => [exam.id, exam]) ?? [])
