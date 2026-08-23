@@ -7,6 +7,14 @@ function getUrlParam(name: string): string | null {
   return new URLSearchParams(window.location.search).get(name)
 }
 
+function isExamType(value: string | null): value is ExamType {
+  return value === 'inf03' || value === 'inf04'
+}
+
+function isRegistryMode(value: string | null): value is RegistryMode {
+  return value === 'exams' || value === 'tasks'
+}
+
 function syncUrl(taskId: string | null, examId: string | null, registryMode: RegistryMode, examType: ExamType) {
   const params = new URLSearchParams()
   params.set('type', examType)
@@ -19,9 +27,13 @@ function syncUrl(taskId: string | null, examId: string | null, registryMode: Reg
 }
 
 export function useCatalogExplorer() {
-  const urlExamType = getUrlParam('type') as ExamType | null
-  const [examType, setExamType] = useState<ExamType>(urlExamType ?? 'inf04')
+  const urlExamType = getUrlParam('type')
+  const initialExamType: ExamType = isExamType(urlExamType) ? urlExamType : 'inf04'
+  const urlMode = getUrlParam('mode')
+  const [examType, setExamType] = useState<ExamType>(initialExamType)
   const [catalog, setCatalog] = useState<Catalog | null>(null)
+  const [catalogError, setCatalogError] = useState<string | null>(null)
+  const [catalogRequest, setCatalogRequest] = useState(0)
   const [query, setQuery] = useState('')
   const [year, setYear] = useState('all')
   const [season, setSeason] = useState<SeasonFilter>('all')
@@ -31,20 +43,42 @@ export function useCatalogExplorer() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(getUrlParam('task'))
   const [selectedExamId, setSelectedExamId] = useState<string | null>(getUrlParam('exam'))
-  const urlMode = getUrlParam('mode') as RegistryMode | null
   const [registryMode, setRegistryMode] = useState<RegistryMode>(
-    urlExamType === 'inf03' ? 'exams' : (urlMode ?? (getUrlParam('task') ? 'tasks' : 'exams')),
+    initialExamType === 'inf03'
+      ? 'exams'
+      : (isRegistryMode(urlMode) ? urlMode : (getUrlParam('task') ? 'tasks' : 'exams')),
   )
   const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false)
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false)
 
   useEffect(() => {
+    let isCancelled = false
+
     fetch(`/data/${examType}/catalog.json`)
-      .then((response) => response.json())
-      .then((data: Catalog) => {
-        setCatalog(data)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Catalog request failed with status ${response.status}`)
+        }
+
+        return response.json() as Promise<Catalog>
       })
-  }, [examType])
+      .then((data) => {
+        if (isCancelled) return
+
+        setCatalog(data)
+        setCatalogError(null)
+      })
+      .catch(() => {
+        if (isCancelled) return
+
+        setCatalog(null)
+        setCatalogError('Nie udało się wczytać archiwum. Sprawdź połączenie i spróbuj ponownie.')
+      })
+
+    return () => {
+      isCancelled = true
+    }
+  }, [catalogRequest, examType])
 
   useEffect(() => {
     syncUrl(selectedTaskId, selectedExamId, registryMode, examType)
@@ -221,14 +255,23 @@ export function useCatalogExplorer() {
     setSelectedTaskId(null)
     setSelectedExamId(null)
     setPreviewMode('exam')
+    setCatalog(null)
+    setCatalogError(null)
     if (type === 'inf03') {
       setRegistryMode('exams')
     }
     setExamType(type)
   }
 
+  function retryCatalog() {
+    setCatalog(null)
+    setCatalogError(null)
+    setCatalogRequest((request) => request + 1)
+  }
+
   return {
     catalog,
+    catalogError,
     detailState: {
       duplicateTaskRows,
       duplicateTasks,
@@ -268,6 +311,7 @@ export function useCatalogExplorer() {
     actions: {
       clearSelection,
       resetFilters,
+      retryCatalog,
       selectExam,
       selectTask,
       setIsDuplicateInfoOpen,

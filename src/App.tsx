@@ -9,11 +9,11 @@ import { RegistryPane } from './components/RegistryPane'
 import { useCatalogExplorer } from './hooks/useCatalogExplorer'
 
 function App() {
-  const { actions, catalog, detailState, filters, previewState, registryState } = useCatalogExplorer()
+  const { actions, catalog, catalogError, detailState, filters, previewState, registryState } = useCatalogExplorer()
   const hasSelection = Boolean(detailState.selectedExam || detailState.selectedTask)
 
   if (!catalog) {
-    return <LoadingShell examType={filters.examType} />
+    return <LoadingShell examType={filters.examType} error={catalogError} onRetry={actions.retryCatalog} />
   }
 
   return (
