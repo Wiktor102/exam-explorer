@@ -1,13 +1,14 @@
 import { ArrowDownAZ } from 'lucide-react'
 import clsx from 'clsx'
 import { sortLabels, typeAccent, typeLabels } from '../constants/catalog'
-import type { Exam, RegistryMode, SortMode, Task } from '../types/catalog'
+import type { Exam, ExamType, RegistryMode, SortMode, Task } from '../types/catalog'
 import { examFileName } from '../utils/catalog'
 import { SeasonExamLabel } from './SeasonExamLabel'
 import { SelectControl } from './SelectControl'
 
 type RegistryPaneProps = {
   examById: Map<string, Exam>
+  examType: ExamType
   filteredExams: Exam[]
   filteredTasks: Task[]
   isSelectedTaskFilteredOut: boolean
@@ -24,6 +25,7 @@ type RegistryPaneProps = {
 
 export function RegistryPane({
   examById,
+  examType,
   filteredExams,
   filteredTasks,
   isSelectedTaskFilteredOut,
@@ -68,6 +70,7 @@ export function RegistryPane({
       {registryMode === 'tasks' ? (
         <TaskTable
           examById={examById}
+          showPart={examType !== 'inf03'}
           filteredTasks={filteredTasks}
           filteredOutSelectedTask={isSelectedTaskFilteredOut ? selectedTask : null}
           selectedTaskId={selectedTaskId}
@@ -87,13 +90,14 @@ export function RegistryPane({
 
 type TaskTableProps = {
   examById: Map<string, Exam>
+  showPart: boolean
   filteredTasks: Task[]
   filteredOutSelectedTask: Task | null
   selectedTaskId: string | null
   onTaskSelect: (task: Task) => void
 }
 
-function TaskTable({ examById, filteredTasks, filteredOutSelectedTask, selectedTaskId, onTaskSelect }: TaskTableProps) {
+function TaskTable({ examById, showPart, filteredTasks, filteredOutSelectedTask, selectedTaskId, onTaskSelect }: TaskTableProps) {
   function renderTaskRow(task: Task, isFilteredOutSelection = false) {
     const exam = examById.get(task.examId)
     if (!exam) return null
@@ -111,7 +115,7 @@ function TaskTable({ examById, filteredTasks, filteredOutSelectedTask, selectedT
         title={isFilteredOutSelection ? `${examFileName(exam)} - wybrane poza filtrami` : examFileName(exam)}
       >
         <SeasonExamLabel exam={exam} />
-        <span className="task-part">{task.partLabel.replace('Część ', '')}</span>
+        {showPart && <span className="task-part">{task.partLabel.replace('Część ', '')}</span>}
         <span className={clsx('type-pill', typeAccent[task.type])}>{typeLabels[task.type] ?? task.type}</span>
         <span className="row-summary">{task.summary}</span>
         <span className="task-repeat">{task.duplicates.length ? `${task.duplicates.length + 1} ark.` : 'unikat'}</span>
@@ -120,10 +124,10 @@ function TaskTable({ examById, filteredTasks, filteredOutSelectedTask, selectedT
   }
 
   return (
-    <div className="task-table" role="table" aria-label="Zadania">
+    <div className={clsx('task-table', !showPart && 'without-part')} role="table" aria-label="Zadania">
       <div className="table-head" role="row">
         <span>Arkusz</span>
-        <span>Cz.</span>
+        {showPart && <span>Cz.</span>}
         <span>Typ</span>
         <span>Opis</span>
         <span>Powtórki</span>

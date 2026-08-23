@@ -279,6 +279,14 @@
     padding: 8px 10px 8px 12px;
   }
 
+  .task-table.without-part .task-row {
+    grid-template-areas:
+      "exam exam repeat"
+      "type summary summary";
+    grid-template-columns: max-content minmax(0, 1fr) max-content;
+    padding: 8px 10px 8px 12px;
+  }
+
   .task-row .exam-code {
     grid-area: exam;
     align-items: center;

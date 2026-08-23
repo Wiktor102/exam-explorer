@@ -40,6 +40,7 @@ function App() {
       <section className={clsx('workspace', !hasSelection && 'list-only')}>
         <RegistryPane
           examById={registryState.examById}
+          examType={filters.examType}
           filteredExams={registryState.filteredExams}
           filteredTasks={registryState.filteredTasks}
           isSelectedTaskFilteredOut={registryState.isSelectedTaskFilteredOut}
