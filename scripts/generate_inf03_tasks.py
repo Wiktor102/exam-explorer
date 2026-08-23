@@ -170,6 +170,19 @@ def split_pdf(source_pdf: Path, destination_pdf: Path, start_page: int, end_page
         writer.write(output)
 
 
+def filter_referenced_assets(source_pdf: Path, asset_files: list[str]) -> list[str]:
+    """Keep only the session assets explicitly named by this exam sheet."""
+    if len(asset_files) < 2:
+        return asset_files
+
+    reader = PdfReader(str(source_pdf))
+    document_text = "\n".join(page.extract_text() or "" for page in reader.pages).casefold()
+    referenced_assets = [asset for asset in asset_files if asset.casefold() in document_text]
+
+    # Preserve the catalog data when a sheet does not name its resources explicitly.
+    return referenced_assets or asset_files
+
+
 def classify_database(text: str) -> tuple[str, str, list[str], str]:
     match = re.search(r"baz[ęe] danych o nazwie\s+([a-z0-9_]+)", text, flags=re.IGNORECASE)
     name = match.group(1) if match else ""
@@ -360,6 +373,7 @@ def main() -> None:
         tasks, page_count = build_tasks_for_exam(exam["id"], source_pdf, public_root)
         exam["tasks"] = [task["id"] for task in tasks]
         exam["pageCount"] = page_count
+        exam["assetFiles"] = filter_referenced_assets(source_pdf, exam.get("assetFiles", []))
         all_tasks.extend(tasks)
         kinds = ", ".join(task["type"] for task in tasks)
         print(f"{exam['id']}: {len(tasks)} tasks [{kinds}]")
