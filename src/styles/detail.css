@@ -194,3 +194,14 @@
 .duplicate-strip button.same-session-repeat:focus-visible {
   opacity: 0.86;
 }
+
+.duplicate-strip button:disabled,
+.duplicate-strip button:disabled:hover,
+.duplicate-strip button:disabled:focus-visible {
+  border-color: var(--active-bg);
+  background: var(--pill-bg);
+  color: inherit;
+  cursor: default;
+  opacity: 1;
+  outline: 2px solid var(--active-bg);
+}

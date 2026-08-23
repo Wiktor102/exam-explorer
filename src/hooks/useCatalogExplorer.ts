@@ -199,10 +199,20 @@ export function useCatalogExplorer() {
       return []
     }
 
-    const seenSessions = new Set([examSessionKey(selectedExam)])
+    const seenSessions = new Set<string>()
 
-    return duplicateTasks
-      .map((task, index) => {
+    return [selectedTask, ...duplicateTasks]
+      .sort((left, right) => {
+        const leftExam = examById.get(left.examId)
+        const rightExam = examById.get(right.examId)
+
+        if (leftExam && rightExam) {
+          return compareExamTime(rightExam, leftExam) || left.part - right.part || left.id.localeCompare(right.id)
+        }
+
+        return left.id.localeCompare(right.id)
+      })
+      .map((task) => {
         const exam = examById.get(task.examId)
         const sessionKey = exam ? examSessionKey(exam) : task.examId
         const isSameSessionRepeat = seenSessions.has(sessionKey)
@@ -212,15 +222,7 @@ export function useCatalogExplorer() {
           task,
           exam,
           isSameSessionRepeat,
-          index,
         }
-      })
-      .sort((left, right) => {
-        if (left.isSameSessionRepeat !== right.isSameSessionRepeat) {
-          return left.isSameSessionRepeat ? 1 : -1
-        }
-
-        return left.index - right.index
       })
   }, [duplicateTasks, examById, selectedExam, selectedTask])
   const previewPdf = previewMode === 'exam' ? selectedExam?.pdf : previewMode === 'task' ? selectedTask?.pdf : previewMode === 'scoring' ? selectedExam?.scoringPdf ?? undefined : undefined
