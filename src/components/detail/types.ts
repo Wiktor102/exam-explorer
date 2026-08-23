@@ -4,5 +4,4 @@ export type DuplicateTaskRow = {
   task: Task
   exam: Exam | undefined
   isSameSessionRepeat: boolean
-  index: number
 }

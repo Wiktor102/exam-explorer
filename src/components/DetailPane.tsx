@@ -79,6 +79,7 @@ export function DetailPane({
               duplicateTaskRows={duplicateTaskRows}
               duplicateTasks={duplicateTasks}
               isOpen={isDuplicateInfoOpen}
+              selectedTask={selectedTask}
               onTaskSelect={onTaskSelect}
               onToggle={onDuplicateInfoToggle}
             />

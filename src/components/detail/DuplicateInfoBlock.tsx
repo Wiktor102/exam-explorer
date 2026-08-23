@@ -9,6 +9,7 @@ type DuplicateInfoBlockProps = {
   duplicateTaskRows: DuplicateTaskRow[]
   duplicateTasks: Task[]
   isOpen: boolean
+  selectedTask: Task
   onTaskSelect: (task: Task) => void
   onToggle: () => void
 }
@@ -17,6 +18,7 @@ export function DuplicateInfoBlock({
   duplicateTaskRows,
   duplicateTasks,
   isOpen,
+  selectedTask,
   onTaskSelect,
   onToggle,
 }: DuplicateInfoBlockProps) {
@@ -41,8 +43,10 @@ export function DuplicateInfoBlock({
           {duplicateTaskRows.slice(0, 5).map(({ task, exam, isSameSessionRepeat }) => (
             <button
               key={task.id}
-              className={clsx(isSameSessionRepeat && 'same-session-repeat')}
+              className={clsx(isSameSessionRepeat && 'same-session-repeat', selectedTask.id === task.id && 'active')}
               onClick={() => onTaskSelect(task)}
+              disabled={selectedTask.id === task.id}
+              aria-current={selectedTask.id === task.id ? 'true' : undefined}
               title={exam ? examFileName(exam) : undefined}
             >
               <Link2 size={14} />
