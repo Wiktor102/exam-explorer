@@ -88,6 +88,14 @@ export function useCatalogExplorer() {
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false)
 
   useEffect(() => {
+    document.documentElement.style.colorScheme = theme
+
+    return () => {
+      document.documentElement.style.colorScheme = ''
+    }
+  }, [theme])
+
+  useEffect(() => {
     let isCancelled = false
 
     fetch(`/data/${examType}/catalog.json`)
