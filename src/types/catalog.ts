@@ -7,6 +7,11 @@ export type TaskType =
   | 'unit-testing'
   | 'web'
   | 'application'
+  | 'database'
+  | 'graphics-vector'
+  | 'graphics-raster'
+  | 'js'
+  | 'php'
 
 export type Exam = {
   id: string
@@ -18,7 +23,7 @@ export type Exam = {
   variant: string
   pdf: string
   scoringPdf: string | null
-  sourcePath: string
+  sourcePath: string | null
   solutionFolder: string | null
   pageCount: number
   tasks: string[]

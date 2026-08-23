@@ -7,6 +7,11 @@ export const typeLabels: Record<string, string> = {
   'unit-testing': 'Testy jednostkowe',
   web: 'Web',
   application: 'Aplikacja',
+  database: 'Baza danych',
+  'graphics-vector': 'Grafika wektorowa',
+  'graphics-raster': 'Grafika rastrowa',
+  js: 'JavaScript',
+  php: 'PHP',
 }
 
 export const typeAccent: Record<string, string> = {
@@ -18,6 +23,11 @@ export const typeAccent: Record<string, string> = {
   'unit-testing': 'red',
   web: 'violet',
   application: 'ink',
+  database: 'blue',
+  'graphics-vector': 'olive',
+  'graphics-raster': 'amber',
+  js: 'teal',
+  php: 'violet',
 }
 
 export const sortLabels = {
