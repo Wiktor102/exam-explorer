@@ -234,7 +234,7 @@ export function useCatalogExplorer() {
 
     setSelectedTaskId(task.id)
     setSelectedExamId(task.examId)
-    setPreviewMode('task')
+    setPreviewMode(registryMode === 'tasks' ? 'task' : 'exam')
   }
 
   function selectExam(exam: Exam) {
