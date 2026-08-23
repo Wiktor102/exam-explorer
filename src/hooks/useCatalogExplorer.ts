@@ -15,6 +15,10 @@ function isRegistryMode(value: string | null): value is RegistryMode {
   return value === 'exams' || value === 'tasks'
 }
 
+function getPreferredTheme(): 'light' | 'dark' {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
 type UrlSelection = {
   taskId: string | null
   examId: string | null
@@ -76,7 +80,7 @@ export function useCatalogExplorer() {
   const [taskType, setTaskType] = useState('all')
   const [sortMode, setSortMode] = useState<SortMode>('newest')
   const [previewMode, setPreviewMode] = useState<PreviewMode>('task')
-  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+  const [theme, setTheme] = useState<'light' | 'dark'>(getPreferredTheme)
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(getUrlParam('task'))
   const [selectedExamId, setSelectedExamId] = useState<string | null>(getUrlParam('exam'))
   const [registryMode, setRegistryMode] = useState<RegistryMode>(
@@ -86,6 +90,14 @@ export function useCatalogExplorer() {
   )
   const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false)
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false)
+
+  useEffect(() => {
+    document.documentElement.style.colorScheme = theme
+
+    return () => {
+      document.documentElement.style.colorScheme = ''
+    }
+  }, [theme])
 
   useEffect(() => {
     let isCancelled = false
