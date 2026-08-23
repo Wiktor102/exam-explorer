@@ -7,6 +7,54 @@ function getUrlParam(name: string): string | null {
   return new URLSearchParams(window.location.search).get(name)
 }
 
+function isExamType(value: string | null): value is ExamType {
+  return value === 'inf03' || value === 'inf04'
+}
+
+function isRegistryMode(value: string | null): value is RegistryMode {
+  return value === 'exams' || value === 'tasks'
+}
+
+function getPreferredTheme(): 'light' | 'dark' {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
+type UrlSelection = {
+  taskId: string | null
+  examId: string | null
+  previewMode?: PreviewMode
+}
+
+function resolveUrlSelection(catalog: Catalog): UrlSelection | null {
+  const taskId = getUrlParam('task')
+  const examId = getUrlParam('exam')
+
+  if (!taskId && !examId) return null
+
+  const taskById = new Map(catalog.tasks.map((task) => [task.id, task]))
+  const examById = new Map(catalog.exams.map((exam) => [exam.id, exam]))
+
+  if (taskId && examId) {
+    const task = taskById.get(taskId)
+    const exam = examById.get(examId)
+    return task && exam && task.examId === exam.id
+      ? { taskId: task.id, examId: exam.id, previewMode: 'task' }
+      : { taskId: null, examId: null }
+  }
+
+  if (taskId) {
+    const task = taskById.get(taskId)
+    return task
+      ? { taskId: task.id, examId: task.examId, previewMode: 'task' }
+      : { taskId: null, examId: null }
+  }
+
+  const exam = examById.get(examId!)
+  return exam
+    ? { taskId: exam.tasks[0] ?? null, examId: exam.id, previewMode: 'exam' }
+    : { taskId: null, examId: null }
+}
+
 function syncUrl(taskId: string | null, examId: string | null, registryMode: RegistryMode, examType: ExamType) {
   const params = new URLSearchParams()
   params.set('type', examType)
@@ -19,77 +67,79 @@ function syncUrl(taskId: string | null, examId: string | null, registryMode: Reg
 }
 
 export function useCatalogExplorer() {
-  const urlExamType = getUrlParam('type') as ExamType | null
-  const [examType, setExamType] = useState<ExamType>(urlExamType ?? 'inf04')
+  const urlExamType = getUrlParam('type')
+  const initialExamType: ExamType = isExamType(urlExamType) ? urlExamType : 'inf04'
+  const urlMode = getUrlParam('mode')
+  const [examType, setExamType] = useState<ExamType>(initialExamType)
   const [catalog, setCatalog] = useState<Catalog | null>(null)
+  const [catalogError, setCatalogError] = useState<string | null>(null)
+  const [catalogRequest, setCatalogRequest] = useState(0)
   const [query, setQuery] = useState('')
   const [year, setYear] = useState('all')
   const [season, setSeason] = useState<SeasonFilter>('all')
   const [taskType, setTaskType] = useState('all')
   const [sortMode, setSortMode] = useState<SortMode>('newest')
   const [previewMode, setPreviewMode] = useState<PreviewMode>('task')
-  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+  const [theme, setTheme] = useState<'light' | 'dark'>(getPreferredTheme)
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(getUrlParam('task'))
   const [selectedExamId, setSelectedExamId] = useState<string | null>(getUrlParam('exam'))
-  const urlMode = getUrlParam('mode') as RegistryMode | null
   const [registryMode, setRegistryMode] = useState<RegistryMode>(
-    urlMode ?? (getUrlParam('task') ? 'tasks' : 'exams'),
+    initialExamType === 'inf03'
+      ? 'exams'
+      : (isRegistryMode(urlMode) ? urlMode : (getUrlParam('task') ? 'tasks' : 'exams')),
   )
   const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false)
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false)
 
   useEffect(() => {
+    document.documentElement.style.colorScheme = theme
+
+    return () => {
+      document.documentElement.style.colorScheme = ''
+    }
+  }, [theme])
+
+  useEffect(() => {
+    let isCancelled = false
+
     fetch(`/data/${examType}/catalog.json`)
-      .then((response) => response.json())
-      .then((data: Catalog) => {
-        setCatalog(data)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Catalog request failed with status ${response.status}`)
+        }
+
+        return response.json() as Promise<Catalog>
       })
-  }, [examType])
+      .then((data) => {
+        if (isCancelled) return
+
+        setCatalog(data)
+        setCatalogError(null)
+
+        const selection = resolveUrlSelection(data)
+        if (selection) {
+          setSelectedTaskId(selection.taskId)
+          setSelectedExamId(selection.examId)
+          if (selection.previewMode) {
+            setPreviewMode(selection.previewMode)
+          }
+        }
+      })
+      .catch(() => {
+        if (isCancelled) return
+
+        setCatalog(null)
+        setCatalogError('Nie udało się wczytać archiwum. Sprawdź połączenie i spróbuj ponownie.')
+      })
+
+    return () => {
+      isCancelled = true
+    }
+  }, [catalogRequest, examType])
 
   useEffect(() => {
     syncUrl(selectedTaskId, selectedExamId, registryMode, examType)
   }, [selectedTaskId, selectedExamId, registryMode, examType])
-
-  useEffect(() => {
-    if (!catalog) return
-
-    const taskId = getUrlParam('task')
-    const examId = getUrlParam('exam')
-
-    if (!taskId && !examId) return
-
-    if (taskId && examId) {
-      const task = taskById.get(taskId)
-      const exam = examById.get(examId)
-      if (task && exam && task.examId === exam.id) {
-        setSelectedTaskId(task.id)
-        setSelectedExamId(exam.id)
-        setPreviewMode('task')
-      } else {
-        setSelectedTaskId(null)
-        setSelectedExamId(null)
-      }
-    } else if (taskId) {
-      const task = taskById.get(taskId)
-      if (task) {
-        setSelectedTaskId(task.id)
-        setSelectedExamId(task.examId)
-        setPreviewMode('task')
-      } else {
-        setSelectedTaskId(null)
-        setSelectedExamId(null)
-      }
-    } else {
-      const exam = examById.get(examId!)
-      if (exam) {
-        setSelectedExamId(exam.id)
-        setSelectedTaskId(exam.tasks[0] ?? null)
-        setPreviewMode('exam')
-      } else {
-        setSelectedExamId(null)
-      }
-    }
-  }, [catalog])
 
   const examById = useMemo(() => {
     return new Map(catalog?.exams.map((exam) => [exam.id, exam]) ?? [])
@@ -120,10 +170,11 @@ export function useCatalogExplorer() {
   }, [catalog, examById, query, season, sortMode, taskType, year])
 
   const filteredExams = useMemo(() => {
-    if (!catalog) return []
     const visibleExamIds = new Set(filteredTasks.map((task) => task.examId))
-    return catalog.exams.filter((exam) => visibleExamIds.has(exam.id))
-  }, [catalog, filteredTasks])
+    return [...visibleExamIds]
+      .map((examId) => examById.get(examId))
+      .filter((exam): exam is Exam => Boolean(exam))
+  }, [examById, filteredTasks])
 
   const selectedTask = selectedTaskId ? taskById.get(selectedTaskId) ?? null : null
   const isSelectedTaskFilteredOut = Boolean(
@@ -148,10 +199,20 @@ export function useCatalogExplorer() {
       return []
     }
 
-    const seenSessions = new Set([examSessionKey(selectedExam)])
+    const seenSessions = new Set<string>()
 
-    return duplicateTasks
-      .map((task, index) => {
+    return [selectedTask, ...duplicateTasks]
+      .sort((left, right) => {
+        const leftExam = examById.get(left.examId)
+        const rightExam = examById.get(right.examId)
+
+        if (leftExam && rightExam) {
+          return compareExamTime(rightExam, leftExam) || left.part - right.part || left.id.localeCompare(right.id)
+        }
+
+        return left.id.localeCompare(right.id)
+      })
+      .map((task) => {
         const exam = examById.get(task.examId)
         const sessionKey = exam ? examSessionKey(exam) : task.examId
         const isSameSessionRepeat = seenSessions.has(sessionKey)
@@ -161,15 +222,7 @@ export function useCatalogExplorer() {
           task,
           exam,
           isSameSessionRepeat,
-          index,
         }
-      })
-      .sort((left, right) => {
-        if (left.isSameSessionRepeat !== right.isSameSessionRepeat) {
-          return left.isSameSessionRepeat ? 1 : -1
-        }
-
-        return left.index - right.index
       })
   }, [duplicateTasks, examById, selectedExam, selectedTask])
   const previewPdf = previewMode === 'exam' ? selectedExam?.pdf : previewMode === 'task' ? selectedTask?.pdf : previewMode === 'scoring' ? selectedExam?.scoringPdf ?? undefined : undefined
@@ -195,7 +248,7 @@ export function useCatalogExplorer() {
 
     setSelectedTaskId(task.id)
     setSelectedExamId(task.examId)
-    setPreviewMode('task')
+    setPreviewMode(registryMode === 'tasks' ? 'task' : 'exam')
   }
 
   function selectExam(exam: Exam) {
@@ -221,11 +274,23 @@ export function useCatalogExplorer() {
     setSelectedTaskId(null)
     setSelectedExamId(null)
     setPreviewMode('exam')
+    setCatalog(null)
+    setCatalogError(null)
+    if (type === 'inf03') {
+      setRegistryMode('exams')
+    }
     setExamType(type)
+  }
+
+  function retryCatalog() {
+    setCatalog(null)
+    setCatalogError(null)
+    setCatalogRequest((request) => request + 1)
   }
 
   return {
     catalog,
+    catalogError,
     detailState: {
       duplicateTaskRows,
       duplicateTasks,
@@ -265,6 +330,7 @@ export function useCatalogExplorer() {
     actions: {
       clearSelection,
       resetFilters,
+      retryCatalog,
       selectExam,
       selectTask,
       setIsDuplicateInfoOpen,
