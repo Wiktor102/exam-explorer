@@ -158,10 +158,11 @@ export function useCatalogExplorer() {
   }, [catalog, examById, query, season, sortMode, taskType, year])
 
   const filteredExams = useMemo(() => {
-    if (!catalog) return []
     const visibleExamIds = new Set(filteredTasks.map((task) => task.examId))
-    return catalog.exams.filter((exam) => visibleExamIds.has(exam.id))
-  }, [catalog, filteredTasks])
+    return [...visibleExamIds]
+      .map((examId) => examById.get(examId))
+      .filter((exam): exam is Exam => Boolean(exam))
+  }, [examById, filteredTasks])
 
   const selectedTask = selectedTaskId ? taskById.get(selectedTaskId) ?? null : null
   const isSelectedTaskFilteredOut = Boolean(
