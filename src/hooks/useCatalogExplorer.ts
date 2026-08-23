@@ -33,7 +33,7 @@ export function useCatalogExplorer() {
   const [selectedExamId, setSelectedExamId] = useState<string | null>(getUrlParam('exam'))
   const urlMode = getUrlParam('mode') as RegistryMode | null
   const [registryMode, setRegistryMode] = useState<RegistryMode>(
-    urlExamType === 'inf03' ? 'exams' : (urlMode ?? (getUrlParam('task') ? 'tasks' : 'exams')),
+    urlMode ?? (getUrlParam('task') ? 'tasks' : 'exams'),
   )
   const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false)
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false)
@@ -221,9 +221,6 @@ export function useCatalogExplorer() {
     setSelectedTaskId(null)
     setSelectedExamId(null)
     setPreviewMode('exam')
-    if (type === 'inf03') {
-      setRegistryMode('exams')
-    }
     setExamType(type)
   }
 

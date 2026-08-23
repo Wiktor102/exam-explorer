@@ -22,7 +22,6 @@ function App() {
 
       <FilterBar
         catalog={catalog}
-        examType={filters.examType}
         query={filters.query}
         registryMode={filters.registryMode}
         season={filters.season}

@@ -8,7 +8,7 @@ export function formatExamLabel(exam: Exam) {
 }
 
 export function examFileName(exam: Exam) {
-  return exam.sourcePath.split('/').at(-1) ?? exam.sourcePath
+  return exam.sourcePath?.split('/').at(-1) ?? exam.pdf.split('/').at(-1) ?? exam.code
 }
 
 export function examSessionKey(exam: Exam) {
@@ -38,6 +38,6 @@ export function repositoryFileUrl(repository: string, path: string) {
 }
 
 export function resourceUrl(repository: string, exam: Exam, assetFile: string) {
-  const sourceDirectory = exam.sourcePath.split('/').slice(0, -1).join('/')
-  return repositoryFileUrl(repository, `${sourceDirectory}/${assetFile}`)
+  const sourceDirectory = exam.sourcePath?.split('/').slice(0, -1).join('/') ?? ''
+  return repositoryFileUrl(repository, sourceDirectory ? `${sourceDirectory}/${assetFile}` : assetFile)
 }
