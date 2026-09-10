@@ -17,14 +17,17 @@ EXAM_RE = re.compile(r"^inf03-(\d{4})-(\d{2})-(\d{2})-([a-z]{2})\.pdf$", re.IGNO
 
 SECTION_PATTERNS = [
     ("database", re.compile(r"^(Operacje na bazie danych|Baza danych):?$")),
-    ("graphics", re.compile(r"^Grafika:?$")),
+    ("graphics", re.compile(r"^Grafika(?:\s+[^\n]*)?:?$", re.IGNORECASE)),
     ("animation", re.compile(r"^Animacja:?$")),
     ("website", re.compile(r"^Witryna [Ii]nternetowa:?$")),
     ("css", re.compile(r"^Styl CSS witryny internetowej:?$")),
-    ("script", re.compile(r"^Skrypty?( połączenia z bazą( danych)?)?:?$")),
+    ("script", re.compile(r"^Skrypty?(?:\s+[^\n]*)?:?$", re.IGNORECASE)),
 ]
 
-GRAPHICS_BLOCK_RE = re.compile(r"^(Przygotowanie grafiki:?|Cechy grafiki\b[^:\n]*:)", re.MULTILINE)
+GRAPHICS_BLOCK_RE = re.compile(
+    r"^(Przygotowanie\s+[^\n]*grafik[^\n]*:?|Cechy grafiki\b[^:\n]*:|Grafika:?\s*)",
+    re.IGNORECASE | re.MULTILINE,
+)
 WEBSITE_CONTENT_RE = re.compile(r"^(Cechy wspólne dla stron:|Cechy witryny:|Wymagania dotyczące witryny:)", re.MULTILINE)
 TRAILING_RE = re.compile(r"^(UWAGA: po zakończeniu pracy|UWAGA: katalog z rezultatami|Czas przeznaczony na wykonanie zadania)", re.MULTILINE)
 
@@ -326,7 +329,11 @@ def build_tasks_for_exam(exam_id: str, source_pdf: Path, public_root: Path) -> t
             add_task(block.start, block.end, text, classify_graphics(text))
 
     if script_section:
-        later_sections = [section.start for section in sections if section.start > script_section.end]
+        later_sections = [
+            section.start
+            for section in sections
+            if section.start > script_section.end and section.kind != "script"
+        ]
         script_end = min(later_sections) if later_sections else document_end
         script_end = min(script_end, document_end)
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T20:53:32.583316+00:00",
+  "generatedAt": "2026-09-10T05:34:51.055641+00:00",
   "years": [
     2026,
     2025,
@@ -9,7 +9,7 @@
     2021
   ],
   "sourceRepository": "https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.03-rozwiazania",
-  "taskCount": 207,
+  "taskCount": 239,
   "taskTypes": [
     "database",
     "graphics-raster",
@@ -17,6 +17,242 @@
     "php"
   ],
   "exams": [
+    {
+      "tasks": [
+        "inf03-2026-06-12-sg-task-1",
+        "inf03-2026-06-12-sg-task-2",
+        "inf03-2026-06-12-sg-task-3"
+      ],
+      "pageCount": 12,
+      "number": "12",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-12-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-12-sg-zo.pdf",
+      "code": "INF.03-12-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-12-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-11-sg-task-1",
+        "inf03-2026-06-11-sg-task-2",
+        "inf03-2026-06-11-sg-task-3"
+      ],
+      "pageCount": 12,
+      "number": "11",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-11-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-11-sg-zo.pdf",
+      "code": "INF.03-11-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-11-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-10-sg-task-1",
+        "inf03-2026-06-10-sg-task-2"
+      ],
+      "pageCount": 12,
+      "number": "10",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-10-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-10-sg-zo.pdf",
+      "code": "INF.03-10-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-10-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-09-sg-task-1",
+        "inf03-2026-06-09-sg-task-2"
+      ],
+      "pageCount": 8,
+      "number": "09",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-09-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-09-sg-zo.pdf",
+      "code": "INF.03-09-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-09-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-08-sg-task-1",
+        "inf03-2026-06-08-sg-task-2",
+        "inf03-2026-06-08-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "08",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-08-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-08-sg-zo.pdf",
+      "code": "INF.03-08-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-08-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-07-sg-task-1",
+        "inf03-2026-06-07-sg-task-2"
+      ],
+      "pageCount": 8,
+      "number": "07",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-07-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-07-sg-zo.pdf",
+      "code": "INF.03-07-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-07-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-06-sg-task-1",
+        "inf03-2026-06-06-sg-task-2",
+        "inf03-2026-06-06-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "06",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-06-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-06-sg-zo.pdf",
+      "code": "INF.03-06-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-06-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-05-sg-task-1",
+        "inf03-2026-06-05-sg-task-2",
+        "inf03-2026-06-05-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "05",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-05-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-05-sg-zo.pdf",
+      "code": "INF.03-05-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-05-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-04-sg-task-1",
+        "inf03-2026-06-04-sg-task-2",
+        "inf03-2026-06-04-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "04",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-04-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-04-sg-zo.pdf",
+      "code": "INF.03-04-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-04-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-03-sg-task-1",
+        "inf03-2026-06-03-sg-task-2",
+        "inf03-2026-06-03-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "03",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-03-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-03-sg-zo.pdf",
+      "code": "INF.03-03-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-03-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-02-sg-task-1",
+        "inf03-2026-06-02-sg-task-2",
+        "inf03-2026-06-02-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "02",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-02-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-02-sg-zo.pdf",
+      "code": "INF.03-02-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-02-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
+    {
+      "tasks": [
+        "inf03-2026-06-01-sg-task-1",
+        "inf03-2026-06-01-sg-task-2"
+      ],
+      "pageCount": 8,
+      "number": "01",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2026-06-01-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2026-06-01-sg-zo.pdf",
+      "code": "INF.03-01-26.06-SG",
+      "session": "2026-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2026-06-01-sg.pdf",
+      "solutionFolder": null,
+      "year": 2026
+    },
     {
       "tasks": [
         "inf03-2026-01-12-sg-task-1",
@@ -1510,6 +1746,694 @@
     }
   ],
   "tasks": [
+    {
+      "id": "inf03-2026-06-12-sg-task-3",
+      "examId": "inf03-2026-06-12-sg",
+      "part": 3,
+      "partLabel": "JavaScript",
+      "title": "JavaScript",
+      "heading": "Witryna internetowa",
+      "type": "js",
+      "typeLabel": "JavaScript",
+      "tags": [
+        "javascript",
+        "frontend"
+      ],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2026-06-12-sg-task-3.pdf",
+      "text": "Witryna internetowa \nIlustracja 2. Wygląd strony internetowej, widać dymek dla etykiety „trekking” \nCechy grafiki 1.jpg: \n− Plik 1.jpg należy obrócić wzdłuż osi pionowej oraz przeskalować z zachowaniem proporcji tak, aby jego\nszerokość wynosiła dokładnie 400 px. Zmodyfikowany obraz jest widoczny na ilustracji 2\nCechy witryny: \n− Składa się ze strony o nazwie index.html\n− Zapisana w języku HTML5\n− Zadeklarowany polski język zawartości witryny\n− Jawnie zastosowany właściwy standard kodowania polskich znaków\n− Tytuł strony widoczny na karcie przeglądarki: „Salon rowerowy”\n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem\nstrony\n− Podział strony na bloki: nagłówkowy, główny, boczny, dwa bloki stopki.\nPodział zrealizowany za pomocą semantycznych znaczników języka HTML\n5 tak, aby po uruchomieniu w przeglądarce układ bloków był zgodny\nz ilustracją 3\n− Zawartość bloku nagłówkowego:\n− Pięć obrazów od 1.jpg do 5.jpg. Wszystkie obrazy mają tekst alternatywny „rower”\nIlustracja 3. Układ bloków \n\nStrona 4 z 9 \n− Zawartość bloku głównego:\n− Nagłówek pierwszego stopnia o treści „Dobierz rozmiar ramy roweru do wzrostu”\n− Nagłówek drugiego stopnia o treści „Wybierz rodzaj roweru”\n− Pole opcji, domyślnie zaznaczone, z etykietą „górski z kołami 29”. Znacznik etykiety ma\nprzypisaną klasę klasa_etykiety i podpowiedź „górski z kołami 29” w postaci \"dymku\"\n− Pole opcji z etykietą „szosa”. Znacznik etykiety ma przypisaną klasę klasa_etykiety\ni podpowiedź „szosa” w postaci \"dymku\"\n− Pole opcji z etykietą „trekking”. Znacznik etykiety ma przypisaną klasę klasa_etykiety\ni podpowiedź „trekking” w postaci \"dymku\"\n− W jednym momencie można zaznaczyć tylko jedno pole opcji\n− Nagłówek drugiego stopnia o treści „Podaj swój wzrost”\n− Pole zakresu liczbowego z ustawionymi wartościami: domyślną 150, minimalną 100,\nmaksymalną 220, zmiana wartości na suwaku powoduje wywołanie skryptu 1\n− Pole edycyjne typu numerycznego z wartością domyślną 150\n− Poniżej przycisk „Sprawdź” z przypisaną klasą klasa_etykiety, którego kliknięcie wywołuje\nskrypt 2\n− Paragraf z wynikiem działania skryptu 2\n− Zawartość bloku bocznego:\n− Nagłówek pierwszego stopnia o treści „Polecane firmy”\n− Paragraf z przypisanymi klasami logo1 i prawa z zawartością „cup”\n− Paragraf z przypisaną klasą logo2 z zawartością „glass”\n− Paragraf z przypisanymi klasami logo1 i srodek z zawartością „spoon”\n− Paragraf z przypisanymi klasami logo2 i prawa z zawartością „teaspoon”\n− Paragraf z przypisanymi klasami logo1 z zawartością „fork”\n− Zawartość pierwszego bloku stopki:\n− Nagłówek czwartego stopnia o treści „Oferowane typy rowerów”\n− Lista punktowana (nieuporządkowana) z elementami: „górskie”, „szosowe”, „miejskie”.\nPierwszy element zagnieżdża drugą listę punktowaną z elementami „koła 29 cali”, „koła 26\ncali”\n− Zawartość drugiego bloku stopki:\n− Nagłówek czwartego stopnia o treści „Informacje”\n− Tabela o dwóch wierszach i dwóch kolumnach. W komórkach pierwszego wiersza wstawione:\ntekst „Autor: ”, numer zdającego; w komórkach drugiego wiersza: tekst „Aktualna data: ” , efekt\ndziałania skryptu 3",
+      "summary": "Skrypt JavaScript po stronie klienta: działanie po stronie przeglądarki. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "8774e2f8df1d",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-12-sg-task-2",
+      "examId": "inf03-2026-06-12-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Cechy grafiki 1.jpg:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": [
+        "gimp",
+        "grafika-rastrowa"
+      ],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2026-06-12-sg-task-2.pdf",
+      "text": "Cechy grafiki 1.jpg: \n− Plik 1.jpg należy obrócić wzdłuż osi pionowej oraz przeskalować z zachowaniem proporcji tak, aby jego\nszerokość wynosiła dokładnie 400 px. Zmodyfikowany obraz jest widoczny na ilustracji 2",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów.",
+      "duplicateGroup": "a19a2b9077ee",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-12-sg-task-1",
+      "examId": "inf03-2026-06-12-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2026-06-12-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nDo wykonania operacji na bazie należy wykorzystać tabele przedstawione na ilustracji 1. Na potrzeby \nzadania model bazy danych został uproszczony. Pole typ w tabeli rowery zawiera wartości: szosowy, górski, \ngravel, elektryczny, miejski, cross, fatbike. \n \n \n \n \nIlustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie rowery, z zestawem polskich znaków (np. utf8_unicode_ci) \n− Do utworzonej bazy zaimportuj tabele z pliku rowery.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie PNG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie rowery. Zapytania zapisz w pliku kwerendy.txt. Wykonaj \nzrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG i nadaj im nazwy \nkw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym paskiem zadań \n− Zapytanie 1: wybierające jedynie model, rozmiar ramy, rozmiar kół, kolor i cenę z tabeli rowery \ndla rowerów w typie górski, których cena jest mniejsza lub równa 4500 \n− Zapytanie 2: wybierające jedynie nazwy producentów oraz minimalną, średnią i maksymalną \ncenę rowerów zgrupowane dla każdego producenta. Kolumnom z cenami należy nadać nazwy \n(aliasy): „najtańszy”, „średnia cena”, „najdroższy”. Należy posłużyć się relacją \n\nStrona 3 z 9 \n− Zapytanie 3: wybierające jedynie id, model, typ i rozmiar kół rowerów karbonowych (w nazwie\nmodelu zawierają słowo „Carbon”) w rozmiarze ramy L\n− Zapytanie 4: aktualizujące cenę rowerów gravelowych (typ: gravel) obniżając ją o 25%",
+      "summary": "Operacje na bazie danych rowery: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "096f2c8122c9",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-11-sg-task-3",
+      "examId": "inf03-2026-06-11-sg",
+      "part": 3,
+      "partLabel": "JavaScript",
+      "title": "JavaScript",
+      "heading": "Witryna internetowa",
+      "type": "js",
+      "typeLabel": "JavaScript",
+      "tags": [
+        "javascript",
+        "frontend"
+      ],
+      "pageStart": 3,
+      "pageEnd": 7,
+      "pdf": "/pdfs/tasks/inf03-2026-06-11-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \n \nIlustracja 2. Wygląd strony lisciaste.html, kursor na obrazie w bloku bocznym \n \nPrzygotowanie grafiki: \n− Plik dab.jpg, wypakowany z archiwum, należy przeskalować z zachowaniem proporcji, do szerokości \n300 px \n \nCechy witryny: \n− Składa się ze strony o nazwie lisciaste.html \n− Zapisana w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony „Atlas drzew” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem \nstrony \n− Podział strony na bloki: nagłówkowy, boczny, nawigacyjny, główny, \nstopki. Podział zrealizowany za pomocą semantycznych znaczników \njęzyka HTML 5 tak, aby po uruchomieniu w przeglądarce układ bloków \nbył zgodny z ilustracją 3 \n− Zawartość bloku nagłówkowego: \n− Nagłówek pierwszego stopnia o treści „Atlas drzew” \n− Zawartość bloku bocznego: \n− Nagłówek trzeciego stopnia o treści „Wybierz drzewo, aby przeczytać o nim informacje” \nIlustracja 3. Układ bloków \n\nStrona 4 z 8 \n− Blok obrazów, w którym znajdują się kolejno obrazy: buk.jpg, lipa.jpg, wierzba.jpg, brzoza.jpg, \ndab.jpg, kasztanowiec.jpg, jarzebina.jpg, klon.jpg, magnolia.jpg. Wszystkie obrazy mają tekst \nalternatywny, którym jest nazwa drzewa zawarta w nazwie właściwego pliku. Wybranie poprzez \nkliknięcie obrazu, powoduje wywołanie funkcji tworzącej elementy z opisem danego drzewa \nw bloku głównym strony (skrypt 1) \n− Pole edycyjne z podpowiedzią „Wyszukaj drzewo…” \n− Przycisk „Szukaj”, którego kliknięcie powoduje wywołanie funkcji szukającej informacji o podanym \ndrzewie (skrypt 2) \n− Zawartość bloku nawigacyjnego: \n− Lista punktowana (nieuporządkowana) z trzema elementami, które są odsyłaczami prowadzącymi \ndo plików: \n− lisciaste.html – drzewa liściaste \n− iglaste.png – drzewa iglaste \n− owocowe.png – drzewa owocowe \n− Zawartość bloku głównego: \n− Paragraf z przypisaną klasą opis. Jego zawartością jest tekst: „Witamy w naszym…”. Cały tekst \nznajduje się w pliku do_strony.txt (do skopiowania) \n− Fragment tekstu „Atlasie drzew” zapisany w semantycznym znaczniku oznaczającym tekst ważny \ni domyślnie sformatowany jako pogrubiony – patrz ilustracja 2 \n− Zawartość bloku stopki: paragraf o treści „Autor: ”, dalej wstawiony numer zdającego \n \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS \ndziałające na stronie: \n− Dla bloku nagłówkowego: tło w postaci obrazu naglowek.png, wysokość 170 px \n− Dla bloku bocznego: szerokość 25%, wysokość 720 px, wyrównanie tekstu do środka \n− Dla bloków nawigacyjnego i głównego: szerokość 55% \n− Dla bloku nawigacyjnego: wysokość 90 px \n− Dla bloku głównego: marginesy wewnętrzne 22 px, jedynie margines zewnętrzny lewy 3%, cień bloku \nbez przesunięcia o rozmyciu 25 px i kolorze Grey \n− Dla bloku obrazów w bloku bocznym i bloku głównego: wysokość 530 px, paski przewijania widoczne \ntylko wtedy, gdy zawartość nie mieści się w bloku \n− Dla bloku stopki: kolor tła Crimson \n− Dla klasy opis: rozmiar czcionki 150%, wysokość wiersza (interlinia) 150%, tekst wyrównany z lewej \ni prawej strony (wyjustowany) \n− Dla elementów listy: sposób wyświetlania liniowo-blokowy, szerokość 30% \n− Dla odsyłaczy: sposób wyświetlania blokowy, kolor czcionki #382828, rozmiar czcionki 180%, brak \npodkreślenia, tekst przekształcony na wielkie litery \n− Dla obrazów w bloku bocznym: obramowanie tylko prawe i dolne linią ciągłą o szerokości 4 px w kolorze \nCrimson, zaokrąglenie rogów 25 px \n− Gdy kursor znajdzie się na obrazie w bloku bocznym kolor obramowania obrazu zmienia się na Teal \n− Dla selektora nagłówka pierwszego stopnia: krój czcionki Chiller, w przypadku braku fantasy, kolor \nczcionki Crimson, rozmiar czcionki 152 px, odstępy między literami 30 px, brak marginesu zewnętrznego \n \nUwaga: styl CSS nagłówka pierwszego stopnia należy zdefiniować wyłącznie przy pomocy selektora \nznacznika. Jest to uwarunkowane projektem późniejszej rozbudowy witryny. \nStrona 5 z 8 \nSkrypty działające po stronie klienta \nWymagania dotyczące skryptów: \n− Należy stosować znaczące nazewnictwo zmiennych i funkcji w języku polskim lub angielskim. \nNazewnictwo odzwierciedla cel zastosowania \n− W pliku do_strony.txt znajdują się zawartości tablic do wykorzystania w kodzie JavaScript. Pierwsza \ntablica zawiera nazwy drzew, druga tablica zawiera ich opisy. Dana nazwa drzewa oraz jego opis są \numieszczone w tablicach pod tym samym indeksem, np. informacje dotyczące drzewa buk pod indeksem \n0 w każdej z tablic \n \nSkrypt 1: \n− Wykonywany po kliknięciu na obraz w bloku bocznym \n− Usuwa zawartość bloku głównego \n− Tworzy elementy i dodaje je do bloku głównego (ilustracja 4): \n− Element DOM dla nagłówka drugiego stopnia z nazwą drzewa, którego obraz został kliknięty \n− Element DOM dla paragrafu z tekstem opisującym drzewo, którego obraz został kliknięty. Do tego \nelementu dodaje klasę opis \n \nSkrypt 2: wyświetla informacje dotyczące drzewa, którego nazwę użytkownik wpisał w pole edycyjne \n− Wykonywany po kliknięciu na przycisk „Szukaj” \n− Pobiera dane z pola edycyjnego \n− Sprawdza czy wpisana przez użytkownika nazwa drzewa znajduje się w tablicy nazw drzew. Jeżeli \nistnieje, to wypisuje w bloku głównym informacje o tym drzewie (tak samo jak w skrypcie 1), \nw przeciwnym wypadku wypisuje w bloku głównym tekst \"Drzewa, o którym chcesz znaleźć informacje, \nnie ma w naszym Atlasie drzew.\" (można wykorzystać tutaj funkcję skryptu 1.) \n \n \n \n \nIlustracja 4. Efekt działania skryptu 1, kliknięto pierwszy obraz w bloku bocznym – buk \n \n \n\nStrona 6 z 8 \n \nIlustracja 5. Efekt działania skryptu 2, wpisano nazwę drzewa, którego nie ma w Atlasie – akacja \n \n \n \n \nTabela 1. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time \n \nWybrane zdarzenia HTML \nZdarzenia myszy Zdarzenia klawiatury Zdarzenia obiektów \nonclick \nondblclick \nonmouseover \nonmouseout \nonkeydown \nonkeypress \nonkeyup \nonload \nonresize \nonfocusin \nonfocusout \n \nElementy formularzy \n \nMetody i pola obiektu string (JS) \nWażniejsze typy pola input: button, checkbox, \nnumber, password, radio, text, range, file \nInne elementy: select, textarea \nLength \nindexOf(text) \nsearch(text) \nlastIndexOf() \nsubstr(startIndex, endIndex) \nreplace(textToReplace, newText) \ntoUpperCase() \ntoLowerCase() \n \n \n \n\nStrona 7 z 8 \nTabela 2. Wybrane pola i metody modelu DOM języka JavaScript \nWyszukiwanie elementów Zmiana elementów \ndocument.getElementById(id) \ndocument.getElementsByTagName(TagName) \ndocument.getElementsByClassName(ClassName) \ndocument.getElementsByName(ElementName) \ndocument.querySelector(CSSselector) \ndocument.querySelectorAll(CSSselector) \nelement.innerHTML = \"wartość\" \nelement.attribute_name = \"wartość\" \nelement.setAttribute(atrybut, wartosc) \nelement.style.property_name = \"wartość\" \n \n \nTabela 3. Tworzenie nowych elementów DOM i wstawianie ich do bloków \nUwaga: w miejscu element należy wstawić obiekt konkretnego elementu, zwróconego takimi funkcjami jak \ngetElementById, createElement... \nKod Opis \ndocument.createElement(\"h2\") Tworzy element DOM <h2> i zwraca go. Jako parametr \nnależy podać nazwę elementu, np. ul, p, table ... \nelement. classList.add(\"klasa1\"); Przypisuje do danego elementu klasę stylu CSS \nelement. classList.remove(\"klasa1\"); Usuwa określoną klasę stylu CSS z elementu. \nelement. classList.toggle(\"klasa1\"); Przełącza obecność klasy w elemencie. Jeśli klasa jest \nprzypisana, zostanie usunięta; jeśli jej nie ma, zostanie \ndodana. \nelement.nazwa_atrybutu = ... Ustawia wartości atrybutów dla danego elementu \nelement.innerText = .... Ustawia tekst dla elementów takich jak paragraf, nagłówek, \nprzycisk, itp. \nelement1.appendChild(element2); Zagnieżdża element2 w elemencie1. Elementem1 może \nbyć cały dokument, blok, lista lub inny element agregujący. \nWewnątrz niego zostaje umieszczony element2 \nelement.scrollIntoView(); Przewija zawartość bloku / strony do wskazanego elementu \n \n \nWybrane fragmenty pomocy ze strony kodilla.com na temat właściwości CSS display \nOpis: CSS display definiuje sposób wyświetlania elementu \nSkładnia: display: value; \nSpis wartości: \nWartość (value) Opis \ninline Wyświetla element w linii (np. <span>) \nblock Wyświetla element w bloku (np. <p>) \ninline-block Wyświetla element jako kontener liniowo-blokowy \nnone Element jest usunięty \n \nPomoc na temat właściwości box-shadow \nCSS Syntax: \nbox-shadow: h-offset v-offset blur spread color inset; \nProperty values: \nValue Description \nh-offset \n(required) \nDefines the horizontal offset of the shadow. Positive values place the shadow to \nthe right, negative values to the left. \nv-offset \n(required) \nDefines the vertical offset of the shadow. Positive values place the shadow \nbelow, negative values above. \nblur-radius \n(optional) \nDefines the blur radius of the shadow. A larger value means a more blurred \nshadow. A value of 0 means a sharp shadow. \nspread-radius \n(optional) \nDefines how much the shadow should expand or contract. Positive values make \nthe shadow larger, negative values make it smaller. \ncolor \n(optional) \nDefines the color of the shadow. It can be a color name, RGB, RGBA, HSL, \nHSLA, hex, etc. \nInset \n(optional) \nIf specified, the shadow will be an inner shadow (drawn inside the element). By \ndefault, shadows are outside. \n \nStrona 8 z 8",
+      "summary": "Skrypt JavaScript po stronie klienta: obsługa formularza. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "fa86d229746e",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-11-sg-task-2",
+      "examId": "inf03-2026-06-11-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie grafiki:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": [
+        "gimp",
+        "grafika-rastrowa"
+      ],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2026-06-11-sg-task-2.pdf",
+      "text": "Przygotowanie grafiki: \n− Plik dab.jpg, wypakowany z archiwum, należy przeskalować z zachowaniem proporcji, do szerokości \n300 px",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów.",
+      "duplicateGroup": "8b9c05e6332d",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-11-sg-task-1",
+      "examId": "inf03-2026-06-11-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2026-06-11-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nDo wykonania operacji na bazie należy wykorzystać tabele przedstawione na ilustracji 1. Na potrzeby \nzadania model bazy danych został uproszczony. Pole rodzaj w tabeli gatunki przyjmuje wartości: 1 dla drzew \nliściastych, 2 dla iglastych lub 3 dla drzew owocowych. Pole opis w tabeli lokalizacje zawiera nazwę lokalizacji \nw postaci miasto, kraj, np. „Warszawa, Polska” \n \n \nIlustracja 1. Baza danych \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie atlas_drzew, z zestawem polskich znaków (np. utf8_unicode_ci) \n− Do utworzonej bazy zaimportuj dane z pliku atlasdrzew.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie PNG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie atlas_drzew. Zapytania zapisz w pliku kwerendy.txt. \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG i nadaj \nim nazwy kw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym paskiem \nzadań \n− Zapytanie 1: wybierające jedynie nazwy, nazwy naukowe oraz średnią długość życia gatunków \ndrzew z rodzaju iglastych posortowane malejąco według średniej długości życia \n− Zapytanie 2: wybierające jedynie pola id i stanZdrowia z tabeli drzewa oraz odpowiadające im \npole nazwa z tabeli gatunki dla tych drzew, które zostały posadzone 6 czerwca 2008 roku. Należy \nposłużyć się relacją \n\nStrona 3 z 8 \n− Zapytanie 3: wybierające jedynie pole rodzaj oraz liczące ile gatunków z każdego rodzaju jest \nopisanych w tej bazie danych. Kolumnie z liczbą gatunków należy nadać nazwę (alias) „ilość” \n− Zapytanie 4: wybierające jedynie nazwy z tabeli gatunki oraz odpowiadające im datę posadzenia \ni stan zdrowia z tabeli drzewa, drzew obserwowanych w Gdańsku, Polsce, których nazwy kończą \nsię na literę 'a'. Należy posłużyć się relacją",
+      "summary": "Operacje na bazie danych atlas_drzew: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "1121b41f94b0",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-10-sg-task-2",
+      "examId": "inf03-2026-06-10-sg",
+      "part": 2,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": [
+        "php",
+        "backend",
+        "mysql"
+      ],
+      "pageStart": 3,
+      "pageEnd": 7,
+      "pdf": "/pdfs/tasks/inf03-2026-06-10-sg-task-2.pdf",
+      "text": "Witryna internetowa \nWitryna internetowa składa się ze stron login.php, wyniki.php oraz pliku wyloguj.php. Do prawidłowego \ndziałania witryny niezbędne są pliki formatu PDF znajdujące się w dołączonym archiwum. Wygląd stron \nprzedstawiono na ilustracjach 2 i 3. \n \n \nIlustracja 2. Wygląd strony login.php \n \n \nIlustracja 3. Wygląd strony wyniki.php \n\nStrona 4 z 8 \nCechy wspólne dla stron login.php i wyniki.php: \n− Zapisana w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich \nznaków \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony \nz kodem strony \n− Podział strony na bloki: nagłówkowy, główny oraz stopka. \nPodział zrealizowany za pomocą semantycznych znaczników \njęzyka HTML5, tak aby po uruchomieniu w przeglądarce układ \nbloków na stronie był zgody z ilustracją 4 \n− Zwartość bloku stopki: \n− Paragraf o treści „Wykonał:” dalej wstawiony numer zdającego \n \nCechy strony login.php: \n− Efekt działania skryptu 1 \n− Tytuł strony widoczny na karcie przeglądarki: „Zaloguj się” \n− Zawartość bloku nagłówkowego: nagłówek pierwszego stopnia o treści „Portal laboratorium” \n− Zawartość bloku głównego: \n− Nagłówek drugiego stopnia o treści „Zaloguj się do systemu” \n− Formularz wysyłający dane metodą bezpieczną do pliku login.php, składający się z pól: \n− Etykieta o treści „Login:” \n− Pole edycyjne \n− Etykieta o treści „Hasło:” \n− Pole edycyjne służące, do wpisywania hasła, ukrywające wprowadzone znaki \n− Przycisk o treści „Zaloguj” wysyłający dane z formularza do skryptu 1 \n− Układ pól zgodny z ilustracją 2 \n− Etykiety są powiązane z odpowiednimi polami edycyjnymi \n \nCechy strony wyniki.php: \n− Efekt działania skryptu 2 \n− Tytuł strony widoczny na karcie przeglądarki: „Przeglądaj wyniki” \n− Zawartość bloku nagłówkowego: \n− Nagłówek pierwszego stopnia o treści „Portal laboratorium” \n− Paragraf z wynikiem działania skryptu 2 \n− Paragraf z odnośnikiem do pliku wyloguj.php o treści „Wyloguj” \n− Zawartość bloku głównego: \n− Nagłówek drugiego stopnia o treści „Wyniki pacjentów” \n− Blok zawierający tabelę z 6 kolumnami. Pierwszy wiersz zawiera komórki nagłówkowe \nkolejno: „Imię pacjenta”, „Nazwisko pacjenta”, „PESEL”, „Data zlecenia”, „Data wykonania”, \n„Wynik”. Zawartość tabeli generowana jest skryptem 3 \n \n \nIlustracja 4. Układ bloków \nStrona 5 z 8 \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS \ndziałające na stronie: \n− Dla selektora ciała strony : krój czcionki Verdana, w przypadku jego braku sans -serif, kolor tła \n#D4F1F4, kolor czcionki #05445E \n− Dla bloku głównego na stronie login.php: szerokość 50 em, marginesy zewnętrzne automatycznie \nwyliczane przez przeglądarkę, marginesy wewnętrzne 20 px \n− Dla bloku stopki: wyrównanie tekstu do prawej strony \n− Dla bloku nagłówkowego: marginesy zewnętrzne 40 px \n− Dla bloku z tabelą: marginesy zewnętrzne 40 px, marginesy wewnętrzne 20 px \n− Dla bloku głównego na stronie login.php, dla bloku nagłówkowego oraz dla bloku z tabelą: kolor tła \n#75E6DA, zaokrąglenie obramowania 5 px, cień elementu o przesunięciu poziomym i pionowym \n10 px, rozmyciu 5 px i kolorze LightBlue \n− Dla selektora nagłówka pierwszego stopnia, selektora nagłówka drugiego stopnia oraz selektora \nformularza: wyrównanie tekstu do środka \n− Dla selektora formularza: marginesy zewnętrzne 10 px \n− Dla przycisku o treści “Zaloguj”: szerokość 14 em \n− Dla tabeli: marginesy zewnętrzne automatycznie wyliczone przez przeglądarkę, obramowanie \npołączone \n− Dla tabeli i wiersza tabeli: obramowanie linią ciągłą 1 px o kolorze #189AB4 \n− Dla komórek nagłówkowych tabeli i komórek tabeli: marginesy wewnętrzne 10 px \n− Dla odnośnika: brak podkreślenia \n− Gdy kursor znajdzie się na wierszu tabeli kolor tła zmienia się na biały o przeźroczystości 0.8 \n \nUwaga: styl CSS ciała strony, formularza, nagłówka pierwszego i drugiego stopnia należy zdefiniować \nwyłącznie przy pomocy selektora tego znacznika. Jest to uwarunkowane projektem późniejszej rozbudowy \nwitryny. \n \nSkrypty działające po stronie serwera \nW tabelach na końcu arkusza zamieszczono pomoc przydatną do napisania skryptów. Wymagania wspólne \ndotyczące skryptów: \n− Napisane w języku PHP \n− Należy stosować znaczące nazewnictwo zmiennych i funkcji w języku polskim lub angielskim \n− Skrypty wykorzystują mechanizm sesji \n \nSkrypt 1 (login.php): \n− Jeżeli dane zostały wysłane z formularza i login to admin, a hasło to TajneHaslo321* ustawiana jest \nzmienna sesji zawierająca aktualną nazwę użytkownika oraz zostaje załadowana strona wyniki.php \n \nSkrypt 2 (wyniki.php): \n− Jeżeli zmienna sesji zawierająca aktualną nazwę użytkownika nie jest ustawiona następuje \nprzekierowanie do strony login.php \n− W bloku nagłówkowym, w akapicie wyświetlany jest napis „Witaj, <użytkownik>” gdzie <użytkownik> \nto nazwa użytkownika pobrana ze zmiennej sesji. Nazwa użytkownika jest zapisana w znaczniku \nsemantycznym oznaczającym tekst ważny, formatowany domyślnie jako pogrubiony \nStrona 6 z 8 \nSkrypt 3 (wyniki.php, tabela): \n− Łączy się z serwerem bazodanowym na localhost, użytkownik root bez hasła, baza danych o nazwie \nlaboratorium \n− Wysyła do bazy danych zapytanie 4 \n− Wyniki zapytania wyświetlane są jako kolejne wiersze tabeli (zgodnie z ilustracją 3) \n− W ostatniej kolumnie tabeli, gdy z bazy została zwrócona niepusta nazwa pliku wstawiany jest \nodnośnik o treści „wynik” prowadzący do pliku o nazwie zwróconej z bazy. Odnośnik otwiera się \nw nowej karcie przeglądarki \n− Ostatnią operacją skryptu jest zamknięcie połączenia z bazą danych \n \nSkrypt 4 (wyloguj.php): \n− Jeżeli jest ustawiona zmienna sesji zawierająca nazwę użytkownika to jest ona usuwana (dane sesji \nsą czyszczone) \n− Następuje przekierowanie do strony login.php \n \nTabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB \nFunkcje biblioteki mysqli Zwracana wartość \nmysqli_connect(serwer, użytkownik, \nhasło, nazwa_bazy) id połączenia lub FALSE, gdy niepowodzenie \nmysqli_select_db(id_polaczenia, \nnazwa_bazy) TRUE/FALSE w zależności od stanu operacji \nmysqli_error(id_polaczenia) Tekst komunikatu błędu \nmysqli_close(id_polaczenia) TRUE/FALSE w zależności od stanu operacji \nmysqli_query(id_polaczenia, \nzapytanie) Wynik zapytania \nmysqli_fetch_row(wynik_zapytania) Tablica numeryczna przechowująca kolejny wiersz \nz podanych w wyniku zapytania \nmysqli_fetch_array(wynik_zapytania) \nTablica asocjacyjna zawierająca kolejny wiersz z \npodanych w wyniku zapytania lub FALSE, jeżeli nie \nma więcej wierszy w wyniku zapytania \nmysqli_num_rows(wynik_zapytania) Liczba wierszy w podanym wyniku zapytania \nmysqli_num_fields(wynik_zapytania) Liczba kolumn w podanym zapytaniu \nisset($zmienna) TRUE/FALSE w zależności od, tego czy $zmienna \nistnieje \n \n \nTabela 2. Wybrane funkcje do obsługi sesji w PHP \nFunkcja Opis \nsession_start() Rozpoczyna sesję i umożliwia dostęp do zmiennych \nsesyjnych \n$_SESSION['nazwa'] Ustawia lub zmienia wartość zmiennej sesyjnej o podanej \nnazwie \nunset($_SESSION['nazwa']) Usuwa zmienną sesyjną o podanej nazwie \nsession_destroy() Usuwa wszystkie zmienne sesyjne i kończy sesję \n \nTabela 3. Wybrane zastosowanie funkcji header w PHP \nNazwa i wartość nagłówka Opis \nheader(\"Location: [URL]\"); Przekierowuje klienta do innego adresu URL \nheader(\"Content-Type: application/json\"); Określa typ MIME odpowiedzi jako JSON \nheader(\"Cache-Control: no-cache, must-revalidate\"); Zapobiega przechowywaniu odpowiedzi w \npamięci podręcznej \nheader(\"HTTP/1.0 404 Not Found\"); Wysyła kod statusu 404 oznaczający, że zasób nie \nzostał znaleziony \n \nStrona 7 z 8 \nTabela 4. Wybrane funkcje języka SQL operujące na dacie i czasie \nFunkcja Wartość zwracana \nCURDATE() aktualna data w formacie YYYY-MM-DD, np: 2016-04-05 \nCURTIME() aktualny czas w formacie HH:MM:SS, np: 09:06:34 \nYEAR() rok dla podanej w parametrze daty, np: 2016 \nMONTH() miesiąc dla podanej w parametrze daty, np: 4 \nDAY() dzień dla podanej w parametrze daty, np: 5 \nHOUR() godzina od podanego w parametrze czasu, np: 9 \nMINUTE() minuty od podanego w parametrze czasu, np: 6 \nSECOND() sekundy od podanego w parametrze czasu, np: 34 \nDATE() tworzy typ DATE z innego typu np. DATETIME \n \nTabela 5. Wybrane fragmenty pomocy ze strony w3schools.com na temat właściwości box-shadow \nCSS Syntax \nbox-shadow: h-offset v-offset blur spread color; \nProperty Values \nValue Description \nh-offset Required. The horizontal offset of the shadow. A positive value puts the shadow on the \nright side of the box, a negative value puts the shadow on the left side of the box \nv-offset Required. The vertical offset of the shadow. A positive value puts the shadow below the \nbox, a negative value puts the shadow above the box \nblur Optional. The blur radius. The higher the number, the more blurred the shadow will be \nspread Optional. The spread radius. A positive value increases the size of the shadow, a negative \nvalue decreases the size of the shadow \ncolor Optional. The color of the shadow. The default value is the text color. Look at CSS Color \nValues for a complete list of possible color values. \n \n Tabela 6. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "8290fc47b711",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-10-sg-task-1",
+      "examId": "inf03-2026-06-10-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2026-06-10-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nDo wykonania operacji na bazie należy wykorzystać tabele przedstawione na ilustracji 1. \n \n \n \n \n \nIlustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie laboratorium, z zestawem polskich znaków (np. utf8_polish_ci) \n− Do utworzonej bazy zaimportuj tabele z pliku laboratorium.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie PNG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie laboratorium. Zapytania zapisz w pliku kwerendy.txt. \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG \ni nadaj im nazwy kw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym \npaskiem zadań \n− Zapytanie 1: wybierające jedynie imię i nazwisko diagnosty laboratoryjnego z tabeli Diagnosta \nposortowane malejąco według nazwiska \n− Zapytanie 2: zliczające liczbę zleceń pogrupowanych po datach (bez uwzględnienia godziny). \nWybierane są jedynie daty i liczby zleceń \n\nStrona 3 z 8 \n− Zapytanie 3: wybierające jedynie daty zleceń dla pacjenta o nazwisku Nowicki. Należy \nposłużyć się relacją \n− Zapytanie 4: wybierające jedynie imię, nazwisko oraz pesel pacjenta z tabeli Pacjent, datę \nz tabeli Zlecenie, datę i plik z tabeli Wynik. Należy posłużyć się relacją i odpowiednim \nrodzajem złączenia. Wybierane są wszystkie zlecenia niezależenie od tego czy jest im \nprzypisany wynik",
+      "summary": "Operacje na bazie danych laboratorium: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "0e6c8542f437",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-09-sg-task-2",
+      "examId": "inf03-2026-06-09-sg",
+      "part": 2,
+      "partLabel": "JavaScript",
+      "title": "JavaScript",
+      "heading": "Witryna internetowa",
+      "type": "js",
+      "typeLabel": "JavaScript",
+      "tags": [
+        "javascript",
+        "frontend"
+      ],
+      "pageStart": 3,
+      "pageEnd": 7,
+      "pdf": "/pdfs/tasks/inf03-2026-06-09-sg-task-2.pdf",
+      "text": "Witryna internetowa \nSkłada się z pliku index.html. Jej wygląd przedstawiono na ilustracji 2. Układ bloków z potrawami może się \nróżnić w zależności od szerokości okna przeglądarki. \nIlustracja 2. Wygląd strony internetowej \nCechy strony index.html: \n− Zapisana w języku HTML5\n− Zadeklarowany polski język zawartości witryny\n− Jawnie zastosowany właściwy standard \nkodowania polskich znaków\n− Tytuł strony widoczny na karcie przeglądarki:\n„Restauracja Marchewka”\n− Arkusz stylów w pliku o nazwie styl.css\nprawidłowo połączony z kodem strony\n− Podział strony na bloki: blok nagłówkowy zawierający dwie sekcje, blok główny zawierający dwie\nsekcje, blok stopki. Podział zrealizowany za pomocą semantycznych znaczników języka HTML5 tak,\naby po uruchomieniu w przeglądarce układ bloków był zgodny z ilustracją 3\nIlustracja 3. Układ bloków \nStrona 4 z 7 \n− Zawartość lewej sekcji nagłówkowej: \n− Nagłówek pierwszego stopnia o treści „Restauracja Marchewka” \n− Nagłówek trzeciego stopnia o treści „Twoje wegetariańskie miejsce na mapie miasta” \n− Zawartość prawej sekcji nagłówkowej: obraz logo.png z tekstem alternatywnym „logo” \n− Zawartość lewej sekcji głównej: \n− Nagłówek stopnia czwartego o treści „Twoje zamówienie” \n− Lista punktowana (nieuporządkowana) - lista w stanie początkowym jest pusta \n− Przycisk o treści „Wyczyść”, którego kliknięcie powoduje wykonanie skryptu 2 \n− Przycisk o treści „Zatwierdź”, którego kliknięcie powoduje wykonanie skryptu 3 \n− Zawartość prawej sekcji głównej: 6 bloków z potrawami zawierających obraz oraz paragraf. Kolejne \nbloki zawierają odpowiednio: \n− Obraz nalesniki.webp z tekstem alternatywnym „Naleśniki” i paragraf o treści „Naleśniki” \n− Obraz lasagne.webp z tekstem alternatywnym „Lasagne szpinakowa” i paragraf o treści \n„Lasagne szpinakowa” \n− Obraz marchewka.webp z tekstem alternatywnym „Pieczona marchewka” i paragraf o treści \n„Pieczona marchewka” \n− Obraz rosol.webp z tekstem alternatywnym „Wege rosół” i paragraf o treści „Wege rosół” \n− Obraz tarta.webp z tekstem alternatywnym „Tarta szparagowa” i paragraf o treści „Tarta \nszparagowa” \n− Obraz kompot.webp z tekstem alternatywnym „Kompot” i paragraf o treści „Kompot” \n− Kliknięcie każdego z bloków powoduje wykonanie skryptu 1 \n− Zawartość stopki: paragraf o treści „Wykonał:”, dalej wstawiony numer zdającego \n \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS \ndziałające na stronie: \n− Domyślnie, dla wszystkich selektorów: krój czcionki „Verdana”, zaokrąglenie obramowania 5 px \n− Dla selektora ciała strony: kolor tła #D1E2C4 \n− Dla lewej sekcji nagłówkowej: szerokość 80%, kolor tła #778A35, wysokość 200 px \n− Dla prawej sekcji nagłówkowej: szerokość 20%, kolor tła #778A35, wysokość 200 px \n− Dla nagłówka pierwszego stopnia: rozmiar czcionki 50 px, margines wewnętrzny lewy 200 px \n− Dla nagłówka trzeciego stopnia: rozmiar czcionki 30 px, czcionka pochylona, margines wewnętrzny \nlewy 200 px \n− Dla lewej sekcji głównej: kolor tła #EBEBE8, szerokość 25% \n− Dla prawej sekcji głównej: szerokość 75% \n− Dla bloków z potrawami: kolor tła #778A35, tekst wyrównany do środka, marginesy zewnętrzne \n20 px, wyświetlanie elementów blokowych obok siebie zgodnie z ilustracją 2 \n− Dla selektora obrazu znajdującego się w bloku z potrawą: marginesy zewnętrzne 15 px, wysokość \n150 px \n− Gdy kursor znajdzie się na bloku z potrawą pojawia się obrys (outline) linią ciągłą, o szerokości 2 px \ni kolorze białym \n− Dla stopki: kolor tła #778A35, margines zewnętrzny górny 10 px, marginesy wewnętrzne 10 px, \nwyrównanie tekstu do prawej strony \n− Dla przycisków: kolor tła #778A35, marginesy wewnętrzne 5px \n \nStrona 5 z 7 \nUwaga: styl CSS ciała strony, obrazu znajdującego się w bloku z potrawą należy zdefiniować wyłącznie przy \npomocy selektorów tych znaczników. Jest to uwarunkowane projektem późniejszej rozbudowy witryny. \n \nSkrypty działające po stronie klienta \nWymagania wspólne dotyczące skryptów: \n− Należy stosować znaczące nazewnictwo zmiennych i funkcji w języku polskim lub angielskim \n \nSkrypt 1 \n− Wywoływany jest po kliknięciu na blok z potrawą \n− Dodaje nowy element do listy w lewej sekcji głównej. Element ten zawiera nazwę klikniętej potrawy \n(ilustracja 4) \n \nSkrypt 2: \n− Wywoływany jest po kliknięciu na przycisk Wyczyść \n− Czyści zawartość listy lewej sekcji głównej \n \nSkrypt 3: \n− Wywoływany jest po kliknięciu na przycisk Zatwierdź \n− Na stronie pojawia się alert z informacją „Zamówienie zostało przekazane do realizacji” (ilustracja 5) \n− Zawartość listy z lewej sekcji głównej jest czyszczona \n \n \n \nIlustracja 4. Działanie skryptu 1. Po kliknięciu na blok z potrawą „naleśniki” nazwa potrawy została \ndodana do listy \n \n \n \nIlustracja 5. Działanie skryptu 3 \n\nStrona 6 z 7 \nTabela 1. Wybrane właściwości modelu flexbox. Pogrubienie oznacza wartość domyślną, znak \npionowej kreski oddziela dostępne wartości atrybutów \nWłaściwość CSS Znaczenie \ndisplay: flex; Element staje się blokowym kontenerem flexbox. \nflex-wrap: nowrap | wrap | wrap -reverse | initial | \ninherit; \nOkreśla, czy elementy zawarte w kontenerze flexbox \npowinny być zawijane do nowych linii, czy też nie. \nflex-direction: row | row-reverse | column | column-\nreverse | initial | inherit; \nOkreśla kolejność zawijania \nelementów. \njustify-content: flex-start | flex-end | center | space-\nbetween | space -around | space -evenly | initial | \ninherit; \nWyrównuje elementy kontenera flexbox, gdy nie \nzajmują one całej dostępnej przestrzeni w osi głównej \n(poziomej). \nalign-items: normal | stretch | positional alignment \n| flex-start | flex-end | baseline | initial | inherit; \nOkreśla domyślne wyrównanie elementów w \nkontenerze flexbox lub grid. W kontenerze flexboxa \nelementy są wyrównywane w osi pionowej. \nTabela 2. Wybrane pola i metody modelu DOM języka JavaScript \nWyszukiwanie elementów Zmiana elementów \ndocument.getElementById(id) \ndocument.getElementsByTagName(TagName) \ndocument.getElementsByClassName(ClassName) \ndocument.getElementsByName(ElementName) \ndocument.querySelector(CSSselector) \ndocument.querySelectorAll(CSSselector) \nelement.innerHTML = \"wartość\" \nelement.attribute_name = \"wartość\" \nelement.setAttribute(atrybut, wartosc) \nelement.style.property_name = \"wartość\" \nOperacje na elementach dokumentu Wybrane właściwości obiektu style \ndocument.createElement(element) \ndocument.removeChild(element) \ndocument.appendChild(element) \ndocument.replaceChild(element) \ndocument.write(text) \nbackgroundColor \ncolor \nfontSize \nfontStyle = \"normal | italic | oblique | initial | inherit\" \nfontWeight = \"normal | lighter | bold | bolder | value | \ninitial | inherit\" \nlistStyleType = \"circle| decimal | disc | none | square | \ninitial...\" \nWybrane zdarzenia HTML \nZdarzenia myszy Zdarzenia klawiatury Zdarzenia obiektów \nonclick \nondblclick \nonmouseover \nonmouseout \nonkeydown \nonkeypress \nonkeyup \nonload \nonresize \nonfocusin \nonfocusout \nElementy formularzy Metody i pola obiektu string (JS) \nWażniejsze typy pola input: button, checkbox, \nnumber, password, radio, text, range, file \nInne elementy: select, textarea \nLength \nindexOf(text) \nsearch(text) \nlastIndexOf() \nsubstr(startIndex, endIndex) \nreplace(textToReplace, newText) \ntoUpperCase() \ntoLowerCase() \nStrona 7 z 7 \nTabela 3. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time",
+      "summary": "Skrypt JavaScript po stronie klienta: obsługa formularza. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "a96c9e565c9b",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-09-sg-task-1",
+      "examId": "inf03-2026-06-09-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2026-06-09-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nDo wykonania operacji na bazie należy wykorzystać tabele przedstawione na ilustracji 1. \n \n \n \n \nIlustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie restauracja, z zestawem polskich znaków (np. utf8_polish_ci) \n− Do utworzonej bazy zaimportuj tabele z pliku restauracja.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie PNG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie restauracja. Zapytania zapisz w pliku kwerendy.txt. \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG \ni nadaj im nazwy kw1, kw2, kw3, kw4, kw5 . Zrzuty powinny obejmować cały ekran monitora \nz widocznym paskiem zadań \n− Zapytanie 1: wybierające jedynie imiona i nazwiska kelnerów posortowane malejąco według \nnazwiska \n− Zapytanie 2: zliczające jedynie liczbę zamówień, które zostały złożone dla stolika numer 3 \nw sali numer 1. Należy posłużyć się relacją \n− Zapytanie 3: wybierające jedynie nazwy potraw, które zostały zamówione dnia 9 czerwca \n2024. Należy posłużyć się relacją \n\nStrona 3 z 7 \n− Zapytanie 4: tworzące nowego użytkownika lokalnego o nazwie administrator i haśle\nboss123!\n− Zapytanie 5: zmieniające strukturę tabeli Potrawy poprzez zmianę typu kolumny cena w taki\nsposób, aby przechowywała ona liczby rzeczywiste składające się z maksimum 4 cyfr w części\ncałkowitej (przed przecinkiem) i 2 cyfr w części ułamkowej (po przecinku). Typ ten powinien\nprzechowywać dane w zapisie stałoprzecinkowym. Należy zachować ws zystkie\ndotychczasowe ograniczenia nałożone na kolumnę",
+      "summary": "Operacje na bazie danych restauracja: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "7aa2fb09e47b",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-08-sg-task-3",
+      "examId": "inf03-2026-06-08-sg",
+      "part": 3,
+      "partLabel": "JavaScript",
+      "title": "JavaScript",
+      "heading": "Witryna internetowa",
+      "type": "js",
+      "typeLabel": "JavaScript",
+      "tags": [
+        "javascript",
+        "frontend"
+      ],
+      "pageStart": 3,
+      "pageEnd": 6,
+      "pdf": "/pdfs/tasks/inf03-2026-06-08-sg-task-3.pdf",
+      "text": "Witryna internetowa \nIlustracja 2. Wygląd strony w pliku index.html, kursor znajduje się na przedostatniej miniaturze \nPrzygotowanie grafiki: \n‒ Plik gra10.png, wypakowany z archiwum, należy przeskalować do szerokości 1024 px \nz zachowaniem proporcji obrazu, a następnie wykadrować w pionie do wymiaru 576 px. \nTak przygotowaną grafikę należy zapisać w pliku gra10.jpg \nWitryna internetowa składa się ze stron index.html oraz onas.html. Ich wygląd przedstawiono na ilustracjach \nIlustracja 2 i 4. \nCechy wspólne dla obu stron: \n‒ Zapisane w języku HTML5 \n‒ Zadeklarowany polski język zawartości witryny \n‒ Jawnie zastosowany właściwy standard kodowania polskich znaków \n‒ Arkusz stylów styl_gier.css właściwie połączony z kodem strony \n‒ Plik skryptu skrypty.js właściwie połączony z kodem strony \n‒ Podział strony na bloki: nagłówkowy 1, nagłówkowy 2, główny, stopki. \nPodział zrealizowany za pomocą semantycznych znaczników języka \nHTML5 tak, aby po uruchomieniu w przeglądarce układ bloków był \nzgodny z ilustracją 3 \n‒ Zawartość bloku nagłówkowego 1: \n‒ Nagłówek drugiego stopnia zawierający odnośnik do pliku index.html o treści „PoGRAJmy!” \n‒ Zawartość bloku nagłówkowego 2: \n‒ Lista punktowana (nieuporządkowana), której elementami są: odnośnik do pliku index.html \no treści „Strona główna”, odnośnik do pliku onas.html o treści „O nas”\n‒ Zawartość stopki: \n‒ Paragraf o treści: „Autor:” dalej wstawiony numer zdającego. Numer zdającego należy zapisać \nprzy użyciu znacznika semantycznego oznaczającego tekst ważny domyślnie formatowany \njako pogrubiony \n‒ Paragraf zawierający efekt działania funkcji licznik ze skryptu \nIlustracja 3. Układ bloków \n\nStrona 4 z 6 \nCechy strony index.html: \n‒ Tytuł strony widoczny na karcie przeglądarki: „Najlepsze gry | PoGRAJmy!” \n‒ Zawartość bloku głównego: \n‒ Nagłówek pierwszego stopnia o treści: „Oto nasz wybór najciekawszych gier” \n‒ Blok zawierający dziesięć obrazów od gra1.jpg do gra10.jpg, każdy obraz ma ustawiony: \n‒ Tekst alternatywny „Miniatura gry” \n‒ Podpowiedź (dymek pojawiający się po najechaniu kursorem na obraz) „Tytuł gry” \n \n \n \nIlustracja 4. Wygląd strony onas.html \n \nCechy strony onas.html: \n‒ Tytuł strony widoczny na karcie przeglądarki: „O nas | PoGRAJmy!” \n‒ Zawartość bloku głównego: \n‒ Nagłówek pierwszego stopnia o treści: „Twoje centrum rozrywki” \n‒ Blok zawierający trzy obrazy: gra10.jpg, gra5.jpg oraz gra1.jpg \n‒ Trzy paragrafy z treścią skopiowaną z pliku teksty_marketingowe.txt \n‒ W skopiowanej treści fragmenty między gwiazdkami należy zapisać za pomocą znaczników \nsemantycznych oznaczających tekst ważny, formatowany domyślnie jako pogrubiony. \nFragmenty między znakami podkreślenia zapisać za pomocą znaczników semantycznych \noznaczających tekst uwypuklony, formatowany domyślnie jako pochylony. Znaki gwiazdki \ni podkreślenia należy usunąć (ilustracja 4) \n \n \n\nStrona 5 z 6 \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl_gier.css. Cechy formatowania CSS \ndziałające na stronie: \n‒ Domyślne formatowanie wszystkich selektorów: krój czcionki „Segoe UI”, a w przypadku jej braku \n„Tahoma” \n‒ Dla bloku nagłówkowego 1: szerokość 40% \n‒ Dla bloku nagłówkowego 2: szerokość 60%, wyrównanie zawartości bloku do prawej strony \n‒ Dla listy punktowanej: brak punktora \n‒ Dla elementu listy: wyświetlanie jako element liniowy \n‒ Dla odnośnika: brak podkreślenia, kolor czcionki #0077A2 \n‒ Jedynie dla odnośnika znajdującego się w elemencie listy: marginesy wewnętrzne 1 em \n‒ Dla selektora nagłówka pierwszego stopnia: wyrównanie tekstu do środka \n‒ Dla selektora obrazu: szerokość 20 em, marginesy zewnętrzne 1 em \n‒ Obrazy są wyświetlane obok siebie zgodnie z ilustracją 2 i 4 \n‒ Gdy kursor znajdzie się na obrazie: dodawany jest obrys (outline) o szerokości 3 px linią kreskową \nkoloru #E30613 \n \nUwaga: styl CSS nagłówka pierwszego stopnia i obrazu należy zdefiniować wyłącznie przy pomocy selektora \ntego znacznika. Jest to uwarunkowane projektem późniejszej rozbudowy witryny. \n \nSkrypt działający po stronie klienta \nWymagania dotyczące skryptu: \n− Należy stosować znaczące nazewnictwo zmiennych i funkcji w języku polskim lub angielskim \n− Plik skrypty.js powinien zawierać funkcję licznik napisaną w języku JavaScript \n− Funkcja jest wywoływana w momencie załadowania się stron index.html oraz onas.html \n \nFunkcja licznik: \n− Wykorzystuje obiekt localStorage do przechowania licznika wyświetleń strony \n− Po każdym odwiedzeniu strony zwiększa liczbę jej wyświetleń o 1 \n− W paragrafie znajdującym się w stopce witryny wyświetla napis „Liczba wejść na stronę: X”, gdzie X \njest liczbą wyświetleń strony \n \n \nTabela 1. Metody mechanizmu localStorage \nMetoda Opis \nlocalStorage.setItem(key, \nvalue) \nUstawia klucz key na wartość value, a jeśli klucz ten \njuż istnieje – aktualizuje jego wartość. \nlocalStorage.removeItem(key) Usuwa klucz key. Jeśli klucz ten nie istnieje, metoda \nnie robi nic. \nlocalStorage.getItem(key) Zwraca wartość przypisaną do klucza key lub wartość \nnull, gdy klucz ten nie istnieje. \nlocalStorage.clear() Usuwa wszystkie klucze ustawione w obiekcie \nlocalStorage. \n \n \nStrona 6 z 6 \nTabela 2. Wybrane zdarzenia języka JavaScript \nZdarzenie Opis \nonload Wywoływane, gdy cały dokument, w tym wszystkie zasoby, takie jak obrazy i \nskrypty, zostaną w pełni załadowane. \nonclick Wywoływane, gdy użytkownik kliknie na element (także dotknie na ekranach \ndotykowych). \nonchange Wywoływane, gdy wartość elementu zmienia się i zmiana ta zostanie \nzatwierdzona (np. po opuszczeniu pola tekstowego lub wybraniu nowej wartości \nw polu wyboru). \nonsubmit Wywoływane, gdy przesyłany jest formularz. Umożliwia to przechwycenie i \newentualnie przerwanie przesyłania formularza. \nonmouseover Wywoływane, gdy kursor myszy przechodzi nad elementem. \n \nTabela 3. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, \netc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time",
+      "summary": "Skrypt JavaScript po stronie klienta: obsługa formularza. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "0a30ee075882",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-08-sg-task-2",
+      "examId": "inf03-2026-06-08-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie grafiki:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": [
+        "gimp",
+        "grafika-rastrowa"
+      ],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2026-06-08-sg-task-2.pdf",
+      "text": "Przygotowanie grafiki: \n‒ Plik gra10.png, wypakowany z archiwum, należy przeskalować do szerokości 1024 px \nz zachowaniem proporcji obrazu, a następnie wykadrować w pionie do wymiaru 576 px. \nTak przygotowaną grafikę należy zapisać w pliku gra10.jpg \nWitryna internetowa składa się ze stron index.html oraz onas.html. Ich wygląd przedstawiono na ilustracjach \nIlustracja 2 i 4. \nCechy wspólne dla obu stron: \n‒ Zapisane w języku HTML5 \n‒ Zadeklarowany polski język zawartości witryny \n‒ Jawnie zastosowany właściwy standard kodowania polskich znaków \n‒ Arkusz stylów styl_gier.css właściwie połączony z kodem strony \n‒ Plik skryptu skrypty.js właściwie połączony z kodem strony \n‒ Podział strony na bloki: nagłówkowy 1, nagłówkowy 2, główny, stopki. \nPodział zrealizowany za pomocą semantycznych znaczników języka \nHTML5 tak, aby po uruchomieniu w przeglądarce układ bloków był \nzgodny z ilustracją 3 \n‒ Zawartość bloku nagłówkowego 1: \n‒ Nagłówek drugiego stopnia zawierający odnośnik do pliku index.html o treści „PoGRAJmy!” \n‒ Zawartość bloku nagłówkowego 2: \n‒ Lista punktowana (nieuporządkowana), której elementami są: odnośnik do pliku index.html \no treści „Strona główna”, odnośnik do pliku onas.html o treści",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów.",
+      "duplicateGroup": "b85d46b60ddd",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-08-sg-task-1",
+      "examId": "inf03-2026-06-08-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2026-06-08-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nDo wykonania operacji na bazie należy wykorzystać tabele przedstawione na ilustracji 1. Na potrzeby \nzadania model bazy danych został uproszczony. W tabeli gry pole gatunek zawiera nazwy gatunków danej \ngry, oddzielone przecinkami. \n \nIlustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n‒ Utwórz bazę danych o nazwie bazagier, z zestawem znaków utf8mb4_unicode_ci \n‒ Do utworzonej bazy zaimportuj tabele z pliku bazagier.sql \n‒ Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie PNG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n‒ Wykonaj zapytania SQL działające na bazie bazagier. Zapytania zapisz w pliku kwerendy.txt. \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPEG \ni nadaj im nazwy kw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym \npaskiem zadań \n‒ Zapytanie 1: wybierające jedynie tytuły i gatunki gier wydanych w latach 2018 ÷ 2023, dla których \njednym z gatunków jest „Niezależne” \n‒ Zapytanie 2: wybierające jedynie nazwę każdego producenta w bazie oraz liczbę gier, które ten \nproducent wyprodukował, zgrupowane po nazwie producenta. Kolumnie z liczbą gier należy \nnadać nazwę (alias) „liczba_gier”. Należy posłużyć się relacją i odpowiednim rodzajem złączenia \n(wybrani są wszyscy producenci, nawet z zerową liczbą gier) \n‒ Zapytanie 3: wybierające identyfikatory i tytuły gier, odpowiadającą im nazwę producenta z tabeli \nproducenci oraz odpowiadającą im nazwę wydawcy z tabeli wydawcy. Kolumnie z nazwą \nproducenta należy nadać nazwę (alias) „producent”, a kolumnie z nazwą wydawcy – (alias) \n„wydawca”. Należy posłużyć się złożoną relacją \n‒ Zapytanie 4: dodające do tabeli gry kolumnę ocena typu liczbowego, kolumna nie może być pusta, \na jej wartość domyślna to 5 \n \n\nStrona 3 z 6",
+      "summary": "Operacje na bazie danych bazagier: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "4dc573040925",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-07-sg-task-2",
+      "examId": "inf03-2026-06-07-sg",
+      "part": 2,
+      "partLabel": "JavaScript",
+      "title": "JavaScript",
+      "heading": "Witryna internetowa",
+      "type": "js",
+      "typeLabel": "JavaScript",
+      "tags": [
+        "javascript",
+        "frontend"
+      ],
+      "pageStart": 3,
+      "pageEnd": 6,
+      "pdf": "/pdfs/tasks/inf03-2026-06-07-sg-task-2.pdf",
+      "text": "Witryna internetowa \n \nIlustracja 2. Strona gra.html \nCechy strony: \n− Nazwa pliku gra.html \n− Zapisana w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony „Gra” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem \nstrony \n− Podział strony na bloki: nagłówkowy, główny, stopka. Blok główny \nzawiera trzy bloki sekcji. Podział zrealizowany za pomocą \nsemantycznych znaczników języka HTML5 tak, aby po uruchomieniu \nw przeglądarce układ bloków był zgodny z ilustracją 3 \n− Zawartość bloku nagłówkowego: \n− Nagłówek pierwszego stopnia o treści: „Zagraj w kółko i krzyżyk” \n− Zawartość bloku głównego: trzy sekcje \n− Zawartość bloku sekcji lewej: \n− Nagłówek drugiego stopnia o treści: „Gra kółko” \n− Zawartość bloku sekcji środkowej: \n− Tabela o trzech wierszach i trzech kolumnach \n− Każda komórka tabeli jest wypełniona obrazem nic.png \n− Dla każdego obrazu, gdy zostanie kliknięty, uruchamia się skrypt \n− Zawartość bloku sekcji prawej: \n− Nagłówek drugiego stopnia o treści: „Gra krzyżyk” \n− Zawartość bloku stopki: \n− Odnośnik do strony https://pl.battleship-game.org/ o treści „Zagraj w statki”. Odnośnik otwiera się \nw nowym oknie \n− Paragraf o treści „Grę opracował: ”, dalej wstawiony numer zdającego \nIlustracja 3. Układ bloków \n\nStrona 4 z 6 \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS \ndziałające na stronie: \n− Domyślnie, dla wszystkich selektorów: krój czcionki Lucida Console, w przypadku braku monospace \n− Dla ciała strony: kolor tła HoneyDew, tekst wyrównany do środka \n− Dla bloków nagłówkowego i stopki: marginesy wewnętrzne 20 px \n− Dla bloków sekcji lewej i prawej: kolor tła PaleGreen, szerokość 20%, marginesy wewnętrzne górny \ni dolny 80 px, boczne 0, zaokrąglenie rogów 40 px \n− Dodatkowo dla bloku sekcji prawej: blok jest niewidoczny (ukryty) \n− Dla bloku sekcji środkowej: szerokość 60%, cień bloku bez przesunięcia o rozmyciu 10 px i kolorze \nDarkGreen \n− Dla selektora obrazu: szerokość 80%, marginesy zewnętrzne 10 px, typ kursora pointer \n− Dla selektora tabeli: szerokość 90%, marginesy zewnętrzne 10 px, obramowanie tabeli i komórek \npołączone \n− Dla selektora komórki tabeli: obramowanie linią ciągłą o szerokości 3 px i kolorze SeaGreen \n− Gdy komórka tabeli zostanie kliknięta, kolor tła zmienia się na SeaGreen \n \nUwaga: styl CSS obrazu, tabeli i komórki tabeli należy zdefiniować wyłącznie przy pomocy selektora tego \nznacznika. Jest to uwarunkowane projektem późniejszej rozbudowy witryny. \n \nSkrypt działający po stronie klienta \nWymagania dotyczące skryptu: \n− Należy stosować znaczące nazewnictwo zmiennych i funkcji w języku polskim lub angielskim \n− Realizuje jedynie działanie planszy do gry w kółko i krzyżyk dla dwóch graczy \n− Rozstrzyganie wygranej zostanie zaimplementowane w przyszłości – nie trzeba sprawdzać czy dany \nukład kółek i krzyżyków daje wygraną \n− Stan początkowy \n− aktualny gracz to kółko \n− Gdy gracz kółko kliknie w komórkę tabeli z obrazem nic.png: \n− w komórce jest podmieniany obraz na o.png \n− blok sekcji lewej staje się ukryty \n− blok sekcji prawej staje się widoczny \n− aktualny gracz jest zmieniany na krzyżyk \n− Gdy gracz krzyżyk kliknie w komórkę tabeli z obrazem nic.png: \n− w komórce jest podmieniany obraz na x.png \n− blok sekcji lewej staje się widoczny \n− blok sekcji prawej staje się ukryty \n− aktualny gracz jest zmieniany na kółko \n− Gdy dowolny gracz kliknie komórkę tabeli z obrazem kółka lub krzyżyka – brak akcji \n \n \nStrona 5 z 6 \nPrzykład działania planszy (ilustracja 4): \n1. Grę rozpoczyna kółko, widoczny jest blok sekcji lewej z napisem „Gra kółko”, gracz klika w dowolną\nkomórkę tabeli – pojawia się w tym miejscu grafika o.png\n2. Następnie ruch należy do krzyżyka, widoczny jest blok sekcji prawej z napisem „Gra krzyżyk”, gracz\nklika w dowolną pustą komórkę tabeli – pojawia się w tym miejscu grafika x.png\n3. Gra kółko, widoczny jest blok sekcji lewej, gracz klika w dowolną pustą komórkę, pojawia się tam\no.png\n4. Gra krzyżyk, widoczny jest blok sekcji prawej, gracz klika w dowolną pustą komórkę, pojawia się tam\nx.png\nitd. \n1 2 3 4 \nIlustracja 4. Działanie planszy do gry \nTabela 1. Wybrane pola i metody modelu DOM języka JavaScript \nWyszukiwanie elementów Zmiana elementów \ndocument.getElementById(id) \ndocument.getElementsByTagName(TagName) \ndocument.getElementsByClassName(ClassName) \ndocument.getElementsByName(ElementName) \ndocument.querySelector(CSSselector) \ndocument.querySelectorAll(CSSselector) \nelement.innerHTML = \"wartość\" \nelement.attribute_name = \"wartość\" \nelement.setAttribute(atrybut, wartosc) \nelement.style.property_name = \"wartość\" \nOperacje na elementach dokumentu Wybrane właściwości obiektu style \ndocument.createElement(element) \ndocument.removeChild(element) \ndocument.appendChild(element) \ndocument.replaceChild(element) \ndocument.write(text) \nbackgroundColor \ncolor \nfontSize \nfontStyle = \"normal | italic | oblique | initial | inherit\" \nfontWeight = \"normal | lighter | bold | bolder | value | \ninitial | inherit\" \nlistStyleType = \"circle| decimal | disc | none | square | \ninitial...\" \nWybrane zdarzenia HTML \nZdarzenia myszy Zdarzenia klawiatury Zdarzenia obiektów \nonclick \nondblclick \nonmouseover \nonmouseout \nonkeydown \nonkeypress \nonkeyup \nonload \nonresize \nonfocusin \nonfocusout \nElementy formularzy Metody i pola obiektu string (JS) \nWażniejsze typy pola input: button, checkbox, \nnumber, password, radio, text, range, file \nInne elementy: select, textarea \nLength \nindexOf(text) \nsearch(text) \nlastIndexOf() \nsubstr(startIndex, endIndex) \nreplace(textToReplace, newText) \ntoUpperCase() \ntoLowerCase() \n\nStrona 6 z 6 \nTabela 2. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time",
+      "summary": "Skrypt JavaScript po stronie klienta: obsługa formularza. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "4cc951800e19",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-07-sg-task-1",
+      "examId": "inf03-2026-06-07-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2026-06-07-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nBaza danych składa się z jednej tabeli zawierającej informacje o grach towarzyskich. Pole potrzebne zawiera \npotrzebne materiały do przeprowadzenia gry. Pole czasRozgrywki zawiera średni czas gry w minutach. \n \nIlustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie gryTowarzyskie, z zestawem polskich znaków (np. utf8_polish_ci) \n− Do utworzonej bazy zaimportuj tabelę z pliku gryTowarzyskie.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie PNG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie gryTowarzyskie. Zapytania zapisz w pliku kwerendy.txt. \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG \ni nadaj im nazwy kw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym \npaskiem zadań \n− Zapytanie 1: wybierające jedynie nazwy i potrzebne materiały do gier przeznaczonych dla więcej \nniż 4 graczy \n− Zapytanie 2: liczące średnią arytmetyczną czasu trwania gier, które są przeznaczone jedynie dla \ndwóch graczy, nazwa kolumny (alias) „średnia w minutach” \n− Zapytanie 3: wybierające jedynie nazwy gier o najdłuższym czasie rozgrywki. Jeśli kilka gier ma \nten sam, najdłuższy czas rozgrywki to wszystkie ich nazwy powinny być wybrane. Należy posłużyć \nsię kwerendą zagnieżdżoną \n− Zapytanie 4: wybierające jedynie nazwy gier karcianych (pole potrzebne zawiera cząstkę „karty”) \nprzeznaczonych dla mniej niż 4 graczy \n \n \n \n\nStrona 3 z 6",
+      "summary": "Operacje na bazie danych gryTowarzyskie: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "6bf0d185d04f",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-06-sg-task-3",
+      "examId": "inf03-2026-06-06-sg",
+      "part": 3,
+      "partLabel": "JavaScript",
+      "title": "JavaScript",
+      "heading": "Witryna internetowa",
+      "type": "js",
+      "typeLabel": "JavaScript",
+      "tags": [
+        "javascript",
+        "frontend"
+      ],
+      "pageStart": 3,
+      "pageEnd": 7,
+      "pdf": "/pdfs/tasks/inf03-2026-06-06-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nIlustracja 2. Strona recepty.html \n \nModyfikacje grafiki recepta.png: \n− Butelka z zakrętką wypełniona kolorem czarnym \n− Krzyż na butelce wypełniony kolorem czerwonym \n− Białe tło zamienione na tło przezroczyste \n− Docelowe wymiary grafiki 100 px na 100 px \n \nWitryna składa się ze stron index.html, recepty.html, skierowania.html . W plikach \nindex.html i skierowania.html należy napisać „Strona w trakcie budowy” \n \nCechy strony recepty.html: \n− Zapisana w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony „Konto pacjenta” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem \nstrony \n− Podział strony na bloki: nagłówkowy, nawigacyjny, główny i stopka. Blok \ngłówny zawiera cztery bloki sekcji. Podział zrealizowany za pomocą \nsemantycznych znaczników języka HTML5 tak, aby po uruchomieniu \nw przeglądarce układ bloków był zgodny z ilustracją 4 \n− Zawartość bloku nagłówkowego: \n− Nagłówek drugiego stopnia o treści: „Strefa pacjenta” \n− Zawartość bloku nawigacyjnego: \n− Odnośnik do strony index.html o treści „Strona główna” \n− Odnośnik do strony recepty.html o treści „Recepty” \n− Odnośnik do strony skierowania.html o treści „Skierowania” \n− Zawartość bloku sekcji lewa1: \n− Obraz pacjent.png z tekstem alternatywnym „dane pacjenta” \n− Nagłówek trzeciego stopnia o treści „Dane pacjenta” \nIlustracja 3. \nGrafika \nIlustracja 4. Układ bloków \nStrona 4 z 7 \n− Paragraf o treści „Agnieszka” \n− Paragraf o treści „Nowak” \n− Zawartość bloku sekcji prawa1: \n− Obraz recepta.png z tekstem alternatywnym „dane recept” \n− Nagłówek trzeciego stopnia o treści „Dane recept” \n− Zawartość bloku sekcji prawa2: \n− Efekt działania skryptu \n− Zawartość bloku sekcji lewa2: \n− Obraz lekarz.png z tekstem alternatywnym „dane lekarza” \n− Nagłówek trzeciego stopnia o treści „Dane lekarza” \n− Paragraf o treści „lek. Marian Kowal” \n− Paragraf o treści „numer PWZ: 4387203” \n− Zawartość bloku stopki: \n− Paragraf o treści „Autor strony: ”, dalej wstawiony numer zdającego. Numer zdającego zapisany za \npomocą znacznika semantycznego oznaczającego tekst uwypuklony, formatowany domyślnie jako \npochylony \n \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS \ndziałające na stronie: \n− Domyślnie, dla wszystkich selektorów: krój czcionki Trebuchet MS, w przypadku braku sans-serif \n− Dla bloków nagłówkowego i stopki: kolor tła #B17948, biały kolor tekstu, marginesy wewnętrzne 5 px, \nwyrównanie tekstu do środka \n− Dla bloku nawigacyjnego: kolor tła #D9A97E, kolor czcionki biały, wyrównanie tekstu do środka \n− Dla bloków sekcji lewa1 i lewa2: szerokość 40%, wysokość 200 px \n− Dla bloku sekcji prawa1: szerokość 60%, wysokość 120 px \n− Dla bloku sekcji prawa2: szerokość 60%, wysokość 400 px, paski przewijania zawsze widoczne \n− Dla selektora obrazu: opływanie po jego prawej stronie, marginesy zewnętrzne 20 px \n− Dla selektora nagłówka czwartego stopnia: wyrównanie tekstu do prawej strony, kolor czcionki czerwony, \nrozmiar czcionki 120% \n− Dla selektora odnośnika: biały kolor czcionki, rozmiar czcionki 150%, marginesy zewnętrzne 30 px \n− Dla klasy recepty: kolor tła PeachPuff, marginesy wewnętrzne 20 px, zewnętrzne 40 px, zaokrąglenie \nrogów 20 px \n− Gdy kursor znajdzie się na elemencie z przypisaną klasą recepty, kolor tła zmienia się na #D9A97E \n \nUwaga: styl CSS obrazu, nagłówka czwartego stopnia i odnośnika należy zdefiniować wyłącznie przy \npomocy selektora tego znacznika. Jest to uwarunkowane projektem późniejszej rozbudowy witryny. \n \nSkrypt działający po stronie klienta \nWymagania dotyczące skryptu: \n− Należy stosować znaczące nazewnictwo zmiennych w języku polskim lub angielskim \n− Skrypt ma za zadanie wygenerować elementy w bloku sekcji prawa2 wraz z danymi \n− Strukturę danych należy skopiować z pliku dane.json \n− Struktura jest uproszczona, dane innych pacjentów nie będą dodawane, ale może ulec zmianie tablica \nrecepty. W tym mogą zostać dopisane nowe elementy do tablicy, co należy uwzględnić w skrypcie. \nStrona 5 z 7 \n− Generowanych jest tyle bloków ile jest elementów tablicy recepty. Każdy blok ma przypisaną klasę \nrecepty \n− Wewnątrz jednego bloku generowane są: \n− Paragraf o treści „Data wystawienia: ”, dalej wstawiona wartość z tablicy \n− Lista numerowana (uporządkowana) z nazwami leków pobranymi z tablicy. Pod jednym indeksem \ntablicy recepty mogą być maksymalnie trzy leki, zapisane w polach lek1, lek2, lek3. Pierwszy lek \nzawsze jest wpisany. Kolejne wpisy mogą być puste. Gdy wpis jest pusty – nie jest uwzględniany \nw liście. Na ilustracji 5 pokazano wygenerowany drugi i trzeci blok dla indeksów [1] i [2] tablicy recepty. \nPod indeksem [1] zdefiniowano tylko dwa leki, pod indeksem [2] zdefiniowano tylko jeden lek – dlatego \nlisty mają kolejno dwa i jeden element \n− Nagłówek czwartego stopnia o treści „Kod: ”, dalej wstawiona wartość kodu z tablicy \n \n \n \nIlustracja 5. Wygenerowane bloki \n \n \n\nStrona 6 z 7 \nTabela 1. Wybrane pola i metody modelu DOM języka JavaScript \nWyszukiwanie elementów Zmiana elementów \ndocument.getElementById(id) \ndocument.getElementsByTagName(TagName) \ndocument.getElementsByClassName(ClassName) \ndocument.getElementsByName(ElementName) \ndocument.querySelector(CSSselector) \ndocument.querySelectorAll(CSSselector) \nelement.innerHTML = \"wartość\" \nelement.attribute_name = \"wartość\" \nelement.setAttribute(atrybut, wartosc) \nelement.style.property_name = \"wartość\" \n \nOperacje na elementach dokumentu Wybrane właściwości obiektu style \ndocument.createElement(element) \ndocument.removeChild(element) \ndocument.appendChild(element) \ndocument.replaceChild(element) \ndocument.write(text) \nbackgroundColor \ncolor \nfontSize \nfontStyle = \"normal | italic | oblique | initial | inherit\" \nfontWeight = \"normal | lighter | bold | bolder | value | \ninitial | inherit\" \nlistStyleType = \"circle| decimal | disc | none | square | \ninitial...\" \nWybrane zdarzenia HTML \nZdarzenia myszy Zdarzenia klawiatury Zdarzenia obiektów \nonclick \nondblclick \nonmouseover \nonmouseout \nonkeydown \nonkeypress \nonkeyup \nonload \nonresize \nonfocusin \nonfocusout \n Elementy formularzy Metody i pola obiektu string (JS) \nWażniejsze typy pola input: button, checkbox, \nnumber, password, radio, text, range, file \nInne elementy: select, textarea \nLength \nindexOf(text) \nsearch(text) \nlastIndexOf() \nsubstr(startIndex, endIndex) \nreplace(textToReplace, newText) \ntoUpperCase() \ntoLowerCase() \n \nTabela 2. Tworzenie nowych elementów DOM i wstawianie ich do bloków \nUwaga: w miejscu element należy wstawić obiekt konkretnego elementu, zwróconego takimi funkcjami jak \ngetElementById, createElement... \nKod Opis \ndocument.createElement(\"h2\") Tworzy element DOM <h2> i zwraca go. Jako parametr \nnależy podać nazwę elementu, np. ul, p, table ... \nelement. classList.add(\"klasa1\"); Przypisuje do danego elementu klasę stylu CSS \nelement.nazwa-atrybutu = ... Ustawia wartości atrybutów dla danego elementu \nelement.innerText = .... Ustawia tekst dla elementów takich jak paragraf, nagłówek, \nprzycisk itp. \nelement1.appendChild(element2); Zagnieżdża element2 w elemencie1. Elementem1 może \nbyć cały dokument, blok, lista lub inny element agregujący. \nWewnątrz niego zostaje umieszczony element2 \nelement.scrollIntoView(); Przewija zawartość bloku / strony do wskazanego elementu \n \n \nStrona 7 z 7 \nTabela 3. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time",
+      "summary": "Skrypt JavaScript po stronie klienta: obsługa formularza. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "0a97693963d6",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-06-sg-task-2",
+      "examId": "inf03-2026-06-06-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Grafika",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": [
+        "gimp",
+        "grafika-rastrowa"
+      ],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2026-06-06-sg-task-2.pdf",
+      "text": "Grafika \nIlustracja 4. Układ bloków \nStrona 4 z 7 \n− Paragraf o treści „Agnieszka” \n− Paragraf o treści „Nowak” \n− Zawartość bloku sekcji prawa1: \n− Obraz recepta.png z tekstem alternatywnym „dane recept” \n− Nagłówek trzeciego stopnia o treści „Dane recept” \n− Zawartość bloku sekcji prawa2: \n− Efekt działania skryptu \n− Zawartość bloku sekcji lewa2: \n− Obraz lekarz.png z tekstem alternatywnym „dane lekarza” \n− Nagłówek trzeciego stopnia o treści „Dane lekarza” \n− Paragraf o treści „lek. Marian Kowal” \n− Paragraf o treści „numer PWZ: 4387203” \n− Zawartość bloku stopki: \n− Paragraf o treści „Autor strony: ”, dalej wstawiony numer zdającego. Numer zdającego zapisany za \npomocą znacznika semantycznego oznaczającego tekst uwypuklony, formatowany domyślnie jako \npochylony",
+      "summary": "Grafika rastrowa: obrazy witryny internetowej.",
+      "duplicateGroup": "9a06d1eb8258",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-06-sg-task-1",
+      "examId": "inf03-2026-06-06-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2026-06-06-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nBaza danych zawiera połączone relacją m:n tabele pacjentów i leków. W tabeli typy są zapisane typy podania \nleku: tabletka, syrop itp. Rok urodzenia pacjenta jest zapisany w polu pacjenci.rokUr. Model bazy danych jest \nuproszczony jedna recepta to jeden lek dla jednego pacjenta \n \n \nIlustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie recepty, z zestawem polskich znaków (np. utf8_polish_ci) \n− Do utworzonej bazy zaimportuj tabele z pliku recepty.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie PNG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie recepty. Zapytania zapisz w pliku kwerendy.txt. Wykonaj \nzrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG i nadaj im \nnazwy kw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym paskiem \nzadań \n− Zapytanie 1: wybierające jedynie nazwy i ilości leków, dla których jednostka miary to sztuki (szt.) \n− Zapytanie 2: wybierające jedynie imię, nazwisko i rok urodzenia dla pacjentów urodzonych po 2000 \nroku, których imię jest zakończone literą ‘a’ \n− Zapytanie 3: wybierające jedynie nazwy typów leków oraz zliczające liczbę leków danego typu. \nNależy posłużyć się relacją i grupowaniem \n− Zapytanie 4: tworzące użytkownika Lekarz na localhost z hasłem Lek@rz \n \n\nStrona 3 z 7",
+      "summary": "Operacje na bazie danych recepty: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "900a8ed8adeb",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-05-sg-task-3",
+      "examId": "inf03-2026-06-05-sg",
+      "part": 3,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": [
+        "php",
+        "backend",
+        "mysql"
+      ],
+      "pageStart": 3,
+      "pageEnd": 7,
+      "pdf": "/pdfs/tasks/inf03-2026-06-05-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nIlustracja 2. Wygląd strony głównej index.php \n \nCechy grafiki f3.png: \n− Grafikę należy skadrować tak, aby zawierała tylko czerwony fotel – trzeci od lewej \nstrony \n− Po skadrowaniu należy zmienić wymiary grafiki na 524 px szerokości i 640 px \nwysokości. Proporcje muszą być zachowane, fotel musi znajdować się na środku \ngrafiki (np. poprzez przeskalowanie grafiki z zachowaniem proporcji do wysokości \n640 px, a następnie zm ianę wymiarów płótna do szerokości 524 px \nz wyśrodkowaniem) \n \nCechy witryny: \n− Składa się ze strony o nazwie index.php \n− Zapisana w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony „Sprzedaż antyków” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony \nz kodem strony \n− Podział strony na bloki: nagłówkowy, główny i stopkę. Blok główny \nzawiera blok sekcji i blok boczny. Podział zrealizowany za pomocą \nsemantycznych znaczników języka HTML5 tak, aby po uruchomieniu \nw przeglądarce układ bloków był zgodny z ilustracją 4 \n− Zawartość bloku nagłówkowego: \n− Nagłówek pierwszego stopnia o treści: „Najlepsze antyki w mieście” \n− Zawartość bloku głównego: blok sekcji i blok boczny \n \nIlustracja 4. Układ bloków \nIlustracja 3. \nGrafika f3.png \nStrona 4 z 7 \n− Zawartość bloku sekcji: \n− Nagłówek drugiego stopnia o treści: „- Sofy -” \n− Efekt działania skryptu 1 pierwszy wariant (1a) \n− Nagłówek drugiego stopnia o treści: „- Fotele -” \n− Efekt działania skryptu 1 drugi wariant (1b) \n− Nagłówek drugiego stopnia o treści: „- Komody -” \n− Efekt działania skryptu 1 trzeci wariant (1c) \n− Efekt działania skryptu 2 \n− Zawartość bloku bocznego: \n− Nagłówek drugiego stopnia o treści: „Koszyk” \n− Paragraf o treści „Zalogowano: Anna Kowalska” \n− Efekt działania skryptu 3 \n− Zawartość bloki stopki: paragraf o treści „Stronę wykonał: ”, dalej wstawiony numer zdającego \n \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS \ndziałające na stronie: \n− Domyślnie, dla wszystkich selektorów: krój czcionki Georgia \n− Dla selektora ciała strony: kolor tła MistyRose \n− Dla bloku nagłówkowego i stopki: wyrównanie tekstu do środka \n− Dla bloku sekcji: szerokość 70%, wysokość 700 px, suwaki do przewijania zawartości bloku zawsze \nwidoczne \n− Dla bloku bocznego: szerokość 30% \n− Dla selektora obrazu: szerokość 90%, wyrównanie tekstu do środka \n− Dla klasy mebel (skrypt 1): marginesy zewnętrzne 5 px, wewnętrzne 10 px, kolor tła LightCoral, \nzaokrąglenie rogów 20 px \n− Dla klasy obraz (skrypt 1): szerokość 30%, opływanie z prawej strony \n− Dla klasy opis (skrypt 1): znajduje się pod blokami obrazu i informacji, na całej szerokości bloku \nnadrzędnego \n− Dla przycisku: jedynie margines zewnętrzny lewy 30 px, marginesy wewnętrzne 20 px, kolor tła \nLightCoral, obramowanie linią kropkowaną o szerokości 2 px i kolorze Maroon, zaokrąglenie rogów 10 px \n− Dla selektora nagłówka drugiego i czwartego stopnia: czcionka pochylona \n− Dodatkowo dla selektora nagłówka drugiego stopnia: wyrównanie tekstu do środka \n− Gdy kursor znajdzie się na elemencie z przypisaną klasą mebel, jego kolor tła zmienia się na Coral \n \nUwaga: styl CSS ciała strony, obrazu, nagłówka drugiego i czwartego stopnia należy zdefiniować wyłącznie \nprzy pomocy selektora tego znacznika. Jest to uwarunkowane projektem późniejszej rozbudowy witryny. \n \nSkrypty działające po stronie serwera \nWymagania dotyczące skryptów: \n− Napisane w języku PHP \n− Należy stosować znaczące nazewnictwo zmiennych w języku polskim lub angielskim \n− Łączą się z serwerem bazodanowym na localhost, użytkownik root bez hasła, baza danych o nazwie \nantyki \n− Na końcu należy zamknąć połączenie z bazą \n \nStrona 5 z 7 \nSkrypt 1: \n− Pierwszy wariant skryptu – 1a – wysyła do bazy danych zapytanie 1 \n− Drugi wariant skryptu – 1b – wysyła do bazy danych zapytanie 1 zmodyfikowane tak, że sprawdzana \njest kategoria równa 2 \n− Trzeci wariant skryptu – 1c – wysyła do bazy danych zapytanie 1 zmodyfikowane tak, że sprawdzana \njest kategoria równa 3 \n− Każdy zwrócony zapytaniem wiersz jest wypisywany w osobnym bloku formatowanym klasą mebel, \nwedług schematu (ilustracja 5) \n− W bloku znajdują się trzy bloki: obrazu, informacji i opisu. \n− Blok obrazu: \n− Formatowany klasą obraz \n− Wyświetla obraz z pliku o nazwie pobranej z bazy danych i ścieżce dostępu odpowiednio do \nkategorii: sofy/, fotele/, komody/ oraz tekście alternatywnym „mebel” \n− Blok informacji wyświetla: \n− W nagłówku trzeciego stopnia nazwę pobraną z bazy danych \n− W nagłówku czwartego stopnia styl w postaci „styl <styl>” \n− W nagłówku trzeciego stopnia cenę w postaci „CENA: <cena> zł”. Patrz ilustracje 2, 5 \n− Formularz wysyłający dane do tego samego pliku metodą bezpieczną z jednym przyciskiem \n„KUP”. Przycisk wysyła dane, ma przypisany atrybut wartości równy polu idMeble z zapytania. \nPatrz tabela 2. \n− Blok opisu: \n− Jest formatowany klasą opis \n− Wyświetla zwrócony z bazy danych opis \n \n \nIlustracja 5. Schemat dla dwóch produktów: Opływanie obrazu i położenie przycisku „KUP” \n \n \n\nStrona 6 z 7 \nSkrypt 2 obsługujący dane z formularza: \n− Jeżeli zostały wysłane dane z formularza, wysyła do bazy danych zapytanie 2, zmodyfikowane w ten \nsposób, że w miejscu identyfikatora mebla zostanie umieszczona wartość atrybutu value z przycisku \n„KUP” (wciśnięty przycisk przy niebieskim fotelu – identyfikator 9), zostanie przesłana wartość 9 \n− Zakupy są uproszczone – kupuje zawsze klient o identyfikatorze 1, kupowana jest zawsze 1 sztuka \n \nSkrypt 3: \n− Tworzy listę numerowaną (uporządkowaną) \n− Wysyła do bazy danych zapytanie 3 \n− Każdy zwrócony zapytaniem wiersz wypisuje jako element listy o treści \n„<nazwa>, cena: <cena>”, gdzie <> oznacza zwrócone dane. \n− Uwaga: na ilustracji 2 lista jest pusta, ponieważ w tabeli zakupy nie ma \nwpisanych rekordów (nie powstały elementy listy) \n− Skrypt na podstawie zwróconych cen oblicza koszt całkowity koszyka. \nWartość jest wyświetlona pod listą, w postaci „Koszt całkowity: <koszt>” (ilustracja 6). Gdy koszyk jest \npusty to koszt całkowity wynosi 0 (ilustracja 2). \n \nTabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB \nFunkcje biblioteki mysqli Zwracana wartość \nmysqli_connect(serwer, użytkownik, \nhasło, nazwa_bazy) \nid połączenia lub FALSE, gdy niepowodzenie \nmysqli_select_db(id_polaczenia, \nnazwa_bazy) \nTRUE/FALSE w zależności od stanu operacji \nmysqli_error(id_polaczenia) Tekst komunikatu błędu \nmysqli_close(id_polaczenia) TRUE/FALSE w zależności od stanu operacji \nmysqli_query(id_polaczenia, \nzapytanie) \nWynik zapytania \nmysqli_fetch_row(wynik_zapytania) Tablica numeryczna przechowująca kolejny wiersz z \npodanych w wyniku zapytania \nmysqli_fetch_array(wynik_zapytania) Tablica asocjacyjna zawierająca kolejny wiersz z \npodanych w wyniku zapytania lub FALSE, jeżeli nie ma \nwięcej wierszy w wyniku zapytania \nmysqli_num_rows(wynik_zapytania) Liczba wierszy w podanym wyniku zapytania \nmysqli_num_fields(wynik_zapytania) Liczba kolumn w podanym wyniku zapytania \nisset($zmienna) TRUE/FALSE w zależności od, tego czy $zmienna \nistnieje \n \nTabela 2. Wysyłanie danych z przycisku w formularzu \nFormularz, który zawiera jedynie przycisk wysyłający dane do skryptu może przesłać wartość zapisaną \nw przycisku wysyłającym dane: \nprzykład: \n<form method= 'post'> \n <button name='... ' value='wartość wstawiona do tabeli POST'>...</button> \n</form> \n \n \nIlustracja 6. Fragment \nbloku bocznego \nStrona 7 z 7 \nTabela 3. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "992f4540f8b0",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-05-sg-task-2",
+      "examId": "inf03-2026-06-05-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Grafika f3.png",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": [
+        "gimp",
+        "grafika-rastrowa"
+      ],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2026-06-05-sg-task-2.pdf",
+      "text": "Grafika f3.png \nStrona 4 z 7 \n− Zawartość bloku sekcji: \n− Nagłówek drugiego stopnia o treści: „- Sofy -” \n− Efekt działania skryptu 1 pierwszy wariant (1a) \n− Nagłówek drugiego stopnia o treści: „- Fotele -” \n− Efekt działania skryptu 1 drugi wariant (1b) \n− Nagłówek drugiego stopnia o treści: „- Komody -” \n− Efekt działania skryptu 1 trzeci wariant (1c) \n− Efekt działania skryptu 2 \n− Zawartość bloku bocznego: \n− Nagłówek drugiego stopnia o treści: „Koszyk” \n− Paragraf o treści „Zalogowano: Anna Kowalska” \n− Efekt działania skryptu 3 \n− Zawartość bloki stopki: paragraf o treści „Stronę wykonał: ”, dalej wstawiony numer zdającego",
+      "summary": "Grafika rastrowa: logo witryny.",
+      "duplicateGroup": "39a80e14e5ea",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-05-sg-task-1",
+      "examId": "inf03-2026-06-05-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2026-06-05-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nBaza danych zawiera połączone relacją m:n tabele przedstawione na ilustracji 1. W tabeli meble pole \nkategoria przyjmuje wartości: 1 – sofy, 2 – fotele, 3 – komody. Pole czyNowy przyjmuje wartość 1, gdy mebel \njest nowy lub 0, gdy model jest używany. \n \n \nIlustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie antyki, z zestawem polskich znaków (np. utf8_polish_ci) \n− Do utworzonej bazy zaimportuj tabele z pliku antyki.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie PNG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie antyki. Zapytania zapisz w pliku kwerendy.txt. Wykonaj \nzrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG i nadaj im \nnazwy kw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym paskiem \nzadań \n− Zapytanie 1: wybierające jedynie pola idMeble, nazwa, plik, styl, cena i opis z tabeli meble dla \nkategorii 1 \n− Zapytanie 2: wstawiające rekord do tabeli zakupy o wartościach identyfikator klienta: 1, \nidentyfikator mebla: 6, jedna sztuka. Klucz główny nadawany automatycznie \n− Zapytanie 3: wybierające jedynie nazwę i cenę mebli, które zostały zakupione przez klienta \no identyfikatorze równym 1. Należy posłużyć się relacją \n− Zapytanie 4: wybierające jedynie nazwę mebla oraz odpowiadające mu imię i nazwisko \nkupującego klienta. Należy posłużyć się relacją m:n \n \n \n \n \n\nStrona 3 z 7",
+      "summary": "Operacje na bazie danych antyki: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "e5dc6fbc3817",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-04-sg-task-3",
+      "examId": "inf03-2026-06-04-sg",
+      "part": 3,
+      "partLabel": "JavaScript",
+      "title": "JavaScript",
+      "heading": "Witryna internetowa",
+      "type": "js",
+      "typeLabel": "JavaScript",
+      "tags": [
+        "javascript",
+        "frontend"
+      ],
+      "pageStart": 3,
+      "pageEnd": 6,
+      "pdf": "/pdfs/tasks/inf03-2026-06-04-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nIlustracja 2. Wygląd strony internetowej \n \nCechy grafiki osoba.png: \n− Przeskalowana z zachowaniem proporcji do szerokości 100 px \n− Tło przezroczyste \n \nWitryna składa się z podstron o nazwach rezerwacja (format PHP lub HTML) , wycieczki.html. W pliku \nwycieczki.html należy zapisać „Strona w trakcie budowy” \n \nCechy strony rezerwacja: \n− Zapisana w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Biuro turystyczne” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem \nstrony \n− Podział strony na bloki: nagłówkowy, główny i stopki. Blok główny \nzawiera bloki: nawigacyjny, dwa bloki sekcji i blok boczny. Podział \nzrealizowany za pomocą semantycznych znaczników języka HTML5 \ntak, aby po uruchomieniu w przeglądarce układ bloków był zgodny z ilustracją 3 \n− Zawartość bloku nagłówkowego: nagłówek pierwszego stopnia o treści „Rezerwacja wycieczek” \n− Zawartość bloku głównego: blok nawigacyjny, dwa bloki sekcji i blok boczny \n− Zawartość bloku bocznego: 9 obrazów z tekstem alternatywnym „wycieczki”. Obrazy są zapętlone: 1.jpg, \n2.jpg, 3.jpg, 1.jpg itd. Sposób realizacji dowolny \n− Zawartość bloku nawigacyjnego: \n− Przycisk o treści „Uczestnik”, którego kliknięcie powoduje wywołanie funkcji uczestnika \n− Przycisk o treści „Rezerwacja”, którego kliknięcie powoduje wywołanie funkcji rezerwacji \n− Zawartość pierwszego bloku sekcji: \n− Nagłówek drugiego stopnia o treści „Dane Klienta” \nIlustracja 3. Układ bloków \n\nStrona 4 z 7 \n− Obraz osoba.png z tekstem alternatywnym „Klient” \n− Poniżej etykieta „Imię” oraz pole edycyjne z nią powiązane \n− Poniżej etykieta „Nazwisko” oraz pole edycyjne z nią powiązane \n− Paragraf z odnośnikiem o treści „Do strony głównej”, który prowadzi do strony wycieczki.html \n− Zawartość drugiego bloku sekcji: \n− Nagłówek drugiego stopnia o treści „Dane rezerwacji” \n− Ogólny znacznik liniowy <span> ze znakiem , jego kliknięcie powoduje zmianę zdjęcia w bloku \nsekcji drugiej \n− Obraz 1.jpg z tekstem alternatywnym „wycieczka” \n− Ogólny znacznik liniowy <span> ze znakiem , jego kliknięcie powoduje zmianę zdjęcia w bloku \nsekcji drugiej \n− Nagłówek czwartego stopnia o treści „Barcelona” \n− Etykieta „Liczba osób:” oraz pole edycyjne z nią powiązane. Pole jest typu numerycznego, przyjmuje \nwartości od 1 do 4, wyświetla wartość 2. Pole jest nieaktywne \n− Poniżej etykieta „Miejsce wylotu:” oraz pole listy rozwijanej z nią powiązane. Opcje listy: \n„Warszawa”, „Kraków”, „Wrocław”. Pole listy jest nieaktywne \n− Poniżej zgrupowane trzy pola opcji (w jednym momencie możliwe jest wybranie tylko jednego pola), \npowiązane z etykietami „Śniadania”, „Śniadania i obiadokolacje”, „All inclusive”. Wszystkie pola są \nnieaktywne, pierwsze jest zaznaczone \n− Poniżej przycisk „Sprawdź cenę”. Przycisk nie ma funkcjonalności \n− Zawartość bloku stopki: paragraf o treści „Autor strony: ”, dalej wstawiony numer zdającego. Numer \nzdającego jest zapisany w semantycznym znaczniku oznaczającym tekst uwypuklony, formatowany \ndomyślnie jako pochylony \n \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS \ndziałające na stronie: \n− Domyślnie, dla wszystkich selektorów: krój czcionki „Bookman Old Style” \n− Dla ciała strony: kolor tła AliceBlue \n− Dla bloku nagłówkowego i stopki: kolor tła SkyBlue, wyrównanie tekstu do środka, marginesy \nwewnętrzne 1 px, zaokrąglenie rogów 15 px \n− Dla bloku nawigacyjnego: szerokość 90%, wyrównanie tekstu do środka \n− Dla obu bloków sekcji: szerokość 45%, wysokość 640 px \n− Dla bloku bocznego: szerokość 10%, wysokość 700 px, w przypadku przepełnienia bloku zawartość \nwystająca poza blok jest ukryta \n− Jedynie dla obrazów w bloku bocznym: szerokość 100% \n− Dla znacznika span: rozmiar czcionki 200%, kursor pointer \n− Dla przycisku: kolor tła SkyBlue, szerokość 45%, zaokrąglenie rogów 15 px, marginesy wewnętrzne \ngórny i dolny 15 px, pozostałe 40 px, marginesy zewnętrzne górny i dolny 3 px, pozostałe 2% \n− Dla kontrolek (pola edycyjne, lista rozwijana, pola opcji): marginesy zewnętrzne 3 px \n \nSkrypt działający po stronie klienta \nWymagania dotyczące skryptu: \n− Wykonywany po kliknięciu przycisku \n− Należy stosować znaczące nazewnictwo zmiennych i funkcji w języku polskim lub angielskim \n \n\nStrona 5 z 7 \nStan początkowy: \n− Kolor tła przycisku „Uczestnik” jest ustawiony na DodgerBlue \n \nFunkcja uczestnika wywoływana po wciśnięciu przycisku „Uczestnik” (ilustracja 4): \n− Zmieniane są kolory tła przycisków: „Uczestnik” na DodgerBlue, „Rezerwacja” na SkyBlue \n− Kontrolki pierwszego bloku sekcji są aktywowane \n− Kontrolki drugiego bloku sekcji są nieaktywne \n \nFunkcja rezerwacji wywoływana po wciśnięciu przycisku „Rezerwacja” (ilustracja 5): \n− Zmieniane są kolory tła przycisków: „Uczestnik” na SkyBlue na, „Rezerwacja” na DodgerBlue \n− Kontrolki pierwszego bloku sekcji są nieaktywne \n− Kontrolki drugiego bloku sekcji są aktywowane \n \nFunkcja wywoływana po wciśnięciu znaku : \n− Zmienia się obraz oraz nazwa miejsca wycieczki na poprzedni, w przypadku pierwszego – na ostatni \n(obrazy są przewijane do tyłu) \n− Kolejność: 1.jpg „Barcelona”, 3.jpg „Londyn”, 2.jpg „Rzym”, 1.jpg „Barcelona, ... \n \nFunkcja wywoływana po wciśnięciu znaku : \n− Zmienia się obraz oraz nazwa miejsca wycieczki na następny, w przypadku ostatniego – na pierwszy \n− Kolejność: 1.jpg „Barcelona”, 2.jpg „Rzym”, 3.jpg „Londyn”, 1.jpg „Barcelona”, ... \n \n \n \nIlustracja 4. Wciśnięto „Uczestnik” \nkontrolki pierwszego bloku sekcji są aktywne \nIlustracja 5. Wciśnięto „Rezerwacja” \nkontrolki drugiego bloku sekcji są aktywne \n \n \n \n\nStrona 6 z 7 \nTabela 1. Wybrane pola i metody modelu DOM języka JavaScript \nWyszukiwanie elementów Zmiana elementów \ndocument.getElementById(id) \ndocument.getElementsByTagName(TagName) \ndocument.getElementsByClassName(ClassName) \ndocument.getElementsByName(ElementName) \ndocument.querySelector(CSSselector) \ndocument.querySelectorAll(CSSselector) \nelement.innerHTML = \"wartość\" \nelement.attribute_name = \"wartość\" \nelement.setAttribute(atrybut, wartosc) \nelement.style.property_name = \"wartość\" \nOperacje na elementach dokumentu Wybrane właściwości obiektu style \ndocument.createElement(element) \ndocument.removeChild(element) \ndocument.appendChild(element) \ndocument.replaceChild(element) \ndocument.write(text) \nbackgroundColor \ncolor \nfontSize \nfontStyle = \"normal | italic | oblique | initial | inherit\" \nfontWeight = \"normal | lighter | bold | bolder | value | \ninitial | inherit\" \nlistStyleType = \"circle| decimal | disc | none | square | \ninitial...\" \nWybrane zdarzenia HTML \nZdarzenia myszy Zdarzenia klawiatury Zdarzenia obiektów \nonclick \nondblclick \nonmouseover \nonmouseout \nonkeydown \nonkeypress \nonkeyup \nonload \nonresize \nonfocusin \nonfocusout \nElementy formularzy Metody i pola obiektu string (JS) \nWażniejsze typy pola input: button, checkbox, \nnumber, password, radio, text, range, file \nInne elementy: select, textarea \nLength \nindexOf(text) \nsearch(text) \nlastIndexOf() \nsubstr(startIndex, endIndex) \nreplace(textToReplace, newText) \ntoUpperCase() \ntoLowerCase() \nTabela 2. Wybrane znaki specjalne języka HTML5 \n&lt; < \n&rt; > \n&copy; \n&laquo; \n&raquo; \n&euro; \nTabela 3. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time \n\nStrona 7 z 7",
+      "summary": "Skrypt JavaScript po stronie klienta: obsługa formularza. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "3a99269b62e1",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-04-sg-task-2",
+      "examId": "inf03-2026-06-04-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Cechy grafiki osoba.png:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": [
+        "gimp",
+        "grafika-rastrowa"
+      ],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2026-06-04-sg-task-2.pdf",
+      "text": "Cechy grafiki osoba.png: \n− Przeskalowana z zachowaniem proporcji do szerokości 100 px \n− Tło przezroczyste \n \nWitryna składa się z podstron o nazwach rezerwacja (format PHP lub HTML) , wycieczki.html. W pliku \nwycieczki.html należy zapisać „Strona w trakcie budowy” \n \nCechy strony rezerwacja: \n− Zapisana w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Biuro turystyczne” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem \nstrony \n− Podział strony na bloki: nagłówkowy, główny i stopki. Blok główny \nzawiera bloki: nawigacyjny, dwa bloki sekcji i blok boczny. Podział \nzrealizowany za pomocą semantycznych znaczników języka HTML5 \ntak, aby po uruchomieniu w przeglądarce układ bloków był zgodny z ilustracją 3 \n− Zawartość bloku nagłówkowego: nagłówek pierwszego stopnia o treści „Rezerwacja wycieczek” \n− Zawartość bloku głównego: blok nawigacyjny, dwa bloki sekcji i blok boczny \n− Zawartość bloku bocznego: 9 obrazów z tekstem alternatywnym „wycieczki”. Obrazy są zapętlone: 1.jpg, \n2.jpg, 3.jpg, 1.jpg itd. Sposób realizacji dowolny \n− Zawartość bloku nawiga",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów.",
+      "duplicateGroup": "5e9b1f6ba3bf",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-04-sg-task-1",
+      "examId": "inf03-2026-06-04-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2026-06-04-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nDo wykonania operacji na bazie należy wykorzystać tabele przedstawione na ilustracji 1. Pole wyzywienie \nprzyjmuje wartości: 1 – śniadania, 2 – śniadania i obiadokolacje, 3 – all inclusive. Pole osob przechowuje \nliczbę osób, dla których jest zarezerwowana w ycieczka np. Anna Nowakowska zarezerwowała wycieczkę \ndla 2 osób. \n \nIlustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie wyprawy, z zestawem polskich znaków (np. utf8_polish_ci) \n− Do utworzonej bazy zaimportuj tabele z pliku wyprawy.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie PNG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie wyprawy. Zapytania zapisz w pliku kwerendy.txt. Wykonaj \nzrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG i nadaj im nazwy \nkw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym paskiem zadań \n− Zapytanie 1: wybierające jedynie imiona i nazwiska osób rezerwujących wycieczki z wyżywieniem \ntypu 3 (all inclusive) \n− Zapytanie 2: zliczające rezerwacje na wycieczkę o id równym 2 i wylocie z Warszawy \n− Zapytanie 3: wybierające jedynie miejsca wycieczek i odpowiadające im imiona i nazwiska \nrezerwujących. Należy posłużyć się relacją \n− Zapytanie 4: wybierające jedynie miejsca wycieczek i sumujące liczbę osób, dla których została \nzarezerwowana wycieczka. Jedna osoba (jeden rekord) może rezerwować wycieczkę dla kilku osób. \nNależy posłużyć się relacją i grupowaniem \n \n \n\nStrona 3 z 7",
+      "summary": "Operacje na bazie danych wyprawy: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "e77d537fcdf7",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-03-sg-task-3",
+      "examId": "inf03-2026-06-03-sg",
+      "part": 3,
+      "partLabel": "JavaScript",
+      "title": "JavaScript",
+      "heading": "Witryna internetowa",
+      "type": "js",
+      "typeLabel": "JavaScript",
+      "tags": [
+        "javascript",
+        "frontend"
+      ],
+      "pageStart": 3,
+      "pageEnd": 7,
+      "pdf": "/pdfs/tasks/inf03-2026-06-03-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nIlustracja 2. Wygląd strony głównej kartaProduktu.html \n \n \n \nIlustracja 3. Otwarte okno z obrazem \n \n \n \n \nKadr fotela - biała ramka fotel1.png \n \nfotel2.png fotel3.png \nIlustracja 4. Kadr drugiego fotela oraz wycięte fotele \n \n \n\nStrona 4 z 7 \nPrzygotowanie trzech grafik (ilustracja 4): \n− Z grafiki fotele.png należy wyciąć trzy fotele z pierwszej kolumny i nazwać kolejno fotel1.png, \nfotel2.png, fotel3.png \n− Fotele powinny być obcięte bezpośrednio przy krawędziach, przezroczystość powinna być \nzachowana. Obrazów nie należy skalować \n \nWitryna składa się z dwóch stron: kartaProduktu.html i sklep.html. Na stronie sklep.html znajduje się jedynie \nnapis „strona w trakcie budowy” \n \nCechy strony kartaProduktu.html: \n− Zapisana w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony „Fotel” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony \nz kodem strony \n− Podział strony na bloki: nagłówkowy, główny i stopkę. Blok główny \nzawiera blok sekcji i blok artykułu. Podział zrealizowany za pomocą semantycznych znaczników \njęzyka HTML5 tak, aby po uruchomieniu w przeglądarce układ bloków był zgodny z ilustracją 5 \n− Zawartość bloku nagłówkowego: \n− Nagłówek pierwszego stopnia o treści: „Sklep meblowy” \n− Linia pozioma \n− Zawartość bloku głównego: blok sekcji i blok artykułu \n− Zawartość bloku sekcji: \n− Obraz główny fotel1.png z tekstem alternatywnym „fotel”. Obraz jest formatowany klasą o nazwie \nobraz. Jego kliknięcie powoduje wywołanie funkcji JavaScript otwierającej okno \n− Poniżej trzy obrazy miniatur fotel1.png, fotel2.png, fotel3.png z tekstem alternatywnym \n„miniatura”. Obrazy są formatowane klasą miniatury. Kliknięcie każdej miniatury powoduje \nwywołanie funkcji JavaScript podmieniającej obraz główny \n− Blok okna z ilustracji 3 formatowany klasą o nazwie okno, zawierający: \n− Znacznik ogólny liniowy <span> z zawartością &times; i formatowany klasą zamknij. \nKliknięcie znacznika powoduje wywołanie funkcji zamykającej okno \n− Obraz bez źródła formatowany klasą obrazOkno \n− Zawartość bloku artykułu: \n− Nagłówek drugiego stopnia o treści: „Żółty Fotel” \n− Dwa paragrafy z treścią przekopiowaną z pliku opisFotel.txt zgodnie z ilustracją 2 \n− Tekst „Wybierz wariant fotela” zapisany za pomocą znacznika semantycznego oznaczającego \ntekst ważny, formatowany domyślnie jako pogrubiony \n− Lista rozwijana z elementami „wariant 1”, „wariant 2”, „wariant 3” \n− Paragraf z przyciskiem „KUP TERAZ”. Przycisk nie ma funkcjonalności \n− Paragraf z odnośnikiem do pliku sklep.html o treści „Do strony głównej” \n− Zawartość bloku stopki: \n− Linia pozioma \n− Paragraf o treści „Autor strony: ”, dalej wstawiony numer zdającego. Numer zdającego jest \nzapisany za pomocą znacznika semantycznego oznaczającego tekst uwypuklony, formatowany \ndomyślnie jako pochylony \nIlustracja 5. Układ bloków \n\nStrona 5 z 7 \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS \ndziałające na stronie: \n− Domyślnie, dla wszystkich selektorów: krój czcionki „Century Gothic\", w przypadku braku sans-serif \n− Dla ciała strony: kolor tła Beige, rozmiar czcionki 140% \n− Dla bloku nagłówkowego i stopki: wyrównanie tekstu do środka, marginesy wewnętrzne 20 px \n− Dla bloku sekcji i bloku artykułu: szerokość 50%, wysokość 600 px \n− Dla przycisku: kolor tła Tan, zaokrąglenie rogów 20 px, marginesy wewnętrzne 10 px, rozmiar czcionki \n150% \n− Dla klasy obraz: szerokość 40%, marginesy wewnętrzne 20 px, obramowanie linią ciągłą o szerokości \n1 px i kolorze Tan \n− Dla klasy miniatury: szerokość 15% \n− Dla klasy okno: kolor tła czarny z przezroczystością 0.7, szerokość 80%, pozycjonowana względem okna \nprzeglądarki, od lewej strony 0, od góry 0, zawsze na wierzchu, element jest usunięty \n− Dla klasy obrazOkno: marginesy zewnętrzne automatycznie wyliczane przez przeglądarkę, blokowy \nsposób wyświetlania \n− Dla klasy zamknij: pozycjonowanie względem pierwszego rodzica, od góry 15 px, od prawej strony 35 px, \nczcionka koloru Beige, pogrubiona, o rozmiarze 40 px \n− Gdy kursor znajdzie się na elemencie przypisanym do klasy zamknij, zmienia się na pointer \n \nUwaga: Nie należy zmieniać nazw klas, gdyż jest to uwarunkowane projektem całej witryny. \n \nSkrypt działający po stronie klienta \nWymagania dotyczące skryptu: \n− Zapisany w języku JavaScript \n− Należy stosować znaczące nazewnictwo zmiennych i funkcji w języku polskim lub angielskim \n \nFunkcja podmieniająca obraz główny: \n− Po kliknięciu dowolnej miniatury jest podmieniany obraz główny na obraz \nz miniatury. Na ilustracji 6 kliknięto miniaturę fotel3.png, obraz główny zmienił się \nna fotel3.png \n \nFunkcja otwierająca okno: \n− Po kliknięciu obrazu głównego otwiera się okno z tym obrazem (ilustracja 3) \n− Pojawienie się okna jest realizowane poprzez \n− Zmianę sposobu wyświetlania bloku okna na blokowy \n− Przypisanie do obrazu w bloku okna źródła grafiki z obrazu głównego \n \nFunkcja zamykająca okno: \n− Po kliknięciu znaku &times; okno jest usuwane poprzez zastosowanie \nodpowiedniej właściwości CSS \n \n \nIlustracja 6. \n\nStrona 6 z 7 \nTabela 1. Wybrane pola i metody modelu DOM języka JavaScript \nWyszukiwanie elementów Zmiana elementów \ndocument.getElementById(id) \ndocument.getElementsByTagName(TagName) \ndocument.getElementsByClassName(ClassName) \ndocument.getElementsByName(ElementName) \ndocument.querySelector(CSSselector) \ndocument.querySelectorAll(CSSselector) \nelement.innerHTML = \"wartość\" \nelement.attribute_name = \"wartość\" \nelement.setAttribute(atrybut, wartosc) \nelement.style.property_name = \"wartość\" \n \nOperacje na elementach dokumentu Wybrane właściwości obiektu style \ndocument.createElement(element) \ndocument.removeChild(element) \ndocument.appendChild(element) \ndocument.replaceChild(element) \ndocument.write(text) \nbackgroundColor \ncolor \nfontSize \nfontStyle = \"normal | italic | oblique | initial | inherit\" \nfontWeight = \"normal | lighter | bold | bolder | value | \ninitial | inherit\" \nlistStyleType = \"circle| decimal | disc | none | square | \ninitial...\" \nWybrane zdarzenia HTML \nZdarzenia myszy Zdarzenia klawiatury Zdarzenia obiektów \nonclick \nondblclick \nonmouseover \nonmouseout \nonkeydown \nonkeypress \nonkeyup \nonload \nonresize \nonfocusin \nonfocusout \nElementy formularzy Metody i pola obiektu string (JS) \nWażniejsze typy pola input: button, checkbox, \nnumber, password, radio, text, range, file \nInne elementy: select, textarea \nLength \nindexOf(text) \nsearch(text) \nlastIndexOf() \nsubstr(startIndex, endIndex) \nreplace(textToReplace, newText) \ntoUpperCase() \ntoLowerCase() \n \nTabela 2. Wartości właściwości CSS display \ninline Wyświetla element jako liniowy (np. <a>) \nblock Wyświetla element jako blokowy (np. <div>) \nnone Element jest usunięty \n \nTabela 3. Wartości właściwości CSS position \nstatic Domyślna wartość. Elementy renderowane są w kolejności, w jakiej pojawiają się w obiegu \ndokumentów \nabsolute Element jest pozycjonowany względem pierwszego pozycjonowanego (niestatycznego) \nelementu przodka \nfixed Element jest pozycjonowany względem okna przeglądarki \nrelative Element jest pozycjonowany względem swojej normalnej pozycji \nparametrami przesunięcia są własności: left, top, right, bottom \n \n \nStrona 7 z 7 \nTabela 4. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time",
+      "summary": "Skrypt JavaScript po stronie klienta: obsługa formularza. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "88a2884ee167",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-03-sg-task-2",
+      "examId": "inf03-2026-06-03-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie trzech grafik (ilustracja 4):",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": [
+        "gimp",
+        "grafika-rastrowa"
+      ],
+      "pageStart": 4,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2026-06-03-sg-task-2.pdf",
+      "text": "Przygotowanie trzech grafik (ilustracja 4): \n− Z grafiki fotele.png należy wyciąć trzy fotele z pierwszej kolumny i nazwać kolejno fotel1.png, \nfotel2.png, fotel3.png \n− Fotele powinny być obcięte bezpośrednio przy krawędziach, przezroczystość powinna być \nzachowana. Obrazów nie należy skalować \n \nWitryna składa się z dwóch stron: kartaProduktu.html i sklep.html. Na stronie sklep.html znajduje się jedynie \nnapis „strona w trakcie budowy” \n \nCechy strony kartaProduktu.html: \n− Zapisana w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony „Fotel” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony \nz kodem strony \n− Podział strony na bloki: nagłówkowy, główny i stopkę. Blok główny \nzawiera blok sekcji i blok artykułu. Podział zrealizowany za pomocą semantycznych znaczników \njęzyka HTML5 tak, aby po uruchomieniu w przeglądarce układ bloków był zgodny z ilustracją 5 \n− Zawartość bloku nagłówkowego: \n− Nagłówek pierwszego stopnia o treści: „Sklep meblowy” \n− Linia pozioma \n− Zawartość bloku głównego: blok sekcji i blok artykułu \n− Zawartość bloku sekcji: \n− Obraz główny fotel1.png z tekstem alternatywnym „fotel”. Ob",
+      "summary": "Grafika rastrowa: obrazy witryny internetowej.",
+      "duplicateGroup": "87d2b2ad96d8",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-03-sg-task-1",
+      "examId": "inf03-2026-06-03-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2026-06-03-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nBaza danych zawiera połączone relacją m:n tabele przedstawione na ilustracji 1. W tabeli meble pole \nkategoria przyjmuje wartości: 1 – sofy, 2 – fotele, 3 – komody. Pole czyNowy przyjmuje wartość 1, gdy mebel \njest nowy lub 0, gdy model jest używany. \n \n \nIlustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie sklep, z zestawem polskich znaków (np. utf8_polish_ci) \n− Do utworzonej bazy zaimportuj tabele z pliku sklep.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie PNG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie sklep. Zapytania zapisz w pliku kwerendy.txt. Wykonaj \nzrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG i nadaj im \nnazwy kw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym paskiem \nzadań \n− Zapytanie 1: wybierające jedynie nazwę, styl i cenę tylko nowych mebli, których cena nie \nprzekracza 1000 zł. Rekordy powinny być posortowane począwszy od najniższej ceny \n− Zapytanie 2: tworzące widok (perspektywę) o nazwie komody zawierający jedynie pola idMeble, \nnazwa, kategoria, cena z tabeli meble jedynie dla kategorii równej 3. W pliku ze zrzutem należy \nprzedstawić zawartość widoku komody \n− Zapytanie 3: zliczające cenę średnią, minimalną i maksymalną. Nazwy kolumn (aliasy): Średnia \ncena – „Średnia cena komód”, minimalna cena – „Minimalna”, maksymalna cena – „Maksymalna”. \nŚrednia cena powinna być dowolnie zaokrąglona do liczby całkowitej. W zapytaniu należy \nposłużyć się utworzonym widokiem \n− Zapytanie 4: usuwające z tabeli klienci rekord, dla którego imię to Tomasz, a nazwisko Nowak \n \n\nStrona 3 z 7",
+      "summary": "Operacje na bazie danych sklep: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "aae12411f6de",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-02-sg-task-3",
+      "examId": "inf03-2026-06-02-sg",
+      "part": 3,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": [
+        "php",
+        "backend",
+        "mysql"
+      ],
+      "pageStart": 3,
+      "pageEnd": 6,
+      "pdf": "/pdfs/tasks/inf03-2026-06-02-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nIlustracja 2. Wygląd strony głównej index.php, kursor na odnośniku Europa \n \nCechy grafiki siklawica.jpg: \n− Grafikę należy przeskalować z zachowaniem proporcji do szerokości 133 px \n \nCechy witryny: \n− Składa się ze strony o nazwie index.php \n− Zapisana w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony „Wodospady” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony \nz kodem strony \n− Podział strony na bloki: nagłówkowy, główny, artykułu, stopki. Blok \ngłówny zawiera blok boczny i blok sekcji. Podział zrealizowany za \npomocą semantycznych znaczników języka HTML5 tak, aby po \nuruchomieniu w przeglądarce układ bloków był zgodny z ilustracją 3 \n− Zawartość bloku nagłówkowego: nagłówek drugiego stopnia o treści „Łowcy wodospadów” \n− Zawartość bloku głównego: blok boczny i blok sekcji \n− Zawartość bloku bocznego: efekt działania skryptu 1 \n− Zawartość bloku sekcji: \n− Tabela o czterech kolumnach. Pierwszy wiersz jest wierszem nagłówkowym z komórkami: \n„Identyfikator”, „Państwo”, „Nazwa wodospadu”. „Wysokość”. Tabela jest wypełniona skryptem 2 \n− Nagłówek czwartego stopnia o treści „Wpisz osiągnięcie do bazy” \n− Formularz wysyłający dane metodą bezpieczną do tego samego pliku. Formularz zawiera pola \nrozmieszczone zgodnie z ilustracją 2: \nIlustracja 3. Układ bloków \nStrona 4 z 6 \n− Etykieta o treści: „identyfikator wodospadu” \n− Pole edycyjne typu numerycznego połączone z etykietą \n− Etykieta o treści: „turysta” \n− Lista rozwijana połączona z etykietą, której elementy są wypełnione skryptem 3 \n− Przycisk o treści „Wpisz” wysyłający dane do skryptu 4 \n− Zawartość bloku artykułu: \n− Nagłówek trzeciego stopnia o treści „Wodospady w Polsce” \n− Obrazy o nazwach kamienczyk.jpg, siklawica.jpg, siklawa.jpg, wilczki.jpg z tekstem \nalternatywnym „wodospad” \n− Zawartość bloku stopki: paragraf o treści „Autor: ”, dalej wstawiony numer zdającego \n \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS \ndziałające na stronie: \n− Domyślnie, dla wszystkich selektorów: krój czcionki Garamond, w przypadku braku serif, wyrównanie \ntekstu do środka \n− Dla bloku nagłówkowego i stopki: kolor tła SkyBlue, marginesy wewnętrzne 8 px, zewnętrzne 10 px, \nzaokrąglenie rogów 20 px \n− Dla bloku bocznego: szerokość 30% \n− Dla bloku sekcji: szerokość 70%, wysokość 300 px, paski przewijania jedynie w przypadku przepełnienia \nbloku \n− Dla bloku artykułu: kolor tła AliceBlue, wysokość 280 px, marginesy wewnętrzne 8 px, zewnętrzne 10 px, \nzaokrąglenie rogów 20 px \n− Dla selektora obrazu: marginesy zewnętrzne 4 px, umieszczone obok siebie od lewej strony \n− Dla selektora tabeli: szerokość 90%, obramowanie kropkowane o szerokości 1 px i kolorze czarnym \n− Dla selektora odnośnika: blokowy sposób wyświetlania, kolor tła DodgerBlue, biały kolor czcionki, \nszerokość 65%, rozmiar czcionki 130%, marginesy zewnętrzne 10 px, bez podkreślenia \n− Gdy kursor znajdzie się na odnośniku, jego kolor tła zmienia się na RoyalBlue \n \nUwaga: styl CSS obrazu, tabeli i odnośnika należy zdefiniować wyłącznie przy pomocy selektora tego \nznacznika. Jest to uwarunkowane projektem późniejszej rozbudowy witryny. \n \nSkrypty działające po stronie serwera \nWymagania dotyczące skryptów: \n− Napisane w języku PHP \n− Należy stosować znaczące nazewnictwo zmiennych w języku polskim lub angielskim \n− Łączą się z serwerem bazodanowym na localhost, użytkownik root bez hasła, baza danych o nazwie \nwodospady \n− Na końcu należy zamknąć połączenie z bazą \n \nSkrypt 1 \n− Wysyła do bazy danych zapytanie 1 \n− Dla każdego zwróconego zapytaniem rekordu wyświetla odnośnik, którego treścią jest nazwa \nkontynentu. Odnośnik prowadzi do tej samej strony i przesyła identyfikator kontynentu jako parametr \nmetody GET. Na ilustracji 4 jest przedstawiony adres URL po wybraniu odnośnika Europa \n \n \nStrona 5 z 6 \nSkrypt 2 \n− Pobiera wartość przesłaną metodą GET, a w przypadku braku – wartością 6. Wartość ta jest \nidentyfikatorem kontynentu \n− Wysyła do bazy danych zapytanie 3, zmodyfikowane tak, że sprawdzany jest identyfikator kontynentu, \npatrz poprzedni punkt \n− Dla każdego zwróconego zapytaniem rekordu wstawia wiersz tabeli, wypełniając kolejne komórki \nzwróconymi polami (np. jeśli wybrano odnośnik Europa – tabela zawiera dane wodospadów z Europy) \n \n \nIlustracja 4. Adres URL, gdy został wybrany odnośnik Europa \nSkrypt 3 \n− Wysyła do bazy danych zapytanie 5 \n− Kolejne rekordy są opcjami listy rozwijanej tak, że atrybut wartości to pole idTurysta, a treść to nick \n \nSkrypt 4 \n− Działa tylko w przypadku, gdy z formularza zostały przesłane dane, wysyła do bazy danych zapytanie \n4, zmodyfikowane w ten sposób, że do bazy wstawione są wartości pobrane z formularza (zakłada się \nże użytkownik wpisuje tylko identyfikatory wyświetlone w tabeli i nie trzeba sprawdzać poprawności \nidentyfikatora) \n \n \nTabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB \nFunkcje biblioteki mysqli Zwracana wartość \nmysqli_connect(serwer, użytkownik, \nhasło, nazwa_bazy) \nid połączenia lub FALSE, gdy niepowodzenie \nmysqli_select_db(id_polaczenia, \nnazwa_bazy) \nTRUE/FALSE w zależności od stanu operacji \nmysqli_error(id_polaczenia) Tekst komunikatu błędu \nmysqli_close(id_polaczenia) TRUE/FALSE w zależności od stanu operacji \nmysqli_query(id_polaczenia, \nzapytanie) \nWynik zapytania \nmysqli_fetch_row(wynik_zapytania) Tablica numeryczna przechowująca kolejny wiersz z \npodanych w wyniku zapytania \nmysqli_fetch_array(wynik_zapytania) Tablica asocjacyjna zawierająca kolejny wiersz z \npodanych w wyniku zapytania lub FALSE, jeżeli nie ma \nwięcej wierszy w wyniku zapytania \nmysqli_num_rows(wynik_zapytania) Liczba wierszy w podanym wyniku zapytania \nmysqli_num_fields(wynik_zapytania) Liczba kolumn w podanym wyniku zapytania \nisset($zmienna) TRUE/FALSE w zależności od, tego czy $zmienna \nistnieje \n \nTabela 2. The display CSS Property Values \ninline Displays an element as an inline element (like <span>). Any height and width properties \nwill have no effect. This is default. \nblock Displays an element as a block element (like <p>). It starts on a new line, and takes up the \nwhole width \ninline-block Displays an element as an inline -level block container. The element itself is formatted as \nan inline element, but you can apply height and width values \n \n \n\nStrona 6 z 6 \nTabela 3. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time \n \nTabela 4. Metoda GET i odnośniki \nNajpopularniejszy dla metody GET sposób przekazywania parametrów w adresie URL do danego zasobu: \nindex.php?lang=pl&param1=2 \n \nPrzesyłane parametry znajdują się w tablicy globalnej $_GET",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "b623fb3b0524",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-02-sg-task-2",
+      "examId": "inf03-2026-06-02-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Cechy grafiki siklawica.jpg:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": [
+        "gimp",
+        "grafika-rastrowa"
+      ],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2026-06-02-sg-task-2.pdf",
+      "text": "Cechy grafiki siklawica.jpg: \n− Grafikę należy przeskalować z zachowaniem proporcji do szerokości 133 px",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów.",
+      "duplicateGroup": "51a95affdd9d",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-02-sg-task-1",
+      "examId": "inf03-2026-06-02-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2026-06-02-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nBaza danych zawiera połączone relacją tabele przedstawione na ilustracji 1. Tabele obiekty i turyści są \nw relacji m:n, z pośredniczącą tabelą osiagniecia \n \n \n Ilustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie wodospady, z zestawem znaków utf8_unicode_ci \n− Do utworzonej bazy zaimportuj tabele z pliku baza2.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie JPEG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie wodospady. Zapytania zapisz w pliku kwerendy.txt. \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG \ni nadaj im nazwy kw1, kw2, kw3, kw4, kw5. Zrzuty powinny obejmować cały ekran monitora \nz widocznym paskiem zadań \n− Zapytanie 1: wybierające identyfikatory i nazwy wszystkich kontynentów \n− Zapytanie 2: wybierające jedynie pola nazwa, wartoscCechy i plik z tabeli obiekty dla wodospadów \nz Polski (w warunku można zastosować pole idRodzaj = 10) \n− Zapytanie 3: wybierające jedynie pola idObiekt, panstwo, nazwa i wartoscCechy z tabeli obiekty \ndla pól idRodzaj = 10 i idKontynent = 6 \n− Zapytanie 4: wstawiające do tabeli osiagniecia rekord o wartościach: idObiekt = 34, idTurysta = 2. \nKlucz podstawowy nadawany automatycznie \n− Zapytanie 5: wybierające pola idTurysta i nick z tabeli turysci \n \n \n \n\nStrona 3 z 6",
+      "summary": "Operacje na bazie danych wodospady: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "d7be79aca1c5",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-01-sg-task-2",
+      "examId": "inf03-2026-06-01-sg",
+      "part": 2,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": [
+        "php",
+        "backend",
+        "mysql"
+      ],
+      "pageStart": 3,
+      "pageEnd": 6,
+      "pdf": "/pdfs/tasks/inf03-2026-06-01-sg-task-2.pdf",
+      "text": "Witryna internetowa \n \nIlustracja 2. Wygląd strony islandia.php, \nkursor na zdjęciu, pojawia się dymek i zmienia się przezroczystość \n \n \nIlustracja 3. Blok główny ze strony obiekty.php, przewinięto suwak \n \nWitryna składa się z podstron: islandia.php i obiekty.php \n \nCechy wspólne obu stron: \n− Zapisane w języku HTML5 \n− Zadeklarowany polski język zawartości witryny \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony „Islandia” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony \nz kodem strony \n− Podział strony na bloki: nagłówkowy, boczny, główny, stopki. Blok \ngłówny zawiera blok sekcji. Podział zrealizowany za pomocą semantycznych znaczników języka HTML5 \ntak, aby po uruchomieniu w przeglądarce układ bloków był zgodny z ilustracją 4 \n− Zawartość bloku nagłówkowego: \n− Nagłówek pierwszego stopnia o treści „Zwiedzaj Islandię”. Treść jest odnośnikiem do strony \nislandia.php \n \nIlustracja 4. Układ bloków \nStrona 4 z 7 \n− Zawartość bloku bocznego: \n− Nagłówek trzeciego stopnia o treści „Do zwiedzania” \n− Lista punktowana (nieuporządkowana) z dwoma elementami: „Wodospady:” i „Siedliska zwierząt:” \n− Element „Wodospady:” zawiera listę numerowaną (uporządkowaną) wypełnioną skryptem 1 \n− Element „Siedliska zwierząt:” zawiera listę numerowaną (uporządkowaną) wypełnioną skryptem 2 \n− Zawartość bloku stopki: \n− Linia pozioma \n− Paragraf o treści „Autor: ”, dalej wstawiony numer zdającego \n \nZawartość bloku głównego dla strony islandia.php: \n− Nagłówek drugiego stopnia o treści: „Galeria” \n− Blok sekcji z efektem wykonania skryptu 3 \n \nZawartość bloku głównego dla strony obiekty.php: \n− Nagłówek drugiego stopnia o treści: „Opis miejsca” \n− Blok sekcji z efektem działania skryptu 4 \n \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS \ndziałające na stronie: \n− Domyślnie, dla wszystkich selektorów: krój czcionki Comic Sans MS, w przypadku braku sans-serif \n− Dla bloku nagłówkowego i głównego: szerokość 70%, wyrównanie tekstu do środka \n− Dla bloku nagłówkowego i bocznego: kolor tła PaleTurquoise, zaokrąglenie rogów 20 px \n− Dodatkowo dla bloku nagłówkowego: wysokość 100 px, marginesy wewnętrzne 2% \n− Dodatkowo dla bloku bocznego: szerokość 25%, wysokość 700 px, wysokość linii (interlinia) 2 \n− Dla bloku stopki: jedynie margines wewnętrzny górny 10 px \n− Dla bloku sekcji: obramowanie linią kreskową o szerokości 1 px i kolorze DimGray, marginesy \nzewnętrzne górny i dolny 10 px, pozostałe 50 px, wysokość 400 px, paski przewijania pojawiające się \ntylko w przypadku przepełnienia bloku \n− Dla klasy miniatury przypisanej do obrazów ze strony islandia.php, generowanych skryptem 3: wysokość \n200 px, marginesy wewnętrzne 10 px, przezroczystość 0.8, dodana tranzycja trwająca 1 sekundę \n− W przypadku gdy kursor znajdzie się na elemencie z przypisaną klasą miniatury, jego przezroczystość \nzmienia się na wartość 1 \n \nSkrypty działające po stronie serwera \nWymagania dotyczące skryptów: \n− Napisane w języku PHP \n− Należy stosować znaczące nazewnictwo zmiennych w języku polskim lub angielskim \n− Łączą się z serwerem bazodanowym na localhost, użytkownik root bez hasła, baza danych o nazwie \nislandia \n− Na końcu należy zamknąć połączenie z bazą \n \nSkrypt 1 na obu stronach \n− Wysyła do bazy danych zapytanie 3 \n− Każda zwrócona zapytaniem nazwa jest wyświetlana jako element listy \n \n \nStrona 5 z 7 \nSkrypt 2 na obu stronach \n− Wysyła do bazy danych zapytanie 3, zmodyfikowane tak, że w warunku sprawdzane jest pole idRodzaj \nrówne 14 \n− Każda zwrócona zapytaniem nazwa jest wyświetlana jako element listy \n \nSkrypt 3 na stronie islandia.php \n− Wysyła do bazy danych zapytanie 1 \n− Dla każdego zwróconego zapytaniem wiersza wypisuje odnośnik prowadzący do strony obiekty.php oraz \nprzekazujący do tej strony metodą GET parametr o wartości równej polu idObiekt \n− Odnośnik jest obrazem, dla którego źródło to zwrócone pole plik, tekst alternatywny to zwrócone pole \nnazwa. Dodatkowo pole nazwa jest tekstem pojawiającym się w postaci dymka, gdy kursor znajdzie się \nna obrazie (ilustracja 2, czwarty obraz). Obraz ma przypisaną klasę miniatury \n \nSkrypt 4 na stronie obiekty.php \n− Wysyła do bazy danych zapytanie 2, zmodyfikowane w ten sposób, że w warunku jest sprawdzane id \nobiektu przesłane jako parametr metody GET ze strony islandia.php \n− Na podstawie zwróconych zapytaniem danych: \n− Wyświetla obraz, którego źródłem jest pole plik, a tekstem alternatywnym pole nazwa \n− W nagłówku drugiego stopnia wyświetla wartość pola nazwa \n− W nagłówku trzeciego stopnia wyświetla wartość pola rodzaj \n− W paragrafie wyświetla tekst „<nazwaCechy>: <wartoscCechy>”, gdzie w <> umieszczono wartości \nzwrócone zapytaniem \n− W paragrafie wyświetla pole opis \n \n \nTabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB \nFunkcje biblioteki mysqli Zwracana wartość \nmysqli_connect(serwer, użytkownik, \nhasło, nazwa_bazy) id połączenia lub FALSE, gdy niepowodzenie \nmysqli_select_db(id_polaczenia, \nnazwa_bazy) TRUE/FALSE w zależności od stanu operacji \nmysqli_error(id_polaczenia) Tekst komunikatu błędu \nmysqli_close(id_polaczenia) TRUE/FALSE w zależności od stanu operacji \nmysqli_query(id_polaczenia, \nzapytanie) Wynik zapytania \nmysqli_fetch_row(wynik_zapytania) Tablica numeryczna przechowująca kolejny wiersz \nz podanych w wyniku zapytania \nmysqli_fetch_array(wynik_zapytania) \nTablica asocjacyjna zawierająca kolejny wiersz z \npodanych w wyniku zapytania lub FALSE, jeżeli nie \nma więcej wierszy w wyniku zapytania \nmysqli_num_rows(wynik_zapytania) Liczba wierszy w podanym wyniku zapytania \nmysqli_num_fields(wynik_zapytania) Liczba kolumn w podanym zapytaniu \nisset($zmienna) TRUE/FALSE w zależności od, tego czy $zmienna \nistnieje \n \n \nStrona 6 z 7 \nTabela 2. Metoda GET i odnośniki \nNajpopularniejszy dla metody GET sposób przekazywania parametrów dla żądania to przesyłanie ich \nw adresie url: \nindex.php?lang=pl&param1=2 \n \nPrzesyłane parametry znajdują się w tablicy globalnej $_GET \n \n \nTabela 3. CSS transition Property \ntransition: property duration timing-function delay|initial|inherit; \n \nValue Description \ntransition-property Specifies the name of the CSS property the transition effect is for \ntransition-duration Specifies how many seconds or milliseconds the transition effect takes to complete \ntransition-timing-\nfunction Specifies the speed curve of the transition effect \ntransition-delay Defines when the transition effect will start \ninitial Sets this property to its default value. Read about initial \ninherit Inherits this property from its parent element. Read about inherit \n \n \nTabela 4. Semantic Elements in HTML \nTag Description \n<article> Defines independent, self-contained content \n<aside> Defines content aside from the page content \n<details> Defines additional details that the user can view or hide \n<figcaption> Defines a caption for a <figure> element \n<figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. \n<footer> Defines a footer for a document or section \n<header> Specifies a header for a document or section \n<main> Specifies the main content of a document \n<mark> Defines marked/highlighted text \n<nav> Defines navigation links \n<section> Defines a section in a document \n<summary> Defines a visible heading for a <details> element \n<time> Defines a date/time",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "6437fd409fff",
+      "duplicates": []
+    },
+    {
+      "id": "inf03-2026-06-01-sg-task-1",
+      "examId": "inf03-2026-06-01-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2026-06-01-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nDo zadania należy wykorzystać jedynie tabele: kontynenty, rodzaje, obiekty. Tabele przedstawione na \nilustracji 1 są połączone relacją. \n \n \nIlustracja 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj następujące operacje na bazie danych: \n− Utwórz bazę danych o nazwie islandia, z zestawem znaków utf8_unicode_ci \n− Do utworzonej bazy zaimportuj tabele z pliku baza1.sql \n− Wykonaj zrzut ekranu po imporcie. Zapisz zrzut w formacie JPEG pod nazwą import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie islandia. Zapytania zapisz w pliku kwerendy.txt. Wykonaj \nzrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie PNG i nadaj im \nnazwy kw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym paskiem \nzadań \n− Zapytanie 1: wybierające jedynie pola idObiekt, plik i nazwa z tabeli obiekty dla Islandii \n− Zapytanie 2: wybierające jedynie pola plik, nazwa, nazwaCechy, wartoscCechy, opis z tabeli \nobiekty oraz odpowiadające im pole rodzaj z tabeli rodzaje dla obiektu o identyfikatorze 46. Należy \nposłużyć się relacją \n− Zapytanie 3: wybierające jedynie nazwy obiektów z Islandii, których identyfikator rodzaju to 10 \n− Zapytanie 4: wybierające jedynie rodzaj z tabeli rodzaje oraz zliczające liczbę obiektów \n(wodospadów, szczytów itd.) danego rodzaju. Kolumna z liczbą obiektów powinna mieć nadaną \nnazwę (alias) „Liczba obiektów”. Należy posłużyć się grupowaniem i relacją. \n \n \n\nStrona 3 z 7",
+      "summary": "Operacje na bazie danych islandia: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "30d972b27e03",
+      "duplicates": []
+    },
     {
       "id": "inf03-2026-01-12-sg-task-3",
       "examId": "inf03-2026-01-12-sg",
@@ -6063,5 +6987,5 @@
     }
   ],
   "sourceFolder": "_arkusze",
-  "examCount": 74
+  "examCount": 86
 }
