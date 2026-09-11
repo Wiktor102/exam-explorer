@@ -56,7 +56,7 @@ jobs:
             --itemize-changes \
             -e "ssh -i ~/.ssh/mydevil -o IdentitiesOnly=yes" \
             dist/ \
-            wiktor102@s81.mydevil.net:/usr/home/wiktor102/domains/egzamin-zawodowy.wiktorgolicz.pl/public_html/
+            wiktor102@s81.mydevil.net:/
 
       - name: Verify deployment
         run: curl --fail --silent --show-error https://egzamin-zawodowy.wiktorgolicz.pl/ > /dev/null
