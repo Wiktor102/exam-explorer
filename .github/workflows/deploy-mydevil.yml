@@ -1,0 +1,62 @@
+name: Deploy to MyDevil
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mydevil-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Set up pnpm and Node
+        uses: pnpm/setup@v1
+        with:
+          runtime: node@24
+          cache: true
+          install: false
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Configure SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.MYDEVIL_SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.MYDEVIL_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/mydevil
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/mydevil ~/.ssh/known_hosts
+
+      - name: Synchronize production files
+        run: |
+          rsync \
+            --archive \
+            --checksum \
+            --delete-after \
+            --delay-updates \
+            --itemize-changes \
+            -e "ssh -i ~/.ssh/mydevil -o IdentitiesOnly=yes" \
+            dist/ \
+            wiktor102@s81.mydevil.net:/usr/home/wiktor102/domains/egzamin-zawodowy.wiktorgolicz.pl/public_html/
+
+      - name: Verify deployment
+        run: curl --fail --silent --show-error https://egzamin-zawodowy.wiktorgolicz.pl/ > /dev/null
