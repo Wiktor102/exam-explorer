@@ -6,8 +6,10 @@
   padding: 18px;
   overflow: visible;
   background:
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px 28px,
-    linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px
+      28px,
+    linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 /
+      28px 28px,
     var(--background, #eef1ed);
 }
 
@@ -60,7 +62,10 @@
 
 .source-strip {
   display: grid;
-  grid-template-columns: minmax(88px, auto) minmax(150px, auto) repeat(2, minmax(72px, auto)) 52px;
+  grid-template-columns: minmax(88px, auto) minmax(150px, auto) repeat(
+      2,
+      minmax(72px, auto)
+    ) 52px;
   align-items: stretch;
   border-left: 2px solid var(--line-strong);
 }
@@ -169,7 +174,10 @@
 
 .workspace {
   display: grid;
-  grid-template-columns: minmax(380px, 1.04fr) minmax(270px, 0.68fr) minmax(420px, 1.08fr);
+  grid-template-columns: minmax(380px, 1.04fr) minmax(270px, 0.68fr) minmax(
+      420px,
+      1.08fr
+    );
   gap: 14px;
   min-height: 0;
   margin-top: 14px;

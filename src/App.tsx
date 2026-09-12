@@ -1,24 +1,40 @@
-import clsx from 'clsx'
-import { AppTopbar } from './components/AppTopbar'
-import { CookieConsent } from './components/CookieConsent'
-import { DetailPane } from './components/DetailPane'
-import { FilterBar } from './components/FilterBar'
-import { LoadingShell } from './components/LoadingShell'
-import { LandingPage } from './components/LandingPage'
-import { PreviewPane } from './components/PreviewPane'
-import { RegistryPane } from './components/RegistryPane'
-import { useCatalogExplorer } from './hooks/useCatalogExplorer'
+import clsx from "clsx";
+import { AppTopbar } from "./components/AppTopbar";
+import { CookieConsent } from "./components/CookieConsent";
+import { DetailPane } from "./components/DetailPane";
+import { FilterBar } from "./components/FilterBar";
+import { LoadingShell } from "./components/LoadingShell";
+import { LandingPage } from "./components/LandingPage";
+import { PreviewPane } from "./components/PreviewPane";
+import { RegistryPane } from "./components/RegistryPane";
+import { useCatalogExplorer } from "./hooks/useCatalogExplorer";
 
 function CatalogApp() {
-  const { actions, catalog, catalogError, detailState, filters, previewState, registryState } = useCatalogExplorer()
-  const hasSelection = Boolean(detailState.selectedExam || detailState.selectedTask)
+  const {
+    actions,
+    catalog,
+    catalogError,
+    detailState,
+    filters,
+    previewState,
+    registryState,
+  } = useCatalogExplorer();
+  const hasSelection = Boolean(
+    detailState.selectedExam || detailState.selectedTask,
+  );
 
   if (!catalog) {
-    return <LoadingShell examType={filters.examType} error={catalogError} onRetry={actions.retryCatalog} />
+    return (
+      <LoadingShell
+        examType={filters.examType}
+        error={catalogError}
+        onRetry={actions.retryCatalog}
+      />
+    );
   }
 
   return (
-    <main className={clsx('app-shell', filters.theme === 'dark' && 'dark')}>
+    <main className={clsx("app-shell", filters.theme === "dark" && "dark")}>
       <AppTopbar
         catalog={catalog}
         examType={filters.examType}
@@ -42,7 +58,7 @@ function CatalogApp() {
         onYearChange={actions.setYear}
       />
 
-      <section className={clsx('workspace', !hasSelection && 'list-only')}>
+      <section className={clsx("workspace", !hasSelection && "list-only")}>
         <RegistryPane
           examById={registryState.examById}
           examType={filters.examType}
@@ -73,8 +89,12 @@ function CatalogApp() {
             selectedSummary={detailState.selectedSummary}
             selectedTask={detailState.selectedTask}
             onClearSelection={actions.clearSelection}
-            onDuplicateInfoToggle={() => actions.setIsDuplicateInfoOpen((isOpen) => !isOpen)}
-            onSheetInfoToggle={() => actions.setIsSheetInfoOpen((isOpen) => !isOpen)}
+            onDuplicateInfoToggle={() =>
+              actions.setIsDuplicateInfoOpen((isOpen) => !isOpen)
+            }
+            onSheetInfoToggle={() =>
+              actions.setIsSheetInfoOpen((isOpen) => !isOpen)
+            }
             onTaskSelect={actions.selectTask}
           />
         )}
@@ -91,19 +111,21 @@ function CatalogApp() {
         )}
       </section>
     </main>
-  )
+  );
 }
 
 function App() {
-  const params = new URLSearchParams(window.location.search)
-  const hasCatalogLocation = ['type', 'task', 'exam', 'mode'].some((param) => params.has(param))
+  const params = new URLSearchParams(window.location.search);
+  const hasCatalogLocation = ["type", "task", "exam", "mode"].some((param) =>
+    params.has(param),
+  );
 
   return (
     <>
       {hasCatalogLocation ? <CatalogApp /> : <LandingPage />}
       <CookieConsent />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

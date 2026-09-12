@@ -18,8 +18,9 @@
   inset: 0;
   background:
     linear-gradient(rgb(23 32 27 / 5%) 1px, transparent 1px) 0 0 / 24px 24px,
-    linear-gradient(90deg, rgb(23 32 27 / 5%) 1px, transparent 1px) 0 0 / 24px 24px;
-  content: '';
+    linear-gradient(90deg, rgb(23 32 27 / 5%) 1px, transparent 1px) 0 0 / 24px
+      24px;
+  content: "";
   mask-image: linear-gradient(to bottom, #000, transparent 94%);
   pointer-events: none;
 }
@@ -47,11 +48,16 @@
   height: 104px;
   background:
     linear-gradient(rgb(23 32 27 / 5%) 1px, transparent 1px) 0 0 / 24px 24px,
-    linear-gradient(90deg, rgb(23 32 27 / 5%) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgb(23 32 27 / 5%) 1px, transparent 1px) 0 0 / 24px
+      24px,
     var(--landing-background);
   background-attachment: fixed;
   mask-image: linear-gradient(to bottom, #000 0 76px, transparent 104px);
-  -webkit-mask-image: linear-gradient(to bottom, #000 0 76px, transparent 104px);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0 76px,
+    transparent 104px
+  );
 }
 
 .landing-scroll-mask--bottom {
@@ -360,7 +366,7 @@
   inset: -13px 8px 8px -13px;
   z-index: -1;
   border: 1px solid rgb(248 248 239 / 88%);
-  content: '';
+  content: "";
 }
 
 .catalog-picker__heading {
@@ -392,7 +398,10 @@
   background: #eef1e9;
   color: var(--landing-ink);
   text-decoration: none;
-  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
 }
 
 .catalog-option::before {
@@ -402,7 +411,7 @@
   left: 0;
   height: 5px;
   background: var(--option-accent);
-  content: '';
+  content: "";
 }
 
 .catalog-option--red {
@@ -475,7 +484,14 @@
   padding-bottom: 15px;
   padding-top: 15px;
   border-top: 7px solid;
-  border-image: linear-gradient(90deg, #b7352b 0 22%, #bb7a12 22% 44%, #697b27 44% 68%, #0b7569 68%) 1;
+  border-image: linear-gradient(
+      90deg,
+      #b7352b 0 22%,
+      #bb7a12 22% 44%,
+      #697b27 44% 68%,
+      #0b7569 68%
+    )
+    1;
   color: rgb(23 32 27 / 70%);
   font-size: 11px;
   font-weight: 900;
