@@ -25,15 +25,15 @@ const catalogs = [
   },
 ] as const;
 
-const sourceRepositories = [
+const relatedRepositories = [
   {
     code: "INF.03",
-    count: "86 arkuszy / 239 zadań",
+    description: "Repozytorium arkuszy i rozwiązań",
     href: "https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.03-rozwiazania",
   },
   {
     code: "INF.04",
-    count: "29 arkuszy / 87 zadań",
+    description: "Repozytorium arkuszy i rozwiązań",
     href: "https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania",
   },
 ] as const;
@@ -176,20 +176,19 @@ export function LandingPage() {
           aria-labelledby="data-title"
         >
           <div className="landing-data__copy">
-            <h2 id="data-title">Skąd pochodzą materiały?</h2>
+            <h2 id="data-title">Materiały egzaminacyjne</h2>
             <p>
-              Katalog korzysta z różnych publicznych repozytoriów arkuszy INF.03
-              i INF.04. Zachowuje odnośniki do PDF-ów, plików dołączonych do
-              egzaminu i rozwiązań. Opisy zadań służące do wyszukiwania i
-              filtrowania są autorskie.
+              Katalog zawiera arkusze INF.03 i INF.04 z publicznie dostępnych
+              zbiorów. Obok znajdziesz przydatne repozytoria arkuszy i rozwiązań.
+              Opisy zadań służące do wyszukiwania i filtrowania są autorskie.
             </p>
           </div>
 
           <div
             className="landing-source-list"
-            aria-label="Repozytoria z arkuszami"
+            aria-label="Przydatne repozytoria arkuszy i rozwiązań"
           >
-            {sourceRepositories.map((repository) => (
+            {relatedRepositories.map((repository) => (
               <a
                 href={repository.href}
                 target="_blank"
@@ -198,7 +197,7 @@ export function LandingPage() {
               >
                 <span>
                   <strong>{repository.code}</strong>
-                  <small>{repository.count}</small>
+                  <small>{repository.description}</small>
                 </span>
                 <ExternalLink size={19} aria-hidden="true" />
               </a>
@@ -220,8 +219,10 @@ export function LandingPage() {
               katalog, zaproponować zmianę albo opisać błąd w GitHub Issues.
             </p>
             <p>
-              Licencja pozwala na użytek osobisty i modyfikacje. Publiczne
-              udostępnianie własnej kopii aplikacji wymaga osobnej zgody.
+              Możesz modyfikować aplikację i uruchamiać ją dla siebie lub
+              zamkniętej grupy, np. znajomych czy kolegów z klasy, z dostępem
+              ograniczonym do tej grupy. Publiczne wdrożenia i konkurencyjne
+              usługi wymagają osobnej zgody.
               Arkusze i pozostałe materiały egzaminacyjne nie są objęte tą licencją.
             </p>
           </div>

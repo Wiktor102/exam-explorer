@@ -2,7 +2,11 @@
 
 Aplikacja React i Vite do przeglądania archiwalnych arkuszy praktycznych egzaminów zawodowych INF.03 i INF.04. Ułatwia znalezienie konkretnego typu zadania bez przewijania całego arkusza.
 
-Materiały pochodzą z publicznych repozytoriów [INF.03-rozwiazania](https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.03-rozwiazania) i [INF.04-rozwiazania](https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania).
+Materiały egzaminacyjne zebrano z publicznie dostępnych zbiorów. Większość
+materiałów INF.04 pobrano z repozytorium
+[INF.04-rozwiazania](https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania).
+Odnośniki do zewnętrznych zbiorów i rozwiązań nie stanowią ewidencji pochodzenia
+każdego pliku. Zobacz [informacje o materiałach zewnętrznych](THIRD_PARTY_NOTICES.md).
 
 ## Zawartość danych
 
@@ -29,9 +33,14 @@ Kod aplikacji, skrypty, dokumentacja i autorskie opisy katalogu są udostępnian
 na warunkach [Exam Explorer Personal Use and Source Sharing License 1.0](LICENSE).
 Licencja pozwala na użytek osobisty, dowolne prywatne modyfikacje oraz
 udostępnianie kodu i forków z zachowaniem licencji. Własną instancję można
-uruchamiać lokalnie lub na serwerze z dostępem ograniczonym do siebie.
-Publiczne wdrożenia, także bezpłatne i zmodyfikowane, wymagają osobnej pisemnej
-zgody właścicieli praw. Projekt jest source-available, a nie open source.
+uruchamiać lokalnie lub na serwerze dla siebie albo zamkniętej grupy, np.
+znajomych lub kolegów z klasy, do użytku osobistego lub nauki. Dostęp musi
+być ograniczony do tej grupy, np. kontami lub prywatnie przekazanym hasłem.
+Sam nieopublikowany adres nie wystarcza. Publiczne wdrożenia i konkurencyjne
+usługi dla osób spoza takiej grupy, także bezpłatne i zmodyfikowane, wymagają
+osobnej pisemnej zgody właścicieli praw. Zamknięta rejestracja lub zaproszenia
+dla klientów nie czynią usługi prywatną grupą.
+Projekt jest source-available, a nie open source.
 
 Arkusze, zadania, kryteria oceniania, załączniki, rozwiązania oraz ich fragmenty
 i miniatury nie są objęte licencją aplikacji, również gdy znajdują się w danych

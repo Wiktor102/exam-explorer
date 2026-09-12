@@ -6,10 +6,13 @@ the third-party materials described below.
 
 ## Exam materials
 
-The project obtains INF.03 and INF.04 materials from these public repositories:
+INF.03 materials were collected from publicly available sources on the internet.
+Most INF.04 materials were downloaded
+from [INF.04-rozwiazania](https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania).
 
-- [INF.03-rozwiazania](https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.03-rozwiazania)
-- [INF.04-rozwiazania](https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania)
+A collection's operator is not necessarily the copyright holder of the exam
+materials. Existing notices within the materials remain relevant regardless
+of the website from which a copy was obtained.
 
 Exam sheets, questions, assessment criteria, attachments, solutions, and
 reproductions or extracts of these materials are excluded from the application
