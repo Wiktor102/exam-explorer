@@ -12,12 +12,13 @@ type AppTopbarProps = {
 export function AppTopbar({ catalog, examType, onExamTypeChange }: AppTopbarProps) {
 	return (
 		<header className="topbar">
-			<div className="identity">
+			<a className="identity" href="/" aria-label="Wróć do strony głównej">
 				<img className="identity-mark" src="/favicon.svg" alt="" aria-hidden="true" />
 				<div>
-					<h1>Eksplorator zadań {examType === "inf04" ? "INF.04" : "INF.03"}</h1>
+					<p className="eyebrow">Eksplorator zadań</p>
+					<h1>{examType === "inf04" ? "INF.04" : "INF.03"}</h1>
 				</div>
-			</div>
+			</a>
 			<div className="source-strip">
 				<div className="exam-toggle" role="group" aria-label="Typ egzaminu">
 					<button
@@ -35,8 +36,9 @@ export function AppTopbar({ catalog, examType, onExamTypeChange }: AppTopbarProp
 						INF.03
 					</button>
 				</div>
-				<span>{catalog.examCount} arkuszy</span>
-				<span>{catalog.taskCount} zadań</span>
+				<span className="catalog-counts">
+					{catalog.examCount} ark. <b aria-hidden="true">·</b> {catalog.taskCount} zad.
+				</span>
 				<a href={catalog.sourceRepository} target="_blank" rel="noreferrer">
 					Źródło
 					<ExternalLink size={15} strokeWidth={2.5} aria-hidden="true" />

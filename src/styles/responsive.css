@@ -171,7 +171,7 @@
   }
 
   .source-strip {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1.4fr 1.1fr 0.75fr 0.75fr;
     border-top: 2px solid var(--line-strong);
     border-left: 0;
   }
@@ -179,16 +179,27 @@
   .source-strip span,
   .source-strip a {
     min-width: 0;
-    min-height: 46px;
+    min-height: 42px;
+    padding: 7px 8px;
+    font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   .exam-toggle button {
-    min-height: 46px;
+    min-height: 42px;
     min-width: 0;
     padding: 8px 10px;
     font-size: 12px;
+  }
+
+  .identity {
+    padding: 7px 9px;
+  }
+
+  .identity-mark {
+    width: 32px;
+    height: 32px;
   }
 
   .search-box,
