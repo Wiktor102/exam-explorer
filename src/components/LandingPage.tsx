@@ -6,8 +6,6 @@ import {
   ExternalLink,
   FileSearch,
   Github,
-  Search,
-  SlidersHorizontal,
 } from "lucide-react";
 
 const catalogs = [
@@ -81,24 +79,6 @@ export function LandingPage() {
               INF.04, filtruj zadania po temacie i od razu otwieraj właściwe
               strony arkuszy.
             </p>
-
-            <ul
-              className="landing-features"
-              aria-label="Możliwości eksploratora"
-            >
-              <li>
-                <Search size={18} aria-hidden="true" />
-                Wyszukiwanie w treści zadań
-              </li>
-              <li>
-                <SlidersHorizontal size={18} aria-hidden="true" />
-                Filtrowanie po roku, sesji i typie
-              </li>
-              <li>
-                <FileSearch size={18} aria-hidden="true" />
-                Podgląd arkusza i zasad oceniania
-              </li>
-            </ul>
           </div>
 
           <div

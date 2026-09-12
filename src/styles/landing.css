@@ -331,26 +331,6 @@
   line-height: 1.5;
 }
 
-.landing-features {
-  display: grid;
-  gap: 10px;
-  margin: 28px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.landing-features li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  font-weight: 750;
-}
-
-.landing-features svg {
-  color: #0b7569;
-}
-
 .catalog-picker {
   position: relative;
   padding: 10px;
@@ -581,10 +561,6 @@
   .landing-lead {
     margin-top: 22px;
     font-size: 16px;
-  }
-
-  .landing-features {
-    margin-top: 22px;
   }
 
   .catalog-picker {
