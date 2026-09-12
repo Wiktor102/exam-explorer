@@ -101,7 +101,8 @@
 .cookie-consent__button:focus-visible,
 .privacy-settings-button:focus-visible,
 .cookie-consent__close:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--selection-accent) 45%, transparent);
+  outline: 3px solid
+    color-mix(in srgb, var(--selection-accent) 45%, transparent);
   outline-offset: 2px;
 }
 

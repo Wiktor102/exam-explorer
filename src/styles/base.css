@@ -53,8 +53,10 @@ html {
   min-height: 100%;
   overflow-x: hidden;
   background:
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px 28px,
-    linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px
+      28px,
+    linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 /
+      28px 28px,
     var(--background, #eef1ed);
 }
 

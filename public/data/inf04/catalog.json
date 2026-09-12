@@ -4,14 +4,7 @@
   "sourceFolder": "_arkusze",
   "examCount": 29,
   "taskCount": 87,
-  "years": [
-    2026,
-    2025,
-    2024,
-    2023,
-    2022,
-    2021
-  ],
+  "years": [2026, 2025, 2024, 2023, 2022, 2021],
   "taskTypes": [
     "console",
     "desktop",
@@ -39,10 +32,7 @@
         "inf04-2026-01-02-sg-task-2",
         "inf04-2026-01-02-sg-task-3"
       ],
-      "assetFiles": [
-        "zad1.7z",
-        "zad2.7z"
-      ],
+      "assetFiles": ["zad1.7z", "zad2.7z"],
       "scoringPdf": "/pdfs/scoring/inf04-2026-01-02-sg-zo.pdf"
     },
     {
@@ -62,10 +52,7 @@
         "inf04-2026-01-01-sg-task-2",
         "inf04-2026-01-01-sg-task-3"
       ],
-      "assetFiles": [
-        "zad1.7z",
-        "zad2.7z"
-      ],
+      "assetFiles": ["zad1.7z", "zad2.7z"],
       "scoringPdf": "/pdfs/scoring/inf04-2026-01-01-sg-zo.pdf"
     },
     {
@@ -85,9 +72,7 @@
         "inf04-2025-06-02-sg-task-2",
         "inf04-2025-06-02-sg-task-3"
       ],
-      "assetFiles": [
-        "pliki4.zip"
-      ],
+      "assetFiles": ["pliki4.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2025-06-02-sg-zo.pdf"
     },
     {
@@ -107,9 +92,7 @@
         "inf04-2025-06-01-sg-task-2",
         "inf04-2025-06-01-sg-task-3"
       ],
-      "assetFiles": [
-        "pliki4.zip"
-      ],
+      "assetFiles": ["pliki4.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2025-06-01-sg-zo.pdf"
     },
     {
@@ -129,9 +112,7 @@
         "inf04-2025-06-01-sd-task-2",
         "inf04-2025-06-01-sd-task-3"
       ],
-      "assetFiles": [
-        "pliki4.zip"
-      ],
+      "assetFiles": ["pliki4.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2025-06-01-sd-zo.pdf"
     },
     {
@@ -151,9 +132,7 @@
         "inf04-2025-06-01-ag-task-2",
         "inf04-2025-06-01-ag-task-3"
       ],
-      "assetFiles": [
-        "pliki4.zip"
-      ],
+      "assetFiles": ["pliki4.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2025-06-01-ag-zo.pdf"
     },
     {
@@ -173,10 +152,7 @@
         "inf04-2025-01-02-sg-task-2",
         "inf04-2025-01-02-sg-task-3"
       ],
-      "assetFiles": [
-        "pliki3.zip",
-        "pliki4.zip"
-      ],
+      "assetFiles": ["pliki3.zip", "pliki4.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2025-01-02-sg-zo.pdf"
     },
     {
@@ -196,10 +172,7 @@
         "inf04-2025-01-01-sg-task-2",
         "inf04-2025-01-01-sg-task-3"
       ],
-      "assetFiles": [
-        "pliki3.zip",
-        "pliki4.zip"
-      ],
+      "assetFiles": ["pliki3.zip", "pliki4.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2025-01-01-sg-zo.pdf"
     },
     {
@@ -219,10 +192,7 @@
         "inf04-2025-01-01-sd-task-2",
         "inf04-2025-01-01-sd-task-3"
       ],
-      "assetFiles": [
-        "pliki3.zip",
-        "pliki4.zip"
-      ],
+      "assetFiles": ["pliki3.zip", "pliki4.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2025-01-01-sd-zo.pdf"
     },
     {
@@ -242,10 +212,7 @@
         "inf04-2024-06-02-sg-task-2",
         "inf04-2024-06-02-sg-task-3"
       ],
-      "assetFiles": [
-        "pliki1.zip",
-        "pliki2.zip"
-      ],
+      "assetFiles": ["pliki1.zip", "pliki2.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2024-06-02-sg-zo.pdf"
     },
     {
@@ -265,10 +232,7 @@
         "inf04-2024-06-01-sg-task-2",
         "inf04-2024-06-01-sg-task-3"
       ],
-      "assetFiles": [
-        "pliki1.zip",
-        "pliki2.zip"
-      ],
+      "assetFiles": ["pliki1.zip", "pliki2.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2024-06-01-sg-zo.pdf"
     },
     {
@@ -288,10 +252,7 @@
         "inf04-2024-06-01-sd-task-2",
         "inf04-2024-06-01-sd-task-3"
       ],
-      "assetFiles": [
-        "pliki1.zip",
-        "pliki2.zip"
-      ],
+      "assetFiles": ["pliki1.zip", "pliki2.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2024-06-01-sd-zo.pdf"
     },
     {
@@ -311,9 +272,7 @@
         "inf04-2024-01-02-sg-task-2",
         "inf04-2024-01-02-sg-task-3"
       ],
-      "assetFiles": [
-        "materialy.7z"
-      ],
+      "assetFiles": ["materialy.7z"],
       "scoringPdf": "/pdfs/scoring/inf04-2024-01-02-sg-zo.pdf"
     },
     {
@@ -333,9 +292,7 @@
         "inf04-2024-01-02-ag-task-2",
         "inf04-2024-01-02-ag-task-3"
       ],
-      "assetFiles": [
-        "materialy.7z"
-      ],
+      "assetFiles": ["materialy.7z"],
       "scoringPdf": "/pdfs/scoring/inf04-2024-01-02-ag-zo.pdf"
     },
     {
@@ -355,9 +312,7 @@
         "inf04-2024-01-01-sg-task-2",
         "inf04-2024-01-01-sg-task-3"
       ],
-      "assetFiles": [
-        "materialy.7z"
-      ],
+      "assetFiles": ["materialy.7z"],
       "scoringPdf": "/pdfs/scoring/inf04-2024-01-01-sg-zo.pdf"
     },
     {
@@ -377,9 +332,7 @@
         "inf04-2024-01-01-sd-task-2",
         "inf04-2024-01-01-sd-task-3"
       ],
-      "assetFiles": [
-        "materialy.7z"
-      ],
+      "assetFiles": ["materialy.7z"],
       "scoringPdf": "/pdfs/scoring/inf04-2024-01-01-sd-zo.pdf"
     },
     {
@@ -399,9 +352,7 @@
         "inf04-2023-06-03-sg-task-2",
         "inf04-2023-06-03-sg-task-3"
       ],
-      "assetFiles": [
-        "materialy.zip"
-      ],
+      "assetFiles": ["materialy.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2023-06-03-sg-zo.pdf"
     },
     {
@@ -421,9 +372,7 @@
         "inf04-2023-06-02-sg-task-2",
         "inf04-2023-06-02-sg-task-3"
       ],
-      "assetFiles": [
-        "materialy.zip"
-      ],
+      "assetFiles": ["materialy.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2023-06-02-sg-zo.pdf"
     },
     {
@@ -443,9 +392,7 @@
         "inf04-2023-06-01-sg-task-2",
         "inf04-2023-06-01-sg-task-3"
       ],
-      "assetFiles": [
-        "materialy.zip"
-      ],
+      "assetFiles": ["materialy.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2023-06-01-sg-zo.pdf"
     },
     {
@@ -465,9 +412,7 @@
         "inf04-2023-06-01-sd-task-2",
         "inf04-2023-06-01-sd-task-3"
       ],
-      "assetFiles": [
-        "materialy.zip"
-      ],
+      "assetFiles": ["materialy.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2023-06-01-sd-zo.pdf"
     },
     {
@@ -587,9 +532,7 @@
         "inf04-2022-06-02-sg-task-2",
         "inf04-2022-06-02-sg-task-3"
       ],
-      "assetFiles": [
-        "zad1.zip"
-      ],
+      "assetFiles": ["zad1.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2022-06-02-sg-zo.pdf"
     },
     {
@@ -609,9 +552,7 @@
         "inf04-2022-06-01-sg-task-2",
         "inf04-2022-06-01-sg-task-3"
       ],
-      "assetFiles": [
-        "zad1.zip"
-      ],
+      "assetFiles": ["zad1.zip"],
       "scoringPdf": "/pdfs/scoring/inf04-2022-06-01-sg-zo.pdf"
     },
     {
@@ -665,9 +606,7 @@
       "heading": "Część III. Testy aplikacji i dokumentacja",
       "type": "testing",
       "typeLabel": "Testowanie",
-      "tags": [
-        "testing"
-      ],
+      "tags": ["testing"],
       "pageStart": 5,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2026-01-02-sg-task-3.pdf",
@@ -685,9 +624,7 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 3,
       "pageEnd": 5,
       "pdf": "/pdfs/tasks/inf04-2026-01-02-sg-task-2.pdf",
@@ -705,10 +642,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2026-01-02-sg-task-1.pdf",
@@ -726,10 +660,7 @@
       "heading": "Część III. Testy jednostkowe",
       "type": "unit-testing",
       "typeLabel": "Testy jednostkowe",
-      "tags": [
-        "unit-tests",
-        "testing"
-      ],
+      "tags": ["unit-tests", "testing"],
       "pageStart": 6,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2026-01-01-sg-task-3.pdf",
@@ -747,9 +678,7 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 4,
       "pageEnd": 5,
       "pdf": "/pdfs/tasks/inf04-2026-01-01-sg-task-2.pdf",
@@ -767,10 +696,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2026-01-01-sg-task-1.pdf",
@@ -788,10 +714,7 @@
       "heading": "Część III. Testy jednostkowe",
       "type": "unit-testing",
       "typeLabel": "Testy jednostkowe",
-      "tags": [
-        "unit-tests",
-        "testing"
-      ],
+      "tags": ["unit-tests", "testing"],
       "pageStart": 6,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2025-06-02-sg-task-3.pdf",
@@ -809,9 +732,7 @@
       "heading": "Część II. Aplikacja desktopowa",
       "type": "desktop",
       "typeLabel": "Aplikacja desktopowa",
-      "tags": [
-        "desktop"
-      ],
+      "tags": ["desktop"],
       "pageStart": 4,
       "pageEnd": 5,
       "pdf": "/pdfs/tasks/inf04-2025-06-02-sg-task-2.pdf",
@@ -829,10 +750,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2025-06-02-sg-task-1.pdf",
@@ -850,9 +768,7 @@
       "heading": "Część III. Dokumentacja aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2025-06-01-sg-task-3.pdf",
@@ -870,18 +786,14 @@
       "heading": "Część II. Aplikacja desktopowa",
       "type": "desktop",
       "typeLabel": "Aplikacja desktopowa",
-      "tags": [
-        "desktop"
-      ],
+      "tags": ["desktop"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2025-06-01-sg-task-2.pdf",
       "text": "Część II. Aplikacja desktopowa \nZa pomocą dostępnego na stanowisku egzaminacyjnym środowiska programistycznego wykonaj aplikację \ndesktopową wybierania kolorów z palety RGB. Obrazy przedstawiają stany aplikacji. W zależności od \nużytego środowiska programistycznego wygląd może nieznacznie się różnić. \n \n \n \nObraz 2. Stan początkowy \n \nObraz 3. Zmiana pozycji suwaków, zmienia kolor \ndużego prostokąta i wartości po prawej stronie \nsuwaka \n \n \nObraz 4. Po wciśnięciu przycisku, mały prostokąt \nzmienia kolor i napis odpowiadający ustawionemu \nkolorowi RGB \n \nObraz 5. Dalsze zmiany suwaków nie wpływają na \nkolor pobrany w małym prostokącie \n \nOpis wyglądu aplikacji: \n− Tytuł okna „Wzornik kolorów RGB. Wykonał” dalej wstawiony numer zdającego \n− Tło okna: Cornsilk (#FFF8DC) \n− Duży prostokąt o białym kolorze tła \n− Napis: „Dobierz kolor suwakami i zapisz przyciskiem:” \n− Trzy suwaki, każdy o wartości początkowej 255 oraz zakresie wartości od 0 do 255 \n− Z lewej strony suwaków kolejno etykiety: R, G, B \n− Z prawej strony suwaków etykiety z aktualną wartością suwaka, początkowo ustawione na 255 \n− Przycisk „Pobierz” koloru Peru ( #CD853F) \n− Etykieta z pobraną wartością suwaków, domyślnie „255, 255, 255” o kolorze tła białym (mały prostokąt) \n \n \n\nStrona 4 z 5 \nDziałanie aplikacji: \n− Zmiany położenia suwaków powodują zmianę wartości RGB po prawej stronie suwaka oraz powodują \nustawienie koloru dużego prostokąta na wartość RGB odpowiadającą suwakom (obraz 3) \n− Po wciśnięciu przycisku „Pobierz” mały prostokąt na dole okna ma ustawiony kolor oraz tekst \nodpowiadający aktualnemu RGB (obraz 4) \n− Dalsze ruchy suwakami zmieniają kolor dużego prostokąta oraz wartości RGB przy suwakach (obraz 5). \nMały prostokąt nie zmienia się, jego zmianę może wywołać dopiero przyciśnięcie przycisku „Pobierz” \n \nAplikacja powinna być zapisana czytelnie, z zasadami czystego formatowania kodu, należy stosować \nznaczące nazwy zmiennych i funkcji. \n \nPodejmij próbę kompilacji i uruchomienia aplikacji. Informacje dotyczące dokumentacji i zrzutów ekranowych \numieszczono w części III zadania egzaminacyjnego. \n \nKod aplikacji przygotuj do nagrania na płytę. W folderze desktopowa powinno znaleźć się archiwum całego \nprojektu o nazwie desktopowa.zip, skopiowane z projektu pliki źródłowe, które były modyfikowane w czasie \negzaminu (interfejs użytkownika i logika aplikacji) oraz plik wykonywalny, jeżeli istnieje.",
       "summary": "Aplikacja desktopowa: wybór koloru z palety RGB za pomocą suwaków i podglądu zapisanej barwy.",
       "duplicateGroup": "d135b3de982e",
-      "duplicates": [
-        "inf04-2025-06-01-ag-task-2"
-      ]
+      "duplicates": ["inf04-2025-06-01-ag-task-2"]
     },
     {
       "id": "inf04-2025-06-01-sg-task-1",
@@ -892,10 +804,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2025-06-01-sg-task-1.pdf",
@@ -913,9 +822,7 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 6,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2025-06-01-sd-task-3.pdf",
@@ -933,18 +840,14 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 4,
       "pageEnd": 5,
       "pdf": "/pdfs/tasks/inf04-2025-06-01-sd-task-2.pdf",
       "text": "Część II. Aplikacja mobilna \nZa pomocą środowiska programistycznego dostępnego na stanowisku egzaminacyjnym wykonaj aplikację \nmobilną do obsługi urządzeń domowych. Do wykonania zadania należy wykorzystać obrazy zawarte \nw archiwum pliki4.zip zabezpieczonym hasłem: Int3rn3tOfThingS \n \n \n \nObraz 3. \nŚrodowisko Maui, stan początkowy. Emulacja \nPixel 5 \nObraz 4. \nŚrodowisko Android Studio, stan początkowy. \nEmulacja Pixel 5 \n \n \n \nObraz 5. \nFragment widoku po wciśnięciu przycisku \nZATWIERDŹ \nObraz 6. \nFragment widoku po wciśnięciu przycisku Włącz \n \nStan początkowy aplikacji został przedstawiony na obrazach 3 i 4. Interakcje w aplikacji zostały \nprzedstawione na obrazach 5 i 6. W zależności od zastosowanego środowiska programistycznego oraz \nemulowanego systemu wynik końcowy może nieznacznie różnić się od przedstawionego. \n \nElementy aplikacji: \n‒ Napis (etykieta) o treści: „Urządzenia Domowe” \n‒ Napis o treści: „Autor: ”, dalej wstawiony numer zdającego \n‒ Rozkład dotyczący pralki: \n− Obraz pralka.jpg \n− Napis o treści: „Pralka” \n− Pole edycyjne z podpowiedzią o treści: „Podaj nr prania 1..12” umożliwiające wpisywanie jedynie \nliczb \n\nStrona 5 z 7 \n− Przycisk o treści: „Zatwierdź” \n− Napis o treści: „Numer prania: nie podano” \n‒ Rozkład dotyczący odkurzacza: \n‒ Obraz odkurzacz.jpg \n‒ Napis o treści: „Odkurzacz” \n‒ Przycisk o treści: „Włącz” \n‒ Napis o treści: „Odkurzacz wyłączony” \n‒ Napis o treści: „Status: naładowany” \n‒ Rozmieszczenie elementów zgodne z obrazami 3 i 4 \n \nDziałanie aplikacji: \n‒ Po wciśnięciu przycisku „Zatwierdź” pobierana jest liczba z pola edycyjnego, jeśli jest ona z przedziału \nod 1 do 12 to zmieniany jest napis poniżej na: „Numer prania: <numer>”, gdzie <numer> oznacza \nwartość podaną w polu edycyjnym (obraz 5) \n‒ Po wciśnięciu przycisku „Włącz”, zmienia się podpis przycisku na „Wyłącz” oraz treść napisu poniżej \nna: „Odkurzacz włączony”. Jeżeli kolejny raz zostanie wciśnięty przycisk, napisy wracają do stanu \npoczątkowego („Włącz” oraz „Odkurzacz wyłączony”) (obraz 6) \n \nZałożenia aplikacji: \n‒ Interfejs użytkownika zapisany za pomocą języka znaczników wspieranego w danym środowisku (np. \nXAML, XML) \n‒ Zastosowane rozkłady liniowe (Linear / Stack lub inny o tej idei), aby można było uzyskać widok taki \njak na obrazach 3 i 4. \n‒ Kolory tła: \n‒ Dla głównego rozkładu lub strony: LightBlue (#ADD8E6) \n‒ Dla pola edycyjnego: SkyBlue (#87CEEB) \n‒ Dla przycisków: RoyalBlue (#4169E1) \n‒ Kolor czcionki wpisanego tekstu oraz czcionki podpowiedzi dla pola edycyjnego: Navy (#000080) \n‒ Marginesy zewnętrzne: \n‒ Dla pierwszych dwóch napisów 5 \n‒ Dla przycisków 10 \n‒ Dla obrazów marginesy lewy, prawy i dolny 20, górny 0 \n‒ Tekst zapisany powiększoną czcionką dla napisów „Urządzenia Domowe”, „Pralka”, „Odkurzacz” \n‒ Pierwsze dwa napisy na stronie są wyśrodkowane \n‒ Obrazy mają wysokość 150 \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych i funkcji. \n \nPodejmij próbę kompilacji i emulacji aplikacji. Informacje dotyczące dokumentacji i zrzutów ekranowych \numieszczono w części III zadania. \n \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze mobilna powinno znaleźć się archiwum całego \nprojektu o nazwie mobilna.zip, skopiowane z projektu plik (lub pliki) z kodem źródłowym interfejsu \nużytkownika (XAML lub XML) oraz plik źródłowy kodu skojarzonego z interfejsem użytkownika. \n \n \nStrona 6 z 7",
       "summary": "Aplikacja mobilna: model urządzeń domowych z obsługą pralki i odkurzacza.",
       "duplicateGroup": "d0e55d9a7d45",
-      "duplicates": [
-        "inf04-2025-01-02-sg-task-2"
-      ]
+      "duplicates": ["inf04-2025-01-02-sg-task-2"]
     },
     {
       "id": "inf04-2025-06-01-sd-task-1",
@@ -955,19 +858,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2025-06-01-sd-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nNapisz program implementujący klasę i dwie klasy potomne, który obsługuje działanie urządzeń domowych. \n \n \nObraz 1. Działanie programu. Wprowadzono \npoprawny numer programu pralki \nObraz 2. Działanie programu. Wprowadzono \nniepoprawny numer programu pralki \n \nZałożenia do programu: \n‒ Program wykonywany w konsoli \n‒ Zastosowany obiektowy język programowania zgodny z zainstalowanym na stanowisku \negzaminacyjnym: C++ lub C#, lub Java, lub Python \n‒ Program zawiera klasę bazową reprezentującą urządzenie oraz dwie klasy potomne reprezentujące \npralkę oraz odkurzacz \n‒ Wymaganie do klasy bazowej: \n‒ Implementuje jedną ogólnodostępną metodę, która wyświetla treść komunikatu. Komunikat jest \nargumentem metody. Metoda nie zwraca wartości. \n‒ Wymagania do klasy reprezentującej pralkę: \n‒ Definiuje pole przechowujące numer programu prania, który jest liczbą całkowitą. Pole inicjowane \njest wartością 0. Instancje klasy nie mają dostępu do pola, pole nie jest widoczne w klasach \ndziedziczących po klasie pralki \n‒ Implementuje ogólnodostępną metodę do ustawienia numeru programu prania. Argumentem \nmetody jest numer programu. Gdy jest on liczbą z przedziału od 1 do 12, metoda ustawia pole \nokreślające numer programu na tą wartość. W przeciwnym wypadku pole jest ustawione na \nwartość 0. Metoda zwraca wartość pola numeru programu \n‒ Wymagania do klasy reprezentującej odkurzacz: \n‒ Definiuje pole reprezentujące stan odkurzacza, które jest typu logicznego, inicjowane wartością \nfalse. Wartość false oznacza, że odkurzacz jest wyłączony, true - włączony. Pole dostępne \ntylko w tej klasie, niedostępne w klasach potomnych \n‒ Implementuje ogólnodostępną bezargumentową metodę on(), która włącza odkurzacz. Metoda \nnie zwraca wartości. Włączenie polega na ustawieniu pola stanu na wartość true oraz \nwywołaniu metody klasy bazowej z komunikatem „Odkurzacz włączono”. Zmiana stanu \ni komunikat mogą być wykonane tylko i wyłącznie, gdy odkurzacz jest wyłączony \n\nStrona 3 z 7 \n‒ Implementuje ogólnodostępną bezargumentową metodę off(), która wyłącza odkurzacz. \nMetoda nie zwraca wartości. Wyłączenie polega na ustawieniu pola stanu na wartość false oraz \nwywołaniu metody klasy bazowej z komunikatem „Odkurzacz wyłączono”. Zmiana stanu \ni komunikat mogą być wykonane tylko i wyłącznie, gdy odkurzacz jest włączony \n‒ Wymagania do programu głównego: \n‒ Należy zainicjować dwa obiekty typu pralka i odkurzacz \n‒ Na obiekcie typu pralka należy przetestować ustawienie programu prania z wartościami \npoprawnymi i niepoprawnymi. Powinny być wyświetlone odpowiednie komunikaty, patrz obrazy \n1 i 2 \n‒ Na obiekcie typu odkurzacz należy: \n− Wywołać metodę on()trzykrotnie; mimo trzykrotnego wywołania tylko raz wyświetla się \nkomunikat – patrz obraz 1 \n− Wywołać metodę klasy bazowej z treścią: „Odkurzacz wyładował się” \n− Wywołać metodę off() \n‒ Program powinien podejmować zrozumiałą komunikację z użytkownikiem. Jej przykład \nprzedstawiono na obrazach 1 i 2 \n‒ W programie może być zastosowane angielskie lub polskie nazewnictwo klas, pól, metod, instancji \nklas, zmiennych \n‒ Program powinien być zapisany czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych, metod \n‒ Dokumentację aplikacji należy utworzyć zgodnie z opisem w części III treści zadania. \n \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze konsolowa powinno znaleźć się archiwum całego \nprojektu o nazwie konsola.zip, skopiowany z projektu plik z kodem źródłowym programu oraz plik \nwykonywalny, jeżeli istnieje. \n \n \nStrona 4 z 7",
       "summary": "Aplikacja konsolowa: model urządzeń domowych z obsługą pralki i odkurzacza.",
       "duplicateGroup": "e52b6e7b91bc",
-      "duplicates": [
-        "inf04-2025-01-02-sg-task-1"
-      ]
+      "duplicates": ["inf04-2025-01-02-sg-task-1"]
     },
     {
       "id": "inf04-2025-06-01-ag-task-3",
@@ -978,9 +876,7 @@
       "heading": "Część III. Dokumentacja aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 9,
       "pageEnd": 12,
       "pdf": "/pdfs/tasks/inf04-2025-06-01-ag-task-3.pdf",
@@ -998,18 +894,14 @@
       "heading": "Część II. Aplikacja desktopowa",
       "type": "desktop",
       "typeLabel": "Aplikacja desktopowa",
-      "tags": [
-        "desktop"
-      ],
+      "tags": ["desktop"],
       "pageStart": 6,
       "pageEnd": 9,
       "pdf": "/pdfs/tasks/inf04-2025-06-01-ag-task-2.pdf",
       "text": "Część II. Aplikacja desktopowa \nZa pomocą dostępnego na stanowisku egzaminacyjnym środowiska \nprogramistycznego wykonaj aplikację desktopową wybierania kolorów \nz palety RGB. Obrazy przedstawiają stany aplikacji. W zależności od \nużytego środowiska programistycznego wygląd może nieznacznie się \nróżnić. \n \nObraz 2. Stan początkowy \n \n \nObraz 3. Zmiana pozycji suwaków, zmienia kolor dużego prostokąta \ni wartości po prawej stronie suwaka \n \n \n\nStrona 7 z 11 \n \nObraz 4. Po wciśnięciu przycisku, mały prostokąt zmienia kolor i napis \nodpowiadający ustawionemu kolorowi RGB \n \n \nObraz 5. Dalsze zmiany suwaków nie wpływają na kolor pobrany \nw małym prostokącie \n \n \n \n\nStrona 8 z 11 \nOpis wyglądu aplikacji: \n− Tytuł okna „Wzornik kolorów RGB. Wykonał” dalej wstawiony numer \nzdającego \n− Tło okna: Cornsilk (#FFF8DC) \n− Duży prostokąt o białym kolorze tła \n− Napis: „Dobierz kolor suwakami i zapisz przyciskiem:” \n− Trzy suwaki, każdy o wartości początkowej 255 oraz zakresie wartości \nod 0 do 255 \n− Z lewej strony suwaków kolejno etykiety: R, G, B \n− Z prawej strony suwaków etykiety z aktualną wartością suwaka, \npoczątkowo ustawione na 255 \n− Przycisk „Pobierz” koloru Peru ( #CD853F) \n− Etykieta z pobraną wartością suwaków, domyślnie „255, 255, 255” \no kolorze tła białym (mały prostokąt) \n \nDziałanie aplikacji: \n− Zmiany położenia suwaków powodują zmianę wartości RGB po prawej \nstronie suwaka oraz powodują ustawienie koloru dużego prostokąta na \nwartość RGB odpowiadającą suwakom (obraz 3) \n− Po wciśnięciu przycisku „Pobierz” mały prostokąt na dole okna ma \nustawiony kolor oraz tekst odpowiadający aktualnemu RGB (obraz 4) \n− Dalsze ruchy suwakami zmieniają kolor dużego prostokąta oraz \nwartości RGB przy suwakach (obraz 5). Mały prostokąt nie zmienia \nsię, jego zmianę może wywołać dopiero przyciśnięcie przycisku \n„Pobierz” \n \nAplikacja powinna być zapisana czytelnie, z zasadami czystego \nformatowania kodu, należy stosować znaczące nazwy zmiennych \ni funkcji. \n \nStrona 9 z 11 \nPodejmij próbę kompilacji i uruchomienia aplikacji. Informacje dotyczące \ndokumentacji i zrzutów ekranowych umieszczono w części III zadania \negzaminacyjnego. \n \nKod aplikacji przygotuj do nagrania na płytę. W folderze desktopowa \npowinno znaleźć się archiwum całego projektu o nazwie desktopowa.zip, \nskopiowane z projektu pliki źródłowe, które były modyfikowane w czasie \negzaminu (interfejs użytkownika i logika aplikacji) oraz plik wykonywalny, \njeżeli istnieje.",
       "summary": "Aplikacja desktopowa: wybór koloru z palety RGB za pomocą suwaków i podglądu zapisanej barwy.",
       "duplicateGroup": "d135b3de982e",
-      "duplicates": [
-        "inf04-2025-06-01-sg-task-2"
-      ]
+      "duplicates": ["inf04-2025-06-01-sg-task-2"]
     },
     {
       "id": "inf04-2025-06-01-ag-task-1",
@@ -1020,10 +912,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 4,
       "pageEnd": 5,
       "pdf": "/pdfs/tasks/inf04-2025-06-01-ag-task-1.pdf",
@@ -1041,9 +930,7 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 6,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2025-01-02-sg-task-3.pdf",
@@ -1061,18 +948,14 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 4,
       "pageEnd": 5,
       "pdf": "/pdfs/tasks/inf04-2025-01-02-sg-task-2.pdf",
       "text": "Część II. Aplikacja mobilna \nZa pomocą środowiska programistycznego dostępnego na stanowisku egzaminacyjnym wykonaj aplikację \nmobilną do obsługi urządzeń domowych. Do wykonania zadania należy wykorzystać obrazy zawarte \nw archiwum pliki4.zip zabezpieczonym hasłem: Int3rn3tOfThingS \nObraz 3. \nŚrodowisko Maui, stan początkowy. Emulacja \nPixel 5 \nObraz 4. \nŚrodowisko Android Studio, stan początkowy. \nEmulacja Pixel 5 \nObraz 5. \nFragment widoku po wciśnięciu przycisku \nZATWIERDŹ \nObraz 6. \nFragment widoku po wciśnięciu przycisku Włącz \nStan początkowy aplikacji został przedstawiony na obrazach 3 i 4. Interakcje w aplikacji zostały \nprzedstawione na obrazach 5 i 6. W zależności od zastosowanego środowiska programistycznego oraz \nemulowanego systemu wynik końcowy może nieznacznie różnić się od przedstawionego. \nElementy aplikacji: \n‒ Napis (etykieta) o treści: „Urządzenia Domowe” \n‒ Napis o treści: „Autor: ”, dalej wstawiony numer zdającego \n‒ Rozkład dotyczący pralki: \n− Obraz pralka.jpg\n− Napis o treści: „Pralka”\n− Pole edycyjne z podpowiedzią o treści: „Podaj nr prania 1..12” umożliwiające wpisywanie jedynie\nliczb\n\nStrona 5 z 7 \n− Przycisk o treści: „Zatwierdź”\n− Napis o treści: „Numer prania: nie podano”\n‒ Rozkład dotyczący odkurzacza: \n‒ Obraz odkurzacz.jpg \n‒ Napis o treści: „Odkurzacz” \n‒ Przycisk o treści: „Włącz” \n‒ Napis o treści: „Odkurzacz wyłączony” \n‒ Napis o treści: „Status: naładowany” \n‒ Rozmieszczenie elementów zgodne z obrazami 3 i 4 \nDziałanie aplikacji: \n‒ Po wciśnięciu przycisku „Zatwierdź” pobierana jest liczba z pola edycyjnego, jeśli jest ona z przedziału \nod 1 do 12 to zmieniany jest napis poniżej na: „Numer prania: <numer>”, gdzie <numer> oznacza \nwartość podaną w polu edycyjnym (obraz 5) \n‒ Po wciśnięciu przycisku „Włącz”, zmienia się podpis przycisku na „Wyłącz” oraz treść napisu poniżej \nna: „Odkurzacz włączony”. Jeżeli kolejny raz zostanie wciśnięty przycisk, napisy wracają do stanu \npoczątkowego („Włącz” oraz „Odkurzacz wyłączony”) (obraz 6) \nZałożenia aplikacji: \n‒ Interfejs użytkownika zapisany za pomocą języka znaczników wspieranego w danym środowisku (np. \nXAML, XML) \n‒ Zastosowane rozkłady liniowe (Linear / Stack lub inny o tej idei), aby można było uzyskać widok taki \njak na obrazach 3 i 4. \n‒ Kolory tła: \n‒ Dla głównego rozkładu lub strony: LightBlue (#ADD8E6) \n‒ Dla pola edycyjnego: SkyBlue (#87CEEB) \n‒ Dla przycisków: RoyalBlue (#4169E1) \n‒ Kolor czcionki wpisanego tekstu oraz czcionki podpowiedzi dla pola edycyjnego: Navy (#000080) \n‒ Marginesy zewnętrzne: \n‒ Dla pierwszych dwóch napisów 5 \n‒ Dla przycisków 10 \n‒ Dla obrazów marginesy lewy, prawy i dolny 20, górny 0 \n‒ Tekst zapisany powiększoną czcionką dla napisów „Urządzenia Domowe”, „Pralka”, „Odkurzacz” \n‒ Pierwsze dwa napisy na stronie są wyśrodkowane \n‒ Obrazy mają wysokość 150 \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych i funkcji. \nPodejmij próbę kompilacji i emulacji aplikacji. Informacje dotyczące dokumentacji i zrzutów ekranowych \numieszczono w części III zadania. \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze mobilna powinno znaleźć się archiwum całego \nprojektu o nazwie mobilna.zip, skopiowane z projektu plik (lub pliki) z kodem źródłowym interfejsu \nużytkownika (XAML lub XML) oraz plik źródłowy kodu skojarzonego z interfejsem użytkownika. \nStrona 6 z 7",
       "summary": "Aplikacja mobilna: model urządzeń domowych z obsługą pralki i odkurzacza.",
       "duplicateGroup": "d0e55d9a7d45",
-      "duplicates": [
-        "inf04-2025-06-01-sd-task-2"
-      ]
+      "duplicates": ["inf04-2025-06-01-sd-task-2"]
     },
     {
       "id": "inf04-2025-01-02-sg-task-1",
@@ -1083,19 +966,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2025-01-02-sg-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nNapisz program implementujący klasę i dwie klasy potomne, który obsługuje działanie urządzeń domowych. \n \n \nObraz 1. Działanie programu. Wprowadzono \npoprawny numer programu pralki \nObraz 2. Działanie programu. Wprowadzono \nniepoprawny numer programu pralki \n \nZałożenia do programu: \n‒ Program wykonywany w konsoli \n‒ Zastosowany obiektowy język programowania zgodny z zainstalowanym na stanowisku \negzaminacyjnym: C++ lub C#, lub Java, lub Python \n‒ Program zawiera klasę bazową reprezentującą urządzenie oraz dwie klasy potomne reprezentujące \npralkę oraz odkurzacz \n‒ Wymaganie do klasy bazowej: \n‒ Implementuje jedną ogólnodostępną metodę, która wyświetla treść komunikatu. Komunikat jest \nargumentem metody. Metoda nie zwraca wartości. \n‒ Wymagania do klasy reprezentującej pralkę: \n‒ Definiuje pole przechowujące numer programu prania, który jest liczbą całkowitą. Pole inicjowane \njest wartością 0. Instancje klasy nie mają dostępu do pola, pole nie jest widoczne w klasach \ndziedziczących po klasie pralki \n‒ Implementuje ogólnodostępną metodę do ustawienia numeru programu prania. Argumentem \nmetody jest numer programu. Gdy jest on liczbą z przedziału od 1 do 12, metoda ustawia pole \nokreślające numer programu na tą wartość. W przeciwnym wypadku pole jest ustawione na \nwartość 0. Metoda zwraca wartość pola numeru programu \n‒ Wymagania do klasy reprezentującej odkurzacz: \n‒ Definiuje pole reprezentujące stan odkurzacza, które jest typu logicznego, inicjowane wartością \nfalse. Wartość false oznacza, że odkurzacz jest wyłączony, true - włączony. Pole dostępne \ntylko w tej klasie, niedostępne w klasach potomnych \n‒ Implementuje ogólnodostępną bezargumentową metodę on(), która włącza odkurzacz. Metoda \nnie zwraca wartości. Włączenie polega na ustawieniu pola stanu na wartość true oraz \nwywołaniu metody klasy bazowej z komunikatem „Odkurzacz włączono”. Zmiana stanu \ni komunikat mogą być wykonane tylko i wyłącznie, gdy odkurzacz jest wyłączony \n\nStrona 3 z 7 \n‒ Implementuje ogólnodostępną bezargumentową metodę off(), która wyłącza odkurzacz. \nMetoda nie zwraca wartości. Wyłączenie polega na ustawieniu pola stanu na wartość false oraz \nwywołaniu metody klasy bazowej z komunikatem „Odkurzacz wyłączono”. Zmiana stanu \ni komunikat mogą być wykonane tylko i wyłącznie, gdy odkurzacz jest włączony \n‒ Wymagania do programu głównego: \n‒ Należy zainicjować dwa obiekty typu pralka i odkurzacz \n‒ Na obiekcie typu pralka należy przetes tować ustawienie programu prania z wartościami \npoprawnymi i niepoprawny mi. Powinny być wyświetlone odpowiednie komunikaty , patrz \nobrazy 1 i 2 \n‒ Na obiekcie typu odkurzacz należy: \n− Wywołać metodę on()trzykrotnie; mimo trzykrotnego wywołania tylko raz wyświetla się\nkomunikat – patrz obraz 1\n− Wywołać metodę klasy bazowej z treścią: „Odkurzacz wyładował się”\n− Wywołać metodę off()\n‒ Program powinien podejmować zrozumiałą komunikację z użytkownikiem. Jej przykład \nprzedstawiono na obrazach 1 i 2 \n‒ W programie może być zastosowane angielskie lub polskie nazewnictwo klas, pól, metod, instancji \nklas, zmiennych \n‒ Program powinien być zapisany czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych, metod \n‒ Dokumentację aplikacji należy utworzyć zgodnie z opisem w części III treści zadania. \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze konsolowa powinno znaleźć się archiwum całego \nprojektu o nazwie konsola.zip, skopiowany z projektu plik z kodem źródłowym programu oraz plik \nwykonywalny, jeżeli istnieje. \nStrona 4 z 7",
       "summary": "Aplikacja konsolowa: model urządzeń domowych z obsługą pralki i odkurzacza.",
       "duplicateGroup": "e52b6e7b91bc",
-      "duplicates": [
-        "inf04-2025-06-01-sd-task-1"
-      ]
+      "duplicates": ["inf04-2025-06-01-sd-task-1"]
     },
     {
       "id": "inf04-2025-01-01-sg-task-3",
@@ -1106,9 +984,7 @@
       "heading": "Część III. Dokumentacja utworzonych aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 6,
       "pageEnd": 12,
       "pdf": "/pdfs/tasks/inf04-2025-01-01-sg-task-3.pdf",
@@ -1126,10 +1002,7 @@
       "heading": "Część II. Aplikacja webowa",
       "type": "web",
       "typeLabel": "Aplikacja webowa",
-      "tags": [
-        "web",
-        "frontend"
-      ],
+      "tags": ["web", "frontend"],
       "pageStart": 4,
       "pageEnd": 6,
       "pdf": "/pdfs/tasks/inf04-2025-01-01-sg-task-2.pdf",
@@ -1147,10 +1020,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2025-01-01-sg-task-1.pdf",
@@ -1168,18 +1038,14 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 6,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2025-01-01-sd-task-3.pdf",
       "text": "Część III. Dokumentacja aplikacji konsolowej \nWykonaj dokumentację do aplikacji utworzonych na egzaminie. W kodzie źródłowym aplikacji konsolowej za \npomocą komentarza utwórz nagłówek wybranej funkcji (metody) według wzoru z listingu 1. Komentarz \npowinien znaleźć się nad lub pod nazwą funkcji. W miejscu nawiasów <> należy podać odpowiednie opisy. \n \nUWAGA: Dokumentację należy umieścić w komentarzu (wieloliniowym lub kilku jednoliniowych). Znajdujący \nsię w listingu 1 wzór dokumentacji jest bez znaków początku i końca komentarza, gdyż te są różne dla \nróżnych języków programowania. \n \nListing 1. Wzór dokumentacji funkcji (liczba gwiazdek dowolna) \n************************************************ \n nazwa: <tu wstaw nazwę funkcji / metody> \n opis: <co wykonuje funkcja / metoda?> \n parametry: <opis parametru1, lub „brak”> \n <opis parametru2> \n ... \n zwracany typ i opis:<nazwa typu i opis co jest zwracane lub „brak”> \n autor: <numer zdającego> \n************************************************ \n \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji utworzonych podczas egzaminu. Zrzuty \npowinny obejmować cały obszar ekranu monitora z widocznym paskiem zadań. Jeżeli aplikacja uruchamia \nsię, na zrzucie należy umieścić okno z wynikiem działania programu oraz otwarte środowisko \nprogramistyczne z projektem lub okno terminala z kompilacją projektu. Jeżeli aplikacja nie uruchamia się \nz powodu błędów kompilacji, należy na zrzucie umieścić okno ze spisem błędów i widocznym otwartym \nśrodowiskiem programis tycznym. Wykonać należy tyle zrzutów, ile interakcji podejmuje aplikacja. \nWymagane zrzuty ekranu: \n‒ Aplikacja konsolowa – dowolna liczba zrzutów nazwanych konsola1, konsola2, ... (np. stan początkowy, \nbłędnie i poprawnie podana liczba kostek, kilka losowań, opcje ‘t’ oraz na końcu opcja ‘n’) \n‒ Aplikacja mobilna – dowolna liczba zrzutów nazwanych mobile1, mobile2, ... (np. stan początkowy, po \nwciśnięciu przycisku RZUĆ KOŚĆMI, po wciśnięciu przycisku „RESETUJ WYNIK”) \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij go egzamin. Dokument powinien \nzawierać informacje: \n‒ Nazwę systemu operacyjnego, na którym pracował zdający \n‒ Nazwy środowisk programistycznych, z których zdający korzystał na egzaminie \n‒ Nazwę emulatora dla aplikacji mobilnej \n‒ Nazwy użytych języków programowania \nZrzuty ekranu i dokument umieść w podfolderze dokumentacja. \n \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować \npodfoldery: dokumentacja, konsolowa, mobilna. W folderze dokumentacja: pliki ze zrzutami oraz plik \negzamin. W folderze konsolowa: spakowany cały projekt aplikacji konsolowej, pliki źródłowe, opcjonalnie plik \nwykonywalny. W folderze mobilna: spakowany cały projekt aplikacji mobilnej, pliki z kodem źródłowym \ninterfejsu i logiki. Po nagraniu płyty sprawdź poprawność nagrania. Opisz płytę numerem zdającego \ni pozostaw na stanowisku, zapakowaną w pudełku wraz z arkuszem egzaminacyjnym. \n \nStrona 7 z 7 \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \n \nOcenie będą podlegać 4 rezultaty \n‒ Implementacja, kompilacja, uruchomienie programu, \n‒ Aplikacja konsolowa, \n‒ Aplikacja mobilna, \n‒ Dokumentacja aplikacji. \n \nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL \nktórej jakość nagrania została przeze mnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………........… \nCzytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek wybranej funkcji lub metody, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "73285cddbc4d",
-      "duplicates": [
-        "inf04-2024-06-01-sg-task-3"
-      ]
+      "duplicates": ["inf04-2024-06-01-sg-task-3"]
     },
     {
       "id": "inf04-2025-01-01-sd-task-2",
@@ -1190,18 +1056,14 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 4,
       "pageEnd": 6,
       "pdf": "/pdfs/tasks/inf04-2025-01-01-sd-task-2.pdf",
       "text": "Część II. Aplikacja mobilna \nZa pomocą środowiska programistycznego dostępnego na stanowisku egzaminacyjnym wykonaj aplikację \nmobilną do gry w kości. Do zbudowania aplikacji zastosuj obrazy z archiwum pliki1.zip zabezpieczonego \nhasłem Gra^Kosci5 \n \n \n \nObraz 3. \nŚrodowisko .NET MAUI, stan początkowy. \nEmulacja Pixel 5 \nObraz 4. \nŚrodowisko Android Studio, stan początkowy. \nEmulacja Pixel 5 \n \n \n \nObraz 5. \nPo wciśnięciu przycisku RZUĆ KOŚĆMI \nObraz 6. \nPo wciśnięciu przycisku \nRESETUJ WYNIK \n \nStan początkowy aplikacji został przedstawiony na obrazach 3 i 4. Interakcje w aplikacji zostały \nprzedstawione na obrazach 5 i 6. W zależności od zastosowanego środowiska programistycznego oraz \nemulowanego systemu widok może nieznacznie różnić się od przedstawionego. \n\nStrona 5 z 7 \nElementy aplikacji: \n‒ Napis (etykieta) z tytułem gry: „Gra w kości. Autor ”, dalej wstawiony numer zdającego \n‒ Przycisk o treści „RZUĆ KOŚĆMI” \n‒ Pięć obrazów w stanie początkowym wypełnionych grafiką question.jpg \n‒ Napis „Wynik tego losowania: ” \n‒ Napis „Wynik gry: ” \n‒ Przycisk o treści „RESETUJ WYNIK” \n‒ Rozmieszczenie elementów zgodne z obrazami 3 i 4 \n \nDziałanie aplikacji: \n‒ Do wykonania aplikacji można wykorzystać fragmenty kodu z aplikacji konsolowej. Dla uproszczenia \naplikacji, gra odbywa się zawsze na pięciu kościach \n‒ Po wciśnięciu przycisku „RZUĆ KOŚĆMI” (obraz 5): \n‒ Losowanych jest 5 liczb z zakresu od 1 do 6, które są wyświetlone w postaci pięciu obrazów kości \n‒ Obliczana jest suma punktów dla rzutu kośćmi zgodnie z algorytmem podanym w opisie aplikacji \nkonsolowej oraz wynik wyświetlany jest w napisie z wynikiem losowania \n‒ Wynik gry jest powiększany o obliczony wynik rzutu i wyświetlany w napisie z wynikiem gry \n‒ Po wciśnięciu przycisku „RESETUJ WYNIK” (obraz 6): \n‒ Pięć obrazów kości wypełnione zostaje grafiką question.jpg \n‒ Wynik całej gry jest resetowany do wartości 0 \n‒ W napisach dotyczących wyniku losowania i wyniku gry jest zapisana wartość 0 \n \nZałożenia aplikacji: \n‒ Interfejs użytkownika zapisany za pomocą języka znaczników wspieranego w danym środowisku (np. \nXAML, XML) \n‒ Zastosowany rozkład liniowy wertykalny (Linear / Stack lub inny o tej idei), z zagłębionym rozkładem \nliniowym horyzontalnym dla pięciu obrazów \n‒ Kolory tła \n‒ Rozkład wertykalny lub strona: Beige (#F5F5DC) \n‒ Napis z tytułem strony: Brown (#A52A2A) \n‒ Oba przyciski: Chocolate (#D2691E) \n‒ Rozkład horyzontalny: biały \n‒ Biały kolor czcionki dla napisu z tytułem gry \n‒ Rozmiar i marginesy dla pięciu obrazów należy dobrać tak, aby wszystkie obrazy były widoczne \nw całości, nie stykały się ze sobą oraz wypełniały całą szerokość rozkładu. Dla emulacji Pixel5 \nz obrazu 3 zastosowano wysokość obrazu 60 i marginesy 9 \n‒ Marginesy dla pozostałych kontrolek i elementów strony należy dobrać tak, aby kontrolki nie \nprzylegały do siebie w pionie i w poziomie. Dla emulacji Pixel5 z obrazu 3 zastosowano marginesy \ngórny i dolny 10 \n‒ Rozmiar czcionki napisu z tytułem gry jest największy względem innych napisów \n‒ Napisy z wynikami oraz przyciski są wyśrodkowane, napis z tytułem oraz rozkład horyzontalny \nwypełniają w poziomie całą szerokość strony \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych i funkcji. \n \nPodejmij próbę kompilacji i emulacji aplikacji. Informacje dotyczące dokumentacji i zrzutów ekranowych \numieszczono w części III zadania. \n \nStrona 6 z 7 \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze mobilna powinno znaleźć się archiwum całego \nprojektu o nazwie mobilna.zip, skopiowane z projektu plik (lub pliki) z kodem źródłowym interfejsu \nużytkownika (XAML lub XML) oraz plik źródłowy kodu skojarzonego z interfejsem użytkownika.",
       "summary": "Aplikacja mobilna: gra w kości z losowaniem wartości i punktacją.",
       "duplicateGroup": "2451d86ce4a9",
-      "duplicates": [
-        "inf04-2024-06-01-sg-task-2"
-      ]
+      "duplicates": ["inf04-2024-06-01-sg-task-2"]
     },
     {
       "id": "inf04-2025-01-01-sd-task-1",
@@ -1212,10 +1074,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2025-01-01-sd-task-1.pdf",
@@ -1233,9 +1092,7 @@
       "heading": "Część III. Dokumentacja aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2024-06-02-sg-task-3.pdf",
@@ -1253,9 +1110,7 @@
       "heading": "Część II. Aplikacja desktopowa",
       "type": "desktop",
       "typeLabel": "Aplikacja desktopowa",
-      "tags": [
-        "desktop"
-      ],
+      "tags": ["desktop"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2024-06-02-sg-task-2.pdf",
@@ -1273,10 +1128,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2024-06-02-sg-task-1.pdf",
@@ -1294,18 +1146,14 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 6,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2024-06-01-sg-task-3.pdf",
       "text": "Część III. Dokumentacja aplikacji konsolowej \nWykonaj dokumentację do aplikacji utworzonych na egzaminie. W kodzie źródłowym aplikacji konsolowej za \npomocą komentarza utwórz nagłówek wybranej funkcji (metody) według wzoru z listingu 1. Komentarz \npowinien znaleźć się nad lub pod nazwą funkcji. W miejscu nawiasów <> należy podać odpowiednie opisy. \n \nUWAGA: Dokumentację należy umieścić w komentarzu (wieloliniowym lub kilku jednoliniowych). Znajdujący \nsię w listingu 1 wzór dokumentacji jest bez znaków początku i końca komentarza, gdyż te są różne dla \nróżnych języków programowania. \n \nListing 1. Wzór dokumentacji funkcji (liczba gwiazdek dowolna) \n************************************************ \n nazwa: <tu wstaw nazwę funkcji / metody> \n opis: <co wykonuje funkcja / metoda?> \n parametry: <opis parametru1, lub „brak”> \n <opis parametru2> \n ... \n zwracany typ i opis:<nazwa typu i opis co jest zwracane lub „brak”> \n autor: <numer zdającego> \n************************************************ \n \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji utworzonych podczas egzaminu. Zrzuty \npowinny obejmować cały obszar ekranu monitora z widocznym paskiem zadań. Jeżeli aplikacja uruchamia \nsię, na zrzucie należy umieścić okno z wynikiem działania programu oraz otwarte środowisko \nprogramistyczne z projektem lub okno terminala z kompilacją projektu. Jeżeli aplikacja nie uruchamia się \nz powodu błędów kompilacji, należy na zrzucie umieścić okno ze spisem błędów i widocznym otwartym \nśrodowiskiem programis tycznym. Wykonać należy tyle zrzutów, ile interakcji podejmuje aplikacja. \nWymagane zrzuty ekranu: \n‒ Aplikacja konsolowa – dowolna liczba zrzutów nazwanych konsola1, konsola2, ... (np. stan początkowy, \nbłędnie i poprawnie podana liczba kostek, kilka losowań, opcje ‘t’ oraz na końcu opcja ‘n’) \n‒ Aplikacja mobilna – dowolna liczba zrzutów nazwanych mobile1, mobile2, ... (np. stan początkowy, po \nwciśnięciu przycisku RZUĆ KOŚĆMI, po wciśnięciu przycisku „RESETUJ WYNIK”) \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij go egzamin. Dokument powinien \nzawierać informacje: \n‒ Nazwę systemu operacyjnego, na którym pracował zdający \n‒ Nazwy środowisk programistycznych, z których zdający korzystał na egzaminie \n‒ Nazwę emulatora dla aplikacji mobilnej \n‒ Nazwy użytych języków programowania \nZrzuty ekranu i dokument umieść w podfolderze dokumentacja. \n \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować \npodfoldery: dokumentacja, konsolowa, mobilna. W folderze dokumentacja: pliki ze zrzutami oraz plik \negzamin. W folderze konsolowa: spakowany cały projekt aplikacji konsolowej, pliki źródłowe, opcjonalnie plik \nwykonywalny. W folderze mobilna: spakowany cały projekt aplikacji mobilnej, pliki z kodem źródłowym \ninterfejsu i logiki. Po nagraniu płyty sprawdź poprawność nagrania. Opisz płytę numerem zdającego \ni pozostaw na stanowisku, zapakowaną w pudełku wraz z arkuszem egzaminacyjnym. \n \nStrona 7 z 7 \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \n \nOcenie będą podlegać 4 rezultaty \n‒ Implementacja, kompilacja, uruchomienie programu, \n‒ Aplikacja konsolowa, \n‒ Aplikacja mobilna, \n‒ Dokumentacja aplikacji. \n \n \n \nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL \nktórej jakość nagrania została przeze mnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………........… \nCzytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek wybranej funkcji lub metody, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "73285cddbc4d",
-      "duplicates": [
-        "inf04-2025-01-01-sd-task-3"
-      ]
+      "duplicates": ["inf04-2025-01-01-sd-task-3"]
     },
     {
       "id": "inf04-2024-06-01-sg-task-2",
@@ -1316,18 +1164,14 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 4,
       "pageEnd": 6,
       "pdf": "/pdfs/tasks/inf04-2024-06-01-sg-task-2.pdf",
       "text": "Część II. Aplikacja mobilna \nZa pomocą środowiska programistycznego dostępnego na stanowisku egzaminacyjnym wykonaj aplikację \nmobilną do gry w kości. Do zbudowania aplikacji zastosuj obrazy z archiwum pliki1.zip zabezpieczonego \nhasłem Gra^Kosci5 \n \n \n \nObraz 3. \nŚrodowisko .NET MAUI, stan początkowy. \nEmulacja Pixel 5 \nObraz 4. \nŚrodowisko Android Studio, stan początkowy. \nEmulacja Pixel 5 \n \n \nObraz 5. \nPo wciśnięciu przycisku RZUĆ KOŚĆMI \nObraz 6. \nPo wciśnięciu przycisku \nRESETUJ WYNIK \n \nStan początkowy aplikacji został przedstawiony na obrazach 3 i 4. Interakcje w aplikacji zostały \nprzedstawione na obrazach 5 i 6. W zależności od zastosowanego środowiska programistycznego oraz \nemulowanego systemu widok może nieznacznie różnić się od przedstawionego. \n\nStrona 5 z 7 \nElementy aplikacji: \n‒ Napis (etykieta) z tytułem gry: „Gra w kości. Autor ”, dalej wstawiony numer zdającego \n‒ Przycisk o treści „RZUĆ KOŚĆMI” \n‒ Pięć obrazów w stanie początkowym wypełnionych grafiką question.jpg \n‒ Napis „Wynik tego losowania: ” \n‒ Napis „Wynik gry: ” \n‒ Przycisk o treści „RESETUJ WYNIK” \n‒ Rozmieszczenie elementów zgodne z obrazami 3 i 4 \n \nDziałanie aplikacji: \n‒ Do wykonania aplikacji można wykorzystać fragmenty kodu z aplikacji konsolowej. Dla uproszczenia \naplikacji, gra odbywa się zawsze na pięciu kościach \n‒ Po wciśnięciu przycisku „RZUĆ KOŚĆMI” (obraz 5): \n‒ Losowanych jest 5 liczb z zakresu od 1 do 6, które są wyświetlone w postaci pięciu obrazów kości \n‒ Obliczana jest suma punktów dla rzutu kośćmi zgodnie z algorytmem podanym w opisie aplikacji \nkonsolowej oraz wynik wyświetlany jest w napisie z wynikiem losowania \n‒ Wynik gry jest powiększany o obliczony wynik rzutu i wyświetlany w napisie z wynikiem gry \n‒ Po wciśnięciu przycisku „RESETUJ WYNIK” (obraz 6): \n‒ Pięć obrazów kości wypełnione zostaje grafiką question.jpg \n‒ Wynik całej gry jest resetowany do wartości 0 \n‒ W napisach dotyczących wyniku losowania i wyniku gry jest zapisana wartość 0 \n \nZałożenia aplikacji: \n‒ Interfejs użytkownika zapisany za pomocą języka znaczników wspieranego w danym środowisku (np. \nXAML, XML) \n‒ Zastosowany rozkład liniowy wertykalny (Linear / Stack lub inny o tej idei), z zagłębionym rozkładem \nliniowym horyzontalnym dla pięciu obrazów \n‒ Kolory tła \n‒ Rozkład wertykalny lub strona: Beige (#F5F5DC) \n‒ Napis z tytułem strony: Brown (#A52A2A) \n‒ Oba przyciski: Chocolate (#D2691E) \n‒ Rozkład horyzontalny: biały \n‒ Biały kolor czcionki dla napisu z tytułem gry \n‒ Rozmiar i marginesy dla pięciu obrazów należy dobrać tak, aby wszystkie obrazy były widoczne \nw całości, nie stykały się ze sobą oraz wypełniały całą szerokość rozkładu. Dla emulacji Pixel5 \nz obrazu 3 zastosowano wysokość obrazu 60 i marginesy 9 \n‒ Marginesy dla pozostałych kontrolek i elementów strony należy dobrać tak, aby kontrolki nie \nprzylegały do siebie w pionie i w poziomie. Dla emulacji Pixel5 z obrazu 3 zastosowano marginesy \ngórny i dolny 10 \n‒ Rozmiar czcionki napisu z tytułem gry jest największy względem innych napisów \n‒ Napisy z wynikami oraz przyciski są wyśrodkowane, napis z tytułem oraz rozkład horyzontalny \nwypełniają w poziomie całą szerokość strony \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych i funkcji. \n \nPodejmij próbę kompilacji i emulacji aplikacji. Informacje dotyczące dokumentacji i zrzutów ekranowych \numieszczono w części III zadania. \n \nStrona 6 z 7 \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze mobilna powinno znaleźć się archiwum całego \nprojektu o nazwie mobilna.zip, skopiowane z projektu plik (lub pliki) z kodem źródłowym interfejsu \nużytkownika (XAML lub XML) oraz plik źródłowy kodu skojarzonego z interfejsem użytkownika.",
       "summary": "Aplikacja mobilna: gra w kości z losowaniem wartości i punktacją.",
       "duplicateGroup": "2451d86ce4a9",
-      "duplicates": [
-        "inf04-2025-01-01-sd-task-2"
-      ]
+      "duplicates": ["inf04-2025-01-01-sd-task-2"]
     },
     {
       "id": "inf04-2024-06-01-sg-task-1",
@@ -1338,10 +1182,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2024-06-01-sg-task-1.pdf",
@@ -1359,9 +1200,7 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 5,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2024-06-01-sd-task-3.pdf",
@@ -1383,9 +1222,7 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2024-06-01-sd-task-2.pdf",
@@ -1407,10 +1244,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2024-06-01-sd-task-1.pdf",
@@ -1432,9 +1266,7 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 5,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2024-01-02-sg-task-3.pdf",
@@ -1456,9 +1288,7 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2024-01-02-sg-task-2.pdf",
@@ -1480,10 +1310,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2024-01-02-sg-task-1.pdf",
@@ -1505,9 +1332,7 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 9,
       "pageEnd": 12,
       "pdf": "/pdfs/tasks/inf04-2024-01-02-ag-task-3.pdf",
@@ -1529,9 +1354,7 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 5,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2024-01-02-ag-task-2.pdf",
@@ -1553,10 +1376,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2024-01-02-ag-task-1.pdf",
@@ -1578,9 +1398,7 @@
       "heading": "Część III. Dokumentacja aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2024-01-01-sg-task-3.pdf",
@@ -1598,9 +1416,7 @@
       "heading": "Część II. Aplikacja desktopowa",
       "type": "desktop",
       "typeLabel": "Aplikacja desktopowa",
-      "tags": [
-        "desktop"
-      ],
+      "tags": ["desktop"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2024-01-01-sg-task-2.pdf",
@@ -1618,10 +1434,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2024-01-01-sg-task-1.pdf",
@@ -1639,9 +1452,7 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 5,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2024-01-01-sd-task-3.pdf",
@@ -1663,9 +1474,7 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2024-01-01-sd-task-2.pdf",
@@ -1687,10 +1496,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2024-01-01-sd-task-1.pdf",
@@ -1712,18 +1518,14 @@
       "heading": "Część III. Dokumentacja utworzonych aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2023-06-03-sg-task-3.pdf",
       "text": "Część III. Dokumentacja utworzonych aplikacji \nWykonaj dokumentację do aplikacji utworzonych na egzaminie. W kodzie źródłowym aplikacji konsolowej \nutwórz nagłówek klasy, według listingu 1. Nagłówek powinien znaleźć się w kodzie źródłowym nad klasą. \nW miejscu nawiasów <> należy podać nazwę klasy, nazwy pól oraz zwięzłe informacje (kilka słów) – zgodnie \nze wzorcem. W miejscu informacje należy podać opis, co reprezentuje klasa. W miejscu autor należy podać \nnumerem zdającego. \nUWAGA: Dokumentację umieścić w komentarzu (wieloliniowym lub kilku jednoliniowych) . Znajdujący się \nw listingu 1 wzór dokumentacji jest bez znaków początku i końca komentarza, gdyż te są różne dla różnych \njęzyków programowania \nListing 1. Wzór dokumentacji klasy \n****************************************************** \n nazwa klasy: <tu wstaw nazwę klasy> \n pola: <nazwa pola> - <co przechowuje> \n <nazwa pola> - <co przechowuje> \n metody: <nazwa metody>, <co zwraca> – <opis> \n informacje: <opis> \n autor: <numer zdającego> \n ***************************************************** \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji utworzonych podczas egzaminu. Zrzuty \npowinny obejmować cały obszar ekranu monitora z widocznym paskiem zadań. Jeżeli aplikacja uruchamia \nsię, na zrzucie należy umieścić okno z wynikiem działania programu oraz otwarte środowisko \nprogramistyczne z projektem lub okno terminala z kompilacją projektu. Jeżeli aplikacja nie uruchamia się z \npowodu błędów kompilacji, należy na zrzucie umie ścić okno ze spisem błędów i widocznym otwartym \nśrodowiskiem programistycznym. Wymagane zrzuty ekranu: \n‒ dowolna liczba zrzutów ekranowych z aplikacji konsolowej nazwane konsola1, konsola2 itd. \n‒ dowolna liczba zrzutów ekranowych z aplikacji webowej nazwane web1, web2 itd. \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij go egzamin. Dokument powinien \nzawierać podpisane zrzuty ekranu oraz zapisane informacje: \n‒ nazwę systemu operacyjnego, na którym pracował zdający, \n‒ nazwy środowisk programistycznych, z których zdający korzystał na egzaminie, \n‒ nazwy języków programowania / frameworków / bibliotek użytych podczas tworzenia aplikacji, \n‒ opcjonalnie komentarz do wykonanej pracy. \nZrzuty ekranu i dokument umieść w folderze o nazwie dokumentacja. \n \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować \npodfoldery dokumentacja, konsola, web. W folderze dokumentacja pliki: konsola.jpg, web.jpg, egzamin. \nW folderze konsola: cały projekt aplikacji konsolowej. W folderze web: cały projekt aplikacji webowej, \newentualnie inne przygotowane pliki. Po nagraniu płyty sprawdź poprawność nagrania. Opisz płytę numerem \nzdającego i pozostaw na stanowisku, zapakowaną w pudełku wraz z arkuszem egzaminacyjnym. \n \n \nStrona 5 z 5 \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \nOcenie będą podlegać 4 rezultaty \n‒ implementacja, kompilacja, uruchomienie programu, \n‒ aplikacja konsolowa, \n‒ aplikacja web, \n‒ dokumentacja aplikacji. \n \n \nTabela 1. Wybrane elementy frameworka Angular, biblioteki React.js i biblioteki Bootstrap \nAngular \nTo use ngModel i ngForm add: import { FormsModule } from '@angular/forms'; in app.module.ts \nfile. Add FormsModule to imports table \nTo use Bootstrap add to styles.css: @import \"~bootstrap/dist/css/bootstrap.css\"; \nReact.js \nTo use Bootstrap add: import 'bootstrap/dist/css/bootstrap.css'; \nBootstrap Forms (Źródło https://getbootstrap.com/docs/4.0/components/forms/) \nBe sure to use an appropriate type attribute on all inputs (e.g., email for email address or number for numerical \ninformation) to take advantage of newer input controls like email verification, number selection, and more. \nTextual form controls—like <input>s, <select>s, and <textarea>s—are styled with the .form-control class. Included \nare styles for general appearance, focus state, sizing, and more. \n<form> \n <div class=\"form-group\"> \n <label for=\"exampleInputEmail1\">Email address</label> \n <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" /> \n </div> \n <div class=\"form-group\"> \n ... \n </div> \n</form> \nImportant! In React render method use className instead of class; htmlFor instead of for. \nBootstrap buttons (Źródło https://getbootstrap.com/docs/4.0/components/buttons/) \nBootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras \nthrown in for more control. The btn classes are designed to be used with the <button> element. Add modifier \nclasses as: btn-primary, btn-secondary, btn-success and more to btn class in order to add background colors. \ne.g. <button type=\"button\" class=\"btn btn-success\">Success</button> \n \n \n\nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL\nktórej jakość nagrania została przeze mnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………… \n Czytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek klasy, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "74c1108c2c43",
-      "duplicates": [
-        "inf04-2023-06-01-sd-task-3"
-      ]
+      "duplicates": ["inf04-2023-06-01-sd-task-3"]
     },
     {
       "id": "inf04-2023-06-03-sg-task-2",
@@ -1734,19 +1536,14 @@
       "heading": "Część II. Aplikacja Web",
       "type": "web",
       "typeLabel": "Aplikacja webowa",
-      "tags": [
-        "web",
-        "frontend"
-      ],
+      "tags": ["web", "frontend"],
       "pageStart": 3,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2023-06-03-sg-task-2.pdf",
       "text": "Część II. Aplikacja Web \nWykonaj aplikację internetową typu front -end obsługującą formularz z zastosowaniem dostępnego na \nstanowisku egzaminacyjnym frameworka Angular lub biblioteki React. Zastosuj bibliotekę Bootstrap do \nzdefiniowania stylu formularza. \n \nObraz 1a. Formularz wykonany we frameworku \nAngular. Wybrano przycisk Dodaj \n \nObraz 1b. Formularz wykonany z biblioteką \nReact.js. Wybrano przycisk Dodaj \nNa obrazach 1a i 1b przedstawiono działanie formularza przygotowanego w środowisku Angular i React.js \npo wybraniu przycisku Dodaj. W konsoli widoczne wyświetlenie danych wprowadzonych do formularza \nZałożenia aplikacji \n‒ Aplikacja składa się z jednego komponentu formularza. \n‒ Formularz składa się z: \n‒ pola edycyjnego i jego etykiety o treści „Tytuł filmu” \n‒ listy rozwijalnej i jej etykiety o treści „Rodzaj” \n‒ przycisku „Dodaj” \n‒ Lista rozwijalna ma 5 opcji: \n‒ pustą \n‒ Komedia o wartości 1 \n‒ Obyczajowy o wartości 2 \n‒ Sensacyjny o wartości 3 \n‒ Horror o wartości 4 \n‒ Aplikacja w stanie początkowym wyświetla puste pola formularza \n‒ Po wybraniu przycisku „Dodaj” jest generowane zdarzenie, które ma za zadanie wypisanie danych \nz formularza w konsoli przeglądarki (w miejscu trzech kropek wartości pól formularza) \n‒ w Angular postaci: {tytul: ”...”, kategoria: ”...”} – obraz 1a \n‒ w React.js postaci: tytul: ...; rodzaj: ... – obraz 1b \n‒ Strona jest formatowana stylem: body { padding: 20px; } \n‒ Elementy formularza są formatowane stylami biblioteki Bootstrap. Szablon HTML formularza należy \nzbudować sugerując się pomocą zamieszczoną w Tabeli 1. Należy zastosować znaczące nazwy dla \nidentyfikatorów pól formularza \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych i funkcji. \n‒ Dokumentacja do programu wykonana zgodnie z wytycznymi z części III zadania egzaminacyjnego. \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze web powinno znaleźć się archiwum całego \nprojektu o nazwie web.zip oraz pliki z kodem źródłowym które były modyfikowane w czasie egzaminu. \n\n \nStrona 4 z 5",
       "summary": "Aplikacja webowa: katalog filmów z danymi wczytywanymi z pliku.",
       "duplicateGroup": "9a2ce064b2f7",
-      "duplicates": [
-        "inf04-2023-06-01-sd-task-2"
-      ]
+      "duplicates": ["inf04-2023-06-01-sd-task-2"]
     },
     {
       "id": "inf04-2023-06-03-sg-task-1",
@@ -1757,19 +1554,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2023-06-03-sg-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nKorzystając z mechanizmów programowania obiektowego zaprojektuj część logi ki systemu wirtualnej \nwypożyczalni filmów. Zaimplementuj aplikację zawierającą klasę o nazwie film z metodami get, set oraz \ninkrementuj. \nZałożenia klasy: \n‒ Obiektowy język programowania zgodny z zainstalowanym na stanowisku egzaminacyjnym, jeden z: \nC++, C#, Java, Python. \n‒ Klasa film zawiera dwa pola zawierające tytuł oraz liczbę wypożyczeń. Dla uproszczenia można \nprzyjąć, że tytuł może mieć maksymalnie 20 znaków. Dostęp do obu pól ma jedynie klasa. \nW przypadku późniejszego rozszerzenia klasy, klasy potomne powinny również mieć dostęp do tych \npól. \n‒ Klasa film zawiera funkcjonalność: \n‒ inicjalizację pól wartością pustą lub 0 w zależności od typu \n‒ metodę ustawiającą tytuł (ang. setter) \n‒ metodę pobierającą tytuł (ang. getter) \n‒ metodę pobierającą liczbę wypożyczeń (ang. getter) \n‒ bezargumentową metodę realizującą inkrementację pola przechowującego liczbę \nwypożyczeń. Metoda nie zwraca żadnej wartości \nZałożenia aplikacji: \n‒ Inicjalizacja obiektu i wyświetlenie zawartości jego pól \n‒ Test działania metody set, poprzez ustawienie dowolnej wartości dla pola obiektu, \n‒ Test działania metody get, poprzez pobranie wartości z pola obiektu i wyświetlenie jej na ekranie \n‒ Test metody inkrementacji pola przechowującego liczbę wypożyczeń zrealizowany w ten sposób, że \nwyświetlona jest wartość pola przed i po zastosowaniu metody \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy pól i metod \n‒ Dokumentacja do aplikacji wykonana zgodnie z wytycznymi z części III zadania egzaminacyjnego. \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze konsola powinno znaleźć się archiwum całego \nprojektu o nazwie konsola.zip, plik z kodem źródłowym programu oraz plik wykonywalny, jeżeli istnieje \n \n \nStrona 3 z 5",
       "summary": "Aplikacja konsolowa: katalog filmów z danymi wczytywanymi z pliku.",
       "duplicateGroup": "6e1e45ec6aa1",
-      "duplicates": [
-        "inf04-2023-06-01-sd-task-1"
-      ]
+      "duplicates": ["inf04-2023-06-01-sd-task-1"]
     },
     {
       "id": "inf04-2023-06-02-sg-task-3",
@@ -1780,9 +1572,7 @@
       "heading": "Część III. Test aplikacji konsolowej",
       "type": "testing",
       "typeLabel": "Testowanie",
-      "tags": [
-        "testing"
-      ],
+      "tags": ["testing"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2023-06-02-sg-task-3.pdf",
@@ -1800,9 +1590,7 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 2,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2023-06-02-sg-task-2.pdf",
@@ -1820,10 +1608,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2023-06-02-sg-task-1.pdf",
@@ -1841,9 +1626,7 @@
       "heading": "Część III. Dokumentacja utworzonych aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2023-06-01-sg-task-3.pdf",
@@ -1861,9 +1644,7 @@
       "heading": "Część II. Aplikacja desktopowa",
       "type": "desktop",
       "typeLabel": "Aplikacja desktopowa",
-      "tags": [
-        "desktop"
-      ],
+      "tags": ["desktop"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2023-06-01-sg-task-2.pdf",
@@ -1881,10 +1662,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2023-06-01-sg-task-1.pdf",
@@ -1902,18 +1680,14 @@
       "heading": "Część III. Dokumentacja utworzonych aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2023-06-01-sd-task-3.pdf",
       "text": "Część III. Dokumentacja utworzonych aplikacji \nWykonaj dokumentację do aplikacji utworzonych na egzaminie. W kodzie źródłowym aplikacji konsolowej \nutwórz nagłówek klasy, według listingu 1. Nagłówek powinien znaleźć się w kodzie źródłowym nad klasą. \nW miejscu nawiasów <> należy podać nazwę klasy, nazwy pól oraz zwięzłe informacje (kilka słów) – zgodnie \nze wzorcem. W miejscu informacje należy podać opis, co reprezentuje klasa. W miejscu autor należy podać \nnumerem zdającego. \nUWAGA: Dokumentację umieścić w komentarzu (wieloliniowym lub kilku jednoliniowych) . Znajdujący się \nw listingu 1 wzór dokumentacji jest bez znaków początku i końca komentarza, gdyż te są różne dla różnych \njęzyków programowania \nListing 1. Wzór dokumentacji klasy \n****************************************************** \n nazwa klasy: <tu wstaw nazwę klasy> \n pola: <nazwa pola> - <co przechowuje> \n <nazwa pola> - <co przechowuje> \n metody: <nazwa metody>, <co zwraca> – <opis> \n informacje: <opis> \n autor: <numer zdającego> \n ***************************************************** \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji utworzonych podczas egzaminu. Zrzuty \npowinny obejmować cały obszar ekranu monitora z widocznym paskiem zadań. Jeżeli aplikacja uruchamia \nsię, na zrzucie należy umieścić okno z wynikiem działania programu oraz otwarte środowisko \nprogramistyczne z projektem lub okno terminala z kompilacją projektu. Jeżeli aplikacja nie uruchamia się z \npowodu błędów kompilacji, należy na zrzucie umie ścić okno ze spisem błędów i widocznym otwartym \nśrodowiskiem programistycznym. Wymagane zrzuty ekranu: \n‒ dowolna liczba zrzutów ekranowych z aplikacji konsolowej nazwane konsola1, konsola2 itd. \n‒ dowolna liczba zrzutów ekranowych z aplikacji webowej nazwane web1, web2 itd. \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij go egzamin. Dokument powinien \nzawierać podpisane zrzuty ekranu oraz zapisane informacje: \n‒ nazwę systemu operacyjnego, na którym pracował zdający, \n‒ nazwy środowisk programistycznych, z których zdający korzystał na egzaminie, \n‒ nazwy języków programowania / frameworków / bibliotek użytych podczas tworzenia aplikacji, \n‒ opcjonalnie komentarz do wykonanej pracy. \nZrzuty ekranu i dokument umieść w folderze o nazwie dokumentacja. \n \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować \npodfoldery dokumentacja, konsola, web. W folderze dokumentacja pliki: konsola.jpg, web.jpg, egzamin. \nW folderze konsola: cały projekt aplikacji konsolowej. W folderze web: cały projekt aplikacji webowej, \newentualnie inne przygotowane pliki. Po nagraniu płyty sprawdź poprawność nagrania. Opisz płytę numerem \nzdającego i pozostaw na stanowisku, zapakowaną w pudełku wraz z arkuszem egzaminacyjnym. \n \n \nStrona 5 z 5 \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \nOcenie będą podlegać 4 rezultaty \n‒ implementacja, kompilacja, uruchomienie programu, \n‒ aplikacja konsolowa, \n‒ aplikacja web, \n‒ dokumentacja aplikacji. \n \n \nTabela 1. Wybrane elementy frameworka Angular, biblioteki React.js i biblioteki Bootstrap \nAngular \nTo use ngModel i ngForm add: import { FormsModule } from '@angular/forms'; in app.module.ts \nfile. Add FormsModule to imports table \nTo use Bootstrap add to styles.css: @import \"~bootstrap/dist/css/bootstrap.css\"; \nReact.js \nTo use Bootstrap add: import 'bootstrap/dist/css/bootstrap.css'; \nBootstrap Forms (Źródło https://getbootstrap.com/docs/4.0/components/forms/) \nBe sure to use an appropriate type attribute on all inputs (e.g., email for email address or number for numerical \ninformation) to take advantage of newer input controls like email verification, number selection, and more. \nTextual form controls—like <input>s, <select>s, and <textarea>s—are styled with the .form-control class. Included \nare styles for general appearance, focus state, sizing, and more. \n<form> \n <div class=\"form-group\"> \n <label for=\"exampleInputEmail1\">Email address</label> \n <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" /> \n </div> \n <div class=\"form-group\"> \n ... \n </div> \n</form> \nImportant! In React render method use className instead of class; htmlFor instead of for. \nBootstrap buttons (Źródło https://getbootstrap.com/docs/4.0/components/buttons/) \nBootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras \nthrown in for more control. The btn classes are designed to be used with the <button> element. Add modifier \nclasses as: btn-primary, btn-secondary, btn-success and more to btn class in order to add background colors. \ne.g. <button type=\"button\" class=\"btn btn-success\">Success</button> \n \n \n\nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL\nktórej jakość nagrania została przeze mnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………… \n Czytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek klasy, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "74c1108c2c43",
-      "duplicates": [
-        "inf04-2023-06-03-sg-task-3"
-      ]
+      "duplicates": ["inf04-2023-06-03-sg-task-3"]
     },
     {
       "id": "inf04-2023-06-01-sd-task-2",
@@ -1924,19 +1698,14 @@
       "heading": "Część II. Aplikacja Web",
       "type": "web",
       "typeLabel": "Aplikacja webowa",
-      "tags": [
-        "web",
-        "frontend"
-      ],
+      "tags": ["web", "frontend"],
       "pageStart": 3,
       "pageEnd": 3,
       "pdf": "/pdfs/tasks/inf04-2023-06-01-sd-task-2.pdf",
       "text": "Część II. Aplikacja Web \nWykonaj aplikację internetową typu front -end obsługującą formularz z zastosowaniem dostępnego na \nstanowisku egzaminacyjnym frameworka Angular lub biblioteki React. Zastosuj bibliotekę Bootstrap do \nzdefiniowania stylu formularza. \n \nObraz 1a. Formularz wykonany we frameworku \nAngular. Wybrano przycisk Dodaj \n \nObraz 1b. Formularz wykonany z biblioteką \nReact.js. Wybrano przycisk Dodaj \nNa obrazach 1a i 1b przedstawiono działanie formularza przygotowanego w środowisku Angular i React.js \npo wybraniu przycisku Dodaj. W konsoli widoczne wyświetlenie danych wprowadzonych do formularza \nZałożenia aplikacji \n‒ Aplikacja składa się z jednego komponentu formularza. \n‒ Formularz składa się z: \n‒ pola edycyjnego i jego etykiety o treści „Tytuł filmu” \n‒ listy rozwijalnej i jej etykiety o treści „Rodzaj” \n‒ przycisku „Dodaj” \n‒ Lista rozwijalna ma 5 opcji: \n‒ pustą \n‒ Komedia o wartości 1 \n‒ Obyczajowy o wartości 2 \n‒ Sensacyjny o wartości 3 \n‒ Horror o wartości 4 \n‒ Aplikacja w stanie początkowym wyświetla puste pola formularza \n‒ Po wybraniu przycisku „Dodaj” jest generowane zdarzenie, które ma za zadanie wypisanie danych \nz formularza w konsoli przeglądarki (w miejscu trzech kropek wartości pól formularza) \n‒ w Angular postaci: {tytul: ”...”, kategoria: ”...”} – obraz 1a \n‒ w React.js postaci: tytul: ...; rodzaj: ... – obraz 1b \n‒ Strona jest formatowana stylem: body { padding: 20px; } \n‒ Elementy formularza są formatowane stylami biblioteki Bootstrap. Szablon HTML formularza należy \nzbudować sugerując się pomocą zamieszczoną w Tabeli 1. Należy zastosować znaczące nazwy dla \nidentyfikatorów pól formularza \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych i funkcji. \n‒ Dokumentacja do programu wykonana zgodnie z wytycznymi z części III zadania egzaminacyjnego. \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze web powinno znaleźć się archiwum całego \nprojektu o nazwie web.zip oraz pliki z kodem źródłowym które były modyfikowane w czasie egzaminu. \n\n \nStrona 4 z 5",
       "summary": "Aplikacja webowa: katalog filmów z danymi wczytywanymi z pliku.",
       "duplicateGroup": "9a2ce064b2f7",
-      "duplicates": [
-        "inf04-2023-06-03-sg-task-2"
-      ]
+      "duplicates": ["inf04-2023-06-03-sg-task-2"]
     },
     {
       "id": "inf04-2023-06-01-sd-task-1",
@@ -1947,19 +1716,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2023-06-01-sd-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nKorzystając z mechanizmów programowania obiektowego zaprojektuj część logi ki systemu wirtualnej \nwypożyczalni filmów. Zaimplementuj aplikację zawierającą klasę o nazwie film z metodami get, set oraz \ninkrementuj. \nZałożenia klasy: \n‒ Obiektowy język programowania zgodny z zainstalowanym na stanowisku egzaminacyjnym, jeden z: \nC++, C#, Java, Python. \n‒ Klasa film zawiera dwa pola zawierające tytuł oraz liczbę wypożyczeń. Dla uproszczenia można \nprzyjąć, że tytuł może mieć maksymalnie 20 znaków. Dostęp do obu pól ma jedynie klasa. \nW przypadku późniejszego rozszerzenia klasy, klasy potomne powinny również mieć dostęp do tych \npól. \n‒ Klasa film zawiera funkcjonalność: \n‒ inicjalizację pól wartością pustą lub 0 w zależności od typu \n‒ metodę ustawiającą tytuł (ang. setter) \n‒ metodę pobierającą tytuł (ang. getter) \n‒ metodę pobierającą liczbę wypożyczeń (ang. getter) \n‒ bezargumentową metodę realizującą inkrementację pola przechowującego liczbę \nwypożyczeń. Metoda nie zwraca żadnej wartości \nZałożenia aplikacji: \n‒ Inicjalizacja obiektu i wyświetlenie zawartości jego pól \n‒ Test działania metody set, poprzez ustawienie dowolnej wartości dla pola obiektu, \n‒ Test działania metody get, poprzez pobranie wartości z pola obiektu i wyświetlenie jej na ekranie \n‒ Test metody inkrementacji pola przechowującego liczbę wypożyczeń zrealizowany w ten sposób, że \nwyświetlona jest wartość pola przed i po zastosowaniu metody \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy pól i metod \n‒ Dokumentacja do aplikacji wykonana zgodnie z wytycznymi z części III zadania egzaminacyjnego. \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze konsola powinno znaleźć się archiwum całego \nprojektu o nazwie konsola.zip, plik z kodem źródłowym programu oraz plik wykonywalny, jeżeli istnieje \n \n \nStrona 3 z 5",
       "summary": "Aplikacja konsolowa: katalog filmów z danymi wczytywanymi z pliku.",
       "duplicateGroup": "6e1e45ec6aa1",
-      "duplicates": [
-        "inf04-2023-06-03-sg-task-1"
-      ]
+      "duplicates": ["inf04-2023-06-03-sg-task-1"]
     },
     {
       "id": "inf04-2023-01-02-sg-task-3",
@@ -1970,19 +1734,14 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2023-01-02-sg-task-3.pdf",
       "text": "Część III. Dokumentacja aplikacji konsolowej \nWykonaj dokumentację do aplikacji utworzonych na egzaminie. W kodzie źródłowym aplikacji konsolowej \nutwórz nagłówek klasy, według wzoru. Nagłówek powinien znaleźć się nad definicją klasy. W miejscu \nnawiasów <> należy podać odpowiednie opisy. W miejscu autor należy podać numer zdającego. \n \nUWAGA: Dokumentację umieścić w komentarzu (wieloliniowym lub kilku jednoliniowych). Znajdujący się \nw listingu 1 wzór dokumentacji jest bez znaków początku i końca komentarza, gdyż te są różne dla różnych \njęzyków programowania \n \nListing 1. Wzór dokumentacji klasy (liczba gwiazdek dowolna większa od 5) \n************************************************ \n klasa: <tu wstaw nazwę klasy> \n opis: <co klasa reprezentuje> \n pola: <nazwa pola1 - co przechowuje> \n <nazwa pola2 - co przechowuje> \n ... <wpisz tyle pól ile ma klasa wg. powyższego wzoru> \n autor: <numer zdającego> \n************************************************ \n \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji utworzonych podczas egzaminu. Zrzuty \npowinny obejmować cały obszar ekranu monitora z widocznym paskiem zadań. Jeżeli aplikacja uruchamia \nsię, na zrzucie należy umieścić okno z wynikiem działania programu oraz otwarte środowisko \nprogramistyczne z projektem lub okno terminala z kompilacją projektu. Jeżeli aplikacja nie uruchamia się \nz powodu błędów kompilacji, należy na zrzucie umieścić okno ze spisem błędów i widocznym otwartym \nśrodowiskiem programistycznym. Wykonać należy co najmniej tyle zrzutów, ile interakcji podejmuje aplikacja. \nWymagane zrzuty ekranu: \n‒ Aplikacja konsolowa – zrzuty nazwane: konsola1, konsola2 ... \n‒ Aplikacja mobilna – zrzuty nazwane: mobile1, mobile2 ... (np. stan początkowy, w trakcie pisania, po \ndodaniu elementu) \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij go egzamin. Dokument powinien \nzawierać zrzuty ekranu oraz informacje: \n‒ Nazwę systemu operacyjnego, na którym pracował zdający, \n‒ Nazwy środowisk programistycznych, z których zdający korzystał na egzaminie, \n‒ Nazwę emulatora dla aplikacji mobilnej, \n‒ Nazwy języków programowania, \n‒ Opcjonalnie komentarz do wykonanej pracy. \nZrzuty ekranu i dokument umieść w podfolderze dokumentacja. \n \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować \npodfoldery: konsola, mobilna, dokumentacja. W folderze dokumentacja: pliki ze zrzutami oraz plik egzamin. \nW folderze konsola: spakowany cały projekt aplikacji kon solowej, pliki źródłowe, opcjonalnie plik \nuruchomieniowy. W folderze mobilna: spakowany cały projekt aplikacji mobilnej, pliki z kodem źródłowym \ninterfejsu i logiki. Po nagraniu płyty sprawdź poprawność nagrania. Opisz płytę numerem zdającego \ni pozostaw na stanowisku, zapakowaną w pudełku wraz z arkuszem egzaminacyjnym. \n \nStrona 5 z 5 \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \n \nOcenie będą podlegać 4 rezultaty: \n‒ implementacja, kompilacja, uruchomienie programu, \n‒ aplikacja konsolowa, \n‒ aplikacja mobilna, \n‒ dokumentacja aplikacji. \n \nAutomatyczne odświeżanie widoku listy dla Xamarin z https://docs.microsoft.com \n \nIf you want the ListView to automatically update as items are added, removed and changed in the \nunderlying list, you'll need to use an ObservableCollection. ObservableCollection is defined in \nSystem.Collections.ObjectModel and is just like List, except that it can notify ListView of any changes: \n \nObservableCollection<Type> CollectionName = new ObservableCollection<Type>(); \n// add elements to collection \n// assign collection to ListView ItemsSource property \n \n//to add element to ListView just add it to collection \nCollectionName.Add(collectionElement); \n \n \nTypy, metody i pola wykorzystywane do odświeżenia widoku listy dla AndroidStudio \n \nString[] \nArrayList<String> \nArrayAdapter<String> \n \nArrays.asList(tablica_napisow) \n \nKonstruktor i metody klasy ArrayAdapter \nArrayAdapter(Context context, int resource, int textViewResourceId, List<T> objects) \nnp. ArrayAdapter<String>(this, R.layout.ListViewItemTemplate, R.id.txtItem, ArrayListObj); \nnotifyDataSetChanged(); // Notifies the attached observers that the underlying data has been changed and any \nView reflecting the data set should refresh itself. \n \nMetody klasy ListView \nsetAdapter(AdapterObj) \n \n \n \n \n \n \n \n \n \n \n \n \n \n\nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL\nktórej jakość nagrania została przeze mnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………… \n Czytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek klasy, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "73b3ba776ec8",
-      "duplicates": [
-        "inf04-2023-01-02-ag-task-3",
-        "inf04-2023-01-01-sd-task-3"
-      ]
+      "duplicates": ["inf04-2023-01-02-ag-task-3", "inf04-2023-01-01-sd-task-3"]
     },
     {
       "id": "inf04-2023-01-02-sg-task-2",
@@ -1993,19 +1752,14 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 2,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2023-01-02-sg-task-2.pdf",
       "text": "Część II. Aplikacja mobilna \nWykonaj aplikację mobilną obsługującą proste notatki tekstowe za pomocą środowiska programistycznego \ndostępnego na stanowisku egzaminacyjnym oraz uruchom ją w dostępnym emulatorze systemu mobilnego. \nAplikacja umożliwia wpisywanie prostych notatek. Dane poc zątkowe aplikacji zapisano w pliku dane.txt, \nzawartym w archiwum zad2.zip, które znajduje się na pulpicie konta Egzamin i jest zabezpieczony hasłem: \n!D@Ne$ \n \nStrona 3 z 5 \n \n \nObraz 1a. \nAplikacja Android Studio, \nstan początkowy. Emulacja \nNexus 5X API 29 x86. \nObraz 1b. \nAplikacja Xamarin w MS Visual \nStudio, stan początkowy. \nEmulacja Android Oreo. \nObraz 2. \nAplikacja Xamarin, dodano \nelement do listy. Emulacja \nAndroid Oreo. \n \nNa obrazach 1a i 1b przedstawiono stan początkowy aplikacji mobilnej. W zależności od zastosow anego \nśrodowiska programistycznego oraz emulowanego systemu wynik końcowy może nieznacznie się różnić od \nprzedstawionego. Obraz 2 przedstawia zachowanie aplikacji, dodano notatkę „Urodziny Ali”, jest ona \nwidoczna jako ostatni element listy \n \nElementy aplikacji: \n‒ Pole edycyjne z podpowiedzią „Nowy element”. \n‒ Przycisk o treści: „DODAJ”. \n‒ Lista (element widoku listy). \n‒ Rozmieszczenie elementów zgodne z obrazami 1a i 1b \n \nDziałanie aplikacji: \n‒ W stanie początkowym wyświetlone są 3 notatki. Treść notatek można skopiować z pliku dane.txt lub \nręcznie wpisać do kodu źródłowego z obrazu 1b \n‒ Po wpisaniu do pola edycyjnego treści i wybraniu przycisku, jest ona zapisywana jako ostatni element \nwidoku listy (obraz 2) \n \nZałożenia aplikacji: \n‒ Interfejs użytkownika zapisany za pomocą języka znaczników wspieranego w danym środowisku (np. \nXAML, XML). \n‒ Zastosowany rozkład liniowy wertykalny (Linear / Stack lub inny o tej idei) z zagłębionym rozkładem \nliniowym horyzontalnym dla pola edycyjnego i przycisku. \n‒ Cechy przycisku: Kolor tła Crimson (#DC143C), biały kolor czcionki, zgodnie z Obrazem 1a. \n‒ Cechy elementów listy: domyślny kolor czcionki, kolor separatora: Crimson, separator jest widoczny \n(np. poprzez ustawienie wysokości separatora) \n‒ Notatki są zapisane w dowolnej kolekcji z elementami typu napisowego połączonej z widokiem listy \njako jej źródło danych \n\n \nStrona 4 z 5 \n‒ Wybranie przycisku powoduje dopisanie do kolekcji treści z pola edycyjnego, widok listy jest \nautomatycznie odświeżany. Dla uproszczenia można założyć, że pole jest zawsze wypeł nione, jeśli \nwybrany jest przycisk \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych i funkcji. \n \nPodejmij próbę kompilacji i uruchomienia aplikacji. Informacje dotyczące dokumentacji i zrzutu ekranowego \numieszczono w części III zadania. \n \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze mobilna powinno znaleźć się archiwum całego \nprojektu o nazwie mobilna.zip, plik z kodem źródłowym interfejsu użytkownika (XAML lub XML) oraz plik \nźródłowy kodu skojarzonego z interfejsem użytkownika.",
       "summary": "Aplikacja mobilna: gra w kości z losowaniem wartości i punktacją.",
       "duplicateGroup": "201c4ead35b0",
-      "duplicates": [
-        "inf04-2023-01-02-ag-task-2",
-        "inf04-2023-01-01-sd-task-2"
-      ]
+      "duplicates": ["inf04-2023-01-02-ag-task-2", "inf04-2023-01-01-sd-task-2"]
     },
     {
       "id": "inf04-2023-01-02-sg-task-1",
@@ -2016,20 +1770,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2023-01-02-sg-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nNapisz program implementujący klasę do obsługi notatek. \n \nZałożenia do programu: \n‒ Program wykonywany w konsoli \n‒ Obiektowy język programowania zgodny z zainstalowanym na stanowisku egzaminacyjnym: C++ lub \nC#, lub Java, lub Python \n‒ Klasa notatka zawiera pola: \n‒ statyczne numeryczne licznika notatek do zliczania utworzonych notatek \n‒ numeryczne do zapisu unikalnego identyfikatora \n‒ dwa tekstowe do zapisu tytułu notatki i treści notatki \n‒ Dostęp do wszystkich pól jest ograniczony do wnętrza klasy notatka, przy czym pola identyfikatora \ni licznika nie są dostępne dla klas potomnych, a pola tekstowe są dostępne dla klas potomnych \n‒ Klasa notatka zawiera jeden konstruktor o parametrach wejściowych dla tytułu i treści. Ma on za \nzadanie kolejno: \n‒ inkrementować licznik notatek \n‒ ustawić pole identyfikatora równe licznikowi notatek, czyli pierwsza utworzona notatka ma id \nrówne 1, druga – 2, itd. \n‒ ustawić pola tytułu i treści równe parametrom \n‒ Klasa notatka zawiera dwie metody bezparametrowe i niezwracające wartości, które mogą być \nwołane w programie głównym: \n‒ metodę wyświetlenia tytułu i treści notatki \n‒ metodę diagnostyczną wypisującą zawartości wszystkich pól oddzielone od siebie średnikami \n‒ Program powinien podejmować jasną komunikację z użytkownikiem, wyświetlane informacje powinny \nbyć zrozumiałe \n‒ Program powinien być zapisany czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych i funkcji. Wielkość liter np. dla nazwy klasy może być \nrealizowana zgodnie z przyjętą konwencją nazewnictwa w danym języku programowania \n‒ Program główny powinien zawierać test działania aplikacji polegający na utworzeniu dw óch notatek \nz dowolnymi (znaczącymi) danymi (źródło danych jest dowolne: stała napisowa, literał lub pobrane \nz klawiatury) oraz uruchomieniu dla każdej z nich obu metod \n‒ Dokumentację aplikacji należy utworzyć zgodnie z opisem w części III treści zadania. \n \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze konsola powinno znaleźć się archiwum całego \nprojektu o nazwie konsola.zip, plik z kodem źródłowym programu oraz plik uruchomieniowy, jeżeli istnieje.",
       "summary": "Aplikacja konsolowa: klasa notatki z identyfikatorem, licznikiem i metodami wyświetlania.",
       "duplicateGroup": "84d9ac8cec2b",
-      "duplicates": [
-        "inf04-2023-01-02-ag-task-1",
-        "inf04-2023-01-01-sd-task-1"
-      ]
+      "duplicates": ["inf04-2023-01-02-ag-task-1", "inf04-2023-01-01-sd-task-1"]
     },
     {
       "id": "inf04-2023-01-02-ag-task-3",
@@ -2040,19 +1788,14 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 9,
       "pageEnd": 12,
       "pdf": "/pdfs/tasks/inf04-2023-01-02-ag-task-3.pdf",
       "text": "Część III. Dokumentacja aplikacji konsolowej \nWykonaj dokumentację do aplikacji utworzonych na egzaminie. W kodzie \nźródłowym aplikacji konsolowej utwórz nagłówek klasy, według wzoru. \nNagłówek powinien znaleźć się nad definicją klasy. W miejscu nawiasów \n<> należy podać odpowiednie opisy. W miejscu autor należy podać \nnumer zdającego. \n \nUWAGA: Dokumentację umieścić w komentarzu (wieloliniowym lub kilku \njednoliniowych). Znajdujący się w listingu 1 wzór dokumentacji jest bez \nznaków początku i końca komentarza, gdyż te są różne dla różnych \njęzyków programowania \n \nListing 1. Wzór dokumentacji klasy (liczba gwiazdek dowolna większa od \n5) \n************************************************ \n klasa: <tu wstaw nazwę klasy> \n opis: <co klasa reprezentuje> \n pola: <nazwa pola1 - co przechowuje> \n <nazwa pola2 - co przechowuje> \n ... <wpisz tyle pól ile ma klasa wg. powyższego wzoru> \n autor: <numer zdającego> \n************************************************ \n \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji \nutworzonych podczas egzaminu. Zrzuty powinny obejmować cały obszar \nekranu monitora z widocznym paskiem zadań. Jeżeli aplikacja uruchamia \nsię, na zrzucie należy umieścić okno z wynikiem działania programu oraz \notwarte środowisko programistyczne z projektem lub okno terminala \nz kompilacją projektu. Jeżeli aplikacja nie uruchamia się z powodu \nbłędów kompilacji, należy na zrzucie umieścić okno ze spisem błędów \ni widocznym otwartym środowiskiem programistycznym. Wykonać należy \nco najmniej tyle zrzutów, ile interakcji podejmuje aplikacja. Wymagane \nzrzuty ekranu: \n‒ Aplikacja konsolowa – zrzuty nazwane: konsola1, konsola2 ... \n‒ Aplikacja mobilna – zrzuty nazwane: mobile1, mobile2 ... (np. stan \npoczątkowy, w trakcie pisania, po dodaniu elementu) \nStrona 10 z 11 \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij \ngo egzamin. Dokument powinien zawierać zrzuty ekranu oraz informacje: \n‒ Nazwę systemu operacyjnego, na którym pracował zdający, \n‒ Nazwy środowisk programistycznych, z których zdający korzystał na \negzaminie, \n‒ Nazwę emulatora dla aplikacji mobilnej, \n‒ Nazwy języków programowania, \n‒ Opcjonalnie komentarz do wykonanej pracy. \nZrzuty ekranu i dokument umieść w podfolderze dokumentacja. \n \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem \nzdającego powinny się znajdować podfoldery: konsola, mobilna, \ndokumentacja. W folderze dokumentacja: pliki ze zrzutami oraz plik \negzamin. W folderze konsola: spakowany cały projekt aplikacji \nkonsolowej, pliki źródłowe, opcjonalnie plik uruchomieniowy. W folderze \nmobilna: spakowany cały projekt aplikacji mobilnej, pliki z kodem \nźródłowym interfejsu i logiki. Po nagraniu płyty sprawdź poprawność \nnagrania. Opisz płytę numerem zdającego i pozostaw na stanowisku, \nzapakowaną w pudełku wraz z arkuszem egzaminacyjnym. \n \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \n \nOcenie będą podlegać 4 rezultaty: \n‒ implementacja, kompilacja, uruchomienie programu, \n‒ aplikacja konsolowa, \n‒ aplikacja mobilna, \n‒ dokumentacja aplikacji. \n \nStrona 11 z 11 \nAutomatyczne odświeżanie widoku listy dla Xamarin \nz https://docs.microsoft.com \n \nIf you want the ListView to automatically update as items are added, \nremoved and changed in the underlying list, you'll need to use an \nObservableCollection. ObservableCollection is defined in \nSystem.Collections.ObjectModel and is just like List, except that it can \nnotify ListView of any changes: \n \nObservableCollection<Type> CollectionName = new \nObservableCollection<Type>(); \n// add elements to collection \n// assign collection to ListView ItemsSource property \n \n//to add element to ListView just add it to collection \nCollectionName.Add(collectionElement); \n \n \nTypy, metody i pola wykorzystywane do odświeżenia widoku listy \ndla AndroidStudio \n \nString[] \nArrayList<String> \nArrayAdapter<String> \n \nArrays.asList(tablica_napisow) \n \nKonstruktor i metody klasy ArrayAdapter \nArrayAdapter(Context context, int resource, int textViewResourceId, \nList<T> objects) \nnp. ArrayAdapter<String>(this, R.layout.ListViewItemTemplate, \nR.id.txtItem, ArrayListObj); \nnotifyDataSetChanged(); // Notifies the attached observers that the \nunderlying data has been changed and any View reflecting the data set \nshould refresh itself. \n \nMetody klasy ListView \nsetAdapter(AdapterObj) \n \n \nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL\nktórej jakość nagrania została przeze \nmnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………… \n Czytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek klasy, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "73b3ba776ec8",
-      "duplicates": [
-        "inf04-2023-01-02-sg-task-3",
-        "inf04-2023-01-01-sd-task-3"
-      ]
+      "duplicates": ["inf04-2023-01-02-sg-task-3", "inf04-2023-01-01-sd-task-3"]
     },
     {
       "id": "inf04-2023-01-02-ag-task-2",
@@ -2063,19 +1806,14 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 4,
       "pageEnd": 9,
       "pdf": "/pdfs/tasks/inf04-2023-01-02-ag-task-2.pdf",
       "text": "Część II. Aplikacja mobilna \nWykonaj aplikację mobilną obsługującą proste notatki tekstowe za \npomocą środowiska programistycznego dostępnego na stanowisku \negzaminacyjnym oraz uruchom ją w dostępnym emulatorze systemu \nmobilnego. Aplikacja umożliwia wpisywanie prostych notatek. Dane \npoczątkowe aplikacji zapisano w pliku dane.txt, zawartym w archiwum \nzad2.zip, które znajduje się na pulpicie konta Egzamin i jest \nzabezpieczony hasłem: !D@Ne$ \nStrona 5 z 11 \n \nObraz 1a. \nAplikacja Android Studio, stan początkowy. Emulacja Nexus 5X API 29 x86. \n\nStrona 6 z 11 \n \nObraz 1b. \nAplikacja Xamarin w MS Visual Studio, stan początkowy. Emulacja Android \nOreo. \n\nStrona 7 z 11 \n \nObraz 2. \nAplikacja Xamarin, dodano element do listy. Emulacja Android Oreo. \n \nNa obrazach 1a i 1b przedstawiono stan początkowy aplikacji mobilnej. \nW zależności od zastosowanego środowiska programistycznego oraz \nemulowanego systemu wynik końcowy może nieznacznie się różnić od \nprzedstawionego. Obraz 2 przedstawia zachowanie aplikacji, dodano \nnotatkę „Urodziny Ali”, jest ona widoczna jako ostatni element listy \n \n \n\nStrona 8 z 11 \nElementy aplikacji: \n‒ Pole edycyjne z podpowiedzią „Nowy element”. \n‒ Przycisk o treści: „DODAJ”. \n‒ Lista (element widoku listy). \n‒ Rozmieszczenie elementów zgodne z obrazami 1a i 1b \n \nDziałanie aplikacji: \n‒ W stanie początkowym wyświetlone są 3 notatki. Treść notatek \nmożna skopiować z pliku dane.txt lub ręcznie wpisać do kodu \nźródłowego z obrazu 1b \n‒ Po wpisaniu do pola edycyjnego treści i wybraniu przycisku, jest ona \nzapisywana jako ostatni element widoku listy (obraz 2) \n \nZałożenia aplikacji: \n‒ Interfejs użytkownika zapisany za pomocą języka znaczników \nwspieranego w danym środowisku (np. XAML, XML). \n‒ Zastosowany rozkład liniowy wertykalny (Linear / Stack lub inny o tej \nidei) z zagłębionym rozkładem liniowym horyzontalnym dla pola \nedycyjnego i przycisku. \n‒ Cechy przycisku: Kolor tła Crimson (#DC143C), biały kolor czcionki, \nzgodnie z Obrazem 1a. \n‒ Cechy elementów listy: domyślny kolor czcionki, kolor separatora: \nCrimson, separator jest widoczny (np. poprzez ustawienie wysokości \nseparatora) \n‒ Notatki są zapisane w dowolnej kolekcji z elementami typu \nnapisowego połączonej z widokiem listy jako jej źródło danych \n‒ Wybranie przycisku powoduje dopisanie do kolekcji treści z pola \nedycyjnego, widok listy jest automatycznie odświeżany. Dla \nuproszczenia można założyć, że pole jest zawsze wypełnione, jeśli \nwybrany jest przycisk \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad \nczystego formatowania kodu, należy stosować znaczące nazwy \nzmiennych i funkcji. \n \nPodejmij próbę kompilacji i uruchomienia aplikacji. Informacje dotyczące \ndokumentacji i zrzutu ekranowego umieszczono w części III zadania. \n \nStrona 9 z 11 \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze mobilna \npowinno znaleźć się archiwum całego projektu o nazwie mobilna.zip, plik \nz kodem źródłowym interfejsu użytkownika (XAML lub XML) oraz plik \nźródłowy kodu skojarzonego z interfejsem użytkownika.",
       "summary": "Aplikacja mobilna: gra w kości z losowaniem wartości i punktacją.",
       "duplicateGroup": "201c4ead35b0",
-      "duplicates": [
-        "inf04-2023-01-02-sg-task-2",
-        "inf04-2023-01-01-sd-task-2"
-      ]
+      "duplicates": ["inf04-2023-01-02-sg-task-2", "inf04-2023-01-01-sd-task-2"]
     },
     {
       "id": "inf04-2023-01-02-ag-task-1",
@@ -2086,20 +1824,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2023-01-02-ag-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nNapisz program implementujący klasę do obsługi notatek. \n \nZałożenia do programu: \n‒ Program wykonywany w konsoli \n‒ Obiektowy język programowania zgodny z zainstalowanym na \nstanowisku egzaminacyjnym: C++ lub C#, lub Java, lub Python \n‒ Klasa notatka zawiera pola: \n‒ statyczne numeryczne licznika notatek do zliczania \nutworzonych notatek \n‒ numeryczne do zapisu unikalnego identyfikatora \n‒ dwa tekstowe do zapisu tytułu notatki i treści notatki \n‒ Dostęp do wszystkich pól jest ograniczony do wnętrza klasy notatka, \nprzy czym pola identyfikatora i licznika nie są dostępne dla klas \npotomnych, a pola tekstowe są dostępne dla klas potomnych \n‒ Klasa notatka zawiera jeden konstruktor o parametrach wejściowych \ndla tytułu i treści. Ma on za zadanie kolejno: \n‒ inkrementować licznik notatek \n‒ ustawić pole identyfikatora równe licznikowi notatek, czyli \npierwsza utworzona notatka ma id równe 1, druga – 2, itd. \n‒ ustawić pola tytułu i treści równe parametrom \nStrona 4 z 11 \n‒ Klasa notatka zawiera dwie metody bezparametrowe \ni niezwracające wartości, które mogą być wołane w programie \ngłównym: \n‒ metodę wyświetlenia tytułu i treści notatki \n‒ metodę diagnostyczną wypisującą zawartości wszystkich pól \noddzielone od siebie średnikami \n‒ Program powinien podejmować jasną komunikację z użytkownikiem, \nwyświetlane informacje powinny być zrozumiałe \n‒ Program powinien być zapisany czytelnie, z zachowaniem zasad \nczystego formatowania kodu, należy stosować znaczące nazwy \nzmiennych i funkcji. Wielkość liter np. dla nazwy klasy może być \nrealizowana zgodnie z przyjętą konwencją nazewnictwa w danym \njęzyku programowania \n‒ Program główny powinien zawierać test działania aplikacji \npolegający na utworzeniu dwóch notatek z dowolnymi (znaczącymi) \ndanymi (źródło danych jest dowolne: stała napisowa, literał lub \npobrane z klawiatury) oraz uruchomieniu dla każdej z nich obu \nmetod \n‒ Dokumentację aplikacji należy utworzyć zgodnie z opisem w części \nIII treści zadania. \n \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze konsola \npowinno znaleźć się archiwum całego projektu o nazwie konsola.zip, plik \nz kodem źródłowym programu oraz plik uruchomieniowy, jeżeli istnieje.",
       "summary": "Aplikacja konsolowa: klasa notatki z identyfikatorem, licznikiem i metodami wyświetlania.",
       "duplicateGroup": "84d9ac8cec2b",
-      "duplicates": [
-        "inf04-2023-01-02-sg-task-1",
-        "inf04-2023-01-01-sd-task-1"
-      ]
+      "duplicates": ["inf04-2023-01-02-sg-task-1", "inf04-2023-01-01-sd-task-1"]
     },
     {
       "id": "inf04-2023-01-01-sg-task-3",
@@ -2110,18 +1842,14 @@
       "heading": "Część III. Dokumentacja utworzonych aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2023-01-01-sg-task-3.pdf",
       "text": "Część III. Dokumentacja utworzonych aplikacji \nWykonaj dokumentację do aplikacji utworzonych na egzaminie. W kodzie źródłowym aplikacji konsolowej \nutwórz nagłówek funkcji wyznaczającej NWD, według wzoru. Nagłówek powinien znaleźć się nad definicją \nfunkcji. W miejscu nawiasów <> należy podać odpowiednie opisy. W miejscu autor należy podać numer \nzdającego. \n \nUWAGA: Dokumentację umieścić w komentarzu (wieloliniowym lub kilku jednoliniowych). Znajdujący się \nw listingu 1 wzór dokumentacji jest bez znaków początku i końca komentarza, gdyż te są różne dla różnych \njęzyków programowania \n \n \n \nStrona 5 z 5 \nListing 1. Wzór dokumentacji funkcji (liczba gwiazdek dowolna większa od 5) \n********************************************** \nnazwa funkcji: <nazwa> \nopis funkcji: <krótki opis co robi funkcja> \nparametry: <nazwa parametru 1 – znaczenie parametru \n nazwa parametru 2 – znaczenie parametru> \nzwracany typ i opis: <nazwa typu i opis co jest zwracane> \nautor: <numer zdającego> \n*********************************************** \n \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji utworzonych podczas egzaminu. Zrzuty \npowinny obejmować cały obszar ekranu monitora z widocznym paskiem zadań. Jeżeli aplikacja uruchamia \nsię, na zrzucie należy umieścić okno z wynikiem działania programu oraz otwarte środowisko \nprogramistyczne z projektem lub okno terminala z kompilacją projektu. Jeżeli aplikacja nie uruchamia się \nz powodu błędów kompilacji, należy na zrzucie umieścić okno ze spisem błędów i widocznym otwartym \nśrodowiskiem programistycznym. Wykonać należy co najmniej tyle zrzutów, ile interakcji podejmuje aplikacja \n(np. stan początkowy, po wypisaniu hasła, po wyświetleniu danych itd.) Wymagane zrzuty ekranu: \n‒ Aplikacja konsolowa – zrzuty nazwane: konsola1, konsola2, ... \n‒ Aplikacja desktopowa – zrzuty nazwane: desktop1, desktop2, ... \n \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij go egzamin. Dokument powinien \nzawierać podpisane zrzuty ekranu oraz zapisane informacje: \n‒ Nazwę systemu operacyjnego, na którym pracował zdający, \n‒ Nazwy środowisk programistycznych, z których zdający korzystał na egzaminie, \n‒ Nazwy języków programowania, \n‒ Opcjonalnie komentarz do wykonanej pracy. \nZrzuty ekranu i dokument umieść w podfolderze dokumentacja. \n \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować \npodfoldery desktopowa, dokumentacja, konsola. W folderze dokumentacja: pliki ze zrzutami oraz plik \negzamin. W folderze konsola: spakowany cały projekt aplikacji konsolowej, źródło, opcjonalnie plik \nuruchomieniowy. W folderze desktopowa: spakowany cały projekt aplikacji desktopowej, pliki ze źródłami \ninterfejsu i logiki, opcjonalnie plik uruchomieniowy. Opisz płytę numerem zdającego i pozostaw na \nstanowisku, zapakowaną w pudełku wraz z arkuszem egzaminacyjnym. \n \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \n \nOcenie będą podlegać 4 rezultaty: \n‒ implementacja, kompilacja, uruchomienie programu, \n‒ aplikacja konsolowa, \n‒ aplikacja desktopowa, \n‒ dokumentacja aplikacji. \n \n \n \n \n \n \n \n \n \n \n \n\nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL\nktórej jakość nagrania została przeze mnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………… \n Czytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek funkcji wyznaczającej NWD, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "5c1c6dd0eb3c",
-      "duplicates": [
-        "inf04-2023-01-01-ag-task-3"
-      ]
+      "duplicates": ["inf04-2023-01-01-ag-task-3"]
     },
     {
       "id": "inf04-2023-01-01-sg-task-2",
@@ -2132,18 +1860,14 @@
       "heading": "Część II. Aplikacja desktopowa",
       "type": "desktop",
       "typeLabel": "Aplikacja desktopowa",
-      "tags": [
-        "desktop"
-      ],
+      "tags": ["desktop"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2023-01-01-sg-task-2.pdf",
       "text": "Część II. Aplikacja desktopowa \nZa pomocą dostępnego na stanowisku egzaminacyjnym środowiska programistycznego wykonaj aplikację \ndesktopową do wprowadzania danych pracownika z możliwością generowania hasła. \n \n \nObraz 1. Stan początkowy aplikacji \n \n \n \nObraz 2. Fragment okna po \nwybraniu przycisku „Generuj \nhasło” \n \nObraz 3. Po wybraniu przycisku „Zatwierdź” \n \nNa obrazie 1 przedstawiono ideę aplikacji desktopowej. W zależności od użytego środowiska \nprogramistycznego wygląd może nieznacznie się różnić. \n \nOpis wyglądu aplikacji \n‒ Okno o nazwie „Dodaj pracownika”. W nazwie okna należy wstawić także numer zdającego \n‒ Kontrolki rozmieszczone zgodnie z obrazem 1 \n‒ Kontrolki w grupie „Dane Pracownika”: \n‒ pole edycyjne poprzedzone etykietą o treści „Imię” \n‒ pole edycyjne poprzedzone etykietą o treści „Nazwisko” \n‒ lista rozwijalna podpisana „Stanowisko” z elementami: Kierownik, Starszy programista, \nMłodszy programista, Tester \n \n\n \nStrona 4 z 5 \n‒ Kontrolki w grupie „Generowanie hasła”: \n‒ pole edycyjne poprzedzone etykietą o treści „Ile znaków?” \n‒ trzy pola wyboru podpisane: „Małe i wielkie litery”, „Cyfry”, „Znaki specjalne”. Pierwsze pole \njest domyślnie zaznaczone \n‒ przycisk o treści „Generuj hasło” \n‒ Na dole okna znajduje się przycisk „Zatwierdź”, jest on wyraźnie dłuższy niż przycisk do generowania \nhasła \n‒ Okno ma tło koloru LightSteelBlue (#B0C4DE) \n‒ Przyciski mają tło koloru SteelBlue (#4682B4) i biały kolor czcionki \n \nDziałanie aplikacji po wybraniu przycisku „Generuj hasło”: \n‒ Generowane jest hasło o liczbie znaków określonej w polu edycyjnym \n‒ Poszczególne znaki hasła są wybierane losowo z zestawu małych liter \n‒ Jeżeli zaznaczono checkbox „Małe i wielkie litery”, jeden ze znaków jest losowany z zestawu wielkich \nliter \n‒ Jeżeli zaznaczono checkbox „Cyfry”, jeden ze znaków hasła jest losowany z zestawu cyfr \n‒ Jeżeli zaznaczono checkbox „Znaki specjalne”, jeden ze znaków hasła jest losowan y z zestawu \nznaków specjalnych \n‒ Dla uproszczenia zadania można przyjąć zawsze określony znak (np. pierwszy), który jest losowany \nz cyfr. Podobnie należy postąpić ze znakami specjalnymi (np. drugi znak) \n‒ Hasło jest wypisywane jako komunikat zgodnie z obrazem 2 po wybraniu przycisku „Generuj hasło” \n‒ Za zestaw liter przyjmuje się wszystkie litery z klawiatury małe i wielkie alfabetu łacińskiego \n‒ Za zestaw cyfr przyjmuje się kolejne cyfry od 0 do 9 \n‒ Za zestaw znaków specjalnych przyjmuje się znaki !@#$%^&*()_+-= \n‒ Hasło oraz zestawy znaków są przechowywane w zmiennych typu napisowego \n \nDziałanie aplikacji po wybraniu przycisku „Zatwierdź”: \n‒ Wyświetlany jest komunikat z wypełnionymi danymi pracownika oraz wygenerowanym wcześniej \nhasłem, zgodnie z obrazem 3 \n \nUWAGA: dla uproszczenia aplikacji nie trzeba sprawdzać czy pole edycyjne jest wypełnione i czy liczba \nznaków w haśle jest wystarczająca dla wstawienia małych, wielkich liter, liczb i znaków specjalnych \n \nAplikacja powinna być zapisana czytelnie, z zasadami czystego formatowania kodu, należy stosować \nznaczące nazwy zmiennych i funkcji. \n \nPodejmij próbę kompilacji i uruchomienia aplikacji. Informacje dotyczące dokumentacji i zrzutu ekranowego \numieszczono w części III zadania. \n \nKod aplikacji przygotuj do nagrania na płytę. W folderze desktopowa powinno znaleźć się archiwum całego \nprojektu o nazwie desktopowa.zip, pliki źródłowe, które były modyfikowane (interfejs użytkownika i logika \naplikacji) oraz plik uruchomieniowy, jeżeli to możliwe.",
       "summary": "Aplikacja desktopowa: formularz rejestracji konta z walidacją e-maila i hasła.",
       "duplicateGroup": "eec1dade05ae",
-      "duplicates": [
-        "inf04-2023-01-01-ag-task-2"
-      ]
+      "duplicates": ["inf04-2023-01-01-ag-task-2"]
     },
     {
       "id": "inf04-2023-01-01-sg-task-1",
@@ -2154,19 +1878,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2023-01-01-sg-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nZa pomocą narzędzi do tworzenia aplikacji konsolowych zaimplementuj algorytm Euklidesa do szukania \nnajwiększego wspólnego dzielnika z dwóch liczb – NWD(a, b). Algorytm przedstawiono na schemacie. \nAlgorytm Euklidesa \nZałożenia aplikacji: \n‒ Obiektowy język programowania zgodny z zainstalowanym na stanowisku egzaminacyjnym: C++ lub \nC#, lub Java, lub Python \n‒ Implementacja algorytmu w pełni zgodna z przedstawionym na schemacie algorytmem \n‒ Liczby a i b należą do zbioru liczb całkowitych dodatnich (odpowiedni typ lub kontrola poprawności \nwpisanej liczby) \n‒ Szukanie NWD zaimplementowane w funkcji o dwóch argumentach i zwracanej wartości \nnajwiększego wspólnego dzielnika. Funkcja nie może zawierać operacji wejścia - wyjścia \n‒ Program główny testuje działanie funkcji i zawiera operacje wejścia - wyjścia \n‒ Program powinien być zapisany czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować nazwy zmiennych zgodne z nazwami zastosowanymi na schemacie blokowym, pozostałe \nnazwy muszą być znaczące \n‒ Do kodu należy dołączyć dokumentację, która została opisana w części III zadania egzaminacyjnego. \nKod aplikacji przygotuj do nagrania na płytę. W folderze konsola powinno znaleźć się archiwum całego \nprojektu o nazwie konsola.zip, plik z kodem źródłowym programu oraz plik uruchomieniowy, jeżeli istnieje. \n\n \nStrona 3 z 5",
       "summary": "Aplikacja konsolowa: algorytm Euklidesa do obliczania NWD dwóch liczb.",
       "duplicateGroup": "64cb8f038291",
-      "duplicates": [
-        "inf04-2023-01-01-ag-task-1"
-      ]
+      "duplicates": ["inf04-2023-01-01-ag-task-1"]
     },
     {
       "id": "inf04-2023-01-01-sd-task-3",
@@ -2177,19 +1896,14 @@
       "heading": "Część III. Dokumentacja aplikacji konsolowej",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2023-01-01-sd-task-3.pdf",
       "text": "Część III. Dokumentacja aplikacji konsolowej \nWykonaj dokumentację do aplikacji utworzonych na egzaminie. W kodzie źródłowym aplikacji konsolowej \nutwórz nagłówek klasy, według wzoru. Nagłówek powinien znaleźć się nad definicją klasy. W miejscu \nnawiasów <> należy podać odpowiednie opisy. W miejscu autor należy podać numer zdającego. \n \nUWAGA: Dokumentację umieścić w komentarzu (wieloliniowym lub kilku jednoliniowych). Znajdujący się \nw listingu 1 wzór dokumentacji jest bez znaków początku i końca komentarza, gdyż te są różne dla różnych \njęzyków programowania \n \nListing 1. Wzór dokumentacji klasy (liczba gwiazdek dowolna większa od 5) \n************************************************ \n klasa: <tu wstaw nazwę klasy> \n opis: <co klasa reprezentuje> \n pola: <nazwa pola1 - co przechowuje> \n <nazwa pola2 - co przechowuje> \n ... <wpisz tyle pól ile ma klasa wg. powyższego wzoru> \n autor: <numer zdającego> \n************************************************ \n \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji utworzonych podczas egzaminu. Zrzuty \npowinny obejmować cały obszar ekranu monitora z widocznym paskiem zadań. Jeżeli aplikacja uruchamia \nsię, na zrzucie należy umieścić okno z wynikiem działania programu oraz otwarte środowisko \nprogramistyczne z projektem lub okno terminala z kompilacją projektu. Jeżeli aplikacja nie uruchamia się \nz powodu błędów kompilacji, należy na zrzucie umieścić okno ze spisem błędów i widocznym otwartym \nśrodowiskiem programistycznym. Wykonać należy co najmniej tyle zrzutów, ile interakcji podejmuje aplikacja. \nWymagane zrzuty ekranu: \n‒ Aplikacja konsolowa – zrzuty nazwane: konsola1, konsola2 ... \n‒ Aplikacja mobilna – zrzuty nazwane: mobile1, mobile2 ... (np. stan początkowy, w trakcie pisania, po \ndodaniu elementu) \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij go egzamin. Dokument powinien \nzawierać zrzuty ekranu oraz informacje: \n‒ Nazwę systemu operacyjnego, na którym pracował zdający, \n‒ Nazwy środowisk programistycznych, z których zdający korzystał na egzaminie, \n‒ Nazwę emulatora dla aplikacji mobilnej, \n‒ Nazwy języków programowania, \n‒ Opcjonalnie komentarz do wykonanej pracy. \nZrzuty ekranu i dokument umieść w podfolderze dokumentacja. \n \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować \npodfoldery: konsola, mobilna, dokumentacja. W folderze dokumentacja: pliki ze zrzutami oraz plik egzamin. \nW folderze konsola: spakowany cały projekt aplikacji kon solowej, pliki źródłowe, opcjonalnie plik \nuruchomieniowy. W folderze mobilna: spakowany cały projekt aplikacji mobilnej, pliki z kodem źródłowym \ninterfejsu i logiki. Po nagraniu płyty sprawdź poprawność nagrania. Opisz płytę numerem zdającego \ni pozostaw na stanowisku, zapakowaną w pudełku wraz z arkuszem egzaminacyjnym. \n \nStrona 5 z 5 \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \n \nOcenie będą podlegać 4 rezultaty: \n‒ implementacja, kompilacja, uruchomienie programu, \n‒ aplikacja konsolowa, \n‒ aplikacja mobilna, \n‒ dokumentacja aplikacji. \n \nAutomatyczne odświeżanie widoku listy dla Xamarin z https://docs.microsoft.com \n \nIf you want the ListView to automatically update as items are added, removed and changed in the \nunderlying list, you'll need to use an ObservableCollection. ObservableCollection is defined in \nSystem.Collections.ObjectModel and is just like List, except that it can notify ListView of any changes: \n \nObservableCollection<Type> CollectionName = new ObservableCollection<Type>(); \n// add elements to collection \n// assign collection to ListView ItemsSource property \n \n//to add element to ListView just add it to collection \nCollectionName.Add(collectionElement); \n \n \nTypy, metody i pola wykorzystywane do odświeżenia widoku listy dla AndroidStudio \n \nString[] \nArrayList<String> \nArrayAdapter<String> \n \nArrays.asList(tablica_napisow) \n \nKonstruktor i metody klasy ArrayAdapter \nArrayAdapter(Context context, int resource, int textViewResourceId, List<T> objects) \nnp. ArrayAdapter<String>(this, R.layout.ListViewItemTemplate, R.id.txtItem, ArrayListObj); \nnotifyDataSetChanged(); // Notifies the attached observers that the underlying data has been changed and any \nView reflecting the data set should refresh itself. \n \nMetody klasy ListView \nsetAdapter(AdapterObj) \n \n \n \n \n \n \n \n \n \n \n \n \n \n\nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL\nktórej jakość nagrania została przeze mnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………… \n Czytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek klasy, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "73b3ba776ec8",
-      "duplicates": [
-        "inf04-2023-01-02-sg-task-3",
-        "inf04-2023-01-02-ag-task-3"
-      ]
+      "duplicates": ["inf04-2023-01-02-sg-task-3", "inf04-2023-01-02-ag-task-3"]
     },
     {
       "id": "inf04-2023-01-01-sd-task-2",
@@ -2200,19 +1914,14 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 2,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2023-01-01-sd-task-2.pdf",
       "text": "Część II. Aplikacja mobilna \nWykonaj aplikację mobilną obsługującą proste notatki tekstowe za pomocą środowiska programistycznego \ndostępnego na stanowisku egzaminacyjnym oraz uruchom ją w dostępnym emulatorze systemu mobilnego. \nAplikacja umożliwia wpisywanie prostych notatek. Dane poc zątkowe aplikacji zapisano w pliku dane.txt, \nzawartym w archiwum zad2.zip, które znajduje się na pulpicie konta Egzamin i jest zabezpieczony hasłem: \n!D@Ne$ \n \nStrona 3 z 5 \n \n \nObraz 1a. \nAplikacja Android Studio, \nstan początkowy. Emulacja \nNexus 5X API 29 x86. \nObraz 1b. \nAplikacja Xamarin w MS Visual \nStudio, stan początkowy. \nEmulacja Android Oreo. \nObraz 2. \nAplikacja Xamarin, dodano \nelement do listy. Emulacja \nAndroid Oreo. \n \nNa obrazach 1a i 1b przedstawiono stan początkowy aplikacji mobilnej. W zależności od zastosow anego \nśrodowiska programistycznego oraz emulowanego systemu wynik końcowy może nieznacznie się różnić od \nprzedstawionego. Obraz 2 przedstawia zachowanie aplikacji, dodano notatkę „Urodziny Ali”, jest ona \nwidoczna jako ostatni element listy \n \nElementy aplikacji: \n‒ Pole edycyjne z podpowiedzią „Nowy element”. \n‒ Przycisk o treści: „DODAJ”. \n‒ Lista (element widoku listy). \n‒ Rozmieszczenie elementów zgodne z obrazami 1a i 1b \n \nDziałanie aplikacji: \n‒ W stanie początkowym wyświetlone są 3 notatki. Treść notatek można skopiować z pliku dane.txt lub \nręcznie wpisać do kodu źródłowego z obrazu 1b \n‒ Po wpisaniu do pola edycyjnego treści i wybraniu przycisku, jest ona zapisywana jako ostatni element \nwidoku listy (obraz 2) \n \nZałożenia aplikacji: \n‒ Interfejs użytkownika zapisany za pomocą języka znaczników wspieranego w danym środowisku (np. \nXAML, XML). \n‒ Zastosowany rozkład liniowy wertykalny (Linear / Stack lub inny o tej idei) z zagłębionym rozkładem \nliniowym horyzontalnym dla pola edycyjnego i przycisku. \n‒ Cechy przycisku: Kolor tła Crimson (#DC143C), biały kolor czcionki, zgodnie z Obrazem 1a. \n‒ Cechy elementów listy: domyślny kolor czcionki, kolor separatora: Crimson, separator jest widoczny \n(np. poprzez ustawienie wysokości separatora) \n‒ Notatki są zapisane w dowolnej kolekcji z elementami typu napisowego połączonej z widokiem listy \njako jej źródło danych \n\n \nStrona 4 z 5 \n‒ Wybranie przycisku powoduje dopisanie do kolekcji treści z pola edycyjnego, widok listy jest \nautomatycznie odświeżany. Dla uproszczenia można założyć, że pole jest zawsze wypeł nione, jeśli \nwybrany jest przycisk \n‒ Aplikacja powinna być zapisana czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych i funkcji. \n \nPodejmij próbę kompilacji i uruchomienia aplikacji. Informacje dotyczące dokumentacji i zrzutu ekranowego \numieszczono w części III zadania. \n \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze mobilna powinno znaleźć się archiwum całego \nprojektu o nazwie mobilna.zip, plik z kodem źródłowym interfejsu użytkownika (XAML lub XML) oraz plik \nźródłowy kodu skojarzonego z interfejsem użytkownika.",
       "summary": "Aplikacja mobilna: gra w kości z losowaniem wartości i punktacją.",
       "duplicateGroup": "201c4ead35b0",
-      "duplicates": [
-        "inf04-2023-01-02-sg-task-2",
-        "inf04-2023-01-02-ag-task-2"
-      ]
+      "duplicates": ["inf04-2023-01-02-sg-task-2", "inf04-2023-01-02-ag-task-2"]
     },
     {
       "id": "inf04-2023-01-01-sd-task-1",
@@ -2223,20 +1932,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2023-01-01-sd-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nNapisz program implementujący klasę do obsługi notatek. \n \nZałożenia do programu: \n‒ Program wykonywany w konsoli \n‒ Obiektowy język programowania zgodny z zainstalowanym na stanowisku egzaminacyjnym: C++ lub \nC#, lub Java, lub Python \n‒ Klasa notatka zawiera pola: \n‒ statyczne numeryczne licznika notatek do zliczania utworzonych notatek \n‒ numeryczne do zapisu unikalnego identyfikatora \n‒ dwa tekstowe do zapisu tytułu notatki i treści notatki \n‒ Dostęp do wszystkich pól jest ograniczony do wnętrza klasy notatka, przy czym pola identyfikatora \ni licznika nie są dostępne dla klas potomnych, a pola tekstowe są dostępne dla klas potomnych \n‒ Klasa notatka zawiera jeden konstruktor o parametrach wejściowych dla tytułu i treści. Ma on za \nzadanie kolejno: \n‒ inkrementować licznik notatek \n‒ ustawić pole identyfikatora równe licznikowi notatek, czyli pierwsza utworzona notatka ma id \nrówne 1, druga – 2, itd. \n‒ ustawić pola tytułu i treści równe parametrom \n‒ Klasa notatka zawiera dwie metody bezparametrowe i niezwracające wartości, które mogą być \nwołane w programie głównym: \n‒ metodę wyświetlenia tytułu i treści notatki \n‒ metodę diagnostyczną wypisującą zawartości wszystkich pól oddzielone od siebie średnikami \n‒ Program powinien podejmować jasną komunikację z użytkownikiem, wyświetlane informacje powinny \nbyć zrozumiałe \n‒ Program powinien być zapisany czytelnie, z zachowaniem zasad czystego formatowania kodu, należy \nstosować znaczące nazwy zmiennych i funkcji. Wielkość liter np. dla nazwy klasy może być \nrealizowana zgodnie z przyjętą konwencją nazewnictwa w danym języku programowania \n‒ Program główny powinien zawierać test działania aplikacji polegający na utworzeniu dw óch notatek \nz dowolnymi (znaczącymi) danymi (źródło danych jest dowolne: stała napisowa, literał lub pobrane \nz klawiatury) oraz uruchomieniu dla każdej z nich obu metod \n‒ Dokumentację aplikacji należy utworzyć zgodnie z opisem w części III treści zadania. \n \nKod aplikacji przygotuj do nagrania na płytę. W podfolderze konsola powinno znaleźć się archiwum całego \nprojektu o nazwie konsola.zip, plik z kodem źródłowym programu oraz plik uruchomieniowy, jeżeli istnieje.",
       "summary": "Aplikacja konsolowa: klasa notatki z identyfikatorem, licznikiem i metodami wyświetlania.",
       "duplicateGroup": "84d9ac8cec2b",
-      "duplicates": [
-        "inf04-2023-01-02-sg-task-1",
-        "inf04-2023-01-02-ag-task-1"
-      ]
+      "duplicates": ["inf04-2023-01-02-sg-task-1", "inf04-2023-01-02-ag-task-1"]
     },
     {
       "id": "inf04-2023-01-01-ag-task-3",
@@ -2247,18 +1950,14 @@
       "heading": "Część III. Dokumentacja utworzonych aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 8,
       "pageEnd": 12,
       "pdf": "/pdfs/tasks/inf04-2023-01-01-ag-task-3.pdf",
       "text": "Część III. Dokumentacja utworzonych aplikacji \nWykonaj dokumentację do aplikacji utworzonych na egzaminie. W kodzie \nźródłowym aplikacji konsolowej utwórz nagłówek funkcji wyznaczającej \nNWD, według wzoru. Nagłówek powinien znaleźć się nad definicją \nfunkcji. W miejscu nawiasów <> należy podać odpowiednie opisy. \nW miejscu autor należy podać numer zdającego. \n \nUWAGA: Dokumentację umieścić w komentarzu (wieloliniowym lub kilku \njednoliniowych). Znajdujący się w listingu 1 wzór dokumentacji jest bez \nznaków początku i końca komentarza, gdyż te są różne dla różnych \njęzyków programowania \n \n \nStrona 9 z 10 \nListing 1. Wzór dokumentacji funkcji (liczba gwiazdek dowolna większa \nod 5) \n********************************************** \nnazwa funkcji: <nazwa> \nopis funkcji: <krótki opis co robi funkcja> \nparametry: <nazwa parametru 1 – znaczenie parametru \n nazwa parametru 2 – znaczenie parametru> \nzwracany typ i opis: <nazwa typu i opis co jest zwracane> \nautor: <numer zdającego> \n*********************************************** \n \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji \nutworzonych podczas egzaminu. Zrzuty powinny obejmować cały obszar \nekranu monitora z widocznym paskiem zadań. Jeżeli aplikacja uruchamia \nsię, na zrzucie należy umieścić okno z wynikiem działania programu oraz \notwarte środowisko programistyczne z projektem lub okno terminala \nz kompilacją projektu. Jeżeli aplikacja nie uruchamia się z powodu \nbłędów kompilacji, należy na zrzucie umieścić okno ze spisem błędów \ni widocznym otwartym środowiskiem programistycznym. Wykonać należy \nco najmniej tyle zrzutów, ile interakcji podejmuje aplikacja (np. stan \npoczątkowy, po wypisaniu hasła, po wyświetleniu danych itd.) Wymagane \nzrzuty ekranu: \n‒ Aplikacja konsolowa – zrzuty nazwane: konsola1, konsola2, ... \n‒ Aplikacja desktopowa – zrzuty nazwane: desktop1, desktop2, ... \n \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij \ngo egzamin. Dokument powinien zawierać podpisane zrzuty ekranu oraz \nzapisane informacje: \n‒ Nazwę systemu operacyjnego, na którym pracował zdający, \n‒ Nazwy środowisk programistycznych, z których zdający korzystał na \negzaminie, \n‒ Nazwy języków programowania, \n‒ Opcjonalnie komentarz do wykonanej pracy. \nZrzuty ekranu i dokument umieść w podfolderze dokumentacja. \n \n \nStrona 10 z 10 \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem \nzdającego powinny się znajdować podfoldery desktopowa, dokumentacja, \nkonsola. W folderze dokumentacja: pliki ze zrzutami oraz plik egzamin. \nW folderze konsola: spakowany cały projekt aplikacji konsolowej, źródło, \nopcjonalnie plik uruchomieniowy. W folderze desktopowa: spakowany \ncały projekt aplikacji desktopowej, pliki ze źródłami interfejsu i logiki, \nopcjonalnie plik uruchomieniowy. Opisz płytę numerem zdającego \ni pozostaw na stanowisku, zapakowaną w pudełku wraz z arkuszem \negzaminacyjnym. \n \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \n \nOcenie będą podlegać 4 rezultaty: \n‒ implementacja, kompilacja, uruchomienie programu, \n‒ aplikacja konsolowa, \n‒ aplikacja desktopowa, \n‒ dokumentacja aplikacji. \n \n \n \n \n \n \n \n \n \n \n \n\nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL\nktórej jakość nagrania została przeze \nmnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………… \n Czytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek funkcji wyznaczającej NWD, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "5c1c6dd0eb3c",
-      "duplicates": [
-        "inf04-2023-01-01-sg-task-3"
-      ]
+      "duplicates": ["inf04-2023-01-01-sg-task-3"]
     },
     {
       "id": "inf04-2023-01-01-ag-task-2",
@@ -2269,18 +1968,14 @@
       "heading": "Część II. Aplikacja desktopowa",
       "type": "desktop",
       "typeLabel": "Aplikacja desktopowa",
-      "tags": [
-        "desktop"
-      ],
+      "tags": ["desktop"],
       "pageStart": 5,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2023-01-01-ag-task-2.pdf",
       "text": "Część II. Aplikacja desktopowa \nZa pomocą dostępnego na stanowisku egzaminacyjnym środowiska \nprogramistycznego wykonaj aplikację desktopową do wprowadzania \ndanych pracownika z możliwością generowania hasła. \n \n \nObraz 1. Stan początkowy aplikacji \n \n \nObraz 2. Fragment okna po wybraniu przycisku „Generuj hasło” \n\nStrona 6 z 10 \n \n \nObraz 3. Po wybraniu przycisku „Zatwierdź” \n \nNa obrazie 1 przedstawiono ideę aplikacji desktopowej. W zależności od \nużytego środowiska programistycznego wygląd może nieznacznie się \nróżnić. \n \nOpis wyglądu aplikacji \n‒ Okno o nazwie „Dodaj pracownika”. W nazwie okna należy wstawić \ntakże numer zdającego \n‒ Kontrolki rozmieszczone zgodnie z obrazem 1 \n‒ Kontrolki w grupie „Dane Pracownika”: \n‒ pole edycyjne poprzedzone etykietą o treści „Imię” \n‒ pole edycyjne poprzedzone etykietą o treści „Nazwisko” \n‒ lista rozwijalna podpisana „Stanowisko” z elementami: \nKierownik, Starszy programista, Młodszy programista, Tester \n \n\nStrona 7 z 10 \n‒ Kontrolki w grupie „Generowanie hasła”: \n‒ pole edycyjne poprzedzone etykietą o treści „Ile znaków?” \n‒ trzy pola wyboru podpisane: „Małe i wielkie litery”, „Cyfry”, \n„Znaki specjalne”. Pierwsze pole jest domyślnie zaznaczone \n‒ przycisk o treści „Generuj hasło” \n‒ Na dole okna znajduje się przycisk „Zatwierdź”, jest on wyraźnie \ndłuższy niż przycisk do generowania hasła \n‒ Okno ma tło koloru LightSteelBlue (#B0C4DE) \n‒ Przyciski mają tło koloru SteelBlue (#4682B4) i biały kolor czcionki \n \nDziałanie aplikacji po wybraniu przycisku „Generuj hasło”: \n‒ Generowane jest hasło o liczbie znaków określonej w polu \nedycyjnym \n‒ Poszczególne znaki hasła są wybierane losowo z zestawu małych \nliter \n‒ Jeżeli zaznaczono checkbox „Małe i wielkie litery”, jeden ze znaków \njest losowany z zestawu wielkich liter \n‒ Jeżeli zaznaczono checkbox „Cyfry”, jeden ze znaków hasła jest \nlosowany z zestawu cyfr \n‒ Jeżeli zaznaczono checkbox „Znaki specjalne”, jeden ze znaków \nhasła jest losowany z zestawu znaków specjalnych \n‒ Dla uproszczenia zadania można przyjąć zawsze określony znak \n(np. pierwszy), który jest losowany z cyfr. Podobnie należy postąpić \nze znakami specjalnymi (np. drugi znak) \n‒ Hasło jest wypisywane jako komunikat zgodnie z obrazem 2 po \nwybraniu przycisku „Generuj hasło” \n‒ Za zestaw liter przyjmuje się wszystkie litery z klawiatury małe \ni wielkie alfabetu łacińskiego \n‒ Za zestaw cyfr przyjmuje się kolejne cyfry od 0 do 9 \n‒ Za zestaw znaków specjalnych przyjmuje się znaki !@#$%^&*()_+-= \n‒ Hasło oraz zestawy znaków są przechowywane w zmiennych typu \nnapisowego \n \nDziałanie aplikacji po wybraniu przycisku „Zatwierdź”: \n‒ Wyświetlany jest komunikat z wypełnionymi danymi pracownika oraz \nwygenerowanym wcześniej hasłem, zgodnie z obrazem 3 \n \nStrona 8 z 10 \nUWAGA: dla uproszczenia aplikacji nie trzeba sprawdzać czy pole \nedycyjne jest wypełnione i czy liczba znaków w haśle jest wystarczająca \ndla wstawienia małych, wielkich liter, liczb i znaków specjalnych \n \nAplikacja powinna być zapisana czytelnie, z zasadami czystego \nformatowania kodu, należy stosować znaczące nazwy zmiennych \ni funkcji. \n \nPodejmij próbę kompilacji i uruchomienia aplikacji. Informacje dotyczące \ndokumentacji i zrzutu ekranowego umieszczono w części III zadania. \n \nKod aplikacji przygotuj do nagrania na płytę. W folderze desktopowa \npowinno znaleźć się archiwum całego projektu o nazwie desktopowa.zip, \npliki źródłowe, które były modyfikowane (interfejs użytkownika i logika \naplikacji) oraz plik uruchomieniowy, jeżeli to możliwe.",
       "summary": "Aplikacja desktopowa: formularz rejestracji konta z walidacją e-maila i hasła.",
       "duplicateGroup": "eec1dade05ae",
-      "duplicates": [
-        "inf04-2023-01-01-sg-task-2"
-      ]
+      "duplicates": ["inf04-2023-01-01-sg-task-2"]
     },
     {
       "id": "inf04-2023-01-01-ag-task-1",
@@ -2291,19 +1986,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2023-01-01-ag-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nZa pomocą narzędzi do tworzenia aplikacji konsolowych zaimplementuj \nalgorytm Euklidesa do szukania największego wspólnego dzielnika \nz dwóch liczb – NWD(a, b). Algorytm przedstawiono na schemacie. \n \nAlgorytm Euklidesa \n\nStrona 4 z 10 \nZałożenia aplikacji: \n‒ Obiektowy język programowania zgodny z zainstalowanym na \nstanowisku egzaminacyjnym: C++ lub C#, lub Java, lub Python \n‒ Implementacja algorytmu w pełni zgodna z przedstawionym na \nschemacie algorytmem \n‒ Liczby a i b należą do zbioru liczb całkowitych dodatnich \n(odpowiedni typ lub kontrola poprawności wpisanej liczby) \n‒ Szukanie NWD zaimplementowane w funkcji o dwóch argumentach \ni zwracanej wartości największego wspólnego dzielnika. Funkcja nie \nmoże zawierać operacji wejścia - wyjścia \n‒ Program główny testuje działanie funkcji i zawiera operacje wejścia - \nwyjścia \n‒ Program powinien być zapisany czytelnie, z zachowaniem zasad \nczystego formatowania kodu, należy stosować nazwy zmiennych \nzgodne z nazwami zastosowanymi na schemacie blokowym, \npozostałe nazwy muszą być znaczące \n‒ Do kodu należy dołączyć dokumentację, która została opisana \nw części III zadania egzaminacyjnego. \n \nKod aplikacji przygotuj do nagrania na płytę. W folderze konsola powinno \nznaleźć się archiwum całego projektu o nazwie konsola.zip, plik z kodem \nźródłowym programu oraz plik uruchomieniowy, jeżeli istnieje. \n \n \nStrona 5 z 10",
       "summary": "Aplikacja konsolowa: algorytm Euklidesa do obliczania NWD dwóch liczb.",
       "duplicateGroup": "64cb8f038291",
-      "duplicates": [
-        "inf04-2023-01-01-sg-task-1"
-      ]
+      "duplicates": ["inf04-2023-01-01-sg-task-1"]
     },
     {
       "id": "inf04-2022-06-02-sg-task-3",
@@ -2314,9 +2004,7 @@
       "heading": "Część III. Testy utworzonych aplikacji",
       "type": "testing",
       "typeLabel": "Testowanie",
-      "tags": [
-        "testing"
-      ],
+      "tags": ["testing"],
       "pageStart": 5,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2022-06-02-sg-task-3.pdf",
@@ -2334,10 +2022,7 @@
       "heading": "Część II. Aplikacja Web",
       "type": "web",
       "typeLabel": "Aplikacja webowa",
-      "tags": [
-        "web",
-        "frontend"
-      ],
+      "tags": ["web", "frontend"],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2022-06-02-sg-task-2.pdf",
@@ -2355,10 +2040,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2022-06-02-sg-task-1.pdf",
@@ -2376,9 +2058,7 @@
       "heading": "Część III. Dokumentacja aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2022-06-01-sg-task-3.pdf",
@@ -2396,9 +2076,7 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 2,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2022-06-01-sg-task-2.pdf",
@@ -2416,10 +2094,7 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2022-06-01-sg-task-1.pdf",
@@ -2437,18 +2112,14 @@
       "heading": "Część III. Dokumentacja utworzonych aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2022-01-01-sg-task-3.pdf",
       "text": "Część III. Dokumentacja utworzonych aplikacji \nWykonaj dokumentację aplikacji utworzonych podczas egzaminu. W kodzie źródłowym aplikacji konsolowej \nutwórz nagłówek metody sortującej i szukającej, według wzoru umieszczonego w listingu 1. Nagłówek \npowinien znaleźć się w kodzie źródłowym nad metodą. W miejscu nawiasów <> należy podać nazwę funkcji, \nnazwy parametrów (lub słowo „brak”) oraz zwięzłe informacje (kilka słów) – zgodnie ze wzorcem. W miejscu \nautor należy podać swój numer PESEL \nListing 1. Wzór dokumentacji funkcji \n/******************************************************** \n * nazwa funkcji: <tu wstaw nazwę funkcji> \n * parametry wejściowe: <nazwa parametru> - <co przechowuje> \n * wartość zwracana: <co zwraca funkcja – opis> \n * autor: <numer PESEL zdającego> \n * ****************************************************/ \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji. Zrzuty powinny obejmować cały obszar \nekranu z widocznym paskiem zadań. Jeżeli aplikacja uruchamia się, na zrzucie należy umieścić okno \nz wynikiem działania programu oraz otwarte środowisko programistyczne z projektem. Jeżeli aplikacja nie \nuruchamia się z powodu błędów kompilacji, należy na zrzucie umieścić okno ze spisem błędów i widocznym \notwartym środowiskiem programistycznym. Wymagane zrzuty ekranu: \n‒ z aplikacji konsolowej – konsola.jpg \n‒ z aplikacji mobilnej – mobilna.jpg \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij go egzamin. \nDokument powinien zawierać podpisane zrzuty ekranu oraz zapisane informacje: \n‒ nazwę systemu operacyjnego, na którym pracował zdający \n‒ nazwy środowisk programistycznych, z których zdający korzystał na egzaminie \n‒ nazwy języków programowania użytych podczas tworzenia aplikacji \n‒ nazwę emulowanego urządzenia lub systemu, na którym uruchomiono aplikację mobilną \n‒ opcjonalnie komentarz do wykonanej pracy. \nDokumentacja powinna się znajdować w podfolderze dokumentacja \n \nStrona 5 z 5 \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem PESEL powinny się znajdować podfoldery \ndokumentacja, konsola, mobilna. W folderze dokumentacja powinny znaleźć się pliki: konsola.jpg, \nmobilna.jpg, egzamin. W folderze konsola: cały projekt aplikacji konsolowej. W folderze mobilna: cały projekt \naplikacji mobilnej, ewentualnie inne przygotowane pliki. Po nagraniu płyty sprawdź poprawność nagrania. \nOpisz płytę swoim numerem PESEL i pozostaw na stanowisku, zapakowaną w pudełku wraz z arkuszem \negzaminacyjnym. \n \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \nOcenie będą podlegać 4 rezultaty \n‒ Implementacja, kompilacja, uruchomienie programu, \n‒ Aplikacja konsolowa, \n‒ Aplikacja mobilna, \n‒ Dokumentacja aplikacji. \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL\nktórej jakość nagrania została przeze mnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………… \n Czytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek metod sortującej i wyszukującej, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "bfaf29b5c21b",
-      "duplicates": [
-        "inf04-2021-06-01-sg-task-3"
-      ]
+      "duplicates": ["inf04-2021-06-01-sg-task-3"]
     },
     {
       "id": "inf04-2022-01-01-sg-task-2",
@@ -2459,18 +2130,14 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 2,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2022-01-01-sg-task-2.pdf",
       "text": "Część II. Aplikacja mobilna \nWykonaj aplikację mobilną za pomocą środowiska programistycznego dostępnego na stanowisku \negzaminacyjnym oraz uruchom ją w dostępnym emulatorze systemu mobilnego. \n \nStrona 3 z 5 \n \nObraz 1a. \nEmulacja na urządzeniu Nexus 5X API 29 x86. \nAplikację utworzono w Android Studio \nObraz 1b. \nEmulacja na systemie Android \nOreo. Aplikację utworzono w MS \nVisual Studio \nNa obrazach 1a i 1b przedstawiono działanie aplikacji mobilnej. W zależności od użytego środowiska \nprogramistycznego oraz emulowanego systemu wynik końcowy może nieznacznie się różnić. \nOpis wyglądu aplikacji \n‒ Napis „Rejestruj konto”. \n‒ Napis „Podaj e-mail:”, a pod nim pole edycyjne z podpowiedzią o treści „email”. \n‒ Napis „Podaj hasło:”, a pod nim pole edycyjne do wprowadzenia hasła, realizuje ukrywanie hasła jak \nna obrazach 1a i 1b. \n‒ Napis „Powtórz hasło:”, a pod nim pole edycyjne do wprowadzenia hasła, realizu je ukrywanie hasła \njak na obrazach 1a i 1b. \n‒ Przycisk o treści „ZATWIERDŹ”, jest on wyśrodkowany. \n‒ Obszar do wyświetlania komunikatów, jest on wyśrodkowany. \nDziałanie aplikacji \n‒ Po wybraniu przycisku ZATWIERDŹ jest sprawdzane: \n‒ Czy e-mail zawiera znak @. \n‒ Czy podane hasło jest równe powtórzonemu hasłu. \n‒ W obszarze do wyświetlania komunikatów pojawia się napis: \n‒ Na początku działania aplikacji: „Autor”, dalej wstawiony numer PESEL zdającego. \n‒ Po zatwierdzeniu, gdy e-mail jest niepoprawny: „Nieprawidłowy adres e-mail”. \n‒ Po zatwierdzeniu, gdy hasła się różnią: „Hasła się różnią”. \n‒ Po zatwierdzeniu, gdy nie wystąpiły błędy: „Witaj <e-mail>”, gdzie <e-mail> oznacza aktualnie \nwprowadzony adres e-mail. \n \n\n \nStrona 4 z 5 \nZałożenia aplikacji \n‒ Interfejs użytkownika zapisany za pomocą języka znaczników wspieranego w danym środowisku (np. \nXAML, XML). \n‒ Zastosowany typ rozkładu liniowy (Linear / Stack lub inny o tej idei). \n‒ Zastosowany kolor tła dla napisu „Rejestruj konto”: Teal (#008080), zgodnie z Obrazem 1a. \n‒ Zastosowany kolory czcionki: czarny i biały, zgodnie z Obrazem 1a. \n‒ Czcionka napisu „Rejestruj konto” jest wizualnie większa od pozostałych. \n‒ Pola edycyjne są rozciągnięte na całą szerokość ekranu. \n‒ Aplikacja powinna być zapisana czytelnie, z zasadami czystego formatowania kodu, stosować \nznaczące nazwy zmiennych i funkcji. \n‒ Dokumentacja do programu wykonana zgodnie z wytycznymi z części III zadania egzaminacyjnego. \nKod aplikacji (cały folder projektu) przygotuj do nagrania na płytę (skopiuj do folderu z numerem PESEL, do \npodfolderu mobilna).",
       "summary": "Aplikacja mobilna: formularz rejestracji konta z walidacją e-maila i hasła.",
       "duplicateGroup": "bc9a06d75a4e",
-      "duplicates": [
-        "inf04-2021-06-01-sg-task-2"
-      ]
+      "duplicates": ["inf04-2021-06-01-sg-task-2"]
     },
     {
       "id": "inf04-2022-01-01-sg-task-1",
@@ -2481,19 +2148,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2022-01-01-sg-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nNapisz program sortujący tablicę metodą przez wybieranie według zamieszczonej dokumentacji: \nSortowanie przez wybieranie - jedna z prostszych metod sortowania o złożoności O(n 2). Polega na \nwyszukaniu elementu mającego się znaleźć na żądanej pozycji i zamianie miejscami z tym, który jest tam \nobecnie. Operacja jest wykonywana dla wszystkich indeksów sortowanej tablicy. \nAlgorytm przedstawia się następująco: \n1. wyszukaj minimalną wartość z tablicy spośród elementów od i do końca tablicy \n2. zamień wartość minimalną, z elementem na pozycji i \nGdy zamiast wartości minimalnej wybierana będzie maksymalna, wówczas tablica będzie posortowana \nod największego do najmniejszego elementu. \nZałożenia do programu \n‒ Program wykonywany w konsoli. \n‒ Obiektowy język programowania zgodny z zainstalowanym na stanowisku egzaminacyjnym: C++ lub \nC# lub Java lub Python. \n‒ Sortowanie odbywa się malejąco, nie wykorzystuje gotowych funkcji do sortowania oraz do szukania \nmaksimum. \n‒ Sortowana jest tablica 10 liczb całkowitych. Tablica jest polem klasy. \n‒ Tablica jest wczytywana z klawiatury po uprzednim wypisaniu odpowiedniego komunikatu. \n‒ Wszystkie elementy posortowanej tablicy są wyświetlane na ekranie. \n‒ Klasa zawiera co najmniej dwie metody: sortującą i szukają cą wartość najwyższą. Widzialność \nmetody szukającej ogranicza się jedynie do klasy. \n‒ Metoda szukająca zwraca wartość, w zależności od przyjętej taktyki może być to wartość \nmaksymalna lub index wartości maksymalnej. \n‒ Program powinien być zapisany czytelnie, z zasadami czystego formatowania kodu, należy stosować \nznaczące nazwy zmiennych i funkcji. \n‒ Dokumentacja do programu wykonana zgodnie z wytycznymi z części III zadania egzaminacyjnego. \nKod aplikacji (cały folder projektu) przygotuj do nagrania na płytę (skopiuj do folderu z numerem PESEL, do \npodfolderu konsola).",
       "summary": "Aplikacja konsolowa: wypełnianie tablicy pseudolosowymi liczbami i sortowanie.",
       "duplicateGroup": "7e3aa3cba73d",
-      "duplicates": [
-        "inf04-2021-06-01-sg-task-1"
-      ]
+      "duplicates": ["inf04-2021-06-01-sg-task-1"]
     },
     {
       "id": "inf04-2021-06-01-sg-task-3",
@@ -2504,18 +2166,14 @@
       "heading": "Część III. Dokumentacja utworzonych aplikacji",
       "type": "documentation",
       "typeLabel": "Dokumentacja",
-      "tags": [
-        "documentation"
-      ],
+      "tags": ["documentation"],
       "pageStart": 4,
       "pageEnd": 8,
       "pdf": "/pdfs/tasks/inf04-2021-06-01-sg-task-3.pdf",
       "text": "Część III. Dokumentacja utworzonych aplikacji \nWykonaj dokumentację aplikacji utworzonych podczas egzaminu. W kodzie źródłowym aplikacji konsolowej \nutwórz nagłówek metody sortującej i szukającej , według wzoru umieszczonego w listingu 1 . Nagłówek \npowinien znaleźć się w kodzie źródłowym nad metodą. W miejscu nawiasów <> należy podać nazwę funkcji, \nnazwy parametrów (lub słowo „brak”) oraz zwięzłe informacje (kilka słów) – zgodnie ze wzorcem. W miejscu \nautor należy podać swój numer PESEL \nListing 1. Wzór dokumentacji funkcji \n/******************************************************** \n * nazwa funkcji: <tu wstaw nazwę funkcji> \n * parametry wejściowe: <nazwa parametru> - <co przechowuje> \n * wartość zwracana: <co zwraca funkcja – opis> \n * autor: <numer PESEL zdającego> \n * ****************************************************/ \nWykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji. Zrzuty powinny obejmować cały obszar \nekranu z widocznym paskiem zadań. Jeżeli aplikacja uruchamia się , na zrzucie należy umieścić okno \nz wynikiem działania programu oraz otwarte środowisko programistyczne z projektem. Jeżeli aplikacja nie \nuruchamia się z powodu błędów kompilacji, należy na zrzucie umieścić okno ze spisem błędów i widocznym \notwartym środowiskiem programistycznym. Wymagane zrzuty ekranu: \n‒ z aplikacji konsolowej – konsola.jpg \n‒ z aplikacji mobilnej – mobilna.jpg \nW edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij go egzamin. \nDokument powinien zawierać podpisane zrzuty ekranu oraz zapisane informacje: \n‒ nazwę systemu operacyjnego, na którym pracował zdający \n‒ nazwy środowisk programistycznych, z których zdający korzystał na egzaminie \n‒ nazwy języków programowania użytych podczas tworzenia aplikacji \n‒ nazwę emulowanego urządzenia lub systemu, na którym uruchomiono aplikację mobilną \n‒ opcjonalnie komentarz do wykonanej pracy. \nDokumentacja powinna się znajdować w podfolderze dokumentacja \n \nStrona 5 z 5 \nUWAGA: Nagraj płytę z rezultatami pracy. W folderze z numerem PESEL powinny się znajdować podfoldery \ndokumentacja, konsola , mobilna. W folderze dokumentacja powinny znaleźć się pliki: konsola.jpg, \nmobilna.jpg, egzamin. W folderze konsola: cały projekt aplikacji konsolowej. W folderze mobilna: cały projekt \naplikacji mobilnej, ewentualnie inne przygotowane pliki. Po nagraniu płyty sprawdź poprawność nagrania. \nOpisz płytę swoim numerem PESEL i pozostaw na stanowisku, zapakowaną w pudełku wraz z arkuszem \negzaminacyjnym. \n \nCzas przeznaczony na wykonanie zadania wynosi 180 minut. \nOcenie będą podlegać 4 rezultaty \n‒ Implementacja, kompilacja, uruchomienie programu, \n‒ Aplikacja konsolowa, \n‒ Aplikacja mobilna, \n‒ Dokumentacja aplikacji. \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\nWypełnia zdający \nDo arkusza egzaminacyjnego dołączam płytę CD opisaną numerem PESEL\nktórej jakość nagrania została przeze mnie sprawdzona. \nWypełnia Przewodniczący ZN \nPotwierdzam, że do arkusza egzaminacyjnego dołączona jest płyta CD, opisana numerem PESEL zdającego.\n……………………………… \n Czytelny podpis Przewodniczącego ZN \n ,",
       "summary": "Dokumentacja: nagłówek metod sortującej i wyszukującej, zrzuty uruchomienia aplikacji, plik egzamin z opisem narzędzi.",
       "duplicateGroup": "bfaf29b5c21b",
-      "duplicates": [
-        "inf04-2022-01-01-sg-task-3"
-      ]
+      "duplicates": ["inf04-2022-01-01-sg-task-3"]
     },
     {
       "id": "inf04-2021-06-01-sg-task-2",
@@ -2526,18 +2184,14 @@
       "heading": "Część II. Aplikacja mobilna",
       "type": "mobile",
       "typeLabel": "Aplikacja mobilna",
-      "tags": [
-        "mobile"
-      ],
+      "tags": ["mobile"],
       "pageStart": 2,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf04-2021-06-01-sg-task-2.pdf",
       "text": "Część II. Aplikacja mobilna \nWykonaj aplikację mobilną za pomocą środowiska programistycznego dostępnego na stanowisku \negzaminacyjnym oraz uruchom ją w dostępnym emulatorze systemu mobilnego. \n \nStrona 3 z 5 \n \nObraz 1a. \nEmulacja na urządzeniu Nexus 5X API 29 x86. \nAplikację utworzono w Android Studio \nObraz 1b. \nEmulacja na systemie Android \nOreo. Aplikację utworzono w MS \nVisual Studio \nNa obraz ach 1a i 1b przedstawiono działanie aplikacji mobilnej . W zależności od użytego środowiska \nprogramistycznego oraz emulowanego systemu wynik końcowy może nieznacznie się różnić. \nOpis wyglądu aplikacji \n‒ Napis „Rejestruj konto”. \n‒ Napis „Podaj e-mail:”, a pod nim pole edycyjne z podpowiedzią o treści „email”. \n‒ Napis „Podaj hasło:”, a pod nim pole edycyjne do wprowadzenia hasła, realizuje ukrywanie hasła jak \nna obrazach 1a i 1b. \n‒ Napis „Powtórz hasło:”, a pod nim pole edycyjne do wprowadzenia hasła, realizuje ukrywanie hasła \njak na obrazach 1a i 1b. \n‒ Przycisk o treści „ZATWIERDŹ”, jest on wyśrodkowany. \n‒ Obszar do wyświetlania komunikatów, jest on wyśrodkowany. \nDziałanie aplikacji \n‒ Po wybraniu przycisku ZATWIERDŹ jest sprawdzane: \n‒ Czy e-mail zawiera znak @. \n‒ Czy podane hasło jest równe powtórzonemu hasłu. \n‒ W obszarze do wyświetlania komunikatów pojawia się napis: \n‒ Na początku działania aplikacji: „Autor”, dalej wstawiony numer PESEL zdającego. \n‒ Po zatwierdzeniu, gdy e-mail jest niepoprawny: „Nieprawidłowy adres e-mail”. \n‒ Po zatwierdzeniu, gdy hasła się różnią: „Hasła się różnią”. \n‒ Po zatwierdzeniu, gdy nie wystąpiły błędy: „Witaj <e-mail>”, gdzie <e-mail> oznacza aktualnie \nwprowadzony adres e-mail. \n \n\n \nStrona 4 z 5 \nZałożenia aplikacji \n‒ Interfejs użytkownika zapisany za pomocą języka znaczników wspieranego w danym środowisku (np. \nXAML, XML). \n‒ Zastosowany typ rozkładu liniowy (Linear / Stack lub inny o tej idei). \n‒ Zastosowany kolor tła dla napisu „Rejestruj konto”: Teal (#008080) ,zgodnie z Obrazem 1a. \n‒ Zastosowany kolory czcionki: czarny i biały, zgodnie z Obrazem 1a. \n‒ Czcionka napisu „Rejestruj konto” jest wizualnie większa od pozostałych. \n‒ Pola edycyjne są rozciągnięte na całą szerokość ekranu. \n‒ Aplikacja powinna być zapisan a czytelnie, z zasadami czystego formatowania kodu, stosować \nznaczące nazwy zmiennych i funkcji. \n‒ Dokumentacja do programu wykonana zgodnie z wytycznymi z części III zadania egzaminacyjnego. \nKod aplikacji (cały folder projektu) przygotuj do nagrania na płytę (skopiuj do folderu z numerem PESEL, do \npodfolderu mobilna).",
       "summary": "Aplikacja mobilna: formularz rejestracji konta z walidacją e-maila i hasła.",
       "duplicateGroup": "bc9a06d75a4e",
-      "duplicates": [
-        "inf04-2022-01-01-sg-task-2"
-      ]
+      "duplicates": ["inf04-2022-01-01-sg-task-2"]
     },
     {
       "id": "inf04-2021-06-01-sg-task-1",
@@ -2548,19 +2202,14 @@
       "heading": "Część I. Aplikacja konsolowa",
       "type": "console",
       "typeLabel": "Aplikacja konsolowa",
-      "tags": [
-        "console",
-        "cli"
-      ],
+      "tags": ["console", "cli"],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf04-2021-06-01-sg-task-1.pdf",
       "text": "Część I. Aplikacja konsolowa \nNapisz program sortujący tablicę metodą przez wybieranie według zamieszczonej dokumentacji: \nSortowanie przez wybieranie - jedna z prostszych metod sortowania o złożoności O(n 2). Polega na \nwyszukaniu elementu mającego się znaleźć na żądanej pozycji i zamianie miejscami z tym, który jest tam \nobecnie. Operacja jest wykonywana dla wszystkich indeksów sortowanej tablicy. \nAlgorytm przedstawia się następująco: \n1. wyszukaj minimalną wartość z tablicy spośród elementów od i do końca tablicy \n2. zamień wartość minimalną, z elementem na pozycji i \nGdy zamiast wartości minimalnej wybierana będzie maksymalna, wówczas tablica będzie posortowana \nod największego do najmniejszego elementu. \nZałożenia do programu \n‒ Program wykonywany w konsoli. \n‒ Obiektowy język programowania zgodny z zainstalowanym na stanowisku egzaminacyjnym: C++ lub \nC# lub Java lub Python. \n‒ Sortowanie odbywa się malejąco, nie wykorzystuje gotowych funkcji do sortowania oraz do szukania \nmaksimum. \n‒ Sortowana jest tablica 10 liczb całkowitych. Tablica jest polem klasy. \n‒ Tablica jest wczytywana z klawiatury po uprzednim wypisaniu odpowiedniego komunikatu. \n‒ Wszystkie elementy posortowanej tablicy są wyświetlane na ekranie. \n‒ Klasa zawiera co najmniej dwie metody: sortującą i szukającą wartość najwyższą. Widzialność \nmetody szukającej ogranicza się jedynie do klasy. \n‒ Metoda szukająca zwraca wartość, w zależności od przyjętej taktyki może być to wartość \nmaksymalna lub index wartości maksymalnej. \n‒ Program powinien być zapisany czytelnie, z zasadami czystego formatowania kodu, należy stosować \nznaczące nazwy zmiennych i funkcji. \n‒ Dokumentacja do programu wykonana zgodnie z wytycznymi z części III zadania egzaminacyjnego. \nKod aplikacji (cały folder projektu) przygotuj do nagrania na płytę (skopiuj do folderu z numerem PESEL, do \npodfolderu konsola).",
       "summary": "Aplikacja konsolowa: wypełnianie tablicy pseudolosowymi liczbami i sortowanie.",
       "duplicateGroup": "7e3aa3cba73d",
-      "duplicates": [
-        "inf04-2022-01-01-sg-task-1"
-      ]
+      "duplicates": ["inf04-2022-01-01-sg-task-1"]
     }
   ]
 }

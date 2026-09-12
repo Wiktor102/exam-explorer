@@ -1,27 +1,33 @@
-import { ArrowDownAZ } from 'lucide-react'
-import clsx from 'clsx'
-import { sortLabels, typeAccent, typeLabels } from '../constants/catalog'
-import type { Exam, ExamType, RegistryMode, SortMode, Task } from '../types/catalog'
-import { examFileName } from '../utils/catalog'
-import { SeasonExamLabel } from './SeasonExamLabel'
-import { SelectControl } from './SelectControl'
+import { ArrowDownAZ } from "lucide-react";
+import clsx from "clsx";
+import { sortLabels, typeAccent, typeLabels } from "../constants/catalog";
+import type {
+  Exam,
+  ExamType,
+  RegistryMode,
+  SortMode,
+  Task,
+} from "../types/catalog";
+import { examFileName } from "../utils/catalog";
+import { SeasonExamLabel } from "./SeasonExamLabel";
+import { SelectControl } from "./SelectControl";
 
 type RegistryPaneProps = {
-  examById: Map<string, Exam>
-  examType: ExamType
-  filteredExams: Exam[]
-  filteredTasks: Task[]
-  isSelectedTaskFilteredOut: boolean
-  registryMode: RegistryMode
-  selectedExamId: string | null
-  selectedTaskId: string | null
-  selectedTask: Task | null
-  sortMode: SortMode
-  taskById: Map<string, Task>
-  onExamSelect: (exam: Exam) => void
-  onSortModeChange: (sortMode: SortMode) => void
-  onTaskSelect: (task: Task) => void
-}
+  examById: Map<string, Exam>;
+  examType: ExamType;
+  filteredExams: Exam[];
+  filteredTasks: Task[];
+  isSelectedTaskFilteredOut: boolean;
+  registryMode: RegistryMode;
+  selectedExamId: string | null;
+  selectedTaskId: string | null;
+  selectedTask: Task | null;
+  sortMode: SortMode;
+  taskById: Map<string, Task>;
+  onExamSelect: (exam: Exam) => void;
+  onSortModeChange: (sortMode: SortMode) => void;
+  onTaskSelect: (task: Task) => void;
+};
 
 export function RegistryPane({
   examById,
@@ -45,7 +51,7 @@ export function RegistryPane({
         <div>
           <p className="eyebrow">Katalog</p>
           <h2>
-            {registryMode === 'tasks'
+            {registryMode === "tasks"
               ? `${filteredTasks.length} pasujących zadań`
               : `${filteredExams.length} pasujących arkuszy`}
           </h2>
@@ -67,12 +73,14 @@ export function RegistryPane({
         </div>
       </div>
 
-      {registryMode === 'tasks' ? (
+      {registryMode === "tasks" ? (
         <TaskTable
           examById={examById}
-          showPart={examType !== 'inf03'}
+          showPart={examType !== "inf03"}
           filteredTasks={filteredTasks}
-          filteredOutSelectedTask={isSelectedTaskFilteredOut ? selectedTask : null}
+          filteredOutSelectedTask={
+            isSelectedTaskFilteredOut ? selectedTask : null
+          }
           selectedTaskId={selectedTaskId}
           onTaskSelect={onTaskSelect}
         />
@@ -85,46 +93,71 @@ export function RegistryPane({
         />
       )}
     </div>
-  )
+  );
 }
 
 type TaskTableProps = {
-  examById: Map<string, Exam>
-  showPart: boolean
-  filteredTasks: Task[]
-  filteredOutSelectedTask: Task | null
-  selectedTaskId: string | null
-  onTaskSelect: (task: Task) => void
-}
+  examById: Map<string, Exam>;
+  showPart: boolean;
+  filteredTasks: Task[];
+  filteredOutSelectedTask: Task | null;
+  selectedTaskId: string | null;
+  onTaskSelect: (task: Task) => void;
+};
 
-function TaskTable({ examById, showPart, filteredTasks, filteredOutSelectedTask, selectedTaskId, onTaskSelect }: TaskTableProps) {
+function TaskTable({
+  examById,
+  showPart,
+  filteredTasks,
+  filteredOutSelectedTask,
+  selectedTaskId,
+  onTaskSelect,
+}: TaskTableProps) {
   function renderTaskRow(task: Task, isFilteredOutSelection = false) {
-    const exam = examById.get(task.examId)
-    if (!exam) return null
+    const exam = examById.get(task.examId);
+    if (!exam) return null;
 
     return (
       <button
         key={task.id}
         className={clsx(
-          'task-row',
-          selectedTaskId === task.id && 'selected',
-          isFilteredOutSelection && 'filtered-out-selected',
+          "task-row",
+          selectedTaskId === task.id && "selected",
+          isFilteredOutSelection && "filtered-out-selected",
         )}
         onClick={() => onTaskSelect(task)}
         role="row"
-        title={isFilteredOutSelection ? `${examFileName(exam)} - wybrane poza filtrami` : examFileName(exam)}
+        title={
+          isFilteredOutSelection
+            ? `${examFileName(exam)} - wybrane poza filtrami`
+            : examFileName(exam)
+        }
       >
         <SeasonExamLabel exam={exam} />
-        {showPart && <span className="task-part">{task.partLabel.replace('Część ', '')}</span>}
-        <span className={clsx('type-pill', typeAccent[task.type])}>{typeLabels[task.type] ?? task.type}</span>
+        {showPart && (
+          <span className="task-part">
+            {task.partLabel.replace("Część ", "")}
+          </span>
+        )}
+        <span className={clsx("type-pill", typeAccent[task.type])}>
+          {typeLabels[task.type] ?? task.type}
+        </span>
         <span className="row-summary">{task.summary}</span>
-        <span className="task-repeat">{task.duplicates.length ? `${task.duplicates.length + 1} ark.` : 'unikat'}</span>
+        <span className="task-repeat">
+          {task.duplicates.length
+            ? `${task.duplicates.length + 1} ark.`
+            : "unikat"}
+        </span>
       </button>
-    )
+    );
   }
 
   return (
-    <div className={clsx('task-table', !showPart && 'without-part')} role="table" aria-label="Zadania">
+    <div
+      className={clsx("task-table", !showPart && "without-part")}
+      role="table"
+      aria-label="Zadania"
+    >
       <div className="table-head" role="row">
         <span>Arkusz</span>
         {showPart && <span>Cz.</span>}
@@ -133,38 +166,52 @@ function TaskTable({ examById, showPart, filteredTasks, filteredOutSelectedTask,
         <span>Powtórki</span>
       </div>
       {filteredTasks.map((task) => renderTaskRow(task))}
-      {filteredOutSelectedTask ? renderTaskRow(filteredOutSelectedTask, true) : null}
+      {filteredOutSelectedTask
+        ? renderTaskRow(filteredOutSelectedTask, true)
+        : null}
     </div>
-  )
+  );
 }
 
 type ExamListProps = {
-  filteredExams: Exam[]
-  selectedExamId: string | null
-  taskById: Map<string, Task>
-  onExamSelect: (exam: Exam) => void
-}
+  filteredExams: Exam[];
+  selectedExamId: string | null;
+  taskById: Map<string, Task>;
+  onExamSelect: (exam: Exam) => void;
+};
 
-function ExamList({ filteredExams, selectedExamId, taskById, onExamSelect }: ExamListProps) {
+function ExamList({
+  filteredExams,
+  selectedExamId,
+  taskById,
+  onExamSelect,
+}: ExamListProps) {
   return (
     <div className="exam-list">
       {filteredExams.map((exam) => {
-        const examTasks = exam.tasks.map((id) => taskById.get(id)).filter(Boolean) as Task[]
+        const examTasks = exam.tasks
+          .map((id) => taskById.get(id))
+          .filter(Boolean) as Task[];
 
         return (
           <button
             key={exam.id}
-            className={clsx('exam-line', selectedExamId === exam.id && 'selected')}
+            className={clsx(
+              "exam-line",
+              selectedExamId === exam.id && "selected",
+            )}
             onClick={() => onExamSelect(exam)}
             title={examFileName(exam)}
           >
             <SeasonExamLabel exam={exam} />
             <span>{exam.pageCount} str.</span>
             <span>{exam.variant}</span>
-            <span>{examTasks.map((task) => typeLabels[task.type]).join(' / ')}</span>
+            <span>
+              {examTasks.map((task) => typeLabels[task.type]).join(" / ")}
+            </span>
           </button>
-        )
+        );
       })}
     </div>
-  )
+  );
 }

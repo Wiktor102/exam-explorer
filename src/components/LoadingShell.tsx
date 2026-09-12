@@ -1,10 +1,10 @@
-import type { ExamType } from '../types/catalog'
+import type { ExamType } from "../types/catalog";
 
 type LoadingShellProps = {
-  examType: ExamType
-  error?: string | null
-  onRetry?: () => void
-}
+  examType: ExamType;
+  error?: string | null;
+  onRetry?: () => void;
+};
 
 export function LoadingShell({ examType, error, onRetry }: LoadingShellProps) {
   if (error) {
@@ -19,13 +19,15 @@ export function LoadingShell({ examType, error, onRetry }: LoadingShellProps) {
           )}
         </div>
       </main>
-    )
+    );
   }
 
   return (
     <main className="loading-shell">
       <div className="loading-mark" />
-      <p>Wczytywanie archiwum {examType === 'inf04' ? 'INF.04' : 'INF.03'}...</p>
+      <p>
+        Wczytywanie archiwum {examType === "inf04" ? "INF.04" : "INF.03"}...
+      </p>
     </main>
-  )
+  );
 }

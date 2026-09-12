@@ -1,8 +1,9 @@
-@import './styles/base.css';
-@import './styles/layout.css';
-@import './styles/controls.css';
-@import './styles/registry.css';
-@import './styles/detail.css';
-@import './styles/preview.css';
-@import './styles/privacy.css';
-@import './styles/responsive.css';
+@import "./styles/base.css";
+@import "./styles/landing.css";
+@import "./styles/layout.css";
+@import "./styles/controls.css";
+@import "./styles/registry.css";
+@import "./styles/detail.css";
+@import "./styles/preview.css";
+@import "./styles/privacy.css";
+@import "./styles/responsive.css";
