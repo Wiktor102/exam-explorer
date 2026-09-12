@@ -177,10 +177,10 @@ export function LandingPage() {
           <div className="landing-data__copy">
             <h2 id="data-title">Skąd pochodzą materiały?</h2>
             <p>
-              Katalog korzysta z publicznych repozytoriów arkuszy INF.03 i
-              INF.04. Zachowuje odnośniki do PDF-ów, plików dołączonych do
-              egzaminu i rozwiązań. Opisy zadań służą do wyszukiwania i
-              filtrowania.
+              Katalog korzysta z różnych publicznych repozytoriów arkuszy INF.03
+              i INF.04. Zachowuje odnośniki do PDF-ów, plików dołączonych do
+              egzaminu i rozwiązań. Opisy zadań służące do wyszukiwania i
+              filtrowania są autorskie.
             </p>
           </div>
 

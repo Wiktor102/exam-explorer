@@ -62,10 +62,9 @@
 
 .source-strip {
   display: grid;
-  grid-template-columns: minmax(88px, auto) minmax(150px, auto) repeat(
-      2,
-      minmax(72px, auto)
-    ) 52px;
+  grid-template-columns:
+    minmax(88px, auto) minmax(150px, auto) repeat(2, minmax(72px, auto))
+    52px;
   align-items: stretch;
   border-left: 2px solid var(--line-strong);
 }

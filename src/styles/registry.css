@@ -24,10 +24,9 @@
 
 .task-table.without-part .table-head,
 .task-table.without-part .task-row {
-  grid-template-columns: minmax(126px, 150px) minmax(112px, 132px) minmax(
-      140px,
-      1fr
-    ) 70px;
+  grid-template-columns:
+    minmax(126px, 150px) minmax(112px, 132px) minmax(140px, 1fr)
+    70px;
   gap: 10px;
   padding-right: 12px;
 }
