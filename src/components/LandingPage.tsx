@@ -6,6 +6,7 @@ import {
   ExternalLink,
   FileSearch,
   Github,
+  Scale,
 } from "lucide-react";
 
 const catalogs = [
@@ -215,8 +216,13 @@ export function LandingPage() {
               Brakuje arkusza? Coś nie działa? Zgłoś to.
             </h2>
             <p>
-              Kod aplikacji jest otwarty. Możesz sprawdzić, jak powstaje
+              Kod aplikacji jest dostępny do wglądu. Możesz sprawdzić, jak powstaje
               katalog, zaproponować zmianę albo opisać błąd w GitHub Issues.
+            </p>
+            <p>
+              Licencja pozwala na użytek osobisty i modyfikacje. Publiczne
+              udostępnianie własnej kopii aplikacji wymaga osobnej zgody.
+              Arkusze i pozostałe materiały egzaminacyjne nie są objęte tą licencją.
             </p>
           </div>
           <div className="landing-project-links">
@@ -235,6 +241,15 @@ export function LandingPage() {
             >
               <Bug size={19} aria-hidden="true" />
               Zgłoś problem
+            </a>
+            <a
+              className="landing-license-link"
+              href="https://github.com/Wiktor102/exam-explorer/blob/main/LICENSE"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Scale size={19} aria-hidden="true" />
+              Zobacz licencję
             </a>
           </div>
         </section>

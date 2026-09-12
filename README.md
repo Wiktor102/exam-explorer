@@ -23,6 +23,23 @@ Każdy katalog zawiera pełne arkusze PDF, osobne PDF-y dla zadań oraz, gdy są
 
 Analityka Google Analytics jest ładowana dopiero po wyrażeniu zgody w ustawieniach prywatności.
 
+## Licencja
+
+Kod aplikacji, skrypty, dokumentacja i autorskie opisy katalogu są udostępniane
+na warunkach [Exam Explorer Personal Use and Source Sharing License 1.0](LICENSE).
+Licencja pozwala na użytek osobisty, dowolne prywatne modyfikacje oraz
+udostępnianie kodu i forków z zachowaniem licencji. Własną instancję można
+uruchamiać lokalnie lub na serwerze z dostępem ograniczonym do siebie.
+Publiczne wdrożenia, także bezpłatne i zmodyfikowane, wymagają osobnej pisemnej
+zgody właścicieli praw. Projekt jest source-available, a nie open source.
+
+Arkusze, zadania, kryteria oceniania, załączniki, rozwiązania oraz ich fragmenty
+i miniatury nie są objęte licencją aplikacji, również gdy znajdują się w danych
+katalogu. Prawa do nich pozostają przy odpowiednich właścicielach. Licencja
+aplikacji nie nadaje praw do tych materiałów ani nie nakłada na nie dodatkowych
+ograniczeń. Źródła i zakres wyłączeń opisuje [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Zależności zewnętrzne zachowują własne licencje.
+
 ## Wymagania
 
 - Node.js 24

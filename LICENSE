@@ -1,0 +1,87 @@
+Exam Explorer Personal Use and Source Sharing License 1.0
+
+Copyright (c) 2026 Wiktor Golicz
+
+1. Scope
+
+The "Software" means the original application code, scripts, documentation,
+and original catalog descriptions in this repository, to the extent that
+their copyright holders have made them available under this license.
+"Licensor" means each such copyright holder. Third-party materials described
+in section 5 are not part of the Software.
+
+2. Permission
+
+Subject to these terms, the Licensor grants you a worldwide, royalty-free,
+non-exclusive license to use, copy, study, and modify the Software for your
+own personal use. You may run original or modified versions on your devices
+or on a server, including rented infrastructure, provided access to the
+running application is restricted to you. There are no restrictions on the
+changes you may make for that personal use.
+
+You may share the Software's source code, including modified source code
+and public repository forks. Shared copies must include this license and
+retain copyright and third-party notices. You must identify modifications
+you distribute. Recipients receive permission to use the covered Software
+under this license directly from the Licensor. You may not relicense the
+covered Software in a way that removes these restrictions.
+
+3. No public hosting
+
+You may not deploy, host, or otherwise make a running version of the Software
+publicly accessible, or provide its functionality to the public through
+another application or service. This restriction applies to original and
+modified versions, including static builds, public previews, mirrors, and
+versions embedded in other websites. It applies whether access is free,
+paid, commercial, educational, or otherwise noncommercial.
+
+A service is publicly accessible if members of the public can access it,
+including through registration, payment, or a shared password. An unlisted
+URL alone does not make a deployment private. Publishing source code for
+inspection or download as permitted by section 2 is not public hosting of
+the running application.
+
+4. Separate permission
+
+Public hosting and other uses not granted by this license require separate
+written permission from the relevant copyright holders. This license does
+not restrict the Licensor's own use or separately authorized deployments.
+All rights not expressly granted are reserved, subject to applicable law.
+Nothing here limits uses that applicable law permits without a license.
+
+5. Excluded materials
+
+Exam sheets, questions, assessment criteria, attachments, solutions, and
+other third-party educational materials are excluded from this license.
+This exclusion also covers reproductions, extracts, split PDFs, preview
+images, and exam content embedded in catalog data, regardless of file format
+or location. In particular, exam materials in public/pdfs/, public/previews/,
+and public/data/ are excluded. Original software and original catalog
+descriptions remain subject to this license.
+
+Rights to excluded materials remain with their respective rights holders.
+This license grants no rights to those materials and imposes no additional
+restrictions on their use. Their inclusion does not declare them public
+domain or imply permission from their rights holders.
+
+Third-party software, dependencies, icons, and other assets retain their
+own licenses. See THIRD_PARTY_NOTICES.md for source information.
+
+6. Termination
+
+Your permissions under this license end automatically if you breach its
+terms. They are reinstated if you remedy the breach within 30 days after
+first learning of it. This automatic reinstatement is available only once;
+after a later breach, reinstatement requires the Licensor's written consent.
+Termination does not terminate the rights of recipients who comply with
+this license.
+
+7. Warranty and liability
+
+To the extent permitted by applicable law, the Software is provided "as is",
+without warranties, including warranties of merchantability, fitness for
+a particular purpose, title, or non-infringement. To the extent permitted by
+applicable law, the Licensor is not liable for any damages or other liability
+arising from the Software or its use.
+
+This is a custom source-available license, not an open-source license.

@@ -222,7 +222,7 @@
 }
 
 .landing-data__copy > p:last-child,
-.landing-open-source > div:first-child > p:last-child {
+.landing-open-source > div:first-child > p:first-of-type {
   max-width: 640px;
   margin: 22px 0 0;
   color: #3f4941;
@@ -302,6 +302,12 @@
 
 .landing-project-links a + a {
   border-left: 1px solid var(--landing-ink);
+}
+
+.landing-project-links .landing-license-link {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--landing-ink);
+  border-left: 0;
 }
 
 .landing-project-links a:hover,
