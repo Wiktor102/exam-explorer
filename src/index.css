@@ -1,4 +1,5 @@
 @import './styles/base.css';
+@import './styles/landing.css';
 @import './styles/layout.css';
 @import './styles/controls.css';
 @import './styles/registry.css';

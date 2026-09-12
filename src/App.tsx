@@ -4,11 +4,12 @@ import { CookieConsent } from './components/CookieConsent'
 import { DetailPane } from './components/DetailPane'
 import { FilterBar } from './components/FilterBar'
 import { LoadingShell } from './components/LoadingShell'
+import { LandingPage } from './components/LandingPage'
 import { PreviewPane } from './components/PreviewPane'
 import { RegistryPane } from './components/RegistryPane'
 import { useCatalogExplorer } from './hooks/useCatalogExplorer'
 
-function App() {
+function CatalogApp() {
   const { actions, catalog, catalogError, detailState, filters, previewState, registryState } = useCatalogExplorer()
   const hasSelection = Boolean(detailState.selectedExam || detailState.selectedTask)
 
@@ -85,9 +86,19 @@ function App() {
           />
         )}
       </section>
-
-      <CookieConsent />
     </main>
+  )
+}
+
+function App() {
+  const params = new URLSearchParams(window.location.search)
+  const hasCatalogLocation = ['type', 'task', 'exam', 'mode'].some((param) => params.has(param))
+
+  return (
+    <>
+      {hasCatalogLocation ? <CatalogApp /> : <LandingPage />}
+      <CookieConsent />
+    </>
   )
 }
 
