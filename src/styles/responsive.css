@@ -16,14 +16,21 @@
   .workspace {
     overflow: hidden;
   }
+
+  html:has(.landing-page),
+  body:has(.landing-page),
+  #root:has(.landing-page) {
+    height: auto;
+    overflow-y: auto;
+  }
 }
 
 @media (max-width: 1500px) {
   .control-band {
     grid-template-areas:
-      "mode year season type theme reset"
-      "search search search search search search";
-    grid-template-columns: max-content repeat(3, minmax(118px, 1fr)) 52px 52px;
+      "mode year season type reset"
+      "search search search search search";
+    grid-template-columns: max-content repeat(3, minmax(118px, 1fr)) 52px;
   }
 
   .search-box {
@@ -109,8 +116,7 @@
       "mode mode filter-toggle"
       "search search search"
       "year season season"
-      "type type type"
-      "theme theme reset";
+      "type type reset";
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 52px;
     margin-top: 10px;
   }
@@ -161,23 +167,19 @@
     min-height: 48px;
   }
 
-  .theme-toggle {
-    border-left: 0;
-    border-right: 1px solid var(--line);
-  }
-
   .reset-filters {
     border-left: 0;
   }
 
   .source-strip {
-    grid-template-columns: 1.4fr 1.1fr 0.75fr 0.75fr;
+    grid-template-columns: 0.9fr 1.4fr 0.75fr 0.75fr 52px;
     border-top: 2px solid var(--line-strong);
     border-left: 0;
   }
 
-  .source-strip span,
-  .source-strip a {
+  .source-strip > span,
+  .source-strip a,
+  .source-strip > button {
     min-width: 0;
     min-height: 42px;
     padding: 7px 8px;

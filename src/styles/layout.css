@@ -60,21 +60,22 @@
 
 .source-strip {
   display: grid;
-  grid-template-columns: minmax(150px, auto) minmax(120px, auto) repeat(2, minmax(82px, auto));
-  align-items: center;
+  grid-template-columns: minmax(88px, auto) minmax(150px, auto) repeat(2, minmax(72px, auto)) 52px;
+  align-items: stretch;
   border-left: 2px solid var(--line-strong);
 }
 
 .exam-toggle {
   display: flex;
   align-items: stretch;
+  height: 100%;
 }
 
 .exam-toggle button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
+  min-height: 100%;
   min-width: 75px;
   padding: 8px 12px;
   border: 0;
@@ -82,6 +83,7 @@
   cursor: pointer;
   font-size: 13px;
   font-weight: 800;
+  line-height: 1;
   color: var(--ink);
 }
 
@@ -109,17 +111,20 @@
   outline-offset: -4px;
 }
 
-.source-strip span,
-.source-strip a {
-  display: grid;
+.source-strip > span,
+.source-strip a,
+.source-strip > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   min-height: 46px;
-  place-items: center;
   padding: 8px 12px;
   border-left: 1px solid var(--line);
   color: var(--ink);
   font-size: 13px;
   font-weight: 800;
+  line-height: 1;
   text-align: center;
   text-decoration: none;
 }
@@ -130,11 +135,35 @@
   gap: 7px;
 }
 
-.catalog-counts {
+.source-strip > button {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  background: var(--source-bg);
+  cursor: pointer;
+}
+
+.source-strip > button:hover,
+.source-strip > button:focus-visible {
+  background: var(--focus-bg);
+}
+
+.source-strip > button:focus-visible {
+  outline: 2px solid var(--selection-accent);
+  outline-offset: -4px;
+}
+
+.catalog-count {
+  gap: 4px;
   white-space: nowrap;
 }
 
-.catalog-counts b {
+.catalog-count strong,
+.catalog-count small {
+  font: inherit;
+}
+
+.catalog-count small {
   color: var(--muted);
 }
 

@@ -19,7 +19,13 @@ function CatalogApp() {
 
   return (
     <main className={clsx('app-shell', filters.theme === 'dark' && 'dark')}>
-      <AppTopbar catalog={catalog} examType={filters.examType} onExamTypeChange={actions.setExamType} />
+      <AppTopbar
+        catalog={catalog}
+        examType={filters.examType}
+        theme={filters.theme}
+        onExamTypeChange={actions.setExamType}
+        onThemeChange={actions.setTheme}
+      />
 
       <FilterBar
         catalog={catalog}
@@ -27,14 +33,12 @@ function CatalogApp() {
         registryMode={filters.registryMode}
         season={filters.season}
         taskType={filters.taskType}
-        theme={filters.theme}
         year={filters.year}
         onQueryChange={actions.setQuery}
         onRegistryModeChange={actions.setRegistryMode}
         onResetFilters={actions.resetFilters}
         onSeasonChange={actions.setSeason}
         onTaskTypeChange={actions.setTaskType}
-        onThemeChange={actions.setTheme}
         onYearChange={actions.setYear}
       />
 

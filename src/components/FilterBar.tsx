@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { CalendarDays, Columns3, FileText, ListFilter, Moon, RotateCcw, Search, SlidersHorizontal, Snowflake, Sun } from 'lucide-react'
+import { CalendarDays, Columns3, FileText, ListFilter, RotateCcw, Search, SlidersHorizontal, Snowflake, Sun } from 'lucide-react'
 import clsx from 'clsx'
 import { typeLabels } from '../constants/catalog'
 import type { Catalog, RegistryMode, SeasonFilter } from '../types/catalog'
@@ -11,14 +11,12 @@ type FilterBarProps = {
   registryMode: RegistryMode
   season: SeasonFilter
   taskType: string
-  theme: 'light' | 'dark'
   year: string
   onQueryChange: (query: string) => void
   onRegistryModeChange: (mode: RegistryMode) => void
   onResetFilters: () => void
   onSeasonChange: (season: SeasonFilter) => void
   onTaskTypeChange: (taskType: string) => void
-  onThemeChange: (theme: 'light' | 'dark') => void
   onYearChange: (year: string) => void
 }
 
@@ -28,14 +26,12 @@ export function FilterBar({
   registryMode,
   season,
   taskType,
-  theme,
   year,
   onQueryChange,
   onRegistryModeChange,
   onResetFilters,
   onSeasonChange,
   onTaskTypeChange,
-  onThemeChange,
   onYearChange,
 }: FilterBarProps) {
   const [filtersExpanded, setFiltersExpanded] = useState(false)
@@ -117,16 +113,6 @@ export function FilterBar({
           placeholder="Szukaj zadania, arkusza, technologii..."
         />
       </label>
-
-      <button
-        type="button"
-        className="icon-command theme-toggle collapsible-filter"
-        onClick={() => onThemeChange(theme === 'dark' ? 'light' : 'dark')}
-        aria-label={theme === 'dark' ? 'Włącz tryb jasny' : 'Włącz tryb ciemny'}
-        title={theme === 'dark' ? 'Tryb jasny' : 'Tryb ciemny'}
-      >
-        {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
-      </button>
 
       <button
         type="button"

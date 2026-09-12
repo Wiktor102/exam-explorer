@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { House, Moon, Sun } from "lucide-react";
 import clsx from "clsx";
 
 import type { Catalog, ExamType } from "../types/catalog";
@@ -6,10 +6,12 @@ import type { Catalog, ExamType } from "../types/catalog";
 type AppTopbarProps = {
 	catalog: Catalog;
 	examType: ExamType;
+	theme: "light" | "dark";
 	onExamTypeChange: (type: ExamType) => void;
+	onThemeChange: (theme: "light" | "dark") => void;
 };
 
-export function AppTopbar({ catalog, examType, onExamTypeChange }: AppTopbarProps) {
+export function AppTopbar({ catalog, examType, theme, onExamTypeChange, onThemeChange }: AppTopbarProps) {
 	return (
 		<header className="topbar">
 			<a className="identity" href="/" aria-label="Wróć do strony głównej">
@@ -20,6 +22,10 @@ export function AppTopbar({ catalog, examType, onExamTypeChange }: AppTopbarProp
 				</div>
 			</a>
 			<div className="source-strip">
+				<a className="home-link" href="/" aria-label="Wróć do strony głównej">
+					<House size={16} strokeWidth={2.5} aria-hidden="true" />
+					Start
+				</a>
 				<div className="exam-toggle" role="group" aria-label="Typ egzaminu">
 					<button
 						type="button"
@@ -36,17 +42,23 @@ export function AppTopbar({ catalog, examType, onExamTypeChange }: AppTopbarProp
 						INF.03
 					</button>
 				</div>
-				<span className="catalog-counts">
-					{catalog.examCount} ark. <b aria-hidden="true">·</b> {catalog.taskCount} zad.
+				<span className="catalog-count">
+					<strong>{catalog.examCount}</strong>
+					<small>ark.</small>
 				</span>
-				<a href={catalog.sourceRepository} target="_blank" rel="noreferrer">
-					Źródło
-					<ExternalLink size={15} strokeWidth={2.5} aria-hidden="true" />
-				</a>
-				<a href="https://github.com/Wiktor102/exam-explorer" target="_blank" rel="noreferrer">
-					Github
-					<ExternalLink size={15} strokeWidth={2.5} aria-hidden="true" />
-				</a>
+				<span className="catalog-count">
+					<strong>{catalog.taskCount}</strong>
+					<small>zad.</small>
+				</span>
+				<button
+					type="button"
+					className="topbar-theme"
+					onClick={() => onThemeChange(theme === "dark" ? "light" : "dark")}
+					aria-label={theme === "dark" ? "Włącz tryb jasny" : "Włącz tryb ciemny"}
+					title={theme === "dark" ? "Tryb jasny" : "Tryb ciemny"}
+				>
+					{theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
+				</button>
 			</div>
 		</header>
 	);
