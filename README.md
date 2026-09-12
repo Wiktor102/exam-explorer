@@ -1,50 +1,89 @@
-# Przeglądarka zadań INF.04
+# Eksplorator zadań INF.03 i INF.04
 
-Lokalna aplikacja React/Vite do przeglądania archiwalnych polskich egzaminów praktycznych INF.04.
+Aplikacja React i Vite do przeglądania archiwalnych arkuszy praktycznych egzaminów zawodowych INF.03 i INF.04. Ułatwia znalezienie konkretnego typu zadania bez przewijania całego arkusza.
 
-Aplikacja kataloguje arkusze egzaminacyjne z repozytorium:
-https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania
+Materiały pochodzą z publicznych repozytoriów [INF.03-rozwiazania](https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.03-rozwiazania) i [INF.04-rozwiazania](https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania).
 
-Zawiera:
+## Zawartość danych
 
-- 29 pełnych plików PDF z egzaminami z katalogu `_arkusze`
-- 87 osobno skatalogowanych rekordów zadań
-- wygenerowane podglądy PDF zawierające tylko zadania dla części I, II i III
-- wyszukiwanie, filtrowanie po roku, filtrowanie po typie zadania, sortowanie oraz widoki zadań i egzaminów
-- grupowanie powtarzających się zadań w arkuszach składanych z różnych części
-- linki między trzema częściami aktualnie wybranego egzaminu
+| Kwalifikacja | Arkusze | Zadania | Lata |
+| --- | ---: | ---: | --- |
+| INF.03 | 86 | 239 | 2021-2026 |
+| INF.04 | 29 | 87 | 2021-2026 |
+| Łącznie | 115 | 326 | 2021-2026 |
 
-## Uruchomienie
+Każdy katalog zawiera pełne arkusze PDF, osobne PDF-y dla zadań oraz, gdy są dostępne, kryteria oceniania. Interfejs pozwala:
+
+- przełączać katalog INF.03 i INF.04;
+- wyszukiwać i filtrować zadania według roku, sesji i typu;
+- przeglądać arkusze lub pojedyncze zadania w PDF;
+- otwierać kryteria oceniania, pliki dołączone do arkusza i folder rozwiązania;
+- znajdować powtarzające się zadania;
+- udostępniać wybrany arkusz lub zadanie przez adres URL.
+
+Analityka Google Analytics jest ładowana dopiero po wyrażeniu zgody w ustawieniach prywatności.
+
+## Wymagania
+
+- Node.js 24
+- pnpm 11.6.0
+- Python 3 z `pip`, tylko do odtwarzania katalogów
+
+## Uruchomienie lokalne
 
 ```bash
-npm install
-npm run dev
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-Lokalny adres środowiska deweloperskiego to zwykle:
+Aplikacja będzie dostępna pod adresem `http://localhost:5173`.
+
+## Sprawdzenie i build
+
+```bash
+pnpm lint
+pnpm build
+pnpm preview
+```
+
+## Układ projektu
 
 ```text
-http://localhost:5173
+src/                            aplikacja React
+public/data/inf03/catalog.json  katalog INF.03
+public/data/inf04/catalog.json  katalog INF.04
+public/pdfs/                    arkusze, zadania i kryteria oceniania
+public/previews/                miniatury arkuszy INF.03
+scripts/                        generatory katalogów
 ```
 
-## Budowanie
+## Odświeżanie katalogów
+
+Generatory wymagają `pypdf`:
 
 ```bash
-npm run build
+python3 -m pip install pypdf
 ```
 
-## Regenerowanie katalogu
+### INF.03
 
-W razie potrzeby zainstaluj zależność Pythona:
+Skrypt dzieli obecne arkusze z `public/pdfs/exams` na zadania i aktualizuje `public/data/inf03/catalog.json`.
 
 ```bash
-python -m pip install pypdf
+python3 scripts/generate_inf03_tasks.py --public public
 ```
 
-Następnie uruchom:
+### INF.04
+
+Generator oczekuje lokalnego klonu repozytorium źródłowego. Kopiuje arkusze, zadania i dostępne kryteria oceniania do `public/pdfs`.
 
 ```bash
-npm run generate:catalog -- --source "path/to/INF.04-rozwiazania" --public public
+pnpm generate:catalog -- --source ../INF.04-rozwiazania --public public
+cp public/data/catalog.json public/data/inf04/catalog.json
 ```
 
-Polecenie nadpisuje `public/data/catalog.json`, kopiuje pełne pliki PDF do `public/pdfs/exams` i tworzy pliki PDF z zakresami stron dla zadań w `public/pdfs/tasks`.
+Skrypt INF.04 nadal zapisuje katalog do `public/data/catalog.json`, ale aplikacja odczytuje `public/data/inf04/catalog.json`. Druga komenda umieszcza wygenerowane dane we właściwym miejscu.
+
+## Wdrożenie
+
+Workflow GitHub Actions [Deploy to MyDevil](.github/workflows/deploy-mydevil.yml) uruchamia się ręcznie, buduje aplikację przez `pnpm build` i synchronizuje katalog `dist/` z produkcją.
