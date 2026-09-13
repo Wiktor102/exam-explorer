@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const GOOGLE_PRIVACY_URL = "https://policies.google.com/privacy?hl=pl";
 const GOOGLE_ANALYTICS_DATA_URL =
   "https://support.google.com/analytics/answer/6004245?hl=pl";
-const UODO_URL = "https://uodo.gov.pl/pl/p/skargi";
+const UODO_URL = "https://uodo.gov.pl/pl/492/2464";
 
 export function PrivacyPolicyPage() {
   useEffect(() => {
@@ -56,7 +56,7 @@ export function PrivacyPolicyPage() {
             Wróć do strony głównej
           </a>
           <a href="#administrator">Administrator</a>
-          <a href="#jakie-dane">Jakie dane</a>
+          <a href="#jakie-dane">Hosting</a>
           <a href="#analityka">Analityka</a>
           <a href="#cookies">Cookies</a>
           <a href="#prawa">Twoje prawa</a>
@@ -64,13 +64,11 @@ export function PrivacyPolicyPage() {
 
         <article className="privacy-article">
           <header className="privacy-hero">
-            <p className="privacy-kicker">Informacje prawne</p>
             <h1>Polityka prywatności</h1>
             <p>
-              Poniżej opisuję, jakie dane mogą powstać podczas korzystania z
-              Eksploratora zadań i jak możesz decydować o pomiarze odwiedzin.
-              Do przeglądania arkuszy nie trzeba zakładać konta ani podawać
-              danych kontaktowych.
+              Ta polityka opisuje dane przetwarzane przez hosting oraz, po
+              wyrażeniu zgody, przez Google Analytics 4. Wyjaśnia też, jak
+              zmienić decyzję dotyczącą pomiaru odwiedzin.
             </p>
           </header>
 
@@ -87,12 +85,7 @@ export function PrivacyPolicyPage() {
           </section>
 
           <section id="jakie-dane">
-            <h2>2. Jak działa aplikacja i hosting</h2>
-            <p>
-              Aplikacja nie ma kont użytkowników, formularzy ani bazy danych z
-              informacjami o odwiedzających. Nie zapisuje odpowiedzi na zadania
-              i nie śledzi postępów w nauce.
-            </p>
+            <h2>2. Hosting</h2>
             <p>
               Serwer może automatycznie zapisywać logi techniczne, w tym adres
               IP, datę i godzinę żądania, odwiedzony adres, kod odpowiedzi oraz
@@ -141,9 +134,8 @@ export function PrivacyPolicyPage() {
               </li>
             </ul>
             <p>
-              Do Google Analytics nie wysyłamy treści wyszukiwania, odpowiedzi
-              na zadania, imienia, adresu e-mail ani innych danych podawanych
-              przez użytkownika. Funkcje reklamowe i personalizacja reklam są
+              Do Google Analytics trafiają dane standardowe i parametry zdarzeń
+              wymienione powyżej. Funkcje reklamowe i personalizacja reklam są
               wyłączone w kodzie aplikacji.
             </p>
             <p>
@@ -227,8 +219,7 @@ export function PrivacyPolicyPage() {
               prawem wcześniejszego przetwarzania.
             </p>
             <p>
-              Aplikacja nie podejmuje zautomatyzowanych decyzji i nie profiluje
-              użytkowników. W sprawie swoich praw napisz na{" "}
+              W sprawie swoich praw napisz na{" "}
               <a href="mailto:admin@wiktorgolicz.pl">
                 admin@wiktorgolicz.pl
               </a>

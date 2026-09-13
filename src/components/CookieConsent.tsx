@@ -66,8 +66,8 @@ export function CookieConsent() {
         <h2>Pomóż ulepszać katalog</h2>
         <p>
           Za Twoją zgodą Google Analytics zmierzy odwiedziny oraz to, które
-          arkusze i zadania otwierasz. Nie zbieramy odpowiedzi ani danych
-          logowania. <a href="/polityka-prywatnosci/">Dowiedz się więcej</a>.
+          arkusze i zadania otwierasz.{" "}
+          <a href="/polityka-prywatnosci/">Dowiedz się więcej</a>.
         </p>
       </div>
 
