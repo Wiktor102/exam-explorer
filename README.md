@@ -34,13 +34,7 @@ na warunkach [Exam Explorer Personal Use and Source Sharing License 1.0](LICENSE
 Licencja pozwala na użytek osobisty, dowolne prywatne modyfikacje oraz
 udostępnianie kodu i forków z zachowaniem licencji. Własną instancję można
 uruchamiać lokalnie lub na serwerze dla siebie albo zamkniętej grupy, np.
-znajomych lub kolegów z klasy, do użytku osobistego lub nauki. Dostęp musi
-być ograniczony do tej grupy, np. kontami lub prywatnie przekazanym hasłem.
-Sam nieopublikowany adres nie wystarcza. Publiczne wdrożenia i konkurencyjne
-usługi dla osób spoza takiej grupy, także bezpłatne i zmodyfikowane, wymagają
-osobnej pisemnej zgody właścicieli praw. Zamknięta rejestracja lub zaproszenia
-dla klientów nie czynią usługi prywatną grupą.
-Projekt jest source-available, a nie open source.
+znajomych lub kolegów z klasy, do użytku osobistego lub nauki.
 
 Arkusze, zadania, kryteria oceniania, załączniki, rozwiązania oraz ich fragmenty
 i miniatury nie są objęte licencją aplikacji, również gdy znajdują się w danych
@@ -109,7 +103,3 @@ cp public/data/catalog.json public/data/inf04/catalog.json
 ```
 
 Skrypt INF.04 nadal zapisuje katalog do `public/data/catalog.json`, ale aplikacja odczytuje `public/data/inf04/catalog.json`. Druga komenda umieszcza wygenerowane dane we właściwym miejscu.
-
-## Wdrożenie
-
-Workflow GitHub Actions [Deploy to MyDevil](.github/workflows/deploy-mydevil.yml) uruchamia się ręcznie, buduje aplikację przez `pnpm build` i synchronizuje katalog `dist/` z produkcją.
