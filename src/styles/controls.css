@@ -197,6 +197,10 @@
   grid-template-columns: 18px minmax(0, auto);
 }
 
+.exam-code.heading > span {
+  text-box: trim-both cap alphabetic;
+}
+
 .exam-code.compact {
   grid-template-columns: 14px minmax(0, auto);
   gap: 5px;
@@ -210,7 +214,11 @@
   stroke-width: 2.2;
 }
 
-.exam-code.heading .season-icon,
+.exam-code.heading .season-icon {
+  height: 18px;
+  min-height: 0;
+}
+
 .exam-code.compact .season-icon {
   height: 1.18em;
   min-height: 0;
