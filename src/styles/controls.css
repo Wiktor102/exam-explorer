@@ -108,10 +108,10 @@
   .control-band .select-control select::picker(select) {
     margin-block-start: 6px;
     padding: 4px;
-    border: 2px solid var(--line-strong);
+    border: 2px solid var(--selection-accent);
     border-radius: 0;
     background: var(--paper-strong);
-    box-shadow: 5px 5px 0 var(--line-strong);
+    box-shadow: 5px 5px 0 var(--selection-accent);
     color: var(--ink);
   }
 
