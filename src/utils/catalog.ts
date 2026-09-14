@@ -53,6 +53,19 @@ export function repositoryFileUrl(
   return `${repository}/raw/${encodeURIComponent(branch)}/${path.split("/").map(encodeURIComponent).join("/")}`;
 }
 
+export function resourceFileName(
+  exam: Exam,
+  assetFile: string,
+  index: number,
+) {
+  const extensionIndex = assetFile.lastIndexOf(".");
+  const extension =
+    extensionIndex >= 0 ? assetFile.slice(extensionIndex).toLowerCase() : "";
+  const sequence = exam.assetFiles.length > 1 ? `-${index + 1}` : "";
+
+  return `${exam.code}${sequence}${extension}`;
+}
+
 export function resourceUrl(
   repository: string,
   exam: Exam,

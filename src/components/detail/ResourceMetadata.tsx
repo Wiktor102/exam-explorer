@@ -1,7 +1,11 @@
 import { Download, ExternalLink } from "lucide-react";
 import clsx from "clsx";
 import type { Catalog, Exam } from "../../types/catalog";
-import { resourceUrl, solutionUrl } from "../../utils/catalog";
+import {
+  resourceFileName,
+  resourceUrl,
+  solutionUrl,
+} from "../../utils/catalog";
 
 type ResourceMetadataProps = {
   catalog: Catalog;
@@ -19,23 +23,31 @@ export function ResourceMetadata({
         className={clsx(selectedExam.assetFiles.length > 0 && "resource-links")}
       >
         {selectedExam.assetFiles.length > 0
-          ? selectedExam.assetFiles.map((assetFile) => (
-              <a
-                key={assetFile}
-                href={resourceUrl(
-                  catalog.sourceRepository,
-                  selectedExam,
-                  assetFile,
-                  catalog.sourceBranch,
-                )}
-                target="_blank"
-                rel="noreferrer"
-                download
-              >
-                <Download size={13} aria-hidden="true" />
-                {assetFile}
-              </a>
-            ))
+          ? selectedExam.assetFiles.map((assetFile, index) => {
+              const downloadName = resourceFileName(
+                selectedExam,
+                assetFile,
+                index,
+              );
+
+              return (
+                <a
+                  key={assetFile}
+                  href={resourceUrl(
+                    catalog.sourceRepository,
+                    selectedExam,
+                    assetFile,
+                    catalog.sourceBranch,
+                  )}
+                  target="_blank"
+                  rel="noreferrer"
+                  download={downloadName}
+                >
+                  <Download size={13} aria-hidden="true" />
+                  {downloadName}
+                </a>
+              );
+            })
           : "brak w katalogu"}
       </strong>
       <span>Rozwiązania</span>
