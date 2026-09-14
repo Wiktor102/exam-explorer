@@ -7,6 +7,11 @@ the third-party materials described below.
 ## Exam materials
 
 INF.03 materials were collected from publicly available sources on the internet.
+Attachment links include files published in the
+[CKZiU Wyrzysk INF.03 catalog](https://zspwyrzysk.pl/ckziu/ti/sheets/inf.03/2).
+The INF.03-02-26.06-SG attachment uses the public file linked by
+[KURSINF](https://www.kursinf.pl/arkusze/inf03/arkusz/135), because the CKZiU
+catalog currently returns the INF.03-01-26.06-SG file for both exams.
 Most INF.04 materials were downloaded
 from [INF.04-rozwiazania](https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania).
 

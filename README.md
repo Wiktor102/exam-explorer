@@ -93,6 +93,12 @@ Skrypt dzieli obecne arkusze z `public/pdfs/exams` na zadania i aktualizuje `pub
 python3 scripts/generate_inf03_tasks.py --public public
 ```
 
+Publiczne załączniki INF.03 można zsynchronizować z katalogu CKZiU w Wyrzysku:
+
+```bash
+python3 scripts/sync_inf03_resources.py --public public
+```
+
 ### INF.04
 
 Generator oczekuje lokalnego klonu repozytorium źródłowego. Kopiuje arkusze, zadania i dostępne kryteria oceniania do `public/pdfs`.

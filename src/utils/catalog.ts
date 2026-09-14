@@ -33,23 +33,42 @@ export function formatPartNumber(part: number) {
   return romanNumerals[part] ?? String(part);
 }
 
-export function solutionUrl(repository: string, folder: string | null) {
+export function solutionUrl(
+  repository: string,
+  folder: string | null,
+  branch = "main",
+) {
   if (!folder) {
     return repository;
   }
 
-  return `${repository}/tree/main/${folder.split("/").map(encodeURIComponent).join("/")}`;
+  return `${repository}/tree/${encodeURIComponent(branch)}/${folder.split("/").map(encodeURIComponent).join("/")}`;
 }
 
-export function repositoryFileUrl(repository: string, path: string) {
-  return `${repository}/raw/main/${path.split("/").map(encodeURIComponent).join("/")}`;
+export function repositoryFileUrl(
+  repository: string,
+  path: string,
+  branch = "main",
+) {
+  return `${repository}/raw/${encodeURIComponent(branch)}/${path.split("/").map(encodeURIComponent).join("/")}`;
 }
 
-export function resourceUrl(repository: string, exam: Exam, assetFile: string) {
+export function resourceUrl(
+  repository: string,
+  exam: Exam,
+  assetFile: string,
+  branch = "main",
+) {
+  const externalUrl = exam.assetUrls?.[assetFile];
+  if (externalUrl) {
+    return externalUrl;
+  }
+
   const sourceDirectory =
     exam.sourcePath?.split("/").slice(0, -1).join("/") ?? "";
   return repositoryFileUrl(
     repository,
     sourceDirectory ? `${sourceDirectory}/${assetFile}` : assetFile,
+    branch,
   );
 }

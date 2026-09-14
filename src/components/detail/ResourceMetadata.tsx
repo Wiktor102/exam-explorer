@@ -26,6 +26,7 @@ export function ResourceMetadata({
                   catalog.sourceRepository,
                   selectedExam,
                   assetFile,
+                  catalog.sourceBranch,
                 )}
                 target="_blank"
                 rel="noreferrer"
@@ -43,6 +44,7 @@ export function ResourceMetadata({
           href={solutionUrl(
             catalog.sourceRepository,
             selectedExam.solutionFolder,
+            catalog.sourceBranch,
           )}
           target="_blank"
           rel="noreferrer"
