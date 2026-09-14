@@ -203,9 +203,13 @@ function ExamList({
             onClick={() => onExamSelect(exam)}
             title={examFileName(exam)}
           >
-            <SeasonExamLabel exam={exam} showSeason={false} />
-            <span>{exam.pageCount} str.</span>
+            <SeasonExamLabel
+              exam={exam}
+              showSeason={false}
+              showVariant={false}
+            />
             <span>{exam.variant}</span>
+            <span className="exam-page-count">{exam.pageCount} str.</span>
             <span>
               {examTasks.map((task) => typeLabels[task.type]).join(" / ")}
             </span>
