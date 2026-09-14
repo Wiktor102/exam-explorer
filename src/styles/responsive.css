@@ -17,11 +17,16 @@
     overflow: hidden;
   }
 
-  html:has(.landing-page),
+  html:has(.landing-page) {
+    height: auto;
+    overflow-x: clip;
+    overflow-y: auto;
+  }
+
   body:has(.landing-page),
   #root:has(.landing-page) {
     height: auto;
-    overflow-y: auto;
+    overflow: visible;
   }
 }
 
@@ -64,6 +69,16 @@
   #root {
     height: auto;
     overflow-y: auto;
+  }
+
+  html:has(.landing-page) {
+    overflow-x: clip;
+    overflow-y: auto;
+  }
+
+  body:has(.landing-page),
+  #root:has(.landing-page) {
+    overflow: visible;
   }
 
   .app-shell {

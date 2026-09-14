@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { DuplicateTaskRow } from "../components/detail/types";
 import type {
   Catalog,
@@ -15,6 +15,7 @@ import {
   examSessionKey,
   formatExamLabel,
 } from "../utils/catalog";
+import { trackExamOpen, trackTaskOpen } from "../lib/analytics";
 
 function getUrlParam(name: string): string | null {
   return new URLSearchParams(window.location.search).get(name);
@@ -120,6 +121,7 @@ export function useCatalogExplorer() {
   );
   const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false);
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false);
+  const hasTrackedInitialSelection = useRef(false);
 
   useLayoutEffect(() => {
     const root = document.documentElement;
@@ -232,6 +234,20 @@ export function useCatalogExplorer() {
       ? (examById.get(selectedTask.examId) ?? null)
       : null;
 
+  useEffect(() => {
+    if (!catalog || hasTrackedInitialSelection.current) return;
+
+    hasTrackedInitialSelection.current = true;
+    if (getUrlParam("task") && selectedTask && selectedExam) {
+      trackTaskOpen(selectedTask, selectedExam);
+      return;
+    }
+
+    if (getUrlParam("exam") && selectedExam) {
+      trackExamOpen(selectedExam);
+    }
+  }, [catalog, selectedExam, selectedTask]);
+
   const sameExamTasks = selectedExam?.tasks
     .map((id) => taskById.get(id))
     .filter(Boolean) as Task[] | undefined;
@@ -308,6 +324,11 @@ export function useCatalogExplorer() {
       return;
     }
 
+    const exam = examById.get(task.examId);
+    if (exam) {
+      trackTaskOpen(task, exam);
+    }
+
     setSelectedTaskId(task.id);
     setSelectedExamId(task.examId);
     setPreviewMode(registryMode === "tasks" ? "task" : "exam");
@@ -318,6 +339,8 @@ export function useCatalogExplorer() {
       clearSelection();
       return;
     }
+
+    trackExamOpen(exam);
 
     setSelectedExamId(exam.id);
     setSelectedTaskId(exam.tasks[0] ?? null);

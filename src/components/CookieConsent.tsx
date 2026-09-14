@@ -63,11 +63,11 @@ export function CookieConsent() {
 
       <div className="cookie-consent__copy">
         <p className="eyebrow">Prywatność</p>
-        <h2>Analityczne pliki cookie</h2>
+        <h2>Pomóż ulepszać katalog</h2>
         <p>
-          Aplikacja korzysta z Google Analytics, aby sprawdzać, które arkusze i
-          filtry są przydatne. Analityka jest wyłączona, dopóki jej nie
-          zaakceptujesz, a funkcje reklamowe pozostają wyłączone.
+          Za Twoją zgodą Google Analytics zmierzy odwiedziny oraz to, które
+          arkusze i zadania otwierasz.{" "}
+          <a href="/polityka-prywatnosci/">Dowiedz się więcej</a>.
         </p>
       </div>
 
@@ -83,14 +83,14 @@ export function CookieConsent() {
           type="button"
           onClick={() => saveConsent("rejected")}
         >
-          Odrzuć
+          Nie, dziękuję
         </button>
         <button
           className="cookie-consent__button primary"
           type="button"
           onClick={() => saveConsent("accepted")}
         >
-          Zezwól na analitykę
+          Zezwól
         </button>
       </div>
 

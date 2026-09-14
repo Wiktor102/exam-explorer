@@ -6,6 +6,7 @@ import { FilterBar } from "./components/FilterBar";
 import { LoadingShell } from "./components/LoadingShell";
 import { LandingPage } from "./components/LandingPage";
 import { PreviewPane } from "./components/PreviewPane";
+import { PrivacyPolicyPage } from "./components/PrivacyPolicyPage";
 import { RegistryPane } from "./components/RegistryPane";
 import { useCatalogExplorer } from "./hooks/useCatalogExplorer";
 
@@ -116,6 +117,7 @@ function CatalogApp() {
 }
 
 function App() {
+  const normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
   const params = new URLSearchParams(window.location.search);
   const hasCatalogLocation = ["type", "task", "exam", "mode"].some((param) =>
     params.has(param),
@@ -123,7 +125,13 @@ function App() {
 
   return (
     <>
-      {hasCatalogLocation ? <CatalogApp /> : <LandingPage />}
+      {normalizedPath === "/polityka-prywatnosci" ? (
+        <PrivacyPolicyPage />
+      ) : hasCatalogLocation ? (
+        <CatalogApp />
+      ) : (
+        <LandingPage />
+      )}
       <CookieConsent />
     </>
   );
