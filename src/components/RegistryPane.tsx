@@ -133,7 +133,7 @@ function TaskTable({
             : examFileName(exam)
         }
       >
-        <SeasonExamLabel exam={exam} />
+        <SeasonExamLabel exam={exam} showSeason={false} />
         {showPart && (
           <span className="task-part">
             {task.partLabel.replace("Część ", "")}
@@ -203,7 +203,7 @@ function ExamList({
             onClick={() => onExamSelect(exam)}
             title={examFileName(exam)}
           >
-            <SeasonExamLabel exam={exam} />
+            <SeasonExamLabel exam={exam} showSeason={false} />
             <span>{exam.pageCount} str.</span>
             <span>{exam.variant}</span>
             <span>

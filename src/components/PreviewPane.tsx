@@ -53,7 +53,7 @@ export function PreviewPane({
               onClick={() => onPreviewModeChange("task")}
             >
               <Monitor size={16} />
-              Zadanie
+              <span>Zadanie</span>
             </button>
           )}
           <button
@@ -62,7 +62,7 @@ export function PreviewPane({
             onClick={() => onPreviewModeChange("exam")}
           >
             <FileText size={16} />
-            Arkusz
+            <span>Arkusz</span>
           </button>
           <button
             type="button"
@@ -70,7 +70,7 @@ export function PreviewPane({
             onClick={() => onPreviewModeChange("scoring")}
           >
             <ClipboardCheck size={16} />
-            Ocenianie
+            <span>Ocenianie</span>
           </button>
         </div>
       </div>

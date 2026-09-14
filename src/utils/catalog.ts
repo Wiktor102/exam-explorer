@@ -1,10 +1,10 @@
 import { sessionLabels } from "../constants/catalog";
 import type { Exam } from "../types/catalog";
 
-export function formatExamLabel(exam: Exam) {
+export function formatExamLabel(exam: Exam, showSeason = true) {
   const session = sessionLabels[exam.month] ?? exam.session;
   const sheetNumber = String(Number(exam.number));
-  return `${session} ${exam.year} arkusz ${sheetNumber} ${exam.variant.toLowerCase()}`;
+  return `${showSeason ? `${session} ` : ""}${exam.year} arkusz ${sheetNumber} ${exam.variant.toLowerCase()}`;
 }
 
 export function examFileName(exam: Exam) {

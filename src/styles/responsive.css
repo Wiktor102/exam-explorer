@@ -233,7 +233,7 @@
 
   .preview-mode-control {
     width: 100%;
-    border: 1px solid var(--line-strong);
+    border: 1px solid var(--line);
   }
 
   .preview-mode-control button {

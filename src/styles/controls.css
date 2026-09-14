@@ -120,6 +120,10 @@
   padding: 0 13px;
 }
 
+.segmented-control button > span {
+  text-box: trim-both cap alphabetic;
+}
+
 .segmented-control button.active {
   background: var(--active-bg);
   color: var(--active-fg);
@@ -175,7 +179,7 @@
 .exam-code {
   display: grid;
   grid-template-columns: 18px minmax(0, 1fr);
-  align-items: start;
+  align-items: center;
   gap: 7px;
   color: var(--ink);
   font-family: "Bahnschrift", "Aptos", sans-serif;
@@ -201,8 +205,8 @@
 
 .season-icon {
   width: 18px;
-  height: 2.36em;
-  min-height: 28px;
+  height: 1.18em;
+  min-height: 0;
   stroke-width: 2.2;
 }
 
