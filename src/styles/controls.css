@@ -76,6 +76,69 @@
   color: var(--ink);
 }
 
+/*
+ * Chromium's customizable select API. Browsers without `base-select` support
+ * ignore this block and keep the native select and picker above.
+ */
+@supports (appearance: base-select) {
+  .control-band .select-control select,
+  .control-band .select-control select::picker(select) {
+    appearance: base-select;
+  }
+
+  .control-band .select-control select {
+    padding: 5px 7px;
+    border-radius: 0;
+  }
+
+  .control-band .select-control select::picker-icon {
+    color: var(--muted);
+    transition: rotate 160ms ease;
+  }
+
+  .control-band .select-control select:open::picker-icon {
+    rotate: 180deg;
+  }
+
+  .control-band .select-control select::picker(select) {
+    margin-block-start: 6px;
+    padding: 4px;
+    border: 2px solid var(--line-strong);
+    border-radius: 0;
+    background: var(--paper-strong);
+    box-shadow: 5px 5px 0 var(--line-strong);
+    color: var(--ink);
+  }
+
+  .control-band .select-control select option {
+    min-height: 38px;
+    padding: 8px 10px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .control-band .select-control select option + option {
+    border-top: 1px solid var(--line);
+  }
+
+  .control-band .select-control select option:hover,
+  .control-band .select-control select option:focus-visible {
+    background: var(--focus-bg);
+  }
+
+  .control-band .select-control select option:checked {
+    background: var(--active-bg);
+    color: var(--active-fg);
+    font-weight: 800;
+  }
+
+  .control-band .select-control select option::checkmark {
+    order: 1;
+    margin-inline-start: auto;
+  }
+}
+
 .search-box:focus-within,
 .select-control:hover,
 .select-control:focus-within {
