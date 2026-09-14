@@ -76,6 +76,11 @@
   color: var(--ink);
 }
 
+.season-filter select option svg,
+.type-filter select option svg {
+  display: none;
+}
+
 /*
  * Chromium's customizable select API. Browsers without `base-select` support
  * ignore this block and keep the native select and picker above.
@@ -111,11 +116,55 @@
   }
 
   .control-band .select-control select option {
+    align-items: center;
+    gap: 9px;
     min-height: 38px;
     padding: 8px 10px;
     border: 0;
     background: transparent;
     cursor: pointer;
+  }
+
+  .control-band .season-filter select option svg,
+  .control-band .type-filter select option svg {
+    display: block;
+    flex: 0 0 auto;
+  }
+
+  .control-band .season-filter select option[value="winter"] svg {
+    color: #68a9d3;
+  }
+
+  .control-band .season-filter select option[value="summer"] svg {
+    color: #d98405;
+  }
+
+  .control-band .type-filter select option.ink svg {
+    color: var(--ink);
+  }
+
+  .control-band .type-filter select option.blue svg {
+    color: var(--blue);
+  }
+
+  .control-band .type-filter select option.teal svg {
+    color: var(--teal);
+  }
+
+  .control-band .type-filter select option.amber svg {
+    color: var(--amber);
+  }
+
+  .control-band .type-filter select option.olive svg {
+    color: var(--olive);
+  }
+
+  .control-band .type-filter select option.red svg {
+    color: var(--red);
+  }
+
+  .control-band .type-filter select option.violet svg {
+    color: var(--violet);
   }
 
   .control-band .select-control select option + option {
