@@ -66,6 +66,15 @@ export function resourceFileName(
   return `${exam.code}${sequence}${extension}`;
 }
 
+export function developmentResourceUrl(exam: Exam, index: number) {
+  const parameters = new URLSearchParams({
+    exam: exam.id,
+    resource: String(index),
+  });
+
+  return `/__resource-download?${parameters}`;
+}
+
 export function resourceUrl(
   repository: string,
   exam: Exam,

@@ -2,6 +2,7 @@ import { Download, ExternalLink } from "lucide-react";
 import clsx from "clsx";
 import type { Catalog, Exam } from "../../types/catalog";
 import {
+  developmentResourceUrl,
   resourceFileName,
   resourceUrl,
   solutionUrl,
@@ -29,16 +30,21 @@ export function ResourceMetadata({
                 assetFile,
                 index,
               );
+              const sourceUrl = resourceUrl(
+                catalog.sourceRepository,
+                selectedExam,
+                assetFile,
+                catalog.sourceBranch,
+              );
 
               return (
                 <a
                   key={assetFile}
-                  href={resourceUrl(
-                    catalog.sourceRepository,
-                    selectedExam,
-                    assetFile,
-                    catalog.sourceBranch,
-                  )}
+                  href={
+                    import.meta.env.DEV
+                      ? developmentResourceUrl(selectedExam, index)
+                      : sourceUrl
+                  }
                   target="_blank"
                   rel="noreferrer"
                   download={downloadName}
