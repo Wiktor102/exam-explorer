@@ -404,17 +404,10 @@
 @media (max-width: 720px) {
   .cookie-consent {
     left: 10px;
-    bottom: 10px;
+    bottom: max(10px, env(safe-area-inset-bottom));
     grid-template-columns: auto minmax(0, 1fr);
     width: calc(100vw - 20px);
     padding: 12px;
-  }
-
-  .cookie-consent:not(.with-close) {
-    position: static;
-    z-index: auto;
-    width: 100%;
-    margin-top: 10px;
   }
 
   .cookie-consent.with-close {
@@ -449,7 +442,7 @@
   .cookie-consent {
     grid-template-columns: minmax(0, 1fr);
     gap: 10px;
-    max-height: calc(100dvh - 20px);
+    max-height: calc(100dvh - max(20px, env(safe-area-inset-bottom)));
     overflow: auto;
     padding: 12px;
     scrollbar-gutter: stable;
