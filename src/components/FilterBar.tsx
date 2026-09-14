@@ -57,14 +57,14 @@ export function FilterBar({
           onClick={() => onRegistryModeChange("exams")}
         >
           <FileText size={16} />
-          Arkusze
+          <span>Arkusze</span>
         </button>
         <button
           className={clsx(registryMode === "tasks" && "active")}
           onClick={() => onRegistryModeChange("tasks")}
         >
           <Columns3 size={16} />
-          Zadania
+          <span>Zadania</span>
         </button>
       </div>
 

@@ -86,7 +86,9 @@ a {
   color: inherit;
 }
 
-.app-shell.dark {
+:root.dark,
+.app-shell.dark,
+.loading-shell.dark {
   color: #ecf0e7;
   --background: #101713;
   --paper: #151c18;
@@ -156,6 +158,12 @@ h2 {
 .loading-shell {
   height: 100vh;
   gap: 12px;
+  background:
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px
+      28px,
+    linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 /
+      28px 28px,
+    var(--background, #eef1ed);
 }
 
 .loading-mark {

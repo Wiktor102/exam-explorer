@@ -42,3 +42,10 @@ export const sessionLabels: Record<string, string> = {
   "01": "ZIMA",
   "06": "LATO",
 };
+
+export const variantLabels: Record<string, string> = {
+  SG: "sesja główna",
+  SD: "sesja dodatkowa",
+  AG: "dostosowana sesja główna",
+  AD: "dostosowana sesja dodatkowa",
+};

@@ -70,6 +70,7 @@
 }
 
 .exam-toggle {
+  border-left: 2px solid var(--line-strong);
   display: flex;
   align-items: stretch;
   height: 100%;
@@ -217,4 +218,18 @@
   display: flex;
   flex: 0 0 auto;
   justify-content: flex-end;
+}
+
+@media (min-width: 921px) {
+  .pane-heading,
+  .preview-toolbar {
+    height: 72px;
+    min-height: 72px;
+  }
+
+  .pane-heading h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
