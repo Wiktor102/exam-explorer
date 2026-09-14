@@ -36,6 +36,9 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Mirror exam resources
+        run: python3 scripts/mirror_resources.py --public dist
+
       - name: Configure SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.MYDEVIL_SSH_PRIVATE_KEY }}
