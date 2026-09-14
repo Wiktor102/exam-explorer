@@ -331,7 +331,7 @@
   .task-row .type-pill {
     grid-area: type;
     min-height: 22px;
-    padding: 2px 7px;
+    padding: 3px 7px 1px;
     border-radius: 7px;
   }
 
