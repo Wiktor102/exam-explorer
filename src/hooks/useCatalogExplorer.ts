@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import type { DuplicateTaskRow } from "../components/detail/types";
 import type {
   Catalog,
@@ -121,11 +121,14 @@ export function useCatalogExplorer() {
   const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false);
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false);
 
-  useEffect(() => {
-    document.documentElement.style.colorScheme = theme;
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    root.classList.toggle("dark", theme === "dark");
+    root.style.colorScheme = theme;
 
     return () => {
-      document.documentElement.style.colorScheme = "";
+      root.classList.remove("dark");
+      root.style.colorScheme = "";
     };
   }, [theme]);
 

@@ -82,6 +82,7 @@ export function DetailPane({
 
           <SheetInfoBlock
             isOpen={isSheetInfoOpen}
+            showTaskPages={registryMode === "tasks"}
             selectedExam={selectedExam}
             selectedTask={selectedTask}
             onToggle={onSheetInfoToggle}

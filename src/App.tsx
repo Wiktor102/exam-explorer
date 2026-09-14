@@ -28,6 +28,7 @@ function CatalogApp() {
       <LoadingShell
         examType={filters.examType}
         error={catalogError}
+        theme={filters.theme}
         onRetry={actions.retryCatalog}
       />
     );

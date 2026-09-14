@@ -1,10 +1,12 @@
 import { ChevronDown, FileText } from "lucide-react";
 import clsx from "clsx";
+import { variantLabels } from "../../constants/catalog";
 import type { Exam, Task } from "../../types/catalog";
 import { examFileName } from "../../utils/catalog";
 
 type SheetInfoBlockProps = {
   isOpen: boolean;
+  showTaskPages: boolean;
   selectedExam: Exam;
   selectedTask: Task;
   onToggle: () => void;
@@ -12,6 +14,7 @@ type SheetInfoBlockProps = {
 
 export function SheetInfoBlock({
   isOpen,
+  showTaskPages,
   selectedExam,
   selectedTask,
   onToggle,
@@ -41,11 +44,20 @@ export function SheetInfoBlock({
           <span>Sesja</span>
           <strong>{selectedExam.session}</strong>
           <span>Wersja</span>
-          <strong>{selectedExam.variant}</strong>
+          <strong>
+            {selectedExam.variant}
+            {variantLabels[selectedExam.variant]
+              ? ` - ${variantLabels[selectedExam.variant]}`
+              : ""}
+          </strong>
           <span>Plik arkusza</span>
           <strong>{examFileName(selectedExam)}</strong>
-          <span>Strony</span>
-          <strong>{`s. ${selectedTask.pageStart}-${selectedTask.pageEnd}`}</strong>
+          {showTaskPages && (
+            <>
+              <span>Strony</span>
+              <strong>{`s. ${selectedTask.pageStart}-${selectedTask.pageEnd}`}</strong>
+            </>
+          )}
         </div>
       )}
     </section>
