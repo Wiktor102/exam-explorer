@@ -14,7 +14,7 @@
       "pageCount": 12,
       "number": "12",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki22.7z"],
       "id": "inf03-2026-06-12-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-12-sg-zo.pdf",
       "code": "INF.03-12-26.06-SG",
@@ -23,7 +23,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-12-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki22.7z": "https://zspwyrzysk.pl/ti/sheets/372/attachment/"
+      }
     },
     {
       "tasks": [
@@ -34,7 +37,7 @@
       "pageCount": 12,
       "number": "11",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki21.7z"],
       "id": "inf03-2026-06-11-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-11-sg-zo.pdf",
       "code": "INF.03-11-26.06-SG",
@@ -43,14 +46,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-11-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki21.7z": "https://zspwyrzysk.pl/ti/sheets/371/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2026-06-10-sg-task-1", "inf03-2026-06-10-sg-task-2"],
       "pageCount": 12,
       "number": "10",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki20.7z"],
       "id": "inf03-2026-06-10-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-10-sg-zo.pdf",
       "code": "INF.03-10-26.06-SG",
@@ -59,14 +65,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-10-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki20.7z": "https://zspwyrzysk.pl/ti/sheets/362/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2026-06-09-sg-task-1", "inf03-2026-06-09-sg-task-2"],
       "pageCount": 8,
       "number": "09",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki19.7z"],
       "id": "inf03-2026-06-09-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-09-sg-zo.pdf",
       "code": "INF.03-09-26.06-SG",
@@ -75,7 +84,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-09-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki19.7z": "https://zspwyrzysk.pl/ti/sheets/370/attachment/"
+      }
     },
     {
       "tasks": [
@@ -86,7 +98,7 @@
       "pageCount": 8,
       "number": "08",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki18.7z"],
       "id": "inf03-2026-06-08-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-08-sg-zo.pdf",
       "code": "INF.03-08-26.06-SG",
@@ -95,14 +107,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-08-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki18.7z": "https://zspwyrzysk.pl/ti/sheets/369/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2026-06-07-sg-task-1", "inf03-2026-06-07-sg-task-2"],
       "pageCount": 8,
       "number": "07",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki8.7z"],
       "id": "inf03-2026-06-07-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-07-sg-zo.pdf",
       "code": "INF.03-07-26.06-SG",
@@ -111,7 +126,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-07-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki8.7z": "https://zspwyrzysk.pl/ti/sheets/368/attachment/"
+      }
     },
     {
       "tasks": [
@@ -122,7 +140,7 @@
       "pageCount": 8,
       "number": "06",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki7.7z"],
       "id": "inf03-2026-06-06-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-06-sg-zo.pdf",
       "code": "INF.03-06-26.06-SG",
@@ -131,7 +149,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-06-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki7.7z": "https://zspwyrzysk.pl/ti/sheets/367/attachment/"
+      }
     },
     {
       "tasks": [
@@ -142,7 +163,7 @@
       "pageCount": 8,
       "number": "05",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki5.7z"],
       "id": "inf03-2026-06-05-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-05-sg-zo.pdf",
       "code": "INF.03-05-26.06-SG",
@@ -151,7 +172,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-05-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki5.7z": "https://zspwyrzysk.pl/ti/sheets/361/attachment/"
+      }
     },
     {
       "tasks": [
@@ -162,7 +186,7 @@
       "pageCount": 8,
       "number": "04",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki4.7z"],
       "id": "inf03-2026-06-04-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-04-sg-zo.pdf",
       "code": "INF.03-04-26.06-SG",
@@ -171,7 +195,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-04-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki4.7z": "https://zspwyrzysk.pl/ti/sheets/360/attachment/"
+      }
     },
     {
       "tasks": [
@@ -182,7 +209,7 @@
       "pageCount": 8,
       "number": "03",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki3.7z"],
       "id": "inf03-2026-06-03-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-03-sg-zo.pdf",
       "code": "INF.03-03-26.06-SG",
@@ -191,7 +218,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-03-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki3.7z": "https://zspwyrzysk.pl/ti/sheets/366/attachment/"
+      }
     },
     {
       "tasks": [
@@ -202,7 +232,7 @@
       "pageCount": 8,
       "number": "02",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki2.7z"],
       "id": "inf03-2026-06-02-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-02-sg-zo.pdf",
       "code": "INF.03-02-26.06-SG",
@@ -211,14 +241,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-02-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki2.7z": "https://nuwaflrhlwnsdvnciltx.supabase.co/storage/v1/object/public/kursinf_main/exam_sheets/inf03/1788191876508_5h5d8m_files.7z"
+      }
     },
     {
       "tasks": ["inf03-2026-06-01-sg-task-1", "inf03-2026-06-01-sg-task-2"],
       "pageCount": 8,
       "number": "01",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki1.7z"],
       "id": "inf03-2026-06-01-sg",
       "scoringPdf": "/pdfs/scoring/inf03-2026-06-01-sg-zo.pdf",
       "code": "INF.03-01-26.06-SG",
@@ -227,7 +260,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-06-01-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki1.7z": "https://zspwyrzysk.pl/ti/sheets/364/attachment/"
+      }
     },
     {
       "tasks": [
@@ -238,7 +274,7 @@
       "pageCount": 8,
       "number": "12",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki16.7z"],
       "id": "inf03-2026-01-12-sg",
       "scoringPdf": null,
       "code": "INF.03-12-26.01-SG",
@@ -247,14 +283,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-12-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki16.7z": "https://zspwyrzysk.pl/ti/sheets/354/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2026-01-11-sg-task-1", "inf03-2026-01-11-sg-task-2"],
       "pageCount": 8,
       "number": "11",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki17.7z"],
       "id": "inf03-2026-01-11-sg",
       "scoringPdf": null,
       "code": "INF.03-11-26.01-SG",
@@ -263,7 +302,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-11-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki17.7z": "https://zspwyrzysk.pl/ti/sheets/353/attachment/"
+      }
     },
     {
       "tasks": [
@@ -274,7 +316,7 @@
       "pageCount": 8,
       "number": "10",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki14.7z"],
       "id": "inf03-2026-01-10-sg",
       "scoringPdf": null,
       "code": "INF.03-10-26.01-SG",
@@ -283,7 +325,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-10-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki14.7z": "https://zspwyrzysk.pl/ti/sheets/325/attachment/"
+      }
     },
     {
       "tasks": [
@@ -294,7 +339,7 @@
       "pageCount": 8,
       "number": "09",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki15.7z"],
       "id": "inf03-2026-01-09-sg",
       "scoringPdf": null,
       "code": "INF.03-09-26.01-SG",
@@ -303,7 +348,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-09-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki15.7z": "https://zspwyrzysk.pl/ti/sheets/332/attachment/"
+      }
     },
     {
       "tasks": [
@@ -314,7 +362,7 @@
       "pageCount": 8,
       "number": "08",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki13.7z"],
       "id": "inf03-2026-01-08-sg",
       "scoringPdf": null,
       "code": "INF.03-08-26.01-SG",
@@ -323,7 +371,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-08-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki13.7z": "https://zspwyrzysk.pl/ti/sheets/331/attachment/"
+      }
     },
     {
       "tasks": [
@@ -334,7 +385,7 @@
       "pageCount": 8,
       "number": "07",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki9-2.7z"],
       "id": "inf03-2026-01-07-sg",
       "scoringPdf": null,
       "code": "INF.03-07-26.01-SG",
@@ -343,7 +394,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-07-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki9-2.7z": "https://zspwyrzysk.pl/ti/sheets/330/attachment/"
+      }
     },
     {
       "tasks": [
@@ -354,7 +408,7 @@
       "pageCount": 8,
       "number": "06",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki9-1.7z"],
       "id": "inf03-2026-01-06-sg",
       "scoringPdf": null,
       "code": "INF.03-06-26.01-SG",
@@ -363,14 +417,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-06-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki9-1.7z": "https://zspwyrzysk.pl/ti/sheets/356/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2026-01-05-sg-task-1", "inf03-2026-01-05-sg-task-2"],
       "pageCount": 8,
       "number": "05",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki7.7z"],
       "id": "inf03-2026-01-05-sg",
       "scoringPdf": null,
       "code": "INF.03-05-26.01-SG",
@@ -379,14 +436,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-05-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki7.7z": "https://zspwyrzysk.pl/ti/sheets/329/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2026-01-04-sg-task-1", "inf03-2026-01-04-sg-task-2"],
       "pageCount": 8,
       "number": "04",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki3-2.7z"],
       "id": "inf03-2026-01-04-sg",
       "scoringPdf": null,
       "code": "INF.03-04-26.01-SG",
@@ -395,14 +455,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-04-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki3-2.7z": "https://zspwyrzysk.pl/ti/sheets/328/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2026-01-03-sg-task-1", "inf03-2026-01-03-sg-task-2"],
       "pageCount": 8,
       "number": "03",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki2.7z"],
       "id": "inf03-2026-01-03-sg",
       "scoringPdf": null,
       "code": "INF.03-03-26.01-SG",
@@ -411,7 +474,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-03-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki2.7z": "https://zspwyrzysk.pl/ti/sheets/357/attachment/"
+      }
     },
     {
       "tasks": [
@@ -422,7 +488,7 @@
       "pageCount": 8,
       "number": "02",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki3-1.7z"],
       "id": "inf03-2026-01-02-sg",
       "scoringPdf": null,
       "code": "INF.03-02-26.01-SG",
@@ -431,14 +497,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-02-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki3-1.7z": "https://zspwyrzysk.pl/ti/sheets/327/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2026-01-01-sg-task-1", "inf03-2026-01-01-sg-task-2"],
       "pageCount": 8,
       "number": "01",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki1.7z"],
       "id": "inf03-2026-01-01-sg",
       "scoringPdf": null,
       "code": "INF.03-01-26.01-SG",
@@ -447,7 +516,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2026-01-01-sg.pdf",
       "solutionFolder": null,
-      "year": 2026
+      "year": 2026,
+      "assetUrls": {
+        "pliki1.7z": "https://zspwyrzysk.pl/ti/sheets/326/attachment/"
+      }
     },
     {
       "tasks": [
@@ -458,7 +530,7 @@
       "pageCount": 8,
       "number": "12",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-12-25.06-SG.zip"],
       "id": "inf03-2025-06-12-sg",
       "scoringPdf": null,
       "code": "INF.03-12-25.06-SG",
@@ -467,7 +539,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-12-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-12-25.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/315/attachment/"
+      }
     },
     {
       "tasks": [
@@ -478,7 +553,7 @@
       "pageCount": 8,
       "number": "11",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-11-25.06-SG.zip"],
       "id": "inf03-2025-06-11-sg",
       "scoringPdf": null,
       "code": "INF.03-11-25.06-SG",
@@ -487,7 +562,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-11-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-11-25.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/314/attachment/"
+      }
     },
     {
       "tasks": [
@@ -498,7 +576,7 @@
       "pageCount": 8,
       "number": "10",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki9.7z"],
       "id": "inf03-2025-06-10-sg",
       "scoringPdf": null,
       "code": "INF.03-10-25.06-SG",
@@ -507,7 +585,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-10-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki9.7z": "https://zspwyrzysk.pl/ti/sheets/313/attachment/"
+      }
     },
     {
       "tasks": [
@@ -518,7 +599,7 @@
       "pageCount": 8,
       "number": "09",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki5.7z"],
       "id": "inf03-2025-06-09-sg",
       "scoringPdf": null,
       "code": "INF.03-09-25.06-SG",
@@ -527,7 +608,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-09-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki5.7z": "https://zspwyrzysk.pl/ti/sheets/312/attachment/"
+      }
     },
     {
       "tasks": [
@@ -538,7 +622,7 @@
       "pageCount": 8,
       "number": "08",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki7.7z"],
       "id": "inf03-2025-06-08-sg",
       "scoringPdf": null,
       "code": "INF.03-08-25.06-SG",
@@ -547,7 +631,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-08-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki7.7z": "https://zspwyrzysk.pl/ti/sheets/311/attachment/"
+      }
     },
     {
       "tasks": [
@@ -558,7 +645,7 @@
       "pageCount": 8,
       "number": "07",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki10.7z"],
       "id": "inf03-2025-06-07-sg",
       "scoringPdf": null,
       "code": "INF.03-07-25.06-SG",
@@ -567,7 +654,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-07-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki10.7z": "https://zspwyrzysk.pl/ti/sheets/310/attachment/"
+      }
     },
     {
       "tasks": [
@@ -578,7 +668,7 @@
       "pageCount": 8,
       "number": "06",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki4.7z"],
       "id": "inf03-2025-06-06-sg",
       "scoringPdf": null,
       "code": "INF.03-06-25.06-SG",
@@ -587,14 +677,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-06-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki4.7z": "https://zspwyrzysk.pl/ti/sheets/309/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2025-06-05-sg-task-1", "inf03-2025-06-05-sg-task-2"],
       "pageCount": 8,
       "number": "05",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki6.7z"],
       "id": "inf03-2025-06-05-sg",
       "scoringPdf": null,
       "code": "INF.03-05-25.06-SG",
@@ -603,7 +696,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-05-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki6.7z": "https://zspwyrzysk.pl/ti/sheets/308/attachment/"
+      }
     },
     {
       "tasks": [
@@ -614,7 +710,7 @@
       "pageCount": 8,
       "number": "04",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki11.7z"],
       "id": "inf03-2025-06-04-sg",
       "scoringPdf": null,
       "code": "INF.03-04-25.06-SG",
@@ -623,7 +719,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-04-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki11.7z": "https://zspwyrzysk.pl/ti/sheets/307/attachment/"
+      }
     },
     {
       "tasks": [
@@ -634,7 +733,7 @@
       "pageCount": 8,
       "number": "03",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki12.7z"],
       "id": "inf03-2025-06-03-sg",
       "scoringPdf": null,
       "code": "INF.03-03-25.06-SG",
@@ -643,7 +742,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-03-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki12.7z": "https://zspwyrzysk.pl/ti/sheets/306/attachment/"
+      }
     },
     {
       "tasks": [
@@ -654,7 +756,7 @@
       "pageCount": 8,
       "number": "02",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki2.7z"],
       "id": "inf03-2025-06-02-sg",
       "scoringPdf": null,
       "code": "INF.03-02-25.06-SG",
@@ -663,7 +765,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-02-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki2.7z": "https://zspwyrzysk.pl/ti/sheets/305/attachment/"
+      }
     },
     {
       "tasks": [
@@ -674,7 +779,7 @@
       "pageCount": 8,
       "number": "01",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki1.7z"],
       "id": "inf03-2025-06-01-sg",
       "scoringPdf": null,
       "code": "INF.03-01-25.06-SG",
@@ -683,7 +788,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-06-01-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki1.7z": "https://zspwyrzysk.pl/ti/sheets/304/attachment/"
+      }
     },
     {
       "tasks": [
@@ -694,7 +802,7 @@
       "pageCount": 8,
       "number": "12",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-12-25.01-SG.zip"],
       "id": "inf03-2025-01-12-sg",
       "scoringPdf": null,
       "code": "INF.03-12-25.01-SG",
@@ -703,7 +811,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-12-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-12-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/303/attachment/"
+      }
     },
     {
       "tasks": [
@@ -714,7 +825,7 @@
       "pageCount": 8,
       "number": "11",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-11-25.01-SG.zip"],
       "id": "inf03-2025-01-11-sg",
       "scoringPdf": null,
       "code": "INF.03-11-25.01-SG",
@@ -723,7 +834,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-11-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-11-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/302/attachment/"
+      }
     },
     {
       "tasks": [
@@ -734,7 +848,7 @@
       "pageCount": 8,
       "number": "10",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-10-25.01-SG.zip"],
       "id": "inf03-2025-01-10-sg",
       "scoringPdf": null,
       "code": "INF.03-10-25.01-SG",
@@ -743,7 +857,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-10-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-10-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/301/attachment/"
+      }
     },
     {
       "tasks": [
@@ -754,7 +871,7 @@
       "pageCount": 8,
       "number": "09",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-09-25.01-SG.zip"],
       "id": "inf03-2025-01-09-sg",
       "scoringPdf": null,
       "code": "INF.03-09-25.01-SG",
@@ -763,7 +880,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-09-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-09-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/300/attachment/"
+      }
     },
     {
       "tasks": [
@@ -774,7 +894,7 @@
       "pageCount": 8,
       "number": "08",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["pliki7.7z"],
       "id": "inf03-2025-01-08-sg",
       "scoringPdf": null,
       "code": "INF.03-08-25.01-SG",
@@ -783,7 +903,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-08-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "pliki7.7z": "https://zspwyrzysk.pl/ti/sheets/299/attachment/"
+      }
     },
     {
       "tasks": [
@@ -794,7 +917,7 @@
       "pageCount": 8,
       "number": "07",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-07-25.01-SG.zip"],
       "id": "inf03-2025-01-07-sg",
       "scoringPdf": null,
       "code": "INF.03-07-25.01-SG",
@@ -803,7 +926,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-07-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-07-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/298/attachment/"
+      }
     },
     {
       "tasks": [
@@ -814,7 +940,7 @@
       "pageCount": 8,
       "number": "06",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-06-25.01-SG.zip"],
       "id": "inf03-2025-01-06-sg",
       "scoringPdf": null,
       "code": "INF.03-06-25.01-SG",
@@ -823,7 +949,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-06-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-06-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/297/attachment/"
+      }
     },
     {
       "tasks": [
@@ -834,7 +963,7 @@
       "pageCount": 8,
       "number": "05",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-05-25.01-SG.zip"],
       "id": "inf03-2025-01-05-sg",
       "scoringPdf": null,
       "code": "INF.03-05-25.01-SG",
@@ -843,14 +972,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-05-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-05-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/296/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2025-01-04-sg-task-1", "inf03-2025-01-04-sg-task-2"],
       "pageCount": 8,
       "number": "04",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-04-25.01-SG.zip"],
       "id": "inf03-2025-01-04-sg",
       "scoringPdf": null,
       "code": "INF.03-04-25.01-SG",
@@ -859,7 +991,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-04-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-04-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/295/attachment/"
+      }
     },
     {
       "tasks": [
@@ -870,7 +1005,7 @@
       "pageCount": 8,
       "number": "03",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-03-25.01-SG.zip"],
       "id": "inf03-2025-01-03-sg",
       "scoringPdf": null,
       "code": "INF.03-03-25.01-SG",
@@ -879,7 +1014,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-03-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-03-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/294/attachment/"
+      }
     },
     {
       "tasks": [
@@ -890,7 +1028,7 @@
       "pageCount": 8,
       "number": "02",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-02-25.01-SG.zip"],
       "id": "inf03-2025-01-02-sg",
       "scoringPdf": null,
       "code": "INF.03-02-25.01-SG",
@@ -899,7 +1037,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-02-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-02-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/293/attachment/"
+      }
     },
     {
       "tasks": [
@@ -910,7 +1051,7 @@
       "pageCount": 8,
       "number": "01",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-01-25.01-SG.zip"],
       "id": "inf03-2025-01-01-sg",
       "scoringPdf": null,
       "code": "INF.03-01-25.01-SG",
@@ -919,7 +1060,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2025-01-01-sg.pdf",
       "solutionFolder": null,
-      "year": 2025
+      "year": 2025,
+      "assetUrls": {
+        "INF.03-01-25.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/292/attachment/"
+      }
     },
     {
       "tasks": [
@@ -930,7 +1074,7 @@
       "pageCount": 8,
       "number": "12",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-12-24.06-SG.zip"],
       "id": "inf03-2024-06-12-sg",
       "scoringPdf": null,
       "code": "INF.03-12-24.06-SG",
@@ -939,7 +1083,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-12-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-12-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/268/attachment/"
+      }
     },
     {
       "tasks": [
@@ -950,7 +1097,7 @@
       "pageCount": 8,
       "number": "11",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-11-24.06-SG.zip"],
       "id": "inf03-2024-06-11-sg",
       "scoringPdf": null,
       "code": "INF.03-11-24.06-SG",
@@ -959,7 +1106,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-11-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-11-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/274/attachment/"
+      }
     },
     {
       "tasks": [
@@ -970,7 +1120,7 @@
       "pageCount": 8,
       "number": "10",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-10-24.06-SG.zip"],
       "id": "inf03-2024-06-10-sg",
       "scoringPdf": null,
       "code": "INF.03-10-24.06-SG",
@@ -979,7 +1129,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-10-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-10-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/269/attachment/"
+      }
     },
     {
       "tasks": [
@@ -990,7 +1143,7 @@
       "pageCount": 8,
       "number": "09",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-09-24.06-SG.zip"],
       "id": "inf03-2024-06-09-sg",
       "scoringPdf": null,
       "code": "INF.03-09-24.06-SG",
@@ -999,7 +1152,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-09-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-09-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/270/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1010,7 +1166,7 @@
       "pageCount": 8,
       "number": "08",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-08-24.06-SG.zip"],
       "id": "inf03-2024-06-08-sg",
       "scoringPdf": null,
       "code": "INF.03-08-24.06-SG",
@@ -1019,7 +1175,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-08-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-08-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/271/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1030,7 +1189,7 @@
       "pageCount": 8,
       "number": "07",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-07-24.06-SG.zip"],
       "id": "inf03-2024-06-07-sg",
       "scoringPdf": null,
       "code": "INF.03-07-24.06-SG",
@@ -1039,7 +1198,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-07-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-07-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/275/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1050,7 +1212,7 @@
       "pageCount": 8,
       "number": "06",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-06-24.06-SG.zip"],
       "id": "inf03-2024-06-06-sg",
       "scoringPdf": null,
       "code": "INF.03-06-24.06-SG",
@@ -1059,7 +1221,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-06-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-06-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/272/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1070,7 +1235,7 @@
       "pageCount": 8,
       "number": "05",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-05-24.06-SG.zip"],
       "id": "inf03-2024-06-05-sg",
       "scoringPdf": null,
       "code": "INF.03-05-24.06-SG",
@@ -1079,7 +1244,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-05-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-05-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/276/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1090,7 +1258,7 @@
       "pageCount": 8,
       "number": "04",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-04-24.06-SG.zip"],
       "id": "inf03-2024-06-04-sg",
       "scoringPdf": null,
       "code": "INF.03-04-24.06-SG",
@@ -1099,7 +1267,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-04-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-04-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/277/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1110,7 +1281,7 @@
       "pageCount": 8,
       "number": "03",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-03-24.06-SG.zip"],
       "id": "inf03-2024-06-03-sg",
       "scoringPdf": null,
       "code": "INF.03-03-24.06-SG",
@@ -1119,7 +1290,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-03-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-03-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/278/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1130,7 +1304,7 @@
       "pageCount": 8,
       "number": "02",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-02-24.06-SG.zip"],
       "id": "inf03-2024-06-02-sg",
       "scoringPdf": null,
       "code": "INF.03-02-24.06-SG",
@@ -1139,7 +1313,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-02-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-02-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/273/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1150,7 +1327,7 @@
       "pageCount": 8,
       "number": "01",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-01-24.06-SG.zip"],
       "id": "inf03-2024-06-01-sg",
       "scoringPdf": null,
       "code": "INF.03-01-24.06-SG",
@@ -1159,7 +1336,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2024-06-01-sg.pdf",
       "solutionFolder": null,
-      "year": 2024
+      "year": 2024,
+      "assetUrls": {
+        "INF.03-01-24.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/279/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1406,7 +1586,7 @@
       "pageCount": 8,
       "number": "07",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-07-23.06-SG.zip"],
       "id": "inf03-2023-06-07-sg",
       "scoringPdf": null,
       "code": "INF.03-07-23.06-SG",
@@ -1415,7 +1595,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2023-06-07-sg.pdf",
       "solutionFolder": null,
-      "year": 2023
+      "year": 2023,
+      "assetUrls": {
+        "INF.03-07-23.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/254/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1426,7 +1609,7 @@
       "pageCount": 8,
       "number": "04",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-04-23.06-SG.zip"],
       "id": "inf03-2023-06-04-sg",
       "scoringPdf": null,
       "code": "INF.03-04-23.06-SG",
@@ -1435,7 +1618,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2023-06-04-sg.pdf",
       "solutionFolder": null,
-      "year": 2023
+      "year": 2023,
+      "assetUrls": {
+        "INF.03-04-23.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/253/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1446,7 +1632,7 @@
       "pageCount": 8,
       "number": "02",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-02-23.06-SG.zip"],
       "id": "inf03-2023-06-02-sg",
       "scoringPdf": null,
       "code": "INF.03-02-23.06-SG",
@@ -1455,7 +1641,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2023-06-02-sg.pdf",
       "solutionFolder": null,
-      "year": 2023
+      "year": 2023,
+      "assetUrls": {
+        "INF.03-02-23.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/252/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1466,7 +1655,7 @@
       "pageCount": 8,
       "number": "01",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-01-23.06-SG.zip"],
       "id": "inf03-2023-06-01-sg",
       "scoringPdf": null,
       "code": "INF.03-01-23.06-SG",
@@ -1475,7 +1664,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2023-06-01-sg.pdf",
       "solutionFolder": null,
-      "year": 2023
+      "year": 2023,
+      "assetUrls": {
+        "INF.03-01-23.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/251/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1486,7 +1678,7 @@
       "pageCount": 8,
       "number": "05",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-05-23-SG.zip"],
       "id": "inf03-2023-01-05-sg",
       "scoringPdf": null,
       "code": "INF.03-05-23.01-SG",
@@ -1495,14 +1687,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2023-01-05-sg.pdf",
       "solutionFolder": null,
-      "year": 2023
+      "year": 2023,
+      "assetUrls": {
+        "INF.03-05-23-SG.zip": "https://zspwyrzysk.pl/ti/sheets/238/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2023-01-04-sg-task-1", "inf03-2023-01-04-sg-task-2"],
       "pageCount": 8,
       "number": "04",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-04-23-SG.zip"],
       "id": "inf03-2023-01-04-sg",
       "scoringPdf": null,
       "code": "INF.03-04-23.01-SG",
@@ -1511,7 +1706,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2023-01-04-sg.pdf",
       "solutionFolder": null,
-      "year": 2023
+      "year": 2023,
+      "assetUrls": {
+        "INF.03-04-23-SG.zip": "https://zspwyrzysk.pl/ti/sheets/237/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1522,7 +1720,7 @@
       "pageCount": 8,
       "number": "03",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-03-23.01-SG.zip"],
       "id": "inf03-2023-01-03-sg",
       "scoringPdf": null,
       "code": "INF.03-03-23.01-SG",
@@ -1531,7 +1729,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2023-01-03-sg.pdf",
       "solutionFolder": null,
-      "year": 2023
+      "year": 2023,
+      "assetUrls": {
+        "INF.03-03-23.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/242/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1542,7 +1743,7 @@
       "pageCount": 8,
       "number": "02",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-02-23-SG.zip"],
       "id": "inf03-2023-01-02-sg",
       "scoringPdf": null,
       "code": "INF.03-02-23.01-SG",
@@ -1551,7 +1752,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2023-01-02-sg.pdf",
       "solutionFolder": null,
-      "year": 2023
+      "year": 2023,
+      "assetUrls": {
+        "INF.03-02-23-SG.zip": "https://zspwyrzysk.pl/ti/sheets/236/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1562,7 +1766,7 @@
       "pageCount": 5,
       "number": "01",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-01-23.01-SG.zip"],
       "id": "inf03-2023-01-01-sg",
       "scoringPdf": null,
       "code": "INF.03-01-23.01-SG",
@@ -1571,7 +1775,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2023-01-01-sg.pdf",
       "solutionFolder": null,
-      "year": 2023
+      "year": 2023,
+      "assetUrls": {
+        "INF.03-01-23.01-SG.zip": "https://zspwyrzysk.pl/ti/sheets/235/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1582,7 +1789,7 @@
       "pageCount": 8,
       "number": "03",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-03-22.06-SG.zip"],
       "id": "inf03-2022-06-03-sg",
       "scoringPdf": null,
       "code": "INF.03-03-22.06-SG",
@@ -1591,7 +1798,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2022-06-03-sg.pdf",
       "solutionFolder": null,
-      "year": 2022
+      "year": 2022,
+      "assetUrls": {
+        "INF.03-03-22.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/223/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1602,7 +1812,7 @@
       "pageCount": 8,
       "number": "02",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-02-22.06-SG.zip"],
       "id": "inf03-2022-06-02-sg",
       "scoringPdf": null,
       "code": "INF.03-02-22.06-SG",
@@ -1611,7 +1821,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2022-06-02-sg.pdf",
       "solutionFolder": null,
-      "year": 2022
+      "year": 2022,
+      "assetUrls": {
+        "INF.03-02-22.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/222/attachment/"
+      }
     },
     {
       "tasks": [
@@ -1622,7 +1835,7 @@
       "pageCount": 8,
       "number": "01",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["INF.03-01-22.06-SG.zip"],
       "id": "inf03-2022-06-01-sg",
       "scoringPdf": null,
       "code": "INF.03-01-22.06-SG",
@@ -1631,14 +1844,17 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2022-06-01-sg.pdf",
       "solutionFolder": null,
-      "year": 2022
+      "year": 2022,
+      "assetUrls": {
+        "INF.03-01-22.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/221/attachment/"
+      }
     },
     {
       "tasks": ["inf03-2021-06-01-sg-task-1", "inf03-2021-06-01-sg-task-2"],
       "pageCount": 8,
       "number": "01",
       "sourcePath": null,
-      "assetFiles": [],
+      "assetFiles": ["inf_03_2021_06_01_sg.zip"],
       "id": "inf03-2021-06-01-sg",
       "scoringPdf": null,
       "code": "INF.03-01-21.06-SG",
@@ -1647,7 +1863,10 @@
       "variant": "SG",
       "pdf": "/pdfs/exams/inf03-2021-06-01-sg.pdf",
       "solutionFolder": null,
-      "year": 2021
+      "year": 2021,
+      "assetUrls": {
+        "inf_03_2021_06_01_sg.zip": "https://zspwyrzysk.pl/ti/sheets/3/attachment/"
+      }
     }
   ],
   "tasks": [
@@ -5980,5 +6199,6 @@
     }
   ],
   "sourceFolder": "_arkusze",
-  "examCount": 86
+  "examCount": 86,
+  "sourceBranch": "master"
 }

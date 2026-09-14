@@ -28,6 +28,7 @@ export type Exam = {
   pageCount: number;
   tasks: string[];
   assetFiles: string[];
+  assetUrls?: Record<string, string>;
 };
 
 export type Task = {
@@ -52,6 +53,7 @@ export type Task = {
 export type Catalog = {
   generatedAt: string;
   sourceRepository: string;
+  sourceBranch?: string;
   examCount: number;
   taskCount: number;
   years: number[];

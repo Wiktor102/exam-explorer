@@ -33,23 +33,64 @@ export function formatPartNumber(part: number) {
   return romanNumerals[part] ?? String(part);
 }
 
-export function solutionUrl(repository: string, folder: string | null) {
+export function solutionUrl(
+  repository: string,
+  folder: string | null,
+  branch = "main",
+) {
   if (!folder) {
     return repository;
   }
 
-  return `${repository}/tree/main/${folder.split("/").map(encodeURIComponent).join("/")}`;
+  return `${repository}/tree/${encodeURIComponent(branch)}/${folder.split("/").map(encodeURIComponent).join("/")}`;
 }
 
-export function repositoryFileUrl(repository: string, path: string) {
-  return `${repository}/raw/main/${path.split("/").map(encodeURIComponent).join("/")}`;
+export function repositoryFileUrl(
+  repository: string,
+  path: string,
+  branch = "main",
+) {
+  return `${repository}/raw/${encodeURIComponent(branch)}/${path.split("/").map(encodeURIComponent).join("/")}`;
 }
 
-export function resourceUrl(repository: string, exam: Exam, assetFile: string) {
+export function resourceFileName(
+  exam: Exam,
+  assetFile: string,
+  index: number,
+) {
+  const extensionIndex = assetFile.lastIndexOf(".");
+  const extension =
+    extensionIndex >= 0 ? assetFile.slice(extensionIndex).toLowerCase() : "";
+  const sequence = exam.assetFiles.length > 1 ? `-${index + 1}` : "";
+
+  return `${exam.code}${sequence}${extension}`;
+}
+
+export function developmentResourceUrl(exam: Exam, index: number) {
+  const parameters = new URLSearchParams({
+    exam: exam.id,
+    resource: String(index),
+  });
+
+  return `/__resource-download?${parameters}`;
+}
+
+export function resourceUrl(
+  repository: string,
+  exam: Exam,
+  assetFile: string,
+  branch = "main",
+) {
+  const externalUrl = exam.assetUrls?.[assetFile];
+  if (externalUrl) {
+    return externalUrl;
+  }
+
   const sourceDirectory =
     exam.sourcePath?.split("/").slice(0, -1).join("/") ?? "";
   return repositoryFileUrl(
     repository,
     sourceDirectory ? `${sourceDirectory}/${assetFile}` : assetFile,
+    branch,
   );
 }
