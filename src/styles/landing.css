@@ -551,6 +551,7 @@
 
   .landing-source {
     width: 38px;
+    gap: 0;
     padding: 0;
     justify-content: center;
     font-size: 0;
