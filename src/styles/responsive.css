@@ -380,7 +380,7 @@
   .exam-line {
     grid-template-columns: max-content minmax(0, 1fr);
     grid-template-rows: auto auto;
-    gap: 2px 8px;
+    gap: 2px 16px;
     min-height: 58px;
     padding: 8px 12px;
   }
@@ -396,14 +396,6 @@
     grid-row: 2;
     align-items: center;
     gap: 8px;
-  }
-
-  .exam-line .exam-page-count {
-    order: 1;
-  }
-
-  .exam-line .exam-variant {
-    order: 2;
   }
 
   .exam-line .exam-types {
