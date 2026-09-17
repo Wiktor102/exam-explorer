@@ -65,8 +65,14 @@ export function CookieConsent() {
         <p className="eyebrow">Prywatność</p>
         <h2>Pomóż ulepszać katalog</h2>
         <p>
-          Za Twoją zgodą Google Analytics zmierzy odwiedziny oraz to, które
-          arkusze i zadania otwierasz.{" "}
+          <span className="cookie-consent__copy--desktop">
+            Za Twoją zgodą Google Analytics zmierzy odwiedziny oraz to, które
+            arkusze i zadania otwierasz.{' '}
+          </span>
+          <span className="cookie-consent__copy--mobile">
+            Google Analytics pomoże nam sprawdzić, które arkusze i zadania są
+            najczęściej otwierane.{' '}
+          </span>
           <a href="/polityka-prywatnosci/">Dowiedz się więcej</a>.
         </p>
       </div>
