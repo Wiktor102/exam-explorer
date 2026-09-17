@@ -257,9 +257,11 @@ export function LandingPage() {
       </div>
 
       <footer className="landing-footer">
-        <span>&copy; Wiktor Golicz 2026.</span>
-        <a href="/polityka-prywatnosci/">Polityka prywatności</a>
-        <span>
+        <div className="landing-footer__top">
+          <span>&copy; Wiktor Golicz 2026.</span>
+          <a href="/polityka-prywatnosci/">Polityka prywatności</a>
+        </div>
+        <span className="landing-footer__updated">
           Ostatnia aktualizacja arkuszy:{" "}
           <time dateTime="2026-09-10T05:34:51.055641+00:00">
             10 września 2026, 05:34 UTC

@@ -289,7 +289,7 @@
   overflow-wrap: anywhere;
 }
 
-.landing-footer > a {
+.landing-footer a {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -343,6 +343,12 @@
 
   .privacy-footer {
     align-items: flex-start;
+  }
+
+  .landing-page ~ .privacy-settings-button {
+    right: 10px;
+    left: auto;
+    bottom: 10px;
   }
 }
 
