@@ -107,6 +107,13 @@
     padding: 10px;
   }
 
+  .app-shell:has(.workspace.list-only) {
+    grid-template-rows: auto auto minmax(0, 1fr);
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
   .topbar,
   .control-band,
   .workspace {
@@ -119,6 +126,15 @@
   .workspace {
     display: flex;
     flex-direction: column;
+  }
+
+  .workspace.list-only {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .workspace.list-only .registry-pane {
+    flex: 1;
   }
 
   .topbar {
@@ -292,6 +308,12 @@
     min-height: 0;
   }
 
+  .workspace.list-only .task-table,
+  .workspace.list-only .exam-list {
+    height: 100%;
+    max-height: none;
+  }
+
   .table-head {
     display: none;
   }
@@ -356,8 +378,38 @@
   }
 
   .exam-line {
-    grid-template-columns: 1fr 1fr;
-    padding: 12px;
+    grid-template-columns: max-content minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2px 8px;
+    min-height: 58px;
+    padding: 8px 12px;
+  }
+
+  .exam-line .exam-code {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .exam-line .exam-meta {
+    display: flex;
+    grid-column: 1;
+    grid-row: 2;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .exam-line .exam-page-count {
+    order: 1;
+  }
+
+  .exam-line .exam-variant {
+    order: 2;
+  }
+
+  .exam-line .exam-types {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
   }
 
   .preview-pane {
