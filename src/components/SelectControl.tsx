@@ -1,45 +1,57 @@
-import { type ReactNode, useRef } from 'react'
+import { type ReactNode, useRef } from "react";
 
 type SelectControlProps = {
-  icon: ReactNode
-  label: string
-  children: ReactNode
-  className?: string
-  value: string
-  onChange: (value: string) => void
-}
+  icon: ReactNode;
+  label: string;
+  children: ReactNode;
+  className?: string;
+  value: string;
+  onChange: (value: string) => void;
+};
 
-export function SelectControl({ icon, label, children, className, value, onChange }: SelectControlProps) {
-  const selectRef = useRef<HTMLSelectElement>(null)
+export function SelectControl({
+  icon,
+  label,
+  children,
+  className,
+  value,
+  onChange,
+}: SelectControlProps) {
+  const selectRef = useRef<HTMLSelectElement>(null);
 
   function openSelect() {
-    const select = selectRef.current
+    const select = selectRef.current;
 
     if (!select) {
-      return
+      return;
     }
 
-    select.focus()
-    select.showPicker?.()
+    select.focus();
+    select.showPicker?.();
   }
 
   return (
     <label
-      className={className ? `select-control ${className}` : 'select-control'}
+      className={className ? `select-control ${className}` : "select-control"}
       onMouseDown={(event) => {
         if (event.target === selectRef.current) {
-          return
+          return;
         }
 
-        event.preventDefault()
-        openSelect()
+        event.preventDefault();
+        openSelect();
       }}
     >
       {icon}
       <span>{label}</span>
-      <select ref={selectRef} aria-label={label} value={value} onChange={(event) => onChange(event.target.value)}>
+      <select
+        ref={selectRef}
+        aria-label={label}
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+      >
         {children}
       </select>
     </label>
-  )
+  );
 }

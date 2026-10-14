@@ -1,15 +1,22 @@
-import type { ExamType } from '../types/catalog'
+import clsx from "clsx";
+import type { ExamType } from "../types/catalog";
 
 type LoadingShellProps = {
-  examType: ExamType
-  error?: string | null
-  onRetry?: () => void
-}
+  examType: ExamType;
+  error?: string | null;
+  theme: "light" | "dark";
+  onRetry?: () => void;
+};
 
-export function LoadingShell({ examType, error, onRetry }: LoadingShellProps) {
+export function LoadingShell({
+  examType,
+  error,
+  theme,
+  onRetry,
+}: LoadingShellProps) {
   if (error) {
     return (
-      <main className="loading-shell">
+      <main className={clsx("loading-shell", theme === "dark" && "dark")}>
         <div className="loading-error" role="alert">
           <p>{error}</p>
           {onRetry && (
@@ -19,13 +26,15 @@ export function LoadingShell({ examType, error, onRetry }: LoadingShellProps) {
           )}
         </div>
       </main>
-    )
+    );
   }
 
   return (
-    <main className="loading-shell">
-      <div className="loading-mark" />
-      <p>Wczytywanie archiwum {examType === 'inf04' ? 'INF.04' : 'INF.03'}...</p>
+    <main className={clsx("loading-shell", theme === "dark" && "dark")}>
+      <div className="loading-mark" aria-hidden="true" />
+      <p>
+        Wczytywanie archiwum {examType === "inf04" ? "INF.04" : "INF.03"}...
+      </p>
     </main>
-  )
+  );
 }

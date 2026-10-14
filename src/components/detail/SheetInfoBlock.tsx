@@ -1,16 +1,24 @@
-import { ChevronDown, FileText } from 'lucide-react'
-import clsx from 'clsx'
-import type { Exam, Task } from '../../types/catalog'
-import { examFileName } from '../../utils/catalog'
+import { ChevronDown, FileText } from "lucide-react";
+import clsx from "clsx";
+import { variantLabels } from "../../constants/catalog";
+import type { Exam, Task } from "../../types/catalog";
+import { examFileName } from "../../utils/catalog";
 
 type SheetInfoBlockProps = {
-  isOpen: boolean
-  selectedExam: Exam
-  selectedTask: Task
-  onToggle: () => void
-}
+  isOpen: boolean;
+  showTaskPages: boolean;
+  selectedExam: Exam;
+  selectedTask: Task;
+  onToggle: () => void;
+};
 
-export function SheetInfoBlock({ isOpen, selectedExam, selectedTask, onToggle }: SheetInfoBlockProps) {
+export function SheetInfoBlock({
+  isOpen,
+  showTaskPages,
+  selectedExam,
+  selectedTask,
+  onToggle,
+}: SheetInfoBlockProps) {
   return (
     <section className="collapsible-block">
       <button
@@ -24,7 +32,11 @@ export function SheetInfoBlock({ isOpen, selectedExam, selectedTask, onToggle }:
           <FileText size={16} aria-hidden="true" />
           Informacje o arkuszu
         </span>
-        <ChevronDown className={clsx('collapsible-icon', isOpen && 'open')} size={17} aria-hidden="true" />
+        <ChevronDown
+          className={clsx("collapsible-icon", isOpen && "open")}
+          size={17}
+          aria-hidden="true"
+        />
       </button>
 
       {isOpen && (
@@ -32,13 +44,22 @@ export function SheetInfoBlock({ isOpen, selectedExam, selectedTask, onToggle }:
           <span>Sesja</span>
           <strong>{selectedExam.session}</strong>
           <span>Wersja</span>
-          <strong>{selectedExam.variant}</strong>
+          <strong>
+            {selectedExam.variant}
+            {variantLabels[selectedExam.variant]
+              ? ` - ${variantLabels[selectedExam.variant]}`
+              : ""}
+          </strong>
           <span>Plik arkusza</span>
           <strong>{examFileName(selectedExam)}</strong>
-          <span>Strony</span>
-          <strong>{`s. ${selectedTask.pageStart}-${selectedTask.pageEnd}`}</strong>
+          {showTaskPages && (
+            <>
+              <span>Strony</span>
+              <strong>{`s. ${selectedTask.pageStart}-${selectedTask.pageEnd}`}</strong>
+            </>
+          )}
         </div>
       )}
     </section>
-  )
+  );
 }

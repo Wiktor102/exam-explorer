@@ -45,10 +45,12 @@
 html {
   min-width: 320px;
   min-height: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   background:
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px 28px,
-    linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px
+      28px,
+    linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 /
+      28px 28px,
     var(--background, #eef1ed);
 }
 
@@ -57,7 +59,7 @@ body {
   width: 100%;
   min-height: 100%;
   margin: 0;
-  overflow-x: hidden;
+  overflow: visible;
 }
 
 #root {
@@ -78,7 +80,9 @@ a {
   color: inherit;
 }
 
-:root[data-theme="dark"] {
+:root[data-theme="dark"],
+.app-shell.dark,
+.loading-shell.dark {
   color-scheme: dark;
   color: #ecf0e7;
   --background: #101713;
@@ -149,6 +153,12 @@ h2 {
 .loading-shell {
   height: 100vh;
   gap: 12px;
+  background:
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px
+      28px,
+    linear-gradient(0deg, var(--grid-line-strong) 1px, transparent 1px) 0 0 /
+      28px 28px,
+    var(--background, #eef1ed);
 }
 
 .loading-mark {
