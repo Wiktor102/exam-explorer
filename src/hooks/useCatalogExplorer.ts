@@ -16,6 +16,12 @@ function isRegistryMode(value: string | null): value is RegistryMode {
 }
 
 function getPreferredTheme(): 'light' | 'dark' {
+  try {
+    const storedTheme = window.localStorage.getItem('exam-explorer-theme')
+    if (storedTheme === 'light' || storedTheme === 'dark') return storedTheme
+  } catch {
+    // Keep theme switching available when browser storage is blocked.
+  }
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
@@ -92,10 +98,11 @@ export function useCatalogExplorer() {
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false)
 
   useEffect(() => {
-    document.documentElement.style.colorScheme = theme
-
-    return () => {
-      document.documentElement.style.colorScheme = ''
+    document.documentElement.dataset.theme = theme
+    try {
+      window.localStorage.setItem('exam-explorer-theme', theme)
+    } catch {
+      // The theme still applies for this visit if storage is unavailable.
     }
   }, [theme])
 

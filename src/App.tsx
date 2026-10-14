@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <main className={clsx('app-shell', filters.theme === 'dark' && 'dark')}>
+    <main className="app-shell">
       <AppTopbar catalog={catalog} examType={filters.examType} onExamTypeChange={actions.setExamType} />
 
       <FilterBar
