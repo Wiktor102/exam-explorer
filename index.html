@@ -11,6 +11,17 @@
     />
     <title>Eksplorator zadań INF.03 i INF.04</title>
     <script>
+      // Apply the theme before the first paint, including the loading screen.
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      try {
+        const storedTheme = window.localStorage.getItem('exam-explorer-theme');
+        if (storedTheme === 'light' || storedTheme === 'dark') theme = storedTheme;
+      } catch {
+        // Fall back to the system preference when storage is unavailable.
+      }
+      document.documentElement.dataset.theme = theme;
+    </script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       window.gtag =
         window.gtag ||

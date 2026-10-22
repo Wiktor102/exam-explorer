@@ -38,12 +38,6 @@
   letter-spacing: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -86,9 +80,10 @@ a {
   color: inherit;
 }
 
-:root.dark,
+:root[data-theme="dark"],
 .app-shell.dark,
 .loading-shell.dark {
+  color-scheme: dark;
   color: #ecf0e7;
   --background: #101713;
   --paper: #151c18;

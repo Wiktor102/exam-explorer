@@ -1,3 +1,4 @@
+import { useTheme } from "../hooks/useTheme";
 import {
   ArrowRight,
   Blocks,
@@ -7,6 +8,8 @@ import {
   FileSearch,
   Github,
   Scale,
+  Sun,
+  Moon,
 } from "lucide-react";
 
 const catalogs = [
@@ -39,6 +42,7 @@ const relatedRepositories = [
 ] as const;
 
 export function LandingPage() {
+  const { theme, setTheme } = useTheme();
   return (
     <main className="landing-page">
       <div className="landing-frame" aria-hidden="true" />
@@ -60,6 +64,16 @@ export function LandingPage() {
           <img src="/favicon.svg" alt="" aria-hidden="true" />
           <span>Eksplorator zadań INF.03 i INF.04</span>
         </a>
+        <div className="landing-nav-actions">
+          <button
+            className="landing-source landing-theme-toggle"
+            type="button"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            aria-label={theme === "dark" ? "Włącz tryb jasny" : "Włącz tryb ciemny"}
+            title={theme === "dark" ? "Tryb jasny" : "Tryb ciemny"}
+          >
+            {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
+          </button>
         <a
           className="landing-source"
           href="https://github.com/Wiktor102/exam-explorer"
@@ -69,6 +83,7 @@ export function LandingPage() {
           <Github size={17} aria-hidden="true" />
           Kod źródłowy
         </a>
+        </div>
       </header>
 
       <div className="landing-content">

@@ -1,4 +1,5 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useTheme } from "./useTheme";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { DuplicateTaskRow } from "../components/detail/types";
 import type {
   Catalog,
@@ -27,12 +28,6 @@ function isExamType(value: string | null): value is ExamType {
 
 function isRegistryMode(value: string | null): value is RegistryMode {
   return value === "exams" || value === "tasks";
-}
-
-function getPreferredTheme(): "light" | "dark" {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
 }
 
 type UrlSelection = {
@@ -103,7 +98,7 @@ export function useCatalogExplorer() {
   const [taskType, setTaskType] = useState("all");
   const [sortMode, setSortMode] = useState<SortMode>("newest");
   const [previewMode, setPreviewMode] = useState<PreviewMode>("task");
-  const [theme, setTheme] = useState<"light" | "dark">(getPreferredTheme);
+  const { theme, setTheme } = useTheme();
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(
     getUrlParam("task"),
   );
@@ -122,17 +117,6 @@ export function useCatalogExplorer() {
   const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false);
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false);
   const hasTrackedInitialSelection = useRef(false);
-
-  useLayoutEffect(() => {
-    const root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
-    root.style.colorScheme = theme;
-
-    return () => {
-      root.classList.remove("dark");
-      root.style.colorScheme = "";
-    };
-  }, [theme]);
 
   useEffect(() => {
     let isCancelled = false;
