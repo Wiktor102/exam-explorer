@@ -1,0 +1,2 @@
+# Match the PDF text extraction used by the checked-in catalog.
+pypdf==4.0.2

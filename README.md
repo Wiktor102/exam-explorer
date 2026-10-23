@@ -47,7 +47,7 @@ Zależności zewnętrzne zachowują własne licencje.
 
 - Node.js 24
 - pnpm 11.6.0
-- Python 3 z `pip` tylko do odtwarzania katalogów
+- Python 3 z `pip`, do odtwarzania katalogów i uruchamiania ich testów
 
 ## Uruchomienie lokalne
 
@@ -63,8 +63,14 @@ Aplikacja będzie dostępna pod adresem `http://localhost:5173`.
 ```bash
 pnpm lint
 pnpm build
+python3 -m unittest discover -s scripts -p 'test_generate_catalog.py'
 pnpm preview
 ```
+
+Testy katalogu wymagają zależności z `scripts/requirements-catalog.txt`
+(`python3 -m pip install -r scripts/requirements-catalog.txt`). Workflow
+`Catalog tests` uruchamia je automatycznie dla każdego pull requesta i po pushu
+do `main`; można go też uruchomić ręcznie w GitHub Actions.
 
 ## Układ projektu
 
@@ -79,10 +85,10 @@ scripts/                        generatory katalogów
 
 ## Odświeżanie katalogów
 
-Generatory wymagają `pypdf`:
+Generatory wymagają `pypdf` w wersji zgodnej z tekstem zapisanym w katalogu:
 
 ```bash
-python3 -m pip install pypdf
+python3 -m pip install -r scripts/requirements-catalog.txt
 ```
 
 ### INF.03
