@@ -141,7 +141,7 @@ def main() -> None:
         if shutil.which(executable) is None:
             parser.error(f"Required command not found: {executable}")
 
-    repository = Path(__file__).resolve().parent.parent
+    repository = Path(__file__).resolve().parents[2]
     commit = subprocess.check_output(
         ["git", "rev-parse", "--verify", "--end-of-options", args.ref + "^{commit}"],
         cwd=repository, text=True,

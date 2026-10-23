@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "deploy:prod": "python3 scripts/deploy_production.py",
+    "deploy:prod": "python3 scripts/deploy/deploy_production.py",
     "generate:catalog": "python scripts/generate_catalog.py",
     "lint": "eslint .",
     "preview": "vite preview"
