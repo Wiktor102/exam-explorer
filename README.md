@@ -13,8 +13,8 @@ każdego pliku. Zobacz [informacje o materiałach zewnętrznych](THIRD_PARTY_NOT
 | Kwalifikacja | Arkusze | Zadania | Lata |
 | --- | ---: | ---: | --- |
 | INF.03 | 86 | 239 | 2021-2026 |
-| INF.04 | 29 | 87 | 2021-2026 |
-| Łącznie | 115 | 326 | 2021-2026 |
+| INF.04 | 31 | 93 | 2021-2026 |
+| Łącznie | 117 | 332 | 2021-2026 |
 
 Każdy katalog zawiera pełne arkusze PDF, osobne PDF-y dla zadań oraz, gdy są dostępne, kryteria oceniania. Interfejs pozwala:
 
@@ -63,6 +63,7 @@ Aplikacja będzie dostępna pod adresem `http://localhost:5173`.
 ```bash
 pnpm lint
 pnpm build
+python3 -m unittest discover -s scripts -p 'test_generate_catalog.py'
 pnpm preview
 ```
 
@@ -152,8 +153,9 @@ python3 scripts/mirror_resources.py --public dist
 Generator oczekuje lokalnego klonu repozytorium źródłowego. Kopiuje arkusze, zadania i dostępne kryteria oceniania do `public/pdfs`.
 
 ```bash
-pnpm generate:catalog -- --source ../INF.04-rozwiazania --public public
-cp public/data/catalog.json public/data/inf04/catalog.json
+pnpm generate:catalog --source ../INF.04-rozwiazania --public public
 ```
 
-Skrypt INF.04 nadal zapisuje katalog do `public/data/catalog.json`, ale aplikacja odczytuje `public/data/inf04/catalog.json`. Druga komenda umieszcza wygenerowane dane we właściwym miejscu.
+Polecenie nadpisuje `public/data/inf04/catalog.json`, kopiuje pełne pliki PDF do `public/pdfs/exams` i tworzy pliki PDF z zakresami stron dla zadań w `public/pdfs/tasks`. Domyślnie zachowuje istniejące rekordy i pliki, co chroni katalog przed różnicami wynikającymi z wersji narzędzi do obsługi PDF. Aby odtworzyć całość, użyj flagi `--regenerate-existing`. Zweryfikowane arkusze spoza repozytorium źródłowego są przechowywane w `archive-sources/inf04`, więc generator zachowuje je przy kolejnych uruchomieniach.
+
+Oba arkusze INF.04 z czerwca 2026 i ich zasady oceniania mają lokalne kopie źródłowe. [Spis źródeł](archive-sources/inf04/README.md) podaje adresy, sumy SHA-256 i zakresy stron zadań. Pełne PDF-y zachowują formularze dołączone do arkuszy; osobne zadania pomijają puste strony i końcowe formularze podpisu. Poprawiony zakres stron powoduje odtworzenie pliku zadania, jeśli jego liczba stron jest nieaktualna. Archiwum `Web1.7z`, wymienione w arkuszu 01, nie zostało odnalezione w zweryfikowanych źródłach publicznych.
