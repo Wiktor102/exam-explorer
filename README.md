@@ -63,7 +63,6 @@ Aplikacja będzie dostępna pod adresem `http://localhost:5173`.
 ```bash
 pnpm lint
 pnpm build
-python3 -m unittest discover -s scripts -p 'test_generate_catalog.py'
 pnpm preview
 ```
 
