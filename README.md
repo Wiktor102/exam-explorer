@@ -47,7 +47,7 @@ Zależności zewnętrzne zachowują własne licencje.
 
 - Node.js 24
 - pnpm 11.6.0
-- Python 3, również do lokalnego wdrażania; `pip` do odtwarzania katalogów
+- Python 3 z `pip` tylko do odtwarzania katalogów
 
 ## Uruchomienie lokalne
 
@@ -66,10 +66,6 @@ pnpm build
 pnpm preview
 ```
 
-## Wdrożenie
-
-Instrukcja wdrażania znajduje się w [scripts/deploy/DEPLOY.md](scripts/deploy/DEPLOY.md).
-
 ## Układ projektu
 
 ```text
@@ -79,7 +75,6 @@ public/data/inf04/catalog.json  katalog INF.04
 public/pdfs/                    arkusze, zadania i kryteria oceniania
 public/previews/                miniatury arkuszy INF.03
 scripts/                        generatory katalogów
-scripts/deploy/                 skrypty i instrukcja wdrażania
 ```
 
 ## Odświeżanie katalogów
