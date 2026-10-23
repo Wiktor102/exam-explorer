@@ -5,7 +5,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import os
 from pathlib import Path
 import shlex
 import shutil
@@ -15,9 +14,30 @@ import tempfile
 import uuid
 
 
-HOST = "wiktor102@s81.mydevil.net"
-DOMAIN_DIRECTORY = "/home/wiktor102/domains/egzamin-zawodowy.wiktorgolicz.pl"
-PRODUCTION_URL = "https://egzamin-zawodowy.wiktorgolicz.pl"
+def load_settings(path: Path) -> dict[str, str]:
+    settings = {}
+    for number, line in enumerate(path.read_text().splitlines(), 1):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        key, separator, value = line.partition("=")
+        key = key.strip()
+        if not separator or key not in {
+            "MYDEVIL_HOST", "MYDEVIL_DOMAIN_DIRECTORY", "MYDEVIL_PRODUCTION_URL",
+            "MYDEVIL_SSH_KEY",
+        }:
+            raise RuntimeError(f"Invalid deployment setting at {path}:{number}")
+        try:
+            values = shlex.split(value, comments=True)
+        except ValueError:
+            raise RuntimeError(f"Invalid deployment value at {path}:{number}") from None
+        if len(values) > 1:
+            raise RuntimeError(f"Quote values containing spaces at {path}:{number}")
+        settings[key] = values[0] if values else ""
+    for key in ("MYDEVIL_HOST", "MYDEVIL_DOMAIN_DIRECTORY", "MYDEVIL_PRODUCTION_URL"):
+        if not settings.get(key):
+            raise RuntimeError(f"Missing {key} in {path}")
+    return settings
 
 # Executed by the server's Python, with configuration passed as JSON on stdin.
 REMOTE_SCRIPT = r'''
@@ -118,9 +138,9 @@ def run(args: list[str], **kwargs: object) -> subprocess.CompletedProcess:
     return subprocess.run(args, check=True, **kwargs)
 
 
-def remote(ssh: list[str], action: str, config: dict) -> None:
+def remote(ssh: list[str], host: str, action: str, config: dict) -> None:
     command = shlex.join(["python3", "-c", REMOTE_SCRIPT, action])
-    run([*ssh, HOST, command], input=json.dumps(config), text=True)
+    run([*ssh, host, command], input=json.dumps(config), text=True)
 
 
 def build_manifest(dist: Path) -> dict[str, str]:
@@ -151,7 +171,8 @@ def main() -> None:
     ssh = ["ssh", "-o", "BatchMode=yes", "-o", "StrictHostKeyChecking=yes",
            "-o", "ConnectTimeout=15", "-o", "ServerAliveInterval=15",
            "-o", "ServerAliveCountMax=3"]
-    identity = os.environ.get("MYDEVIL_SSH_KEY")
+    settings = {} if args.dry_run else load_settings(Path(__file__).resolve().with_name(".env"))
+    identity = settings.get("MYDEVIL_SSH_KEY")
     if identity:
         ssh.extend(["-i", str(Path(identity).expanduser()), "-o", "IdentitiesOnly=yes"])
 
@@ -178,21 +199,22 @@ def main() -> None:
             return
 
         config = {
-            "directory": DOMAIN_DIRECTORY,
+            "directory": settings["MYDEVIL_DOMAIN_DIRECTORY"],
             "release": commit[:12] + "-" + uuid.uuid4().hex[:12],
-            "url": PRODUCTION_URL,
+            "url": settings["MYDEVIL_PRODUCTION_URL"].rstrip("/"),
             "manifest": manifest,
             "checks": checks,
         }
-        remote(ssh, "prepare", config)
+        host = settings["MYDEVIL_HOST"]
+        remote(ssh, host, "prepare", config)
         try:
-            destination = f"{HOST}:{DOMAIN_DIRECTORY}/release-{config['release']}/"
+            destination = f"{host}:{config['directory']}/release-{config['release']}/"
             run(["rsync", "--archive", "--checksum", "--copy-dest=../public_html",
                  "--stats", "-e", shlex.join(ssh),
                  str(dist) + "/", destination])
-            remote(ssh, "activate", config)
+            remote(ssh, host, "activate", config)
         finally:
-            remote(ssh, "release", config)
+            remote(ssh, host, "release", config)
 
 
 if __name__ == "__main__":

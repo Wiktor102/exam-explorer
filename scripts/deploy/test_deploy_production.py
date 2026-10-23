@@ -10,7 +10,39 @@ import tempfile
 import threading
 import unittest
 
-from deploy_production import REMOTE_SCRIPT, build_manifest
+from deploy_production import REMOTE_SCRIPT, build_manifest, load_settings
+
+
+class SettingsTests(unittest.TestCase):
+    def test_load_settings_with_quotes_comments_and_optional_key(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / ".env"
+            path.write_text(
+                '# Deployment settings\n'
+                'MYDEVIL_HOST=user@host # SSH target\n'
+                'MYDEVIL_DOMAIN_DIRECTORY="/home/user/my domain"\n'
+                'MYDEVIL_PRODUCTION_URL=https://example.com\n'
+                'MYDEVIL_SSH_KEY=\n'
+            )
+            settings = load_settings(path)
+            self.assertEqual(settings["MYDEVIL_HOST"], "user@host")
+            self.assertEqual(settings["MYDEVIL_DOMAIN_DIRECTORY"], "/home/user/my domain")
+            self.assertEqual(settings["MYDEVIL_SSH_KEY"], "")
+
+    def test_missing_required_setting_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / ".env"
+            path.write_text("MYDEVIL_HOST=user@host\n")
+            with self.assertRaisesRegex(RuntimeError, "Missing MYDEVIL_DOMAIN_DIRECTORY"):
+                load_settings(path)
+
+    def test_malformed_setting_does_not_expose_value(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / ".env"
+            path.write_text('MYDEVIL_SSH_KEY="private-value\n')
+            with self.assertRaises(RuntimeError) as raised:
+                load_settings(path)
+            self.assertNotIn("private-value", str(raised.exception))
 
 
 class QuietHandler(SimpleHTTPRequestHandler):
