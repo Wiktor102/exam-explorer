@@ -32,6 +32,25 @@ ZO_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Arkusze, które nie trafiły jeszcze do repozytorium źródłowego, ale zostały
+# zweryfikowane w publicznym archiwum. Lokalna kopia sprawia, że kolejne
+# generowanie katalogu nie usuwa wpisu.
+EXTERNAL_EXAM_SOURCES = {
+    "inf04-2026-06-01-sg": {
+        "url": "https://arkusze.pl/zawodowy/inf04-2026-czerwiec-egzamin-zawodowy-praktyczny.pdf",
+        "label": "arkusze.pl, publiczny mirror",
+        "scoringUrl": "https://arkusze.pl/zawodowy/inf04-2026-czerwiec-egzamin-zawodowy-praktyczny-zasady-oceniania.pdf",
+        "taskLastPage": 6,
+    },
+    "inf04-2026-06-02-sg": {
+        "url": "https://zawodowe.edu.pl/arkusz-praktyczny/inf04-2026-czerwiec-02/arkusz.pdf",
+        "label": "zawodowe.edu.pl, publiczny mirror materiałów CKE",
+        "scoringUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf04-2026-czerwiec-02/klucz-odpowiedzi.pdf",
+        "taskLastPage": 7,
+    },
+}
+BUNDLED_EXTERNAL_SOURCES = Path(__file__).resolve().parent.parent / "archive-sources" / "inf04"
+
 HEADINGS = [
     ("part-1", "Część I", re.compile(r"Część\s+I\.?\s*", re.IGNORECASE)),
     ("part-2", "Część II", re.compile(r"Część\s+II\.?\s*", re.IGNORECASE)),
@@ -75,6 +94,10 @@ def first_sentenceish(text: str, limit: int = 260) -> str:
 
 
 TOPIC_RULES = [
+    (("bezpiecznych haseł", "generowania haseł", "12-znakowe hasło"), "generator bezpiecznych haseł z losowymi znakami"),
+    (("menedżera haseł", "adres www"), "menedżer haseł z formularzem adresu WWW, loginu i hasła"),
+    (("priorytet notatki",), "klasa Notatka z konstruktorami, priorytetem i datą utworzenia"),
+    (("zapisywania notatek użytkownika",), "lista notatek z formularzem dodawania tytułu i treści"),
     (("szyfr cezara", "kodem cezara", "szyfrowanie"), "szyfrowanie tekstu szyfrem Cezara z kluczem liczbowym i zawijaniem alfabetu"),
     (("gry w kości", "rzut kością", "kości", "kosc"), "gra w kości z losowaniem wartości i punktacją"),
     (("samogłosek", "samoglosek", "powtórzenia znaków", "powtorzenia znakow", "typu łańcuchowego"), "narzędzia tekstowe do liczenia samogłosek i usuwania sąsiednich powtórzeń"),
@@ -135,6 +158,8 @@ def documentation_description(text: str) -> str:
         target = "nagłówek dowolnej funkcji lub metody"
     elif "komentarz do klasy" in text or "nagłówek klasy" in text:
         target = "nagłówek klasy"
+    elif "nagłówek do metody" in text:
+        target = "nagłówek metody"
 
     requirements = ["zrzuty uruchomienia aplikacji"]
     if "egzamin" in text:
@@ -524,7 +549,14 @@ def zo_exam_id(pdf_path: Path) -> str | None:
     return f"inf04-{year}-{month}-{number}-{variant}"
 
 
-def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path, zo_map: dict[str, Path] | None = None) -> dict[str, Any] | None:
+def parse_exam(
+    repo_root: Path,
+    pdf_path: Path,
+    public_root: Path,
+    zo_map: dict[str, Path] | None = None,
+    source_path: str | None = None,
+    replace_existing_assets: bool = False,
+) -> dict[str, Any] | None:
     match = EXAM_RE.match(pdf_path.name)
     if not match:
         return None
@@ -537,10 +569,20 @@ def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path, zo_map: dict[
     exam_id = f"inf04-{year}-{month}-{number}-{variant.lower()}"
     code = f"INF.04-{number}-{str(year)[2:]}.{month}-{variant}"
 
+    if source_path is None:
+        try:
+            source_path = pdf_path.relative_to(repo_root).as_posix()
+        except ValueError:
+            source_path = None
+
     reader = PdfReader(str(pdf_path))
     pages = [page.extract_text() or "" for page in reader.pages]
-    full_text, hits = find_headings(pages)
     page_count = len(reader.pages)
+    external_source = EXTERNAL_EXAM_SOURCES.get(exam_id, {})
+    # Pełny arkusz zachowuje formularze i puste strony mirrora. Zadania obejmują
+    # tylko zweryfikowane strony treści, łącznie z tabelami i dodatkami do kodu.
+    task_page_count = external_source.get("taskLastPage", page_count)
+    full_text, hits = find_headings(pages[:task_page_count])
 
     if len(hits) < 3:
         print(f"Warning: expected 3 section headings in {pdf_path.name}, found {len(hits)}")
@@ -548,7 +590,8 @@ def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path, zo_map: dict[
     exam_pdf_public = Path("pdfs") / "exams" / f"{exam_id}.pdf"
     target_exam_pdf = public_root / exam_pdf_public
     target_exam_pdf.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(pdf_path, target_exam_pdf)
+    if replace_existing_assets or not target_exam_pdf.exists():
+        shutil.copy2(pdf_path, target_exam_pdf)
 
     tasks: list[dict[str, Any]] = []
     for task_index, hit in enumerate(hits[:3], start=1):
@@ -560,11 +603,20 @@ def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path, zo_map: dict[
         task_type, type_label, tags = classify_part(task_index, title_line, task_text)
 
         start_page = hit.page
-        end_page = task_end_page(hit, next_hit, page_count, full_text)
+        end_page = task_end_page(hit, next_hit, task_page_count, full_text)
 
         task_id = f"{exam_id}-task-{task_index}"
         task_pdf_public = Path("pdfs") / "tasks" / f"{task_id}.pdf"
-        split_pdf(pdf_path, public_root / task_pdf_public, start_page, end_page)
+        target_task_pdf = public_root / task_pdf_public
+        if (
+            replace_existing_assets
+            or not target_task_pdf.exists()
+            or (
+                external_source
+                and len(PdfReader(str(target_task_pdf)).pages) != end_page - start_page + 1
+            )
+        ):
+            split_pdf(pdf_path, target_task_pdf, start_page, end_page)
         duplicate_hash = hashlib.sha1(normalize_hash_text(task_text).encode("utf-8")).hexdigest()[:12]
 
         tasks.append(
@@ -595,7 +647,8 @@ def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path, zo_map: dict[
             scoring_pdf_public = Path("pdfs") / "scoring" / f"{exam_id}-zo.pdf"
             target_scoring_pdf = public_root / scoring_pdf_public
             target_scoring_pdf.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(zo_source, target_scoring_pdf)
+            if (replace_existing_assets or not target_scoring_pdf.exists()) and zo_source.resolve() != target_scoring_pdf.resolve():
+                shutil.copy2(zo_source, target_scoring_pdf)
             scoring_pdf_path = f"/{scoring_pdf_public.as_posix()}"
 
     related_assets = sorted(
@@ -614,7 +667,11 @@ def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path, zo_map: dict[
         "variant": variant,
         "pdf": f"/{exam_pdf_public.as_posix()}",
         "scoringPdf": scoring_pdf_path,
-        "sourcePath": pdf_path.relative_to(repo_root).as_posix(),
+        "sourcePath": source_path,
+        "sourceUrl": external_source.get("url"),
+        "sourceLabel": external_source.get("label"),
+        "scoringSourceUrl": external_source.get("scoringUrl"),
+        "scoringSourceLabel": external_source.get("label") if external_source.get("scoringUrl") else None,
         "solutionFolder": solution_folder,
         "pageCount": page_count,
         "tasks": [task["id"] for task in tasks],
@@ -623,8 +680,13 @@ def parse_exam(repo_root: Path, pdf_path: Path, public_root: Path, zo_map: dict[
     }
 
 
-def build_catalog(repo_root: Path, public_root: Path) -> dict[str, Any]:
+def build_catalog(repo_root: Path, public_root: Path, replace_existing_assets: bool = False) -> dict[str, Any]:
     arkusze = repo_root / "_arkusze"
+    bundled_pdfs = [
+        pdf
+        for pdf in BUNDLED_EXTERNAL_SOURCES.glob("*.pdf")
+        if EXAM_RE.match(pdf.name)
+    ]
     pdfs = [
         pdf
         for pdf in arkusze.rglob("*.pdf")
@@ -635,6 +697,11 @@ def build_catalog(repo_root: Path, public_root: Path) -> dict[str, Any]:
         for pdf in arkusze.rglob("*_zo.pdf")
         if ZO_RE.match(pdf.name)
     ]
+    zo_pdfs.extend(
+        pdf
+        for pdf in BUNDLED_EXTERNAL_SOURCES.glob("*_zo.pdf")
+        if ZO_RE.match(pdf.name)
+    )
     zo_map: dict[str, Path] = {}
     for zo_pdf in zo_pdfs:
         eid = zo_exam_id(zo_pdf)
@@ -686,8 +753,17 @@ def build_catalog(repo_root: Path, public_root: Path) -> dict[str, Any]:
     exams: list[dict[str, Any]] = []
     tasks: list[dict[str, Any]] = []
 
-    for pdf in sorted(pdfs):
-        exam = parse_exam(repo_root, pdf, public_root, zo_map)
+    # Lokalna zweryfikowana kopia ma pierwszeństwo, gdy arkusz pojawi się też
+    # w repozytorium źródłowym. Różnice wielkości liter i sufiks _kolor nie
+    # oznaczają osobnego arkusza.
+    source_pdfs: dict[tuple[str, ...], Path] = {}
+    for pdf in sorted(pdfs) + sorted(bundled_pdfs):
+        match = EXAM_RE.match(pdf.name)
+        key = tuple(value.lower() for value in match.groups())
+        source_pdfs[key] = pdf
+
+    for pdf in sorted(source_pdfs.values(), key=lambda item: item.name):
+        exam = parse_exam(repo_root, pdf, public_root, zo_map, replace_existing_assets=replace_existing_assets)
         if not exam:
             continue
         tasks.extend(exam.pop("taskRecords"))
@@ -717,20 +793,81 @@ def build_catalog(repo_root: Path, public_root: Path) -> dict[str, Any]:
     }
 
 
+def preserve_existing_records(catalog: dict[str, Any], catalog_path: Path) -> dict[str, Any]:
+    if not catalog_path.exists():
+        return catalog
+
+    with catalog_path.open(encoding="utf-8") as source:
+        existing = json.load(source)
+
+    exams = {exam["id"]: exam for exam in catalog["exams"]}
+    tasks = {task["id"]: task for task in catalog["tasks"]}
+    regenerated_exam_ids = set(exams)
+    for exam in existing.get("exams", []):
+        if exam["id"] not in EXTERNAL_EXAM_SOURCES or exam["id"] not in exams:
+            exams[exam["id"]] = exam
+    for task in existing.get("tasks", []):
+        if task["examId"] not in EXTERNAL_EXAM_SOURCES or task["examId"] not in regenerated_exam_ids:
+            tasks[task["id"]] = task
+
+    catalog["exams"] = sorted(exams.values(), key=lambda exam: (exam["year"], exam["month"], exam["number"], exam["variant"]), reverse=True)
+    catalog["tasks"] = sorted(tasks.values(), key=lambda task: (task["examId"], task["part"]), reverse=True)
+
+    duplicates: dict[str, list[str]] = {}
+    for task in catalog["tasks"]:
+        duplicates.setdefault(task["duplicateGroup"], []).append(task["id"])
+    for task in catalog["tasks"]:
+        task["duplicates"] = [
+            task_id for task_id in duplicates[task["duplicateGroup"]] if task_id != task["id"]
+        ]
+
+    catalog["examCount"] = len(catalog["exams"])
+    catalog["taskCount"] = len(catalog["tasks"])
+    catalog["taskTypes"] = sorted({task["type"] for task in catalog["tasks"]})
+    catalog["years"] = sorted({exam["year"] for exam in catalog["exams"]}, reverse=True)
+    return catalog
+
+
+def format_catalog(catalog: dict[str, Any]) -> str:
+    text = json.dumps(catalog, ensure_ascii=False, indent=2)
+
+    def compact_array(match: re.Match[str]) -> str:
+        line = match[1] + json.dumps(json.loads(match[2]), ensure_ascii=False) + match[3]
+        return line if len(line) <= 80 else match[0]
+
+    # Zachowaj dotychczasowy zwięzły zapis krótkich list. Treść PDF w polach
+    # tekstowych ma escapowane nowe linie, więc nie uczestniczy w dopasowaniu.
+    return re.sub(
+        r'(?m)^([ \t]*"(?:years|tags|assetFiles|duplicates)": )(\[\n(?:[^\n]*\n)*?[ \t]*\])(,?)$',
+        compact_array,
+        text,
+    ) + "\n"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", required=True, type=Path, help="Path to INF.04-rozwiazania repo")
     parser.add_argument("--public", default=Path("public"), type=Path, help="Vite public directory")
+    parser.add_argument(
+        "--regenerate-existing",
+        action="store_true",
+        help="Regenerate assets and text records already present in the catalog",
+    )
     args = parser.parse_args()
 
     source = args.source.resolve()
+    if not (source / "_arkusze").is_dir():
+        parser.error(f"Source must contain an _arkusze directory: {source}")
     public = args.public.resolve()
-    data_dir = public / "data"
+    data_dir = public / "data" / "inf04"
     data_dir.mkdir(parents=True, exist_ok=True)
 
-    catalog = build_catalog(source, public)
-    with (data_dir / "catalog.json").open("w", encoding="utf-8") as output:
-        json.dump(catalog, output, ensure_ascii=False, indent=2)
+    catalog_path = data_dir / "catalog.json"
+    catalog = build_catalog(source, public, args.regenerate_existing)
+    if not args.regenerate_existing:
+        catalog = preserve_existing_records(catalog, catalog_path)
+    with catalog_path.open("w", encoding="utf-8") as output:
+        output.write(format_catalog(catalog))
     print(f"Generated {catalog['examCount']} exams and {catalog['taskCount']} tasks")
 
 
