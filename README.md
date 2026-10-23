@@ -47,7 +47,7 @@ Zależności zewnętrzne zachowują własne licencje.
 
 - Node.js 24
 - pnpm 11.6.0
-- Python 3 z `pip`, tylko do odtwarzania katalogów
+- Python 3 z `pip` tylko do odtwarzania katalogów
 
 ## Uruchomienie lokalne
 
