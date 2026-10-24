@@ -12,7 +12,7 @@ każdego pliku. Zobacz [informacje o materiałach zewnętrznych](THIRD_PARTY_NOT
 
 | Kwalifikacja | Arkusze | Zadania | Lata |
 | --- | ---: | ---: | --- |
-| INF.03 | 87 | 241 | 2021-2026 |
+| INF.03 | 95 | 265 | 2021-2026 |
 | INF.04 | 31 | 93 | 2021-2026 |
 | Łącznie | 118 | 334 | 2021-2026 |
 

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-24T09:53:32.011575+00:00",
+  "generatedAt": "2026-10-24T10:22:47.002361+00:00",
   "years": [2026, 2025, 2024, 2023, 2022, 2021],
   "sourceRepository": "https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.03-rozwiazania",
-  "taskCount": 241,
+  "taskCount": 265,
   "taskTypes": ["database", "graphics-raster", "js", "php"],
   "exams": [
     {
@@ -1579,6 +1579,139 @@
     },
     {
       "tasks": [
+        "inf03-2023-06-12-sg-task-1",
+        "inf03-2023-06-12-sg-task-2",
+        "inf03-2023-06-12-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "12",
+      "sourcePath": null,
+      "assetFiles": ["materialy12.7z"],
+      "id": "inf03-2023-06-12-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2023-06-12-sg-zo.pdf",
+      "code": "INF.03-12-23.06-SG",
+      "session": "2023-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2023-06-12-sg.pdf",
+      "solutionFolder": null,
+      "year": 2023,
+      "assetUrls": {
+        "materialy12.7z": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-12/zalacznik/85/materialy12.7z"
+      },
+      "sourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-12/arkusz.pdf",
+      "sourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE",
+      "scoringSourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-12/klucz-odpowiedzi.pdf",
+      "scoringSourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE"
+    },
+    {
+      "tasks": [
+        "inf03-2023-06-11-sg-task-1",
+        "inf03-2023-06-11-sg-task-2",
+        "inf03-2023-06-11-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "11",
+      "sourcePath": null,
+      "assetFiles": ["materialy11.7z"],
+      "id": "inf03-2023-06-11-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2023-06-11-sg-zo.pdf",
+      "code": "INF.03-11-23.06-SG",
+      "session": "2023-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2023-06-11-sg.pdf",
+      "solutionFolder": null,
+      "year": 2023,
+      "assetUrls": {
+        "materialy11.7z": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-11/zalacznik/81/materialy11.7z"
+      },
+      "sourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-11/arkusz.pdf",
+      "sourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE",
+      "scoringSourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-11/klucz-odpowiedzi.pdf",
+      "scoringSourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE"
+    },
+    {
+      "tasks": [
+        "inf03-2023-06-10-sg-task-1",
+        "inf03-2023-06-10-sg-task-2",
+        "inf03-2023-06-10-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "10",
+      "sourcePath": null,
+      "assetFiles": ["materialy10.7z"],
+      "id": "inf03-2023-06-10-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2023-06-10-sg-zo.pdf",
+      "code": "INF.03-10-23.06-SG",
+      "session": "2023-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2023-06-10-sg.pdf",
+      "solutionFolder": null,
+      "year": 2023,
+      "assetUrls": {
+        "materialy10.7z": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-10/zalacznik/94/materialy10.7z"
+      },
+      "sourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-10/arkusz.pdf",
+      "sourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE",
+      "scoringSourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-10/klucz-odpowiedzi.pdf",
+      "scoringSourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE"
+    },
+    {
+      "tasks": [
+        "inf03-2023-06-09-sg-task-1",
+        "inf03-2023-06-09-sg-task-2",
+        "inf03-2023-06-09-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "09",
+      "sourcePath": null,
+      "assetFiles": ["materialy9.7z"],
+      "id": "inf03-2023-06-09-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2023-06-09-sg-zo.pdf",
+      "code": "INF.03-09-23.06-SG",
+      "session": "2023-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2023-06-09-sg.pdf",
+      "solutionFolder": null,
+      "year": 2023,
+      "assetUrls": {
+        "materialy9.7z": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-09/zalacznik/92/materialy9.7z"
+      },
+      "sourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-09/arkusz.pdf",
+      "sourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE",
+      "scoringSourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-09/klucz-odpowiedzi.pdf",
+      "scoringSourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE"
+    },
+    {
+      "tasks": [
+        "inf03-2023-06-08-sg-task-1",
+        "inf03-2023-06-08-sg-task-2",
+        "inf03-2023-06-08-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "08",
+      "sourcePath": null,
+      "assetFiles": [],
+      "id": "inf03-2023-06-08-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2023-06-08-sg-zo.pdf",
+      "code": "INF.03-08-23.06-SG",
+      "session": "2023-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2023-06-08-sg.pdf",
+      "solutionFolder": null,
+      "year": 2023,
+      "assetUrls": {},
+      "sourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-08/arkusz.pdf",
+      "sourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE",
+      "scoringSourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-08/klucz-odpowiedzi.pdf",
+      "scoringSourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE"
+    },
+    {
+      "tasks": [
         "inf03-2023-06-07-sg-task-1",
         "inf03-2023-06-07-sg-task-2",
         "inf03-2023-06-07-sg-task-3"
@@ -1602,6 +1735,60 @@
     },
     {
       "tasks": [
+        "inf03-2023-06-06-sg-task-1",
+        "inf03-2023-06-06-sg-task-2",
+        "inf03-2023-06-06-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "06",
+      "sourcePath": null,
+      "assetFiles": ["materialy6.7z"],
+      "id": "inf03-2023-06-06-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2023-06-06-sg-zo.pdf",
+      "code": "INF.03-06-23.06-SG",
+      "session": "2023-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2023-06-06-sg.pdf",
+      "solutionFolder": null,
+      "year": 2023,
+      "assetUrls": {
+        "materialy6.7z": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-06/zalacznik/69/materialy6.7z"
+      },
+      "sourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-06/arkusz.pdf",
+      "sourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE",
+      "scoringSourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-06/klucz-odpowiedzi.pdf",
+      "scoringSourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE"
+    },
+    {
+      "tasks": [
+        "inf03-2023-06-05-sg-task-1",
+        "inf03-2023-06-05-sg-task-2",
+        "inf03-2023-06-05-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "05",
+      "sourcePath": null,
+      "assetFiles": ["materialy5.7z"],
+      "id": "inf03-2023-06-05-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2023-06-05-sg-zo.pdf",
+      "code": "INF.03-05-23.06-SG",
+      "session": "2023-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2023-06-05-sg.pdf",
+      "solutionFolder": null,
+      "year": 2023,
+      "assetUrls": {
+        "materialy5.7z": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-05/zalacznik/65/materialy5.7z"
+      },
+      "sourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-05/arkusz.pdf",
+      "sourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE",
+      "scoringSourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-05/klucz-odpowiedzi.pdf",
+      "scoringSourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE"
+    },
+    {
+      "tasks": [
         "inf03-2023-06-04-sg-task-1",
         "inf03-2023-06-04-sg-task-2",
         "inf03-2023-06-04-sg-task-3"
@@ -1622,6 +1809,33 @@
       "assetUrls": {
         "INF.03-04-23.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/253/attachment/"
       }
+    },
+    {
+      "tasks": [
+        "inf03-2023-06-03-sg-task-1",
+        "inf03-2023-06-03-sg-task-2",
+        "inf03-2023-06-03-sg-task-3"
+      ],
+      "pageCount": 8,
+      "number": "03",
+      "sourcePath": null,
+      "assetFiles": ["materialy3.7z"],
+      "id": "inf03-2023-06-03-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2023-06-03-sg-zo.pdf",
+      "code": "INF.03-03-23.06-SG",
+      "session": "2023-06",
+      "month": "06",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2023-06-03-sg.pdf",
+      "solutionFolder": null,
+      "year": 2023,
+      "assetUrls": {
+        "materialy3.7z": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-03/zalacznik/55/materialy3.7z"
+      },
+      "sourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-03/arkusz.pdf",
+      "sourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE",
+      "scoringSourceUrl": "https://zawodowe.edu.pl/arkusz-praktyczny/inf03-2023-czerwiec-03/klucz-odpowiedzi.pdf",
+      "scoringSourceLabel": "zawodowe.edu.pl, publiczny mirror materiałów CKE"
     },
     {
       "tasks": [
@@ -5560,6 +5774,276 @@
       "duplicates": ["inf03-2024-01-08-sg-task-1", "inf03-2024-01-12-sg-task-1"]
     },
     {
+      "id": "inf03-2023-06-12-sg-task-3",
+      "examId": "inf03-2023-06-12-sg",
+      "part": 3,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": ["php", "backend", "mysql"],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2023-06-12-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. W formularzu wypełniono pola i wybrano przycisk, co spowodowało \nwyświetlenie napisu pod przyciskiem \n \nPrzygotowanie grafiki: \n− Plik zakupy.png , wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, a by \njego szerokość wynosiła dokładnie 180 px. Plik należy zapisać z zachowaniem przezroczystości pod \ntą samą nazwą \nCechy witryny: \n− Składa się ze strony o nazwie index.php \n− Zapisana w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Hurtownia szkolna” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej b loki: lewy, środkowy i prawy oraz na dole blok stopki. \nPodział zrealizowany za pomocą znaczników sekcji tak, aby wygląd układu bloków strony po \nuruchomieniu w przeglądarce, był zgodny z Obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Hurt ownia z najlepszymi cenami” \n− Zawartość bloku lewego: \n− Nagłówek drugiego stopnia o treści „Nasze ceny” \n− Tabela składająca się z czterech wierszy i dwóch kolumn o zawartości generowanej skryptem 1 \n− Zawartość bloku środkowego: \n− Nagłówek drugiego stopnia o treści „Koszt zakupów” \n− Formularz zgodny z obrazem 2, wysyłający dane do tego samego pliku metodą bezpieczną, który \nzawiera: \n− Napis „wybierz artykuł: ” \n− Listę rozwijalną zawierającą nazwy towarów z tabeli: Zeszyt 60 kartek, Zeszyt 32 kartki, \nCyrkiel, Linijka 30 cm. \n− Pole edycyjne typu numerycznego poprzedzone napisem „liczba sztuk: ” \n− Przycisk „OBLICZ”, którego wybranie powoduje przesłanie danych do skryptu 2 \n− Wyniki działania skryptu 2 \n− Zawartość bloku prawego: \n− Nagłówek drugiego stopnia o treści „Kontakt” \n − Obraz zakupy.png z tekstem alternatywnym „hurtownia” \n− Paragraf (akapit) „e -mail: hurt@poczta2.pl”, gdzie hurt@poczta2.pl jest odsyłaczem pocztowym \nłączącym z tym adresem \n− Zawartość stopki: nagłówek czwartego stopnia o treści „Witrynę wykonał: ”, dalej wstawiony numer \nzdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie styl.css . Arkusz CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów : krój czcionki Georgia i wyrównanie tekstu do środka \n− Dla banera i stopki: kolor tła #4BA3C7, biały kolor czcionki, wysokość 80 px, rozmiar czcionki 120% \n− Dla panelu lewego i prawego: kolor tła #EFEFEF wysokość 400 px, szerokość 25% \n− Dla panelu środkowego: kolor tła #90CAF9, wysokość 400 px, szerokość 50% \n− Dla selektora tabeli: margines zewnętrzny lewy 10 px, szerokość 90%, obramowanie linią ciągłą \no szerokości 1 px i kolorze #90CAF9 \n− Dla selektora komórek tabeli: marg inesy wewnętrzne 5 px, obramowanie komórek tabeli linią ciągłą \no szerokości 1 px i kolorze #90CAF9 \n− Po wskazaniu kursorem myszy dowolnego wiersza tabeli zostaje zmieniony kolor tekstu w tym \nwierszu na #90CAF9 \n− Dla selektora pola edycyjnego: margines zewnętrzny górny i dolny 15 px \n \nUwaga: style CSS dla tabeli, komórek tabeli i pola edycyjnego należy zdefiniować wyłącznie przy pomocy \nselektora dla znaczników tabeli, komórek tabeli oraz pola edycyjnego. Jest to uwa runkowane projektem \npóźniejszej rozbudowy witryny. \n \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku index.php \n− Skrypt łączy się z serwerem bazodanowym na localhost , użytkownik root bez hasła, baza danych \no nazwie sklep \n− Na końcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Wysyła do bazy danych zapytanie 1 \n− Wyświetla dane pobrane zapytaniem wewnątrz komóre k tabeli. W pierwszej kolumnie tabeli \nwypisywane są nazwy czterech towarów, w drugiej kolumnie odpowiadające im ceny (zgodnie \nz obrazem 2) \nSkrypt 2 \n− Pobiera z formularza nazwę towaru wybraną w liście rozwijalnej \n− Pobiera z formularza liczbę wpisaną w polu edycyjnym \n− Wysyła do bazy danych zapytanie 2, zmodyfikowane w ten sposób, że w sekcji warunku nazwa \ntowaru jest zgodna z wyborem w liście rozwijalnej \n− Oblicza wartość zakupów na podstawie ceny towaru zwróconej zapytaniem i liczby sztuk tego towaru \npobra nej z pola edycyjnego \n− Obliczona kwota wyświetlana jest pod formularzem w formacie: „wartość zakupów: \n<obliczona_kwota>”, zgodnie z obrazem 2.",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "7027977b1f35",
+      "duplicates": ["inf03-2023-06-02-sg-task-3", "inf03-2023-06-05-sg-task-3"]
+    },
+    {
+      "id": "inf03-2023-06-12-sg-task-2",
+      "examId": "inf03-2023-06-12-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie grafiki:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": ["gimp", "grafika-rastrowa"],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2023-06-12-sg-task-2.pdf",
+      "text": "Przygotowanie grafiki: \n− Plik zakupy.png , wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, a by \njego szerokość wynosiła dokładnie 180 px. Plik należy zapisać z zachowaniem przezroczystości pod \ntą samą nazwą",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów.",
+      "duplicateGroup": "e6bf20579314",
+      "duplicates": ["inf03-2023-06-02-sg-task-2", "inf03-2023-06-05-sg-task-2"]
+    },
+    {
+      "id": "inf03-2023-06-12-sg-task-1",
+      "examId": "inf03-2023-06-12-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": ["sql", "mysql", "phpmyadmin"],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2023-06-12-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nTabele w bazie sklep wykorzystane w zadaniu przedstawione są na obrazie 1. Pole promocja przyjmuje \nwartość 0, gdy towar nie jest objęty promocją lub wartość 1, gdy towar jest objęty promocją. Tabele połączone \nsą relacją opartą na polach: idDostawcy w tabeli towary oraz id w tabeli dostawcy . \n \nObraz 1. Baza danych \n \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie sklep \n− Do bazy zaimportuj tabele z pliku sklep.sql , z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w formacie JPEG i nazwij import . Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie danych sklep . Zapytania zapisz w pliku kwerendy.txt . \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPEG \ni nadaj im nazwy kwerenda1, kwerenda2, kwerenda3, kwerenda4 . Zrzuty powinny obejmować cały \nekran monitora z widocznym paskiem zadań oraz zawierać wykonane zapytanie \n− Zapytanie 1: wybierające jedynie pola nazwa i cena z tabeli towary i wyświetlające jedynie cztery \npierwsze zwrócone zapytaniem rekordy \n− Zapytanie 2: wybierając e jedynie pole cena z tabeli towary dla towaru Ekierka \n− Zapytanie 3: aktualizujące dane w tabeli dostawcy , rekord o id równym 2 w polu nazwa przyjmuje \nnową wartość „Artykuly szkolne” \n− Zapytanie 4: wybierające jedynie pole promocja dla wszystkich rekordów z tabeli towary oraz \nzliczające liczbę towarów objętych i towarów nieobjętych promocją. Nazwa kolumny (alias) dla \nzliczenia towarów: podsumowanie",
+      "summary": "Operacje na bazie danych sklep: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "757c9198341f",
+      "duplicates": ["inf03-2023-06-02-sg-task-1", "inf03-2023-06-05-sg-task-1"]
+    },
+    {
+      "id": "inf03-2023-06-11-sg-task-3",
+      "examId": "inf03-2023-06-11-sg",
+      "part": 3,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": ["php", "backend", "mysql"],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2023-06-11-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. Dodano użytkownika Monika Nowak, \njest on również widoczny w liście \nPrzygotowanie grafiki: \n‒ grafikę biblioteka.png przeskalować z zachowaniem proporcji tak, aby szerokość wynosiła dokładnie \n100 px oraz zapisać w odcieniach szarości. \nCechy witryny: \n− Składa się ze strony o nazwie biblioteka.php \n− Zapisana w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Biblioteka” \n− Arkusz stylów w pliku o nazwie style.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej bloki: lewy, środkowy i prawy oraz na dole blok stopki. \nPodział zrealizowany za pomocą znaczników sekcji tak, aby wygląd układu bloków strony po \nuruchomieniu w przeglądarce, był zgodny z Obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Biblioteka w Książkowicach Małych” \n− Zawartość bloku lewego: \n− Nagłówek czwartego stopnia o treści „Dodaj czytelnika” \n− Formularz wysyłający dane do tego samego pliku metodą post i zawierający: \n− Pole edycyjne poprzedzone napisem „imię: ” \n− Pole edycyjne poprzedzone napisem „nazwisko: ” \n− Pole edycyjne typu numerycznego poprzedzone napisem „sym bol: ” \n− Przycisk AKCEPTUJ wysyłający dane z formularza \n− Efekt działania s kryptu 1 \n− Zawartość bloku środkowego: \n− Obraz biblioteka.png z tekstem alternatywnym „biblioteka” \n− Nagłówek szóstego stopnia o treści: „ul. Czytelników 15; Książkowice Małe”, nazwa ulicy i numer \nlokalu połączone nierozdzielającą spacją \n − Paragraf (akapit) o treści: „Czy masz jakieś uwagi?”, który jest odsyłaczem pocztowym do adresu \nbiuro@bib.pl \n− Zawartość bloku prawego: \n− Nagłówek czwartego stopnia o treści „Nasi czytelnicy:” \n− Lista numerowana (up orządkowana) generowana za pomocą skryptu 2 \n− Zawartość stopki: paragraf (akapit) o treści „Projekt witryny: ”, dalej wstawiony numer zdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie style.css. Styl CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów : krój czcionki Tahoma \n− Dla banera i stopki: kolor tła SaddleBrown, biały kolor czcionki, marginesy wewnętrzne 3 px, \nwyrównanie tekstu do środka \n− Dla panelu lewego i prawego: kolor tła Tan, wysokość 400 px, szerokość 40% \n− Dla panelu środkowego: kolor tła Wheat, wysokość 400 px, szerokość 20% \n− Dla selektora obrazu: margines zewnętrzny prawy 20 px, oblewanie z lewej strony zgodnie \nz Obrazem 2 \n− Dla selektora nagłówka czwartego stopnia: wyrówna nie tekstu do środka \n− Dla selektora pola edycyjnego: marginesy zewnętrzne 5 px \n− Po najechaniu na element listy, jego tło jest zmieniane na Sienna a kolor czcionki na biały \n \nUWAGA : style CSS dla obrazu, nagłówka czwartego stopnia oraz pola edycyjnego należy z definiować \nwyłącznie przy pomocy selektora tego znacznika. Jest to uwarunkowane projektem późniejszej rozbudowy \nwitryny. \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku biblioteka.php \n− Skrypt łączy się z serwerem bazodanowym na localhost , użytkownik root bez hasła, baza danych \no nazwie biblio teka \n− Na końcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Pobiera dane z formularza \n− Wyświetla napis „Dodano czytelnika <imie> <nazwisko>”, gdzie pola <> pobrano z formularza \n− Wysyła do bazy danych zmodyfikowane zapytanie 1 tak, że wstawia do bazy danych dane \nz formularza \nSkrypt 2 \n− Wysyła do bazy danych zapytanie 2 \n− Pobrane zapytaniem imiona i nazwiska czytelników wypisywane są jako elementy listy numerowanej \n(uporządkowanej)",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "1e8845be4ad3",
+      "duplicates": ["inf03-2023-06-07-sg-task-3", "inf03-2023-06-09-sg-task-3"]
+    },
+    {
+      "id": "inf03-2023-06-11-sg-task-2",
+      "examId": "inf03-2023-06-11-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie grafiki:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": ["gimp", "grafika-rastrowa"],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2023-06-11-sg-task-2.pdf",
+      "text": "Przygotowanie grafiki: \n‒ grafikę biblioteka.png przeskalować z zachowaniem proporcji tak, aby szerokość wynosiła dokładnie \n100 px oraz zapisać w odcieniach szarości.",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów, filtry i efekty.",
+      "duplicateGroup": "71dfbb5e38c2",
+      "duplicates": ["inf03-2023-06-07-sg-task-2", "inf03-2023-06-09-sg-task-2"]
+    },
+    {
+      "id": "inf03-2023-06-11-sg-task-1",
+      "examId": "inf03-2023-06-11-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": ["sql", "mysql", "phpmyadmin"],
+      "pageStart": 2,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2023-06-11-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nTabele w bazie biblioteka wykorzystane w zadaniu przedstawione są na obrazie 1. \n \nObraz 1. Baza danych \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie biblioteka \n− Do bazy zaimportuj tabele z pliku biblioteka.sql , z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w folderze z numerem zdającego , w formacie JPEG \ni nazwij dane . Nie kadruj zrzutu. Powinien on obejmować cały ekran monitora, z widocznym paskiem \nzadań. Na zrzucie powinny być widoczne elementy wskazujące na poprawnie wykonany import tabel \n− Zapisz i wykonaj w narzędziu phpMyAdmin zapytania SQL działające na bazie. Wykonaj zrzuty \nekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPEG i nadaj im nazwy: \nkwerenda1, kwerenda2, kwerenda3, kwerenda4 . Zrzuty powinny obejmować cały ekran monitora \nz widocznym paskiem zadań. Zapytania zapisz w pliku kwerendy .txt. Pliki umieść w folderze \nz numerem zdającego. \n− Zapytanie 1: wstawiające do tabeli czytelnicy nowy rekord z danymi: Ewelina Romanowska \nz kodem 56677. Pole klucza głównego nadawane automatycznie \n− Zapytanie 2: wybierające jedynie pola imie i nazwisko dla wszystkich rekordów w tabeli czytelnicy , \nposortowane rosnąco według nazwisk \n− Zapytanie 3: wybierające jedynie pole tytul dla wszystkich utworów, których nazwisko autora \nto Sienkiewicz \n− Zapytanie 4: wybierające jedynie pole nazwisko dla wszystkich rekordów w tabeli autorzy oraz \nobliczające liczbę tytułów danego autora znajdujących się w bazie biblioteka. Nazwa kolumny \n (alias) dla zliczania tytułów: ile_tytulow",
+      "summary": "Operacje na bazie danych biblioteka: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "64a477e3ffec",
+      "duplicates": ["inf03-2023-06-07-sg-task-1", "inf03-2023-06-09-sg-task-1"]
+    },
+    {
+      "id": "inf03-2023-06-10-sg-task-3",
+      "examId": "inf03-2023-06-10-sg",
+      "part": 3,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": ["php", "backend", "mysql"],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2023-06-10-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. Po zatwierdzeniu danych z formularza \nPrzygotowanie grafiki: \n \nObraz 3a. biblioteka.png przed \ntransformacją; rozmiar 150 px na 235 px \n \n \n=> \n \nObraz 3b. biblioteka.png po transformacji; rozmiar \n300 px na 235 px \n‒ grafikę biblioteka.png należy rozszerzyć z rozmiaru poziomego 150 px do rozmiaru 300 px, \na następnie w pustym obszarze zdublować stos książek zgodnie z obrazem 3b \nCechy witryny: \n− Składa się ze strony o nazwie biblioteka.php \n− Zapisana w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Biblioteka publiczna” \n− Arkusz stylów w pliku o nazwie style.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej bloki: lewy, środkowy i dwa prawe ułożone jeden \npod drugim oraz na dole blok stopki. Podział zrealizowany za pomocą zna czników sekcji tak, aby \nwygląd układu bloków strony po uruchomieniu w przeglądarce, był zgodny z obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Biblioteka w Książkowicach Wielkich” \n− Zawartość bloku lewego: \n− Nagłówek trzeciego stopnia o treści „Polecamy dzieła autorów:” \n− Lista numerowana (uporządkowana), której elementy są generowane skryptem 1 \n− Zawartość bloku środkowego: \n− Nagłówek trzeciego stopnia o treści: „ul. Czytelnicza 25, Książkowice Wielkie”. Dwa człony nazwy \nmiasta połą czone są spacją nierozdzielającą \n − Paragraf (akapit) o treści „Napisz do nas”, który jest odsyłaczem pocztowym do adresu \nsekretariat@biblioteka.pl \n− Obraz biblioteka.png z tekstem alternatywnym „książki” \n− Zawartość bloku prawego – górnego: \n− Nagłówek trzeciego stopnia o treści „Dodaj czytelnika” \n− Formularz wysyłający dane do tego samego pliku metodą bezpieczną, zawierający: \n− Pole edycyjne poprzedzone napisem „imię: ” \n− Pole edycyjne poprzedzone napisem „nazwisko: ” \n− Pole edycyjne typu numerycznego poprzedzone napisem „symbol: ” \n− Przycisk DODAJ wysyłający dane z formularza \n− Zawartość bloku prawego – dolnego: efekt działania skryptu 2 \n− Zawartość stopki: paragraf (akapit) o treści „Projekt strony: ”, dalej wstawiony numer zdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie style.css . Arkusz CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów : krój czcionki Verdana \n− Dla banera i stopki: kolor tła #004D40, biały kolor czcionki, marginesy wewnętrzne 10 px, wyrównanie \ntekstu do środka \n− Dla panelu lewego: kolor tła #80CBC4, biały kolor czcionki, wysokość 500 px, sze rokość 30% \n− Dla panelu środkowego: kolor tła #E0F2F1, wysokość 500 px, szerokość 30%, wyrównanie tekstu do \nśrodka \n− Dla obu paneli prawych: wysokość 250 px, szerokość 40% \n− Kolory tła dla paneli prawych: prawego -górnego: #E0F2F1, prawego -dolnego: #B2DFDB \n− Dla selektora nagłówka trzeciego stopnia: wyrównanie tekstu do środka \n− Dla selektora obrazu: marginesy wewnętrzne 5 px, wysokość 150 px, obramowanie linią kropkowaną \no grubości 1 px i kolorze #004D40 zaokrągloną na rogach o 5 px \n− Dla selektora pola edycyjnego: marginesy zewnętrzne 10 px \n \nUwaga: style CSS dla nagłówka trzeciego stopnia, obrazu i pola edycyjnego należy zdefiniować wyłącznie \nprzy pomocy selektora dla znaczników nagłówka trzeciego stopnia, obrazu oraz pola edycyjnego. Jes t to \nuwarunkowane projektem późniejszej rozbudowy witryny. \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku biblioteka.php \n− Skrypt łączy się z serwe rem bazodanowym na localhost , użytkownik root bez hasła, baza danych \no nazwie biblioteka \n− Na końcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Wysyła do bazy danych zapytanie 1 \n− Pobrane zapytaniem imiona i nazwiska autorów wypisywane są jako elementy listy numerowanej \n(uporządkowanej) \nSkrypt 2 \n− Pobiera dane z formularza \n− Wyświetla napis „Czytelnik <imie> <nazwisko> został(a) dodany do bazy danych” (gdzie pola <> \nsą pobrane z formularza) \n− Wysyła do bazy danych zmodyfikowane zapytanie 2 tak, że wst awia do bazy danych dane \nz formularza",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "68865758cf0d",
+      "duplicates": ["inf03-2023-06-04-sg-task-3", "inf03-2023-06-06-sg-task-3"]
+    },
+    {
+      "id": "inf03-2023-06-10-sg-task-2",
+      "examId": "inf03-2023-06-10-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie grafiki:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": ["gimp", "grafika-rastrowa"],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2023-06-10-sg-task-2.pdf",
+      "text": "Przygotowanie grafiki: \n \nObraz 3a. biblioteka.png przed \ntransformacją; rozmiar 150 px na 235 px \n \n \n=> \n \nObraz 3b. biblioteka.png po transformacji; rozmiar \n300 px na 235 px \n‒ grafikę biblioteka.png należy rozszerzyć z rozmiaru poziomego 150 px do rozmiaru 300 px, \na następnie w pustym obszarze zdublować stos książek zgodnie z obrazem 3b",
+      "summary": "Grafika rastrowa: obrazy witryny internetowej.",
+      "duplicateGroup": "78e1c3e5d9af",
+      "duplicates": ["inf03-2023-06-04-sg-task-2", "inf03-2023-06-06-sg-task-2"]
+    },
+    {
+      "id": "inf03-2023-06-10-sg-task-1",
+      "examId": "inf03-2023-06-10-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": ["sql", "mysql", "phpmyadmin"],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2023-06-10-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nTabele w bazie biblioteka wykorzystane w zadaniu przedstawione są na obrazie 1. \n \nObraz 1. Baza danych \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie biblioteka \n− Do bazy zaimportuj tabele z pliku biblioteka.sql , z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w formacie JPEG i nazwij import . Nie kadruj zrzutu. \nPowinien on obejmować cały e kran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie biblioteka . Zapytania zapisz w pliku kwerendy .txt. \nWykonaj zrzuty ekranu przedstawiaj ące wyniki działania kwerend. Zrzuty zapisz w formacie JPEG \ni nadaj im nazwy kwerenda1, kwerenda2, kwerenda3, kwerenda4 . Zrzuty powinny obejmować cały \nekran monitora z widocznym paskiem zadań oraz zawierać wykonane zapytanie \n− Zapytanie 1: wybierające jedyni e pola imie i nazwisko dla wszystkich rekordów w tabeli autorzy , \nposortowane rosnąco nazwiskami autorów \n− Zapytanie 2: wstawiające do tabeli czytelnicy nowy rekord z danymi: Ewa Kowalska z kodem \n145321. Wartość klucza głównego nadawana automatycznie \n− Zapytan ie 3: wybierające jedynie pole tytul dla wszystkich utworów w tabeli ksiazki, należących \ndo kategorii dramat \n− Zapytanie 4: wybierające jedynie pole tytul wszystkich utworów w tabeli książki, wypożyczonych \nprzez czytelnika o identyfikatorze 2. W zapytaniu 4 należy posłużyć się relacją",
+      "summary": "Operacje na bazie danych biblioteka: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "9e8fbb4b8c0b",
+      "duplicates": ["inf03-2023-06-04-sg-task-1", "inf03-2023-06-06-sg-task-1"]
+    },
+    {
+      "id": "inf03-2023-06-09-sg-task-3",
+      "examId": "inf03-2023-06-09-sg",
+      "part": 3,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": ["php", "backend", "mysql"],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2023-06-09-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. Dodano użytkownika Monika Nowak, \njest on również widoczny w liście \nPrzygotowanie grafiki: \n‒ grafikę biblioteka.png przeskalować z zachowaniem proporcji tak, aby szerokość wynosiła dokładnie \n100 px oraz zapisać w odcieniach szarości. \nCechy witryny: \n− Składa się ze strony o nazwie biblioteka.php \n− Zapisana w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Biblioteka” \n− Arkusz stylów w pliku o nazwie style.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej bloki: lewy, środkowy i prawy oraz na dole blok stopki. \nPodział zrealizowany za pomocą znaczników sekcji tak, aby wygląd układu bloków strony po \nuruchomieniu w przeglądarce, był zgodny z Obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Biblioteka w Książkowicach Małych” \n− Zawartość bloku lewego: \n− Nagłówek czwartego stopnia o treści „Dodaj czytelnika” \n− Formularz wysyłający dane do tego samego pliku metodą post i zawierający: \n− Pole edycyjne poprzedzone napisem „imię: ” \n− Pole edycyjne poprzedzone napisem „nazwisko: ” \n− Pole edycyjne typu numerycznego poprzedzone napisem „sym bol: ” \n− Przycisk AKCEPTUJ wysyłający dane z formularza \n− Efekt działania s kryptu 1 \n− Zawartość bloku środkowego: \n− Obraz biblioteka.png z tekstem alternatywnym „biblioteka” \n− Nagłówek szóstego stopnia o treści: „ul. Czytelników 15; Książkowice Małe”, nazwa ulicy i numer \nlokalu połączone nierozdzielającą spacją \n − Paragraf (akapit) o treści: „Czy masz jakieś uwagi?”, który jest odsyłaczem pocztowym do adresu \nbiuro@bib.pl \n− Zawartość bloku prawego: \n− Nagłówek czwartego stopnia o treści „Nasi czytelnicy:” \n− Lista numerowana (up orządkowana) generowana za pomocą skryptu 2 \n− Zawartość stopki: paragraf (akapit) o treści „Projekt witryny: ”, dalej wstawiony numer zdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie style.css. Styl CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów : krój czcionki Tahoma \n− Dla banera i stopki: kolor tła SaddleBrown, biały kolor czcionki, marginesy wewnętrzne 3 px, \nwyrównanie tekstu do środka \n− Dla panelu lewego i prawego: kolor tła Tan, wysokość 400 px, szerokość 40% \n− Dla panelu środkowego: kolor tła Wheat, wysokość 400 px, szerokość 20% \n− Dla selektora obrazu: margines zewnętrzny prawy 20 px, oblewanie z lewej strony zgodnie \nz Obrazem 2 \n− Dla selektora nagłówka czwartego stopnia: wyrówna nie tekstu do środka \n− Dla selektora pola edycyjnego: marginesy zewnętrzne 5 px \n− Po najechaniu na element listy, jego tło jest zmieniane na Sienna a kolor czcionki na biały \n \nUWAGA : style CSS dla obrazu, nagłówka czwartego stopnia oraz pola edycyjnego należy z definiować \nwyłącznie przy pomocy selektora tego znacznika. Jest to uwarunkowane projektem późniejszej rozbudowy \nwitryny. \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku biblioteka.php \n− Skrypt łączy się z serwerem bazodanowym na localhost , użytkownik root bez hasła, baza danych \no nazwie biblio teka \n− Na końcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Pobiera dane z formularza \n− Wyświetla napis „Dodano czytelnika <imie> <nazwisko>”, gdzie pola <> pobrano z formularza \n− Wysyła do bazy danych zmodyfikowane zapytanie 1 tak, że wstawia do bazy danych dane \nz formularza \nSkrypt 2 \n− Wysyła do bazy danych zapytanie 2 \n− Pobrane zapytaniem imiona i nazwiska czytelników wypisywane są jako elementy listy numerowanej \n(uporządkowanej)",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "1e8845be4ad3",
+      "duplicates": ["inf03-2023-06-07-sg-task-3", "inf03-2023-06-11-sg-task-3"]
+    },
+    {
+      "id": "inf03-2023-06-09-sg-task-2",
+      "examId": "inf03-2023-06-09-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie grafiki:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": ["gimp", "grafika-rastrowa"],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2023-06-09-sg-task-2.pdf",
+      "text": "Przygotowanie grafiki: \n‒ grafikę biblioteka.png przeskalować z zachowaniem proporcji tak, aby szerokość wynosiła dokładnie \n100 px oraz zapisać w odcieniach szarości.",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów, filtry i efekty.",
+      "duplicateGroup": "71dfbb5e38c2",
+      "duplicates": ["inf03-2023-06-07-sg-task-2", "inf03-2023-06-11-sg-task-2"]
+    },
+    {
+      "id": "inf03-2023-06-09-sg-task-1",
+      "examId": "inf03-2023-06-09-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": ["sql", "mysql", "phpmyadmin"],
+      "pageStart": 2,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2023-06-09-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nTabele w bazie biblioteka wykorzystane w zadaniu przedstawione są na obrazie 1. \n \nObraz 1. Baza danych \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie biblioteka \n− Do bazy zaimportuj tabele z pliku biblioteka.sql , z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w folderze z numerem zdającego , w formacie JPEG \ni nazwij dane . Nie kadruj zrzutu. Powinien on obejmować cały ekran monitora, z widocznym paskiem \nzadań. Na zrzucie powinny być widoczne elementy wskazujące na poprawnie wykonany import tabel \n− Zapisz i wykonaj w narzędziu phpMyAdmin zapytania SQL działające na bazie. Wykonaj zrzuty \nekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPEG i nadaj im nazwy: \nkwerenda1, kwerenda2, kwerenda3, kwerenda4 . Zrzuty powinny obejmować cały ekran monitora \nz widocznym paskiem zadań. Zapytania zapisz w pliku kwerendy .txt. Pliki umieść w folderze \nz numerem zdającego. \n− Zapytanie 1: wstawiające do tabeli czytelnicy nowy rekord z danymi: Ewelina Romanowska \nz kodem 56677. Pole klucza głównego nadawane automatycznie \n− Zapytanie 2: wybierające jedynie pola imie i nazwisko dla wszystkich rekordów w tabeli czytelnicy , \nposortowane rosnąco według nazwisk \n− Zapytanie 3: wybierające jedynie pole tytul dla wszystkich utworów, których nazwisko autora \nto Sienkiewicz \n− Zapytanie 4: wybierające jedynie pole nazwisko dla wszystkich rekordów w tabeli autorzy oraz \nobliczające liczbę tytułów danego autora znajdujących się w bazie biblioteka. Nazwa kolumny \n (alias) dla zliczania tytułów: ile_tytulow",
+      "summary": "Operacje na bazie danych biblioteka: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "64a477e3ffec",
+      "duplicates": ["inf03-2023-06-07-sg-task-1", "inf03-2023-06-11-sg-task-1"]
+    },
+    {
+      "id": "inf03-2023-06-08-sg-task-3",
+      "examId": "inf03-2023-06-08-sg",
+      "part": 3,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": ["php", "backend", "mysql"],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2023-06-08-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. Z listy rozwijalnej wybrano gumkę do mazania. \n \nPrzygotowanie grafiki: \n− Plik promocja.png , wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, aby \njego szerokość wynosiła dokładnie 180 px. Plik powinien być zapisany z zachowaniem \nprzezroczystości pod tą samą nazwą. \nCechy witryny: \n− Składa się ze strony o nazwie index.php \n− Zapisany w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki „Sklep dla uczniów” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej bloki: lewy, środkowy i prawy oraz na dole blok stopki. \nPodział zrealizowany za pomocą znaczników sekcji tak, aby wygląd układu bloków strony po \nuruchomieniu w przeglądar ce, był zgodny z obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Dzisiejsze promocje naszego sklepu” \n− Zawartość bloku lewego: \n− Nagłówek drugiego stopnia o treści „Taniej o 30%” \n− Lista numerowana (uporządkowana) zgodna z obrazem 2, elementy listy generowane są \nskryptem 1 \n− Zawartość bloku środkowego: \n− Nagłówek drugiego stopnia o treści „Sprawdź cenę” \n− Formularz wysyłający dane do tego samego pliku metodą bezpieczną oraz składający się z: \n− Listy rozwijalnej zawierającej nazwy towarów: „Gu mka do mazania”, „Cienkopis”, „Pisaki \n60 szt.”, „Markery 4 szt.” \n− Przycisku SPRAWDŹ, którego wybranie powoduje wysłanie danych do skryptu 2 \n− Blok zawierający efekt działania skryptu 2 \n− Zawartość bloku prawego: \n− Nagłówek drugiego stopnia o treści: „Kontakt” \n− Paragraf (akapit) o treści „e -mail: bok@sklep.pl ”, gdzie napis „bok@sklep.pl” jest odsyłaczem \npocztowym łączącym z tym adresem \n − Obraz promocja.png z tekstem alternatywnym „promocja” \n− Zawartość stopki: nagłówek czwartego stopnia o treści „Autor strony: ”, dalej wstawiony numer \nzdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie styl.css . Arkusz CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów : krój czcionki Garamond, wyrównanie tekstu do \nśrodka \n− Dla banera i stopki: kolor tła #8C7B75, biały kolor czcionki, wysokość 70 px, rozmiar czcionki 150% \n− Dla panelu lewego i prawego: kolor tła #BCAAA4, wysokość 400 px, szerokość 35% \n− Dla panelu środkowego: kolor tła #EFDCD5, wysokość 400 px, szerokość 30% \n− Dla selektora listy numerowanej: numeracja małymi literami \n− Dla selektora elementu listy: wyrównanie tekst u do lewej strony \n− Dla selektora obrazu: obramowanie o szerokości 1 px linią kreskową koloru #8C7B75, marginesy \nwewnętrzne 5 px, zaokrąglenie obramowania 10% \n− Dla bloku z wynikiem działania skryptu 2: margines zewnętrzny górny 100 px, obramowanie \no szerokości 1 px linią ciągłą koloru #8C7B75. \n \nUWAGA: style CSS dla listy numerowanej, elementu listy i obrazu należy zdefiniować wyłącznie przy pomocy \nselektora dla zn aczników listy numerowanej, elementu listy oraz obrazu. Jest to uwarunkowane projektem \npóźniejszej rozbudowy witryny. \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku index.php \n− Skrypt łączy się z serwerem bazodanowym na localhost , użytkownik root bez hasła, baza danych \no nazwie sklep \n− Na ko ńcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Wysyła do bazy danych zapytanie 1 \n− Nazwy towarów zwrócone zapytaniem wypisywane są jako elementy listy numerowanej \nSkrypt 2 \n− Pobiera z formularza nazwę towaru wybranego w liście rozwijalnej \n− Wysyła do bazy danych zapytanie 2, zmodyfikowane w ten sposób, że w sekcji warunku nazwa \ntowaru jest zgodna z wyborem w liście rozwijalnej \n− Na podstawie ceny zwróconej zapytaniem oblicza cenę promocyjną jako wartość niższą o 30% \n− Pod formularzem wypisuje dane w blo ku, zgodnie z obrazem 2, w formacie: \ncena regularna: <cena_pobrana_z_bazy> \ncena w promocji 30%: <obliczona_cena>",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "a023b150dff0",
+      "duplicates": ["inf03-2023-06-01-sg-task-3", "inf03-2023-06-03-sg-task-3"]
+    },
+    {
+      "id": "inf03-2023-06-08-sg-task-2",
+      "examId": "inf03-2023-06-08-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie grafiki:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": ["gimp", "grafika-rastrowa"],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2023-06-08-sg-task-2.pdf",
+      "text": "Przygotowanie grafiki: \n− Plik promocja.png , wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, aby \njego szerokość wynosiła dokładnie 180 px. Plik powinien być zapisany z zachowaniem \nprzezroczystości pod tą samą nazwą.",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów.",
+      "duplicateGroup": "8eb52c01014f",
+      "duplicates": ["inf03-2023-06-01-sg-task-2", "inf03-2023-06-03-sg-task-2"]
+    },
+    {
+      "id": "inf03-2023-06-08-sg-task-1",
+      "examId": "inf03-2023-06-08-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": ["sql", "mysql", "phpmyadmin"],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2023-06-08-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nTabele w bazie sklep wykorzystane w zadaniu przedstawione są na obrazie 1. Pole promocja przechowuje \nwartość 0, gdy towar nie jest objęty promocją lub 1, gdy towar jest objęty promocją. Tabele połączone są \nrelacją opartą na polach: idDostawcy w tabeli towary oraz id w tabeli dostawcy . \n \nObraz 1. Baza danych \n \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie sklep \n− Do bazy zaimportuj tabele z pliku sklep.sql , z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w formacie JPEG i nazwij baza . Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie danych sklep . Zapytania zapisz w pliku kwerendy.txt . \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPEG \ni nadaj im nazwy kwerenda1 , kwerenda2, kwerenda3, kwerenda4 . Zrzuty p owinny obejmować cały \nekran monitora z widocznym paskiem zadań oraz zawierać wykonane zapytanie. \n− Zapytanie 1: wybierające jedynie pole nazwa z tabeli towary dla towarów objętych promocją \n− Zapytanie 2: wybierające jedynie pole cena z tabeli towary dla towaru Markery 4 szt. \n− Zapytanie 3: wybierające jedynie pola id oraz nazwa dla wszystkich rekordów z tabeli dostawcy \noraz zliczające liczbę towarów dostarczanych przez każdego z dostawców. Nazwa kolumny (alias) \ndla zliczenia towarów: liczba_towarow. W zapytaniu 3 należy posłużyć się relacją \n− Zapytanie 4: modyfikujące strukturę tabeli dostawcy , poprzez dodanie pola typu t ekstowego \no nazwie informacje.",
+      "summary": "Operacje na bazie danych sklep: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "88da7325d239",
+      "duplicates": ["inf03-2023-06-01-sg-task-1", "inf03-2023-06-03-sg-task-1"]
+    },
+    {
       "id": "inf03-2023-06-07-sg-task-3",
       "examId": "inf03-2023-06-07-sg",
       "part": 3,
@@ -5575,7 +6059,10 @@
       "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. Dodano użytkownika Monika Nowak, \njest on również widoczny w liście \nPrzygotowanie grafiki: \n‒ grafikę biblioteka.png przeskalować z zachowaniem proporcji tak, aby szerokość wynosiła dokładnie \n100 px oraz zapisać w odcieniach szarości. \nCechy witryny: \n− Składa się ze strony o nazwie biblioteka.php \n− Zapisana w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Biblioteka” \n− Arkusz stylów w pliku o nazwie style.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej bloki: lewy, środkowy i prawy oraz na dole blok stopki. \nPodział zrealizowany za pomocą znaczników sekcji tak, aby wygląd układu bloków strony po \nuruchomieniu w przeglądarce, był zgodny z Obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Biblioteka w Książkowicach Małych” \n− Zawartość bloku lewego: \n− Nagłówek czwartego stopnia o treści „Dodaj czytelnika” \n− Formularz wysyłający dane do tego samego pliku metodą post i zawierający: \n− Pole edycyjne poprzedzone napisem „imię: ” \n− Pole edycyjne poprzedzone napisem „nazwisko: ” \n− Pole edycyjne typu numerycznego poprzedzone napisem „symbol: ” \n− Przycisk AKCEPTUJ wysyłający dane z formularza \n− Efekt działania skryptu 1 \n− Zawartość bloku środkowego: \n− Obraz biblioteka.png z tekstem alternatywnym „biblioteka” \n− Nagłówek szóstego stopnia o treści: „ul. Czytelników 15; Książkowice Małe”, nazwa ulicy i numer \nlokalu połączone nierozdzielającą spacją \n\nStrona 4 z 5 \n− Paragraf (akapit) o treści: „Czy masz jakieś uwagi?”, który jest odsyłaczem pocztowym do adresu \nbiuro@bib.pl \n− Zawartość bloku prawego: \n− Nagłówek czwartego stopnia o treści „Nasi czytelnicy:” \n− Lista numerowana (uporządkowana) generowana za pomocą skryptu 2 \n− Zawartość stopki: paragraf (akapit) o treści „Projekt witryny: ”, dalej wstawiony numer zdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie style.css. Styl CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów : krój czcionki Tahoma \n− Dla banera i stopki: kolor tła SaddleBrown , biały kolor czcionki, marginesy wewnętrzne 3 px, \nwyrównanie tekstu do środka \n− Dla panelu lewego i prawego: kolor tła Tan, wysokość 400 px, szerokość 40% \n− Dla panelu środkowego: kolor tła Wheat, wysokość 400 px, szerokość 20% \n− Dla selektora obrazu: margines zewnętrzny prawy 20 px, oblewanie z lewej strony zgodnie \nz Obrazem 2 \n− Dla selektora nagłówka czwartego stopnia: wyrównanie tekstu do środka \n− Dla selektora pola edycyjnego: marginesy zewnętrzne 5 px \n− Po najechaniu na element listy, jego tło jest zmieniane na Sienna a kolor czcionki na biały \n \nUWAGA: style CSS dla obrazu, nagłówka czwartego stopnia oraz pola edycyjnego należy zdefiniować \nwyłącznie przy pomocy selektora tego znacznika. Jest to uwarunkowane projektem późniejszej rozbudowy \nwitryny. \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku biblioteka.php \n− Skrypt łączy się z serwerem bazodanowym na localhost, użytkownik root bez hasła, baza dany ch \no nazwie biblioteka \n− Na końcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Pobiera dane z formularza \n− Wyświetla napis „Dodano czytelnika <imie> <nazwisko>”, gdzie pola <> pobrano z formularza \n− Wysyła do bazy danych zmodyfikowane zapytanie 1 tak, że wstawia do bazy danych dane \nz formularza \nSkrypt 2 \n− Wysyła do bazy danych zapytanie 2 \n− Pobrane zapytaniem imiona i nazwiska czytelników wypisywane są jako elementy listy numerowanej \n(uporządkowanej) \n \n \nStrona 5 z 5 \nTabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB \nFunkcje biblioteki mysqli Zwracana wartość \nmysqli_connect(serwer, użytkownik, \nhasło, nazwa_bazy) \nid połączenia lub FALSE, gdy niepowodzenie \nmysqli_select_db(id_polaczenia, \nnazwa_bazy) \nTRUE/FALSE w zależności od stanu operacji \nmysqli_error(id_polaczenia) Tekst komunikatu błędu \nmysqli_close(id_polaczenia) TRUE/FALSE w zależności od stanu operacji \nmysqli_query(id_polaczenia, \nzapytanie) \nWynik zapytania \nmysqli_fetch_row(wynik_zapytania) Tablica numeryczna odpowiadająca wierszowi \nzapytania \nmysqli_fetch_array(wynik_zapytania) Tablica asocjacyjna odpowiadająca wierszowi \nzapytania lub FALSE, jeżeli nie ma więcej wierszy \nw wyniku zapytania \nmysqli_num_rows(wynik_zapytania) Liczba wierszy w podanym wyniku zapytaniu \nmysqli_num_fields(wynik_zapytania) Liczba kolumn w podanym wyniku zapytaniu \n \nUWAGA: p o zakończeniu pracy utwórz w folderze z numerem zdającego plik tekstowy o nazwie \nprzeglądarka.txt. Zapisz w nim nazwę przeglądarki internetowej, w której weryfikowana była poprawność \ndziałania witryny. \nNagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować następujące pliki: \nbiblioteka.php, biblioteka.png , dane.jpg, kwerenda1.jpg, kwerenda2.jpg, kwerenda3.jpg, kwerenda4.jpg, \nkwerendy.txt, przeglądarka.txt, style.css oraz ewentualnie inne przygotowane pliki. Po nagraniu płyty \nsprawdź poprawność nagrania. Opisz płytę swoim numerem zdającego i zapakowaną w pudełku pozostaw \nna stanowisku wraz z arkuszem egzaminacyjnym.",
       "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
       "duplicateGroup": "1e8845be4ad3",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-09-sg-task-3",
+        "inf03-2023-06-11-sg-task-3"
+      ]
     },
     {
       "id": "inf03-2023-06-07-sg-task-2",
@@ -5593,7 +6080,10 @@
       "text": "Przygotowanie grafiki: \n‒ grafikę biblioteka.png przeskalować z zachowaniem proporcji tak, aby szerokość wynosiła dokładnie \n100 px oraz zapisać w odcieniach szarości.",
       "summary": "Grafika rastrowa: przeskalowanie obrazów, filtry i efekty.",
       "duplicateGroup": "71dfbb5e38c2",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-09-sg-task-2",
+        "inf03-2023-06-11-sg-task-2"
+      ]
     },
     {
       "id": "inf03-2023-06-07-sg-task-1",
@@ -5611,7 +6101,118 @@
       "text": "Operacje na bazie danych \nTabele w bazie biblioteka wykorzystane w zadaniu przedstawione są na obrazie 1. \n \nObraz 1. Baza danych \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie biblioteka \n− Do bazy zaimportuj tabele z pliku biblioteka.sql, z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w folderze z numerem zdającego, w formacie JPEG \ni nazwij dane. Nie kadruj zrzutu. Powinien on obejmować cały ekran monitora, z widocznym paskiem \nzadań. Na zrzucie powinny być widoczne elementy wskazujące na poprawnie wykonany import tabel \n− Zapisz i wykonaj w narzędziu phpMyAdmin zapytania SQL działające na bazie. Wykonaj zrzuty \nekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPEG i nadaj im nazwy: \nkwerenda1, kwerenda2, kwerenda3, kwerenda4 . Zrzuty powinny obejmować cały ekran monitora \nz widocznym paskiem zadań. Zapytania zapisz w pliku kwerendy.txt. Pliki umieść w folderze \nz numerem zdającego. \n− Zapytanie 1: wstawiające do tabeli czytelnicy nowy rekord z danymi: Ewelina Romanowska \nz kodem 56677. Pole klucza głównego nadawane automatycznie \n− Zapytanie 2: wybierające jedynie pola imie i nazwisko dla wszystkich rekordów w tabeli czytelnicy, \nposortowane rosnąco według nazwisk \n− Zapytanie 3: wybierające jedynie pole tytul dla wszystkich utworów, których nazwisko autora \nto Sienkiewicz \n− Zapytanie 4: wybierające jedynie pole nazwisko dla wszystkich rekordów w tabeli autorzy oraz \nobliczające liczbę tytułów danego autora znajdujących się w bazie biblioteka. Nazwa kolumny \n\nStrona 3 z 5 \n(alias) dla zliczania tytułów: ile_tytulow",
       "summary": "Operacje na bazie danych biblioteka: utworzenie bazy, import tabel i kwerendy SQL.",
       "duplicateGroup": "64a477e3ffec",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-09-sg-task-1",
+        "inf03-2023-06-11-sg-task-1"
+      ]
+    },
+    {
+      "id": "inf03-2023-06-06-sg-task-3",
+      "examId": "inf03-2023-06-06-sg",
+      "part": 3,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": ["php", "backend", "mysql"],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2023-06-06-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. Po zatwierdzeniu danych z formularza \nPrzygotowanie grafiki: \n \nObraz 3a. biblioteka.png przed \ntransformacją; rozmiar 150 px na 235 px \n \n \n=> \n \nObraz 3b. biblioteka.png po transformacji; rozmiar \n300 px na 235 px \n‒ grafikę biblioteka.png należy rozszerzyć z rozmiaru poziomego 150 px do rozmiaru 300 px, \na następnie w pustym obszarze zdublować stos książek zgodnie z obrazem 3b \nCechy witryny: \n− Składa się ze strony o nazwie biblioteka.php \n− Zapisana w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Biblioteka publiczna” \n− Arkusz stylów w pliku o nazwie style.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej bloki: lewy, środkowy i dwa prawe ułożone jeden \npod drugim oraz na dole blok stopki. Podział zrealizowany za pomocą zna czników sekcji tak, aby \nwygląd układu bloków strony po uruchomieniu w przeglądarce, był zgodny z obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Biblioteka w Książkowicach Wielkich” \n− Zawartość bloku lewego: \n− Nagłówek trzeciego stopnia o treści „Polecamy dzieła autorów:” \n− Lista numerowana (uporządkowana), której elementy są generowane skryptem 1 \n− Zawartość bloku środkowego: \n− Nagłówek trzeciego stopnia o treści: „ul. Czytelnicza 25, Książkowice Wielkie”. Dwa człony nazwy \nmiasta połą czone są spacją nierozdzielającą \n − Paragraf (akapit) o treści „Napisz do nas”, który jest odsyłaczem pocztowym do adresu \nsekretariat@biblioteka.pl \n− Obraz biblioteka.png z tekstem alternatywnym „książki” \n− Zawartość bloku prawego – górnego: \n− Nagłówek trzeciego stopnia o treści „Dodaj czytelnika” \n− Formularz wysyłający dane do tego samego pliku metodą bezpieczną, zawierający: \n− Pole edycyjne poprzedzone napisem „imię: ” \n− Pole edycyjne poprzedzone napisem „nazwisko: ” \n− Pole edycyjne typu numerycznego poprzedzone napisem „symbol: ” \n− Przycisk DODAJ wysyłający dane z formularza \n− Zawartość bloku prawego – dolnego: efekt działania skryptu 2 \n− Zawartość stopki: paragraf (akapit) o treści „Projekt strony: ”, dalej wstawiony numer zdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie style.css . Arkusz CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów : krój czcionki Verdana \n− Dla banera i stopki: kolor tła #004D40, biały kolor czcionki, marginesy wewnętrzne 10 px, wyrównanie \ntekstu do środka \n− Dla panelu lewego: kolor tła #80CBC4, biały kolor czcionki, wysokość 500 px, sze rokość 30% \n− Dla panelu środkowego: kolor tła #E0F2F1, wysokość 500 px, szerokość 30%, wyrównanie tekstu do \nśrodka \n− Dla obu paneli prawych: wysokość 250 px, szerokość 40% \n− Kolory tła dla paneli prawych: prawego -górnego: #E0F2F1, prawego -dolnego: #B2DFDB \n− Dla selektora nagłówka trzeciego stopnia: wyrównanie tekstu do środka \n− Dla selektora obrazu: marginesy wewnętrzne 5 px, wysokość 150 px, obramowanie linią kropkowaną \no grubości 1 px i kolorze #004D40 zaokrągloną na rogach o 5 px \n− Dla selektora pola edycyjnego: marginesy zewnętrzne 10 px \n \nUwaga: style CSS dla nagłówka trzeciego stopnia, obrazu i pola edycyjnego należy zdefiniować wyłącznie \nprzy pomocy selektora dla znaczników nagłówka trzeciego stopnia, obrazu oraz pola edycyjnego. Jes t to \nuwarunkowane projektem późniejszej rozbudowy witryny. \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku biblioteka.php \n− Skrypt łączy się z serwe rem bazodanowym na localhost , użytkownik root bez hasła, baza danych \no nazwie biblioteka \n− Na końcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Wysyła do bazy danych zapytanie 1 \n− Pobrane zapytaniem imiona i nazwiska autorów wypisywane są jako elementy listy numerowanej \n(uporządkowanej) \nSkrypt 2 \n− Pobiera dane z formularza \n− Wyświetla napis „Czytelnik <imie> <nazwisko> został(a) dodany do bazy danych” (gdzie pola <> \nsą pobrane z formularza) \n− Wysyła do bazy danych zmodyfikowane zapytanie 2 tak, że wst awia do bazy danych dane \nz formularza",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "68865758cf0d",
+      "duplicates": ["inf03-2023-06-04-sg-task-3", "inf03-2023-06-10-sg-task-3"]
+    },
+    {
+      "id": "inf03-2023-06-06-sg-task-2",
+      "examId": "inf03-2023-06-06-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie grafiki:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": ["gimp", "grafika-rastrowa"],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2023-06-06-sg-task-2.pdf",
+      "text": "Przygotowanie grafiki: \n \nObraz 3a. biblioteka.png przed \ntransformacją; rozmiar 150 px na 235 px \n \n \n=> \n \nObraz 3b. biblioteka.png po transformacji; rozmiar \n300 px na 235 px \n‒ grafikę biblioteka.png należy rozszerzyć z rozmiaru poziomego 150 px do rozmiaru 300 px, \na następnie w pustym obszarze zdublować stos książek zgodnie z obrazem 3b",
+      "summary": "Grafika rastrowa: obrazy witryny internetowej.",
+      "duplicateGroup": "78e1c3e5d9af",
+      "duplicates": ["inf03-2023-06-04-sg-task-2", "inf03-2023-06-10-sg-task-2"]
+    },
+    {
+      "id": "inf03-2023-06-06-sg-task-1",
+      "examId": "inf03-2023-06-06-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": ["sql", "mysql", "phpmyadmin"],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2023-06-06-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nTabele w bazie biblioteka wykorzystane w zadaniu przedstawione są na obrazie 1. \n \nObraz 1. Baza danych \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie biblioteka \n− Do bazy zaimportuj tabele z pliku biblioteka.sql , z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w formacie JPEG i nazwij import . Nie kadruj zrzutu. \nPowinien on obejmować cały e kran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie biblioteka . Zapytania zapisz w pliku kwerendy .txt. \nWykonaj zrzuty ekranu przedstawiaj ące wyniki działania kwerend. Zrzuty zapisz w formacie JPEG \ni nadaj im nazwy kwerenda1, kwerenda2, kwerenda3, kwerenda4 . Zrzuty powinny obejmować cały \nekran monitora z widocznym paskiem zadań oraz zawierać wykonane zapytanie \n− Zapytanie 1: wybierające jedyni e pola imie i nazwisko dla wszystkich rekordów w tabeli autorzy , \nposortowane rosnąco nazwiskami autorów \n− Zapytanie 2: wstawiające do tabeli czytelnicy nowy rekord z danymi: Ewa Kowalska z kodem \n145321. Wartość klucza głównego nadawana automatycznie \n− Zapytan ie 3: wybierające jedynie pole tytul dla wszystkich utworów w tabeli ksiazki, należących \ndo kategorii dramat \n− Zapytanie 4: wybierające jedynie pole tytul wszystkich utworów w tabeli książki, wypożyczonych \nprzez czytelnika o identyfikatorze 2. W zapytaniu 4 należy posłużyć się relacją",
+      "summary": "Operacje na bazie danych biblioteka: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "9e8fbb4b8c0b",
+      "duplicates": ["inf03-2023-06-04-sg-task-1", "inf03-2023-06-10-sg-task-1"]
+    },
+    {
+      "id": "inf03-2023-06-05-sg-task-3",
+      "examId": "inf03-2023-06-05-sg",
+      "part": 3,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": ["php", "backend", "mysql"],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2023-06-05-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. W formularzu wypełniono pola i wybrano przycisk, co spowodowało \nwyświetlenie napisu pod przyciskiem \n \nPrzygotowanie grafiki: \n− Plik zakupy.png , wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, a by \njego szerokość wynosiła dokładnie 180 px. Plik należy zapisać z zachowaniem przezroczystości pod \ntą samą nazwą \nCechy witryny: \n− Składa się ze strony o nazwie index.php \n− Zapisana w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Hurtownia szkolna” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej b loki: lewy, środkowy i prawy oraz na dole blok stopki. \nPodział zrealizowany za pomocą znaczników sekcji tak, aby wygląd układu bloków strony po \nuruchomieniu w przeglądarce, był zgodny z Obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Hurt ownia z najlepszymi cenami” \n− Zawartość bloku lewego: \n− Nagłówek drugiego stopnia o treści „Nasze ceny” \n− Tabela składająca się z czterech wierszy i dwóch kolumn o zawartości generowanej skryptem 1 \n− Zawartość bloku środkowego: \n− Nagłówek drugiego stopnia o treści „Koszt zakupów” \n− Formularz zgodny z obrazem 2, wysyłający dane do tego samego pliku metodą bezpieczną, który \nzawiera: \n− Napis „wybierz artykuł: ” \n− Listę rozwijalną zawierającą nazwy towarów z tabeli: Zeszyt 60 kartek, Zeszyt 32 kartki, \nCyrkiel, Linijka 30 cm. \n− Pole edycyjne typu numerycznego poprzedzone napisem „liczba sztuk: ” \n− Przycisk „OBLICZ”, którego wybranie powoduje przesłanie danych do skryptu 2 \n− Wyniki działania skryptu 2 \n− Zawartość bloku prawego: \n− Nagłówek drugiego stopnia o treści „Kontakt” \n − Obraz zakupy.png z tekstem alternatywnym „hurtownia” \n− Paragraf (akapit) „e -mail: hurt@poczta2.pl”, gdzie hurt@poczta2.pl jest odsyłaczem pocztowym \nłączącym z tym adresem \n− Zawartość stopki: nagłówek czwartego stopnia o treści „Witrynę wykonał: ”, dalej wstawiony numer \nzdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie styl.css . Arkusz CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów : krój czcionki Georgia i wyrównanie tekstu do środka \n− Dla banera i stopki: kolor tła #4BA3C7, biały kolor czcionki, wysokość 80 px, rozmiar czcionki 120% \n− Dla panelu lewego i prawego: kolor tła #EFEFEF wysokość 400 px, szerokość 25% \n− Dla panelu środkowego: kolor tła #90CAF9, wysokość 400 px, szerokość 50% \n− Dla selektora tabeli: margines zewnętrzny lewy 10 px, szerokość 90%, obramowanie linią ciągłą \no szerokości 1 px i kolorze #90CAF9 \n− Dla selektora komórek tabeli: marg inesy wewnętrzne 5 px, obramowanie linią ciągłą o szerokości \n1 px i kolorze #90CAF9 \n− Po wskazaniu kursorem myszy dowolnego wiersza tabeli zostaje zmieniony kolor tekstu w tym \nwierszu na #90CAF9 \n− Dla selektora pola edycyjnego: margines zewnętrzny górny i dolny 15 px \n \nUwaga: style CSS dla tabeli, komórek tabeli i pola edycyjnego należy zdefiniować wyłącznie przy pomocy \nselektora dla znaczników tabeli, komórek tabeli oraz pola edycyjnego. Jest to uwarunkowane projektem \npóźniejszej rozbudow y witryny. \n \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku index.php \n− Skrypt łączy się z serwerem bazodanowym na localhost , użytkownik root bez hasła, baza danych \no nazwie sklep \n− Na końcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Wysyła do bazy danych zapytanie 1 \n− Wyświetla dane pobrane zapytaniem wewnątrz komóre k tabeli. W pierwszej kolumnie tabeli \nwypisywane są nazwy czterech towarów, w drugiej kolumnie odpowiadające im ceny (zgodnie \nz obrazem 2) \nSkrypt 2 \n− Pobiera z formularza nazwę towaru wybraną w liście rozwijalnej \n− Pobiera z formularza liczbę wpisaną w polu edycyjnym \n− Wysyła do bazy danych zapytanie 2, zmodyfikowane w ten sposób, że w sekcji warunku nazwa \ntowaru jest zgodna z wyborem w liście rozwijalnej \n− Oblicza wartość zakupów na podstawie ceny towaru zwróconej zapytaniem i liczby sztuk tego towaru \npobra nej z pola edycyjnego \n− Obliczona kwota wyświetlana jest pod formularzem w formacie: „wartość zakupów: \n<obliczona_kwota>”, zgodnie z obrazem 2.",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "7027977b1f35",
+      "duplicates": ["inf03-2023-06-02-sg-task-3", "inf03-2023-06-12-sg-task-3"]
+    },
+    {
+      "id": "inf03-2023-06-05-sg-task-2",
+      "examId": "inf03-2023-06-05-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie grafiki:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": ["gimp", "grafika-rastrowa"],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2023-06-05-sg-task-2.pdf",
+      "text": "Przygotowanie grafiki: \n− Plik zakupy.png , wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, a by \njego szerokość wynosiła dokładnie 180 px. Plik należy zapisać z zachowaniem przezroczystości pod \ntą samą nazwą",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów.",
+      "duplicateGroup": "e6bf20579314",
+      "duplicates": ["inf03-2023-06-02-sg-task-2", "inf03-2023-06-12-sg-task-2"]
+    },
+    {
+      "id": "inf03-2023-06-05-sg-task-1",
+      "examId": "inf03-2023-06-05-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": ["sql", "mysql", "phpmyadmin"],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2023-06-05-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nTabele w bazie sklep wykorzystane w zadaniu przedstawione są na obrazie 1. Pole promocja przyjmuje \nwartość 0, gdy towar nie jest objęty promocją lub wartość 1, gdy towar jest objęty promocją. Tabele połączone \nsą relacją opartą na polach: idDostawcy w tabeli towary oraz id w tabeli dostawcy . \n \nObraz 1. Baza danych \n \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie sklep \n− Do bazy zaimportuj tabele z pliku sklep.sql , z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w formacie JPEG i nazwij import . Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie danych sklep . Zapytania zapisz w pliku kwerendy.txt . \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPEG \ni nadaj im nazwy kwerenda1, kwerenda2, kwerenda3, kwerenda4 . Zrzuty powinny obejmować cały \nekran monitora z widocznym paskiem zadań oraz zawierać wykonane zapytanie \n− Zapytanie 1: wybierające jedynie pola nazwa i cena z tabeli towary i wyświetlające jedynie cztery \npierwsze zwrócone zapytaniem rekordy \n− Zapytanie 2: wybierając e jedynie pole cena z tabeli towary dla towaru Ekierka \n− Zapytanie 3: aktualizujące dane w tabeli dostawcy , rekord o id równym 2 w polu nazwa przyjmuje \nnową wartość „Artykuly szkolne” \n− Zapytanie 4: wybierające jedynie pole promocja dla wszystkich rekordów z tabeli towary oraz \nzliczające liczbę towarów objętych i towarów nieobjętych promocją. Nazwa kolumny (alias) dla \nzliczenia towarów: podsumowanie .",
+      "summary": "Operacje na bazie danych sklep: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "757c9198341f",
+      "duplicates": ["inf03-2023-06-02-sg-task-1", "inf03-2023-06-12-sg-task-1"]
     },
     {
       "id": "inf03-2023-06-04-sg-task-3",
@@ -5629,7 +6230,10 @@
       "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. Po zatwierdzeniu danych z formularza \nPrzygotowanie grafiki: \n \nObraz 3a. biblioteka.png przed \ntransformacją; rozmiar 150 px na 235 px \n \n \n \n=> \n \nObraz 3b. biblioteka.png po transformacji; rozmiar \n300 px na 235 px \n‒ grafikę biblioteka.png należy rozszerzyć z rozmiaru poziomego 150 px do rozmiaru 300 px, \na następnie w pustym obszarze zdublować stos książek zgodnie z obrazem 3b \nCechy witryny: \n− Składa się ze strony o nazwie biblioteka.php \n− Zapisana w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Biblioteka publiczna” \n− Arkusz stylów w pliku o nazwie style.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej bloki: lewy, środkowy i dwa prawe ułożone jeden \npod drugim oraz na dole blok stopki. Podział zrealizowany za pomocą znaczników sekcji tak, aby \nwygląd układu bloków strony po uruchomieniu w przeglądarce, był zgodny z obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Biblioteka w Książkowicach Wielkich” \n− Zawartość bloku lewego: \n− Nagłówek trzeciego stopnia o treści „Polecamy dzieła autorów:” \n− Lista numerowana (uporządkowana), której elementy są generowane skryptem 1 \n− Zawartość bloku środkowego: \n− Nagłówek trzeciego stopnia o treści: „ul. Czytelnicza 25, Książkowice Wielkie”. Dwa człony nazwy \nmiasta połączone są spacją nierozdzielającą \n\nStrona 4 z 5 \n− Paragraf (akapit) o treści „Napisz do nas”, który jest odsyłaczem pocztowym do adresu \nsekretariat@biblioteka.pl \n− Obraz biblioteka.png z tekstem alternatywnym „książki” \n− Zawartość bloku prawego – górnego: \n− Nagłówek trzeciego stopnia o treści „Dodaj czytelnika” \n− Formularz wysyłający dane do tego samego pliku metodą bezpieczną, zawierający: \n− Pole edycyjne poprzedzone napisem „imię: ” \n− Pole edycyjne poprzedzone napisem „nazwisko: ” \n− Pole edycyjne typu numerycznego poprzedzone napisem „symbol: ” \n− Przycisk DODAJ wysyłający dane z formularza \n− Zawartość bloku prawego – dolnego: efekt działania skryptu 2 \n− Zawartość stopki: paragraf (akapit) o treści „Projekt strony: ”, dalej wstawiony numer zdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie style.css. Arkusz CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów: krój czcionki Verdana \n− Dla banera i stopki: kolor tła #004D40, biały kolor czcionki, marginesy wewnętrzne 10 px, wyrównanie \ntekstu do środka \n− Dla panelu lewego: kolor tła #80CBC4, biały kolor czcionki, wysokość 500 px, szerokość 30% \n− Dla panelu środkowego: kolor tła #E0F2F1, wysokość 500 px, szerokość 30%, wyrównanie tekstu do \nśrodka \n− Dla obu paneli prawych: wysokość 250 px, szerokość 40% \n− Kolory tła dla paneli prawych: prawego-górnego: #E0F2F1, prawego-dolnego: #B2DFDB \n− Dla selektora nagłówka trzeciego stopnia: wyrównanie tekstu do środka \n− Dla selektora obrazu: marginesy wewnętrzne 5 px, wysokość 150 px, obramowanie linią kropkowaną \no grubości 1 px i kolorze #004D40 zaokrągloną na rogach o 5 px \n− Dla selektora pola edycyjnego: marginesy zewnętrzne 10 px \n \nUwaga: style CSS dla nagłówka trzeciego stopnia, obrazu i pola edycyjnego należy zdefiniować wyłącznie \nprzy pomocy selektora dla znaczników nagłówka trzeciego stopnia, obrazu oraz pola edycyjnego. Jes t to \nuwarunkowane projektem późniejszej rozbudowy witryny. \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku biblioteka.php \n− Skrypt łączy się z serwe rem bazodanowym na localhost, użytkownik root bez hasła, baza danych \no nazwie biblioteka \n− Na końcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Wysyła do bazy danych zapytanie 1 \n− Pobrane zapytaniem imiona i nazwiska autorów wypisywane są jako elementy listy numerowanej \n(uporządkowanej) \nSkrypt 2 \n− Pobiera dane z formularza \n− Wyświetla napis „Czytelnik <imie> <nazwisko> został(a) dodany do bazy danych” (gdzie pola <> \nsą pobrane z formularza) \n− Wysyła do bazy danych zmodyfikowane zapytanie 2 tak, że wst awia do bazy danych dane \nz formularza \nStrona 5 z 5 \nTabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB \nFunkcje biblioteki mysqli Zwracana wartość \nmysqli_connect(serwer, użytkownik, \nhasło, nazwa_bazy) \nid połączenia lub FALSE, gdy niepowodzenie \nmysqli_select_db(id_polaczenia, \nnazwa_bazy) \nTRUE/FALSE w zależności od stanu operacji \nmysqli_error(id_polaczenia) Tekst komunikatu błędu \nmysqli_close(id_polaczenia) TRUE/FALSE w zależności od stanu operacji \nmysqli_query(id_polaczenia, \nzapytanie) \nWynik zapytania \nmysqli_fetch_row(wynik_zapytania) Tablica numeryczna odpowiadająca wierszowi \nzapytania \nmysqli_fetch_array(wynik_zapytania) Tablica asocjacyjna odpowiadająca wierszowi \nzapytania lub FALSE, jeżeli nie ma więcej wierszy \nw wyniku zapytania \nmysqli_num_rows(wynik_zapytania) Liczba wierszy w podanym wyniku zapytaniu \nmysqli_num_fields(wynik_zapytania) Liczba kolumn w podanym wyniku zapytaniu \n \nUWAGA: p o zakończeniu pracy utwórz w folderze z numerem zdającego plik tekstowy o nazwie \nprzeglądarka.txt. Zapisz w nim nazwę przeglądarki internetowej, w której weryfikowana była poprawność \ndziałania witryny. \nNagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować następujące pliki: \nbiblioteka.php, biblioteka.png, import.jpg, kwerenda1.jpg, kwerenda2.jpg, kwerenda3.jpg, kwerenda4.jpg, \nkwerendy.txt, przeglądarka.txt, style.css oraz ewentualnie inne przygotowane pliki. Po nagraniu płyt y \nsprawdź poprawność nagrania. Opisz płytę swoim numerem zdającego i zapakowaną w pudełku pozostaw \nna stanowisku wraz z arkuszem egzaminacyjnym.",
       "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
       "duplicateGroup": "68865758cf0d",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-06-sg-task-3",
+        "inf03-2023-06-10-sg-task-3"
+      ]
     },
     {
       "id": "inf03-2023-06-04-sg-task-2",
@@ -5647,7 +6251,10 @@
       "text": "Przygotowanie grafiki: \n \nObraz 3a. biblioteka.png przed \ntransformacją; rozmiar 150 px na 235 px \n \n \n \n=> \n \nObraz 3b. biblioteka.png po transformacji; rozmiar \n300 px na 235 px \n‒ grafikę biblioteka.png należy rozszerzyć z rozmiaru poziomego 150 px do rozmiaru 300 px, \na następnie w pustym obszarze zdublować stos książek zgodnie z obrazem 3b",
       "summary": "Grafika rastrowa: obrazy witryny internetowej.",
       "duplicateGroup": "78e1c3e5d9af",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-06-sg-task-2",
+        "inf03-2023-06-10-sg-task-2"
+      ]
     },
     {
       "id": "inf03-2023-06-04-sg-task-1",
@@ -5665,7 +6272,64 @@
       "text": "Operacje na bazie danych \nTabele w bazie biblioteka wykorzystane w zadaniu przedstawione są na obrazie 1. \n \nObraz 1. Baza danych \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie biblioteka \n− Do bazy zaimportuj tabele z pliku biblioteka.sql, z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w formacie JPEG i nazwij import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie biblioteka. Zapytania zapisz w pliku kwerendy.txt. \nWykonaj zrzuty ekranu przedstawiaj ące wyniki działania kwerend. Zrzuty zapisz w formacie JPEG \ni nadaj im nazwy kwerenda1, kwerenda2, kwerenda3, kwerenda4 . Zrzuty powinny obejmować cały \nekran monitora z widocznym paskiem zadań oraz zawierać wykonane zapytanie \n− Zapytanie 1: wybierające jedynie pola imie i nazwisko dla wszystkich rekordów w tabeli autorzy, \nposortowane rosnąco nazwiskami autorów \n− Zapytanie 2: wstawiające do tabeli czytelnicy nowy rekord z danymi: Ewa Kowalska z kodem \n145321. Wartość klucza głównego nadawana automatycznie \n− Zapytanie 3: wybierające jedynie pole tytul dla wszystkich utworów w tabeli ksiazki, należących \ndo kategorii dramat \n− Zapytanie 4: wybierające jedynie pole tytul wszystkich utworów w tabeli książki, wypożyczonych \nprzez czytelnika o identyfikatorze 2. W zapytaniu 4 należy posłużyć się relacją \n \n\nStrona 3 z 5",
       "summary": "Operacje na bazie danych biblioteka: utworzenie bazy, import tabel i kwerendy SQL.",
       "duplicateGroup": "9e8fbb4b8c0b",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-06-sg-task-1",
+        "inf03-2023-06-10-sg-task-1"
+      ]
+    },
+    {
+      "id": "inf03-2023-06-03-sg-task-3",
+      "examId": "inf03-2023-06-03-sg",
+      "part": 3,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": ["php", "backend", "mysql"],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2023-06-03-sg-task-3.pdf",
+      "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. Z listy rozwijalnej wybrano gumkę do mazania. \n \nPrzygotowanie grafiki: \n− Plik promocja.png , wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, aby \njego szerokość wynosiła dokładnie 180 px. Plik powinien być zapisany z zachowaniem \nprzezroczystości pod tą samą nazwą. \nCechy witryny: \n− Składa się ze strony o nazwie index.php \n− Zapisany w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki „Sklep dla uczniów” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej bloki: lewy, środkowy i prawy oraz na dole blok stopki. \nPodział zrealizowany za pomocą znaczników sekcji tak, aby wygląd układu bloków strony po \nuruchomieniu w przeglądar ce, był zgodny z obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Dzisiejsze promocje naszego sklepu” \n− Zawartość bloku lewego: \n− Nagłówek drugiego stopnia o treści „Taniej o 30%” \n− Lista numerowana (uporządkowana) zgodna z obrazem 2, elementy l isty generowane są \nskryptem 1 \n− Zawartość bloku środkowego: \n− Nagłówek drugiego stopnia o treści „Sprawdź cenę” \n− Formularz wysyłający dane do tego samego pliku metodą bezpieczną oraz składający się z: \n− Listy rozwijalnej zawierającej nazwy towarów: „Gumka do maz ania”, „Cienkopis”, „Pisaki 60 \nszt.”, „Markery 4 szt.” \n− Przycisku SPRAWDŹ, którego wybranie powoduje wysłanie danych do skryptu 2 \n− Blok zawierający efekt działania skryptu 2 \n− Zawartość bloku prawego: \n− Nagłówek drugiego stopnia o treści: „Kontakt” \n− Paragraf (akapit) o treści „e -mail: bok@sklep.pl ”, gdzie napis „bok@sklep.pl” jest odsyłaczem \npocztowym łączącym z tym adresem \n − Obraz promocja.png z tekstem alternatywnym „promocja” \n− Zawartość stopki: nagłówek czwartego stopnia o treści „Autor strony: ”, dal ej wstawiony numer \nzdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie styl.css . Arkusz CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów : krój czcionki Garamond, wyrównanie tekstu do \nśrodka \n− Dla banera i stopki: kolor tła #8C7B75, biały kolor czcionki, wysokość 70 px, rozmiar czcionki 150% \n− Dla panelu lewego i prawego: kolor tła #BCAAA4, wysokość 400 px, szerokość 35% \n− Dla panelu środkowego: kolor tła #EFDCD5, wysokość 400 px, szerokość 3 0% \n− Dla selektora listy numerowanej: numeracja małymi literami \n− Dla selektora elementu listy: wyrównanie tekstu do lewej strony \n− Dla selektora obrazu: obramowanie o szerokości 1 px linią kreskową koloru #8C7B75, marginesy \nwewnętrzne 5 px, zaokrąglenie obramowania 10% \n− Dla bloku z wynikiem działania skryptu 2: margines zewnętrzny górny 100 px, obramowanie \no szerokości 1 px linią ciągłą koloru #8C7B75. \n \nUWAGA: style CSS dla listy numer owanej, elementu listy i obrazu należy zdefiniować wyłącznie przy pomocy \nselektora dla znaczników listy numerowanej, elementu listy oraz obrazu. Jest to uwarunkowane projektem \npóźniejszej rozbudowy witryny. \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku index.php \n− Skrypt łączy się z serwerem bazodanowym na localhost , użytkownik root bez hasła, baza danych \no nazwie sklep \n− Na ko ńcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Wysyła do bazy danych zapytanie 1 \n− Nazwy towarów zwrócone zapytaniem wypisywane są jako elementy listy numerowanej \nSkrypt 2 \n− Pobiera z formularza nazwę towaru wybranego w liście rozwijalnej \n− Wysyła do bazy danych zapytanie 2, zmodyfikowane w ten sposób, że w sekcji warunku nazwa \ntowaru jest zgodna z wyborem w liście rozwijalnej \n− Na podstawie ceny zwróconej zapytaniem oblicza cenę promocyjną jako wartość niższą o 30% \n− Pod formularzem wypisuje dane w blo ku, zgodnie z obrazem 2, w formacie: \n \ncena regularna: <cena_pobrana_z_bazy> \ncena w promocji 30%: <obliczona_cena>",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "a023b150dff0",
+      "duplicates": ["inf03-2023-06-01-sg-task-3", "inf03-2023-06-08-sg-task-3"]
+    },
+    {
+      "id": "inf03-2023-06-03-sg-task-2",
+      "examId": "inf03-2023-06-03-sg",
+      "part": 2,
+      "partLabel": "Grafika rastrowa",
+      "title": "Grafika rastrowa",
+      "heading": "Przygotowanie grafiki:",
+      "type": "graphics-raster",
+      "typeLabel": "Grafika rastrowa",
+      "tags": ["gimp", "grafika-rastrowa"],
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pdf": "/pdfs/tasks/inf03-2023-06-03-sg-task-2.pdf",
+      "text": "Przygotowanie grafiki: \n− Plik promocja.png , wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, aby \njego szerokość wynosiła dokładnie 180 px. Plik powinien być zapisany z zachowaniem \nprzezroczystości pod tą samą nazwą.",
+      "summary": "Grafika rastrowa: przeskalowanie obrazów.",
+      "duplicateGroup": "8eb52c01014f",
+      "duplicates": ["inf03-2023-06-01-sg-task-2", "inf03-2023-06-08-sg-task-2"]
+    },
+    {
+      "id": "inf03-2023-06-03-sg-task-1",
+      "examId": "inf03-2023-06-03-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": ["sql", "mysql", "phpmyadmin"],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2023-06-03-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nTabele w bazie sklep wykorzystane w zadaniu przedstawione są na obrazie 1. Pole promocja przechowuje \nwartość 0, gdy towar nie jest objęty promocją lub 1, gdy towar jest objęty promocją. Tabele połączone są \nrelacją opartą na polach: idDostawcy w tabeli towary oraz id w tabeli dostawcy . \n \nObraz 1. Baza danych \n \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie sklep \n− Do bazy zaimportuj tabele z pliku sklep.sql , z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w formacie JPEG i nazwij baza . Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie danych sklep . Zapytania zapisz w pliku kwerendy.txt . \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPEG \ni nadaj im nazwy kwerenda1 , kwerenda2, kwerenda3, kwerenda4 . Zrzuty p owinny obejmować cały \nekran monitora z widocznym paskiem zadań oraz zawierać wykonane zapytanie. \n− Zapytanie 1: wybierające jedynie pole nazwa z tabeli towary dla towarów objętych promocją \n− Zapytanie 2: wybierające jedynie pole cena z tabeli towary dla towaru Markery 4 szt. \n− Zapytanie 3: wybierające jedynie pola id oraz nazwa dla wszystkich rekordów z tabeli dostawcy \noraz zliczające liczbę towarów dostarczanych przez każdego z dostawców. Nazwa kolumny (alias) \ndla zliczenia towarów: liczba_towarow. W zapytaniu 3 należy posłużyć się relacją \n− Zapytanie 4: modyfikujące strukturę tabeli dostawcy , poprzez dodanie pola typu t ekstowego \no nazwie informacje.",
+      "summary": "Operacje na bazie danych sklep: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "88da7325d239",
+      "duplicates": ["inf03-2023-06-01-sg-task-1", "inf03-2023-06-08-sg-task-1"]
     },
     {
       "id": "inf03-2023-06-02-sg-task-3",
@@ -5683,7 +6347,10 @@
       "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. W formularzu wypełniono pola i wybrano przycisk, co spowodowało \nwyświetlenie napisu pod przyciskiem \n \nPrzygotowanie grafiki: \n− Plik zakupy.png, wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, aby \njego szerokość wynosiła dokładnie 180 px. Plik należy zapisać z zachowaniem przezroczystości pod \ntą samą nazwą \nCechy witryny: \n− Składa się ze strony o nazwie index.php \n− Zapisana w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki: „Hurtownia szkolna” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej bloki: lewy, środkowy i prawy oraz na dole blok stopki. \nPodział zrealizowany za pomocą znaczników sekcji tak, aby wygląd układu bloków strony po \nuruchomieniu w przeglądarce, był zgodny z Obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Hurtownia z najlepszymi cenami” \n− Zawartość bloku lewego: \n− Nagłówek drugiego stopnia o treści „Nasze ceny” \n− Tabela składająca się z czterech wierszy i dwóch kolumn o zawartości generowanej skryptem 1 \n− Zawartość bloku środkowego: \n− Nagłówek drugiego stopnia o treści „Koszt zakupów” \n− Formularz zgodny z obrazem 2, wysyłający dane do tego samego pliku metodą bezpieczną, który \nzawiera: \n− Napis „wybierz artykuł: ” \n− Listę rozwijalną zawierają cą nazwy towarów z tabeli: Zeszyt 60 kartek, Zeszyt 32 kartki, \nCyrkiel, Linijka 30 cm. \n− Pole edycyjne typu numerycznego poprzedzone napisem „liczba sztuk: ” \n− Przycisk „OBLICZ”, którego wybranie powoduje przesłanie danych do skryptu 2 \n\nStrona 4 z 5 \n− Wyniki działania skryptu 2 \n− Zawartość bloku prawego: \n− Nagłówek drugiego stopnia o treści „Kontakt” \n− Obraz zakupy.png z tekstem alternatywnym „hurtownia” \n− Paragraf (akapit) „e-mail: hurt@poczta2.pl”, gdzie hurt@poczta2.pl jest odsyłaczem pocztowym \nłączącym z tym adresem \n− Zawartość stopki: nagłówek czwartego stopnia o treści „Witrynę wykonał: ”, dalej wstawiony numer \nzdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie styl.css. Arkusz CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów: krój czcionki Georgia i wyrównanie tekstu do środka \n− Dla banera i stopki: kolor tła #4BA3C7, biały kolor czcionki, wysokość 80 px, rozmiar czcionki 120% \n− Dla panelu lewego i prawego: kolor tła #EFEFEF wysokość 400 px, szerokość 25% \n− Dla panelu środkowego: kolor tła #90CAF9, wysokość 400 px, szerokość 50% \n− Dla selektora tabeli: margines zewnętrzny lewy 10 px, szerokość 90%, obramowanie linią ciągłą \no szerokości 1 px i kolorze #90CAF9 \n− Dla selektora komórek tabeli: marginesy wewnętrzne 5 px, obramowanie komórek tabeli linią ciągłą \no szerokości 1 px i kolorze #90CAF9 \n− Po wskazaniu kursorem myszy dowolnego wiersza tabeli zostaje zmieniony kolor tekstu w tym \nwierszu na #90CAF9 \n− Dla selektora pola edycyjnego: margines zewnętrzny górny i dolny 15 px \n \nUwaga: style CSS dla tabeli, komórek tabeli i pola edycyjnego należy zdefiniować wyłącznie przy pomocy \nselektora dla znaczników tabeli, komórek tabeli oraz pola edycyjnego. Jest to uwa runkowane projektem \npóźniejszej rozbudowy witryny. \n \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku index.php \n− Skrypt łączy się z serwerem bazodanowym na localhost, użytkownik root bez hasła, baza danych \no nazwie sklep \n− Na końcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Wysyła do bazy danych zapytanie 1 \n− Wyświetla dane pobrane zapytaniem wewnątrz komóre k tabeli. W pierwszej kolumnie tabeli \nwypisywane są nazwy czterech towarów, w drugiej kolumnie odpowiadające im ceny (zgodnie \nz obrazem 2) \nSkrypt 2 \n− Pobiera z formularza nazwę towaru wybraną w liście rozwijalnej \n− Pobiera z formularza liczbę wpisaną w polu edycyjnym \n− Wysyła do bazy danych zapytanie 2, zmodyfikowane w ten sposób, że w sekcji warunku nazwa \ntowaru jest zgodna z wyborem w liście rozwijalnej \n− Oblicza wartość zakupów na podstawie ceny towaru zwróconej zapytaniem i liczby sztuk tego towaru \npobranej z pola edycyjnego \n− Obliczona kwota wyświetlana jest pod formularzem w formacie: „wartość zakupów: \n<obliczona_kwota>”, zgodnie z obrazem 2. \nStrona 5 z 5 \nTabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB \nFunkcje biblioteki mysqli Zwracana wartość \nmysqli_connect(serwer, użytkownik, \nhasło, nazwa_bazy) \nid połączenia lub FALSE, gdy niepowodzenie \nmysqli_select_db(id_polaczenia, \nnazwa_bazy) \nTRUE/FALSE w zależności od stanu operacji \nmysqli_error(id_polaczenia) Tekst komunikatu błędu \nmysqli_close(id_polaczenia) TRUE/FALSE w zależności od stanu operacji \nmysqli_query(id_polaczenia, \nzapytanie) \nWynik zapytania \nmysqli_fetch_row(wynik_zapytania) Tablica numeryczna odpowiadająca wierszowi \nzapytania \nmysqli_fetch_array(wynik_zapytania) Tablica asocjacyjna odpowiadająca wierszowi \nzapytania lub FALSE, jeżeli nie ma więcej wierszy \nw wyniku zapytania \nmysqli_num_rows(wynik_zapytania) Liczba wierszy w podanym wyniku zapytaniu \nmysqli_num_fields(wynik_zapytania) Liczba kolumn w podanym wyniku zapytaniu \n \nUWAGA: p o zakończeniu pracy utwórz w folderze z numerem zdającego plik tekstowy o nazwie \nprzeglądarka.txt. Zapisz w nim nazwę przeglądarki internetowej, w której weryfikowana była poprawność \ndziałania witryny. \nNagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować następujące pliki: \nimport.jpg, index.php, kwerenda1.jpg, kwerenda2.jpg, kwerenda3.jpg, kwerenda4.jpg, kwerendy.txt, \nprzeglądarka.txt, styl.css, zakupy.png oraz ewentualnie inne przygotowane pliki. Po nagraniu płyty sprawdź \npoprawność nagrania. Opisz płytę swoim numerem zdającego i zapakowaną w pudełku pozostaw na \nstanowisku wraz z arkuszem egzaminacyjnym.",
       "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
       "duplicateGroup": "7027977b1f35",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-05-sg-task-3",
+        "inf03-2023-06-12-sg-task-3"
+      ]
     },
     {
       "id": "inf03-2023-06-02-sg-task-2",
@@ -5701,7 +6368,10 @@
       "text": "Przygotowanie grafiki: \n− Plik zakupy.png, wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, aby \njego szerokość wynosiła dokładnie 180 px. Plik należy zapisać z zachowaniem przezroczystości pod \ntą samą nazwą",
       "summary": "Grafika rastrowa: przeskalowanie obrazów.",
       "duplicateGroup": "e6bf20579314",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-05-sg-task-2",
+        "inf03-2023-06-12-sg-task-2"
+      ]
     },
     {
       "id": "inf03-2023-06-02-sg-task-1",
@@ -5719,7 +6389,10 @@
       "text": "Operacje na bazie danych \nTabele w bazie sklep wykorzystane w zadaniu przedstawione są na obrazie 1. Pole promocja przyjmuje \nwartość 0, gdy towar nie jest objęty promocją lub wartość 1, gdy towar jest objęty promocją. Tabele połączone \nsą relacją opartą na polach: idDostawcy w tabeli towary oraz id w tabeli dostawcy. \n \nObraz 1. Baza danych \n \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie sklep \n− Do bazy zaimportuj tabele z pliku sklep.sql, z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w formacie JPEG i nazwij import. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie danych sklep. Zapytania zapisz w pliku kwerendy.txt. \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPEG \ni nadaj im nazwy kwerenda1, kwerenda2, kwerenda3, kwerenda4 . Zrzuty powinny obejmować cały \nekran monitora z widocznym paskiem zadań oraz zawierać wykonane zapytanie \n− Zapytanie 1: wybierające jedynie pola nazwa i cena z tabeli towary i wyświetlające jedynie cztery \npierwsze zwrócone zapytaniem rekordy \n− Zapytanie 2: wybierające jedynie pole cena z tabeli towary dla towaru Ekierka \n− Zapytanie 3: aktualizujące dane w tabeli dostawcy, rekord o id równym 2 w polu nazwa przyjmuje \nnową wartość „Artykuly szkolne” \n− Zapytanie 4: wybierające jedynie pole promocja dla wszystkich rekordów z tabeli towary oraz \nzliczające liczbę towarów objętych i towarów nieobjętych promocją. Nazwa kolumny (alias) dla \nzliczenia towarów: podsumowanie. \n \n\nStrona 3 z 5",
       "summary": "Operacje na bazie danych sklep: utworzenie bazy, import tabel i kwerendy SQL.",
       "duplicateGroup": "757c9198341f",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-05-sg-task-1",
+        "inf03-2023-06-12-sg-task-1"
+      ]
     },
     {
       "id": "inf03-2023-06-01-sg-task-3",
@@ -5737,7 +6410,10 @@
       "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa. Z listy rozwijalnej wybrano gumkę do mazania. \n \nPrzygotowanie grafiki: \n− Plik promocja.png, wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, aby \njego szerokość wynosiła dokładnie 180 px. Plik powinien być zapisany z zachowaniem \nprzezroczystości pod tą samą nazwą. \nCechy witryny: \n− Składa się ze strony o nazwie index.php \n− Zapisany w języku HTML5 \n− Ustawiony język zawartości strony na polski \n− Jawnie zastosowany właściwy standard kodowania polskich znaków \n− Tytuł strony widoczny na karcie przeglądarki „Sklep dla uczniów” \n− Arkusz stylów w pliku o nazwie styl.css prawidłowo połączony z kodem strony \n− Podział strony na bloki: na górze baner, poniżej bloki: lewy, środkowy i prawy oraz na dole blok stopki. \nPodział zrealizowany za pomocą znaczników sekcji tak, aby wygląd układu bloków strony po \nuruchomieniu w przeglądarce, był zgodny z obrazem 2 \n− Zawartość banera: nagłówek pierwszego stopnia o treści „Dzisiejsze promocje naszego sklepu” \n− Zawartość bloku lewego: \n− Nagłówek drugiego stopnia o treści „Taniej o 30%” \n− Lista numerowana (uporządkowana) zgodna z obrazem 2, elementy l isty generowane są \nskryptem 1 \n− Zawartość bloku środkowego: \n− Nagłówek drugiego stopnia o treści „Sprawdź cenę” \n− Formularz wysyłający dane do tego samego pliku metodą bezpieczną oraz składający się z: \n− Listy rozwijalnej zawierającej nazwy towarów: „Gumka do mazania”, „Cienkopis”, „Pisaki 60 \nszt.”, „Markery 4 szt.” \n− Przycisku SPRAWDŹ, którego wybranie powoduje wysłanie danych do skryptu 2 \n− Blok zawierający efekt działania skryptu 2 \n− Zawartość bloku prawego: \n− Nagłówek drugiego stopnia o treści: „Kontakt” \n− Paragraf (akapit) o treści „e -mail: bok@sklep.pl”, gdzie napis „bok@sklep.pl” jest odsyłaczem \npocztowym łączącym z tym adresem \n\nStrona 4 z 5 \n− Obraz promocja.png z tekstem alternatywnym „promocja” \n− Zawartość stopki: nagłówek czwartego stopnia o treści „Autor strony: ”, dal ej wstawiony numer \nzdającego \nStyl CSS witryny internetowej \nStyl CSS zdefiniowany w całości w zewnętrznym pliku o nazwie styl.css. Arkusz CSS zawiera formatowanie: \n− Domyślne formatowanie wszystkich selektorów: krój czcionki Garamond, wyrównanie tekstu do \nśrodka \n− Dla banera i stopki: kolor tła #8C7B75, biały kolor czcionki, wysokość 70 px, rozmiar czcionki 150% \n− Dla panelu lewego i prawego: kolor tła #BCAAA4, wysokość 400 px, szerokość 35% \n− Dla panelu środkowego: kolor tła #EFDCD5, wysokość 400 px, szerokość 30% \n− Dla selektora listy numerowanej: numeracja małymi literami \n− Dla selektora elementu listy: wyrównanie tekstu do lewej strony \n− Dla selektora obrazu: obramowanie o szerokości 1 px linią kreskową koloru #8C7B75, marginesy \nwewnętrzne 5 px, zaokrąglenie obramowania 10% \n− Dla bloku z wynikiem działania skryptu 2: margines zewnętrzny górny 100 px, obramowanie \no szerokości 1 px linią ciągłą koloru #8C7B75. \n \nUWAGA: style CSS dla listy numerowanej, elementu listy i obrazu należy zdefiniować wyłącznie przy pomocy \nselektora dla znaczników listy numerowanej, elementu listy oraz obrazu. Jest to uwarunkowane projektem \npóźniejszej rozbudowy witryny. \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. \nWymagania dotyczące skryptu: \n− Napisany w języku PHP, umieszczony w pliku index.php \n− Skrypt łączy się z serwerem bazodanowym na localhost, użytkownik root bez hasła, baza danych \no nazwie sklep \n− Na końcu działania skrypt zamyka połączenie z serwerem \nSkrypt 1 \n− Wysyła do bazy danych zapytanie 1 \n− Nazwy towarów zwrócone zapytaniem wypisywane są jako elementy listy numerowanej \nSkrypt 2 \n− Pobiera z formularza nazwę towaru wybranego w liście rozwijalnej \n− Wysyła do bazy danych zapytanie 2, zmodyfikowane w ten sposób, że w sekcji warunku nazwa \ntowaru jest zgodna z wyborem w liście rozwijalnej \n− Na podstawie ceny zwróconej zapytaniem oblicza cenę promocyjną jako wartość niższą o 30% \n− Pod formularzem wypisuje dane w bloku, zgodnie z obrazem 2, w formacie: \ncena regularna: <cena_pobrana_z_bazy> \ncena w promocji 30%: <obliczona_cena> \n \nStrona 5 z 5 \nTabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB \nFunkcje biblioteki mysqli Zwracana wartość \nmysqli_connect(serwer, użytkownik, \nhasło, nazwa_bazy) \nid połączenia lub FALSE, gdy niepowodzenie \nmysqli_select_db(id_polaczenia, \nnazwa_bazy) \nTRUE/FALSE w zależności od stanu operacji \nmysqli_error(id_polaczenia) Tekst komunikatu błędu \nmysqli_close(id_polaczenia) TRUE/FALSE w zależności od stanu operacji \nmysqli_query(id_polaczenia, \nzapytanie) \nWynik zapytania \nmysqli_fetch_row(wynik_zapytania) Tablica numeryczna odpowiadająca wierszowi \nzapytania \nmysqli_fetch_array(wynik_zapytania) Tablica asocjacyjna odpowiadająca wierszowi \nzapytania lub FALSE, jeżeli nie ma więcej wierszy \nw wyniku zapytania \nmysqli_num_rows(wynik_zapytania) Liczba wierszy w podanym wyniku zapytaniu \nmysqli_num_fields(wynik_zapytania) Liczba kolumn w podanym wyniku zapytaniu \n \nUWAGA: p o zakończeniu pracy utwórz w folderze z numerem zdającego plik tekstowy o nazwie \nprzeglądarka.txt. Zapisz w nim nazwę przeglądarki internetowej, w której weryfikowana była poprawność \ndziałania witryny. \nNagraj płytę z rezultatami pracy. W folderze z numerem zdającego powinny się znajdować następujące pliki: \nbaza.jpg, index.php, kwerenda1.jpg, kwerenda2.jpg kwerenda3.jpg kwerenda4.jpg, kwerendy.txt, \npromocja.png, przeglądarka.txt, styl.css oraz ewentualnie inne przygotowane pliki. Po nagraniu płyty \nsprawdź poprawność nagrania. Opisz płytę swoim numerem zdającego i zapakowaną w pudełku pozostaw \nna stanowisku wraz z arkuszem egzaminacyjnym.",
       "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
       "duplicateGroup": "a023b150dff0",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-03-sg-task-3",
+        "inf03-2023-06-08-sg-task-3"
+      ]
     },
     {
       "id": "inf03-2023-06-01-sg-task-2",
@@ -5755,7 +6431,10 @@
       "text": "Przygotowanie grafiki: \n− Plik promocja.png, wypakowany z archiwum, należy przeskalować z zachowaniem proporcji tak, aby \njego szerokość wynosiła dokładnie 180 px. Plik powinien być zapisany z zachowaniem \nprzezroczystości pod tą samą nazwą.",
       "summary": "Grafika rastrowa: przeskalowanie obrazów.",
       "duplicateGroup": "8eb52c01014f",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-03-sg-task-2",
+        "inf03-2023-06-08-sg-task-2"
+      ]
     },
     {
       "id": "inf03-2023-06-01-sg-task-1",
@@ -5773,7 +6452,10 @@
       "text": "Operacje na bazie danych \nTabele w bazie sklep wykorzystane w zadaniu przedstawione są na obrazie 1. Pole promocja przechowuje \nwartość 0, gdy towar nie jest objęty promocją lub 1, gdy towar jest objęty promocją. Tabele połączone są \nrelacją opartą na polach: idDostawcy w tabeli towary oraz id w tabeli dostawcy. \n \nObraz 1. Baza danych \n \nWykonaj operacje na bazie danych: \n− Utwórz nową bazę danych o nazwie sklep \n− Do bazy zaimportuj tabele z pliku sklep.sql, z wcześniej rozpakowanego archiwum \n− Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w formacie JPEG i nazwij baza. Nie kadruj zrzutu. \nPowinien on obejmować cały ekran monitora, z widocznym paskiem zadań. Na zrzucie powinny być \nwidoczne elementy wskazujące na poprawnie wykonany import tabel \n− Wykonaj zapytania SQL działające na bazie danych sklep. Zapytania zapisz w pliku kwerendy.txt. \nWykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPEG \ni nadaj im nazwy kwerenda1, kwerenda2, kwerenda3, kwerenda4. Zrzuty powinny obejmować cały \nekran monitora z widocznym paskiem zadań oraz zawierać wykonane zapytanie. \n− Zapytanie 1: wybierające jedynie pole nazwa z tabeli towary dla towarów objętych promocją \n− Zapytanie 2: wybierające jedynie pole cena z tabeli towary dla towaru Markery 4 szt. \n− Zapytanie 3: wybierające jedynie pola id oraz nazwa dla wszystkich rekordów z tabeli dostawcy \noraz zliczające liczbę towarów dostarczanych przez każdego z dostawców. Nazwa kolumny (alias) \ndla zliczenia towarów: liczba_towarow. W zapytaniu 3 należy posłużyć się relacją \n− Zapytanie 4: modyfikujące strukturę tabeli dostawcy, poprzez dodanie pola typu t ekstowego \no nazwie informacje. \n \n \n\nStrona 3 z 5",
       "summary": "Operacje na bazie danych sklep: utworzenie bazy, import tabel i kwerendy SQL.",
       "duplicateGroup": "88da7325d239",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2023-06-03-sg-task-1",
+        "inf03-2023-06-08-sg-task-1"
+      ]
     },
     {
       "id": "inf03-2023-01-05-sg-task-3",
@@ -6287,6 +6969,6 @@
     }
   ],
   "sourceFolder": "_arkusze",
-  "examCount": 87,
+  "examCount": 95,
   "sourceBranch": "master"
 }
