@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-10T05:34:51.055641+00:00",
+  "generatedAt": "2026-10-24T09:53:32.011575+00:00",
   "years": [2026, 2025, 2024, 2023, 2022, 2021],
   "sourceRepository": "https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.03-rozwiazania",
-  "taskCount": 239,
+  "taskCount": 241,
   "taskTypes": ["database", "graphics-raster", "js", "php"],
   "exams": [
     {
@@ -1848,6 +1848,34 @@
       "assetUrls": {
         "INF.03-01-22.06-SG.zip": "https://zspwyrzysk.pl/ti/sheets/221/attachment/"
       }
+    },
+    {
+      "tasks": [
+        "inf03-2022-01-01-sg-task-1",
+        "inf03-2022-01-01-sg-task-2"
+      ],
+      "pageCount": 8,
+      "number": "01",
+      "sourcePath": null,
+      "assetFiles": [
+        "zad1.zip"
+      ],
+      "id": "inf03-2022-01-01-sg",
+      "scoringPdf": "/pdfs/scoring/inf03-2022-01-01-sg-zo.pdf",
+      "code": "INF.03-01-22.01-SG",
+      "session": "2022-01",
+      "month": "01",
+      "variant": "SG",
+      "pdf": "/pdfs/exams/inf03-2022-01-01-sg.pdf",
+      "solutionFolder": null,
+      "year": 2022,
+      "assetUrls": {
+        "zad1.zip": "https://arkusze.pl/zawodowy/inf03-2022-styczen-egzamin-zawodowy-praktyczny-zalaczniki.zip"
+      },
+      "sourceUrl": "https://arkusze.pl/zawodowy/inf03-2022-styczen-egzamin-zawodowy-praktyczny.pdf",
+      "sourceLabel": "arkusze.pl, publiczny mirror",
+      "scoringSourceUrl": "https://arkusze.pl/zawodowy/inf03-2022-styczen-egzamin-zawodowy-praktyczny-zasady-oceniania.pdf",
+      "scoringSourceLabel": "arkusze.pl, publiczny mirror"
     },
     {
       "tasks": ["inf03-2021-06-01-sg-task-1", "inf03-2021-06-01-sg-task-2"],
@@ -6162,6 +6190,54 @@
       "duplicates": []
     },
     {
+      "id": "inf03-2022-01-01-sg-task-2",
+      "examId": "inf03-2022-01-01-sg",
+      "part": 2,
+      "partLabel": "PHP",
+      "title": "PHP",
+      "heading": "Witryna internetowa",
+      "type": "php",
+      "typeLabel": "PHP",
+      "tags": [
+        "php",
+        "backend",
+        "mysql"
+      ],
+      "pageStart": 3,
+      "pageEnd": 4,
+      "pdf": "/pdfs/tasks/inf03-2022-01-01-sg-task-2.pdf",
+      "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa \n \nWymagania dotyczące witryny: \n Nazwa pliku: restauracja.html \n Zastosowany język HTML 5 \n Zastosowany właściwy standard kodowania polskich znaków \n Tytuł strony widoczny na karcie przeglądarki: „Restauracja Wszystkie Smaki” \n Arkusz stylów w pliku o nazwie styl_1.css prawidłowo połączony z kode m strony \n Podział strony na bloki: baner, panele lewy i prawy, dolny, stopka. Podział zrealizowany za pomocą \nznaczników sekcji tak, aby układ bloków strony po uruchomieniu w przeglądarce, był zgodny \nz Obrazem 2 \n Zawartość banera: nagłówek pierwszego stopnia o treści: Witamy w restauracji „Wszystkie Smaki” \n Zawartość panelu lewego: obraz menu.jpg z tekstem alternatywnym o treści: „Nasze danie” \n Zawartość panelu prawego: \n Nagłówek czwartego stopnia o treści: „U nas dobrze zjesz!” \n Lista numerowana z trzema elementa mi: Obiady od 40 zł; Przekąski od 10 zł; Kolacje od 20 zł \n Zawartość panelu dolnego: \n Nagłówek drugiego stopnia o treści: „Zarezerwuj stolik on -line” \n Formularz zgodny z obrazem 2, wysyłający dane do pliku rezerwacja.php metodą bezpieczną, \nzawiera podpisy i pola: \n „Data (format rrrr -mm-dd):”, poniżej pole edycyjne \n „Ile osób?”, poniżej pole edycyjne typu numerycznego \n „Twój numer telefonu:”, poniżej pole edycyjne \n Pole wyboru z napisem: „Zgadzam się na przetwarzanie moich dan ych osobowych” \n Przycisk „WYCZYŚĆ”, po jego wciśnięciu formularz jest czyszczony \n Przycisk „REZERWUJ”, po jego wciśnięciu są wysyłane dane z formularza \n Zawartość stopki: napis o treści: „Stronę internetową opracował: ”, dalej wstawiony Twój numer PESEL, \nlub w przypadku jego braku, inny numer, którym został podpisany arkusz, numer powinien być zapisany \npochyloną czcionką \n \n \n \nStyl CSS witryny internetowej \nPlik CSS zawiera formatowanie: \n Całej strony: kolor tła #F6E5DC, krój czcionki Verdana \n Banera: kolor tła #2F180C, wyrównanie tekstu do środka, kolor czcionki khaki, wysokość 60 px \n Panelu lewego: szerokość 60% \n Panelu prawego: rozmiar czcionki 150%, marginesy wewnętrzne 70 px \n Panelu dolnego: kolor tła #D0B6A8, wyrównanie tekstu do środka, marg inesy wewnętrzne 30 px \n Stopki: kolor tła #2F180C, kolor czcionki khaki, wysokość 60 px \n Obrazu: wysokość 350 px \n Obu przycisków: marginesy zewnętrzne 10 px, wewnętrzne 5 px, kolor tła #2F180C, kolor czcionki khaki \n \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. Wymagania dotyczące skryptu: \n Napisany w języku PHP, w pliku o nazwie rezerwacja.php \n Jest uruchamiany po wypełnieniu formularza i wciśnięciu przycisku REZERWUJ. Nie jest wymagane \nsprawdzenie poprawności danych wpisa nych w formularz \n Wypisuje tekst „Dodano rezerwację do bazy” \n Łączy się z serwerem bazodanowym na localhost , użytkownik root bez hasła, baza danych o nazwie \nbaza \n Pobiera dane z formularza \n Wysyła do bazy danych zapytanie wstawiające rekord do tabeli rezerwacje z danymi pobranymi \nz formularza bez wypełnionego numeru stolika (zmodyfikowane zapytanie 1, patrz punkt „Operacje na \nbazie danych\") \n Na końcu działania skrypt zamyka połączenie z serwerem. \n \nTabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB \nFunkcje bilioteki mysqli Zwracana wartość \nmysqli_connect(serwer, użytkownik, hasło, nazwa_bazy) id połączenia lub FALSE, gdy niepowodzenie \nmysqli_select_db (id_polaczenia, nazwa_bazy) TRUE/FALSE w zależności od stanu operacji \nmysqli_error(id_polaczenia) Tekst komunikatu błędu \nmysqli_close(id_polaczenia) TRUE/FALSE w zależności od stanu operacji \nmysqli_query(id_polaczenia, zapytanie) Wynik zapytania \nmysqli_fetch_row(wynik_zapytania) Tablica numeryczna odpowiadająca wierszowi \nzapytania \nmysqli_fetch_array(wynik_zapytania) Tablica zawierająca kolejny wiersz z podanych \nw wyniku zapytania lub FALSE, jeżeli nie ma \nwięcej wierszy w wyniku zapytania \nmysqli_num_rows(wynik_zapytania) Liczba wierszy/ kolumn w podanym zapytaniu \nmysqli_num_fields(wynik_zapytania) Liczba wierszy/ kolumn w podanym zapytaniu",
+      "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
+      "duplicateGroup": "ea7e0a735616",
+      "duplicates": [
+        "inf03-2021-06-01-sg-task-2"
+      ]
+    },
+    {
+      "id": "inf03-2022-01-01-sg-task-1",
+      "examId": "inf03-2022-01-01-sg",
+      "part": 1,
+      "partLabel": "Baza danych",
+      "title": "Baza danych",
+      "heading": "Operacje na bazie danych",
+      "type": "database",
+      "typeLabel": "Baza danych",
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
+      "pageStart": 2,
+      "pageEnd": 2,
+      "pdf": "/pdfs/tasks/inf03-2022-01-01-sg-task-1.pdf",
+      "text": "Operacje na bazie danych \nTabele wykorzystane w zadaniu są przedstawione na obrazie 1. Pole typ z tabeli dania odpowiada rodzajom \ndań: 1 – zupy, 2 – mięsne, 3 – przekąski, 4 – napoje. Pole stanowisko z tabeli pracownicy odpowiada \nstanowiskom: 1 – kucharz, 2 – pomoc, 3 – kelner, 4 – barman. \n \nObraz 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj operacje na bazie danych: \n Utwórz nową bazę danych o nazwie baza \n Zaimportuj do bazy tabele z pliku baza.sql , z wcześniej rozpakowanego archiwum. Wykonaj zrzut ekranu \npo imporcie. Zrzut zapisz w formacie JPEG i nazwij zad1 . Nie kadruj zrzutu. Zrzut powinien obejmować \ncały ekran, z widocznym paskiem zadań. Na zrzucie powinny być widoczne elementy wskazujące na \npoprawnie wykonany import tabel. \n Zapisz i wykonaj zapytania SQL działające na bazie. Wykonaj zrzuty ekranu przedstawiające wyniki \ndziałania kwerend. Zrzuty zapisz w formacie JPEG i nadaj im nazwy kw1, kw2, kw3, kw4. Zrzuty powinny \nobejmować cały ekran monito ra z widocznym paskiem zadań. Zapytania zapisz w pliku kwerendy.txt \n Zapytanie 1: wstawiające do tabeli rezerwacje rekord z danymi: numer stolika = 1, data=„2017 -07-\n04”, liczba osób = 4, numer telefonu = „111222333”, wartość pola id nadawana jest automatycz nie \n Zapytanie 2: wybierające z tabeli dania jedynie pola nazwa i cena dla dań mięsnych \n Zapytanie 3: wybierające z tabeli dania jedynie pole nazwa dla takich przekąsek, których cena jest \nmniejsza od 15 zł \n Zapytanie 4: aktualizujące dane w tabeli pracownicy. Dla wszystkich pracowników, którzy \nzatrudnieni są jako kelner, należy dokonać zmiany stanowiska na barman",
+      "summary": "Operacje na bazie danych baza: utworzenie bazy, import tabel i kwerendy SQL.",
+      "duplicateGroup": "63f047590738",
+      "duplicates": [
+        "inf03-2021-06-01-sg-task-1"
+      ]
+    },
+    {
       "id": "inf03-2021-06-01-sg-task-2",
       "examId": "inf03-2021-06-01-sg",
       "part": 2,
@@ -6170,14 +6246,20 @@
       "heading": "Witryna internetowa",
       "type": "php",
       "typeLabel": "PHP",
-      "tags": ["php", "backend", "mysql"],
+      "tags": [
+        "php",
+        "backend",
+        "mysql"
+      ],
       "pageStart": 3,
       "pageEnd": 4,
       "pdf": "/pdfs/tasks/inf03-2021-06-01-sg-task-2.pdf",
       "text": "Witryna internetowa \n \nObraz 2. Witryna internetowa \n \nWymagania dotyczące witryny: \n Nazwa pliku: restauracja.html \n Zastosowany język HTML 5 \n Zastosowany właściwy standard kodowania polskich znaków \n Tytuł strony widoczny na karcie przeglądarki: „Restauracja Wszystkie Smaki” \n Arkusz stylów w pliku o nazwie styl_1.css prawidłowo połączony z kodem strony \n Podział strony na bloki: baner, panele lewy i prawy, dolny, stopka. Podział zrealizowany za pomocą \nznaczników sekcji tak, aby układ bloków strony po uruchomieniu w przeglądarce, był zgodny \nz Obrazem 2 \n Zawartość banera: nagłówek pierwszego stopnia o treści: Witamy w restauracji „Wszystkie Smaki” \n Zawartość panelu lewego: obraz menu.jpg z tekstem alternatywnym o treści: „Nasze danie” \n Zawartość panelu prawego: \n Nagłówek czwartego stopnia o treści: „U nas dobrze zjesz!” \n Lista numerowana z trzema elementami: Obiady od 40 zł; Przekąski od 10 zł; Kolacje od 20 zł \n Zawartość panelu dolnego: \n Nagłówek drugiego stopnia o treści: „Zarezerwuj stolik on-line” \n Formularz zgodny z obrazem 2, wysyłający dane do pliku rezerwacja.php metodą bezpieczną, \nzawiera podpisy i pola: \n „Data (format rrrr-mm-dd):”, poniżej pole edycyjne \n „Ile osób?”, poniżej pole edycyjne typu numerycznego \n „Twój numer telefonu:”, poniżej pole edycyjne \n Pole wyboru z napisem: „Zgadzam się na przetwarzanie moich danych osobowych” \n Przycisk „WYCZYŚĆ”, po jego wciśnięciu formularz jest czyszczony \n Przycisk „REZERWUJ”, po jego wciśnięciu są wysyłane dane z formularza \n Zawartość stopki: napis o treści: „Stronę internetową opracował: ”, dalej wstawiony Twój numer PESEL, \nlub w przypadku jego braku, inny numer, którym został podpisany arkusz, numer powinien być zapisany \npochyloną czcionką \n \n \nwww.praktycznyegzamin.pl\n3 \nArkusz pobrano z: www.praktycznyegzamin.pl\n \nStrona 4 z 5 \nStyl CSS witryny internetowej \nPlik CSS zawiera formatowanie: \n Całej strony: kolor tła #F6E5DC, krój czcionki Verdana \n Banera: kolor tła #2F180C, wyrównanie tekstu do środka, kolor czcionki khaki, wysokość 60 px \n Panelu lewego: szerokość 60% \n Panelu prawego: rozmiar czcionki 150%, marginesy wewnętrzne 70 px \n Panelu dolnego: kolor tła #D0B6A8, wyrównanie tekstu do środka, marginesy wewnętrzne 30 px \n Stopki: kolor tła #2F180C, kolor czcionki khaki, wysokość 60 px \n Obrazu: wysokość 350 px \n Obu przycisków: marginesy zewnętrzne 10 px, wewnętrzne 5 px, kolor tła #2F180C, kolor czcionki khaki \n \nSkrypt połączenia z bazą \nW tabeli 1 podano wybór funkcji PHP do obsługi bazy danych. Wymagania dotyczące skryptu: \n Napisany w języku PHP, w pliku o nazwie rezerwacja.php \n Jest uruchamiany po wypełnieniu formularza i wciśnięciu przycisku REZERWUJ. Nie jest wymagane \nsprawdzenie poprawności danych wpisanych w formularz \n Wypisuje tekst „Dodano rezerwację do bazy” \n Łączy się z serwerem bazodanowym na localhost, użytkownik root bez hasła, baza danych o nazwie \nbaza \n Pobiera dane z formularza \n Wysyła do bazy danych zapytanie wstawiające rekord do tabeli rezerwacje z danymi pobranymi \nz formularza bez wypełnionego numeru stolika (zmodyfikowane zapytanie 1, patrz punkt „Operacje na \nbazie danych\") \n Na końcu działania skrypt zamyka połączenie z serwerem. \n \nTabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB \nFunkcje bilioteki mysqli Zwracana wartość \nmysqli_connect(serwer, użytkownik, hasło, nazwa_bazy) id połączenia lub FALSE, gdy niepowodzenie \nmysqli_select_db(id_polaczenia, nazwa_bazy) TRUE/FALSE w zależności od stanu operacji \nmysqli_error(id_polaczenia) Tekst komunikatu błędu \nmysqli_close(id_polaczenia) TRUE/FALSE w zależności od stanu operacji \nmysqli_query(id_polaczenia, zapytanie) Wynik zapytania \nmysqli_fetch_row(wynik_zapytania) Tablica numeryczna odpowiadająca wierszowi \nzapytania \nmysqli_fetch_array(wynik_zapytania) Tablica zawierająca kolejny wiersz z podanych \nw wyniku zapytania lub FALSE, jeżeli nie ma \nwięcej wierszy w wyniku zapytania \nmysqli_num_rows(wynik_zapytania) Liczba wierszy/ kolumn w podanym zapytaniu \nmysqli_num_fields(wynik_zapytania) Liczba wierszy/ kolumn w podanym zapytaniu \n \nUWAGA: Po zakończeniu pracy utwórz plik tekstowy. Zapisz w nim nazwę przeglądarki internetowej, w której \nweryfikowałeś poprawność działania witryny. Plik zapisz w folderze z Twoim numerem PESEL (lub innym, \nktórym został podpisany arkusz) jako przeglądarka.txt. \nNagraj płytę z rezultatami pracy. W folderze z numerem PESEL (lub innym, którym został podpisany arkusz) \npowinny się znajdować pliki: kw1.jpg, kw2.jpg, kw3.jpg, kw4.jpg, kwerendy.txt, menu.jpg, przeglądarka.txt, \nrestauracja.html, rezerwacja.php, styl_1.css, zad1.jpg, ewentualnie inne przygotowane pliki. Po nagraniu \npłyty sprawdź poprawność nagrania. Opisz płytę swoim numerem PESEL (lub innym, którym został \npodpisany arkusz) i zapakowaną w pudełku pozostaw na stanowisku, wraz z arkuszem egzaminacyjnym. \n \n \nwww.praktycznyegzamin.pl\n4 \nArkusz pobrano z: www.praktycznyegzamin.pl\nStrona 5 z 5",
       "summary": "Skrypt PHP połączenia z bazą danych i wyświetlanie danych na stronie. Zawiera również wymagania witryny internetowej i stylu CSS.",
       "duplicateGroup": "ea7e0a735616",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2022-01-01-sg-task-2"
+      ]
     },
     {
       "id": "inf03-2021-06-01-sg-task-1",
@@ -6188,17 +6270,23 @@
       "heading": "Operacje na bazie danych",
       "type": "database",
       "typeLabel": "Baza danych",
-      "tags": ["sql", "mysql", "phpmyadmin"],
+      "tags": [
+        "sql",
+        "mysql",
+        "phpmyadmin"
+      ],
       "pageStart": 2,
       "pageEnd": 2,
       "pdf": "/pdfs/tasks/inf03-2021-06-01-sg-task-1.pdf",
       "text": "Operacje na bazie danych \nTabele wykorzystane w zadaniu są przedstawione na obrazie 1. Pole typ z tabeli dania odpowiada rodzajom \ndań: 1 – zupy, 2 – mięsne, 3 – przekąski, 4 – napoje. Pole stanowisko z tabeli pracownicy odpowiada \nstanowiskom: 1 – kucharz, 2 – pomoc, 3 – kelner, 4–barman. \n \nObraz 1. Baza danych \n \nZa pomocą narzędzia phpMyAdmin wykonaj operacje na bazie danych: \n Utwórz nową bazę danych o nazwie baza \n Zaimportuj do bazy tabele z pliku baza.sql, z wcześniej rozpakowanego archiwum. Wykonaj zrzut ekranu \npo imporcie. Zrzut zapisz w formacie JPEG i nazwij zad1. Nie kadruj zrzutu. Zrzut powinien obejmować \ncały ekran, z widocznym paskiem zadań. Na zrzucie powinny być widoczne elementy wskazujące na \npoprawnie wykonany import tabel. \n Zapisz i wykonaj zapytania SQL działające na bazie. Wykonaj zrzuty ekranu przedstawiające wyniki \ndziałania kwerend. Zrzuty zapisz w formacie JPEG i nadaj im nazwy kw1, kw2, kw3, kw4. Zrzuty powinny \nobejmować cały ekran monitora z widocznym paskiem zadań. Zapytania zapisz w pliku kwerendy.txt \n Zapytanie 1: wstawiające do tabeli rezerwacje rekord z danymi: numer stolika = 1, data=„2017 -07-\n04”, liczba osób = 4, numer telefonu = „111222333”, wartość pola id nadawana jest automatycznie \n Zapytanie 2: wybierające z tabeli dania jedynie pola nazwa i cena dla dań mięsnych \n Zapytanie 3: wybierające z tabeli dania jedynie pole nazwa dla takich przekąsek, których cena jest \nmniejsza od 15 zł \n Zapytanie 4: aktualizujące dane w tabeli pracownicy. Dla wszystkich pracowników, którzy \nzatrudnieni są jako kelner, należy dokonać zmiany stanowiska na barman \n \n \n \n \n \n \n \n \nwww.praktycznyegzamin.pl\n2 \nArkusz pobrano z: www.praktycznyegzamin.pl\n \nStrona 3 z 5",
       "summary": "Operacje na bazie danych baza: utworzenie bazy, import tabel i kwerendy SQL.",
       "duplicateGroup": "63f047590738",
-      "duplicates": []
+      "duplicates": [
+        "inf03-2022-01-01-sg-task-1"
+      ]
     }
   ],
   "sourceFolder": "_arkusze",
-  "examCount": 86,
+  "examCount": 87,
   "sourceBranch": "master"
 }
