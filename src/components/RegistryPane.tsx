@@ -208,9 +208,11 @@ function ExamList({
               showSeason={false}
               showVariant={false}
             />
-            <span>{exam.variant}</span>
-            <span className="exam-page-count">{exam.pageCount} str.</span>
-            <span>
+            <span className="exam-meta">
+              <span className="exam-variant">{exam.variant}</span>
+              <span className="exam-page-count">{exam.pageCount} str.</span>
+            </span>
+            <span className="exam-types">
               {examTasks.map((task) => typeLabels[task.type]).join(" / ")}
             </span>
           </button>

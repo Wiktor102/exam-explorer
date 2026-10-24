@@ -245,8 +245,10 @@ export function PrivacyPolicyPage() {
       </div>
 
       <footer className="landing-footer privacy-footer">
-        <span>&copy; Wiktor Golicz 2026.</span>
-        <a href="/">Eksplorator zadań</a>
+        <div className="landing-footer__top">
+          <span>&copy; Wiktor Golicz 2026.</span>
+          <a href="/">Eksplorator zadań</a>
+        </div>
       </footer>
     </main>
   );
