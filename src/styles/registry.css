@@ -105,3 +105,7 @@
 .exam-page-count {
   color: var(--muted);
 }
+
+.exam-meta {
+  display: contents;
+}
