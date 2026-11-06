@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/generate_seo.mjs",
     "deploy:prod": "python3 scripts/deploy/deploy_production.py",
     "generate:catalog": "python3 scripts/generate_catalog.py",
     "lint": "eslint .",
