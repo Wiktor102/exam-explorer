@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   AppWindow,
   Braces,
@@ -22,6 +22,7 @@ import {
   Sun,
   Terminal,
   TestTubeDiagonal,
+  X,
   type LucideIcon,
 } from "lucide-react";
 import clsx from "clsx";
@@ -75,6 +76,31 @@ export function FilterBar({
   onYearChange,
 }: FilterBarProps) {
   const [filtersExpanded, setFiltersExpanded] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    function focusSearch(event: KeyboardEvent) {
+      const target = event.target as HTMLElement | null;
+      const isTyping =
+        target &&
+        (target.tagName === "INPUT" ||
+          target.tagName === "TEXTAREA" ||
+          target.tagName === "SELECT" ||
+          target.isContentEditable);
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        searchInputRef.current?.focus();
+        return;
+      }
+      if (event.key === "/" && !isTyping) {
+        event.preventDefault();
+        searchInputRef.current?.focus();
+      }
+    }
+
+    window.addEventListener("keydown", focusSearch);
+    return () => window.removeEventListener("keydown", focusSearch);
+  }, []);
 
   return (
     <section
@@ -185,11 +211,31 @@ export function FilterBar({
         <label className="search-box collapsible-filter">
           <Search size={18} />
           <input
+            ref={searchInputRef}
             value={query}
             onChange={(event) => onQueryChange(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Escape" && query) {
+                onQueryChange("");
+              }
+            }}
             aria-label="Szukaj"
             placeholder="Szukaj zadania, arkusza, technologii..."
           />
+          {query && (
+            <button
+              type="button"
+              className="icon-command search-clear"
+              onClick={() => {
+                onQueryChange("");
+                searchInputRef.current?.focus();
+              }}
+              aria-label="Wyczyść wyszukiwanie"
+              title="Wyczyść wyszukiwanie (Esc)"
+            >
+              <X size={16} />
+            </button>
+          )}
         </label>
 
         <button

@@ -1,5 +1,6 @@
 import { ArrowDownAZ } from "lucide-react";
 import clsx from "clsx";
+import { useMemo } from "react";
 import { sortLabels, typeAccent, typeLabels } from "../constants/catalog";
 import type {
   Exam,
@@ -9,6 +10,7 @@ import type {
   Task,
 } from "../types/catalog";
 import { examFileName } from "../utils/catalog";
+import { findHighlightRanges } from "../utils/search";
 import { SeasonExamLabel } from "./SeasonExamLabel";
 import { SelectControl } from "./SelectControl";
 
@@ -17,6 +19,7 @@ type RegistryPaneProps = {
   examType: ExamType;
   filteredExams: Exam[];
   filteredTasks: Task[];
+  highlightTokens: string[];
   isSelectedTaskFilteredOut: boolean;
   registryMode: RegistryMode;
   selectedExamId: string | null;
@@ -25,6 +28,7 @@ type RegistryPaneProps = {
   sortMode: SortMode;
   taskById: Map<string, Task>;
   onExamSelect: (exam: Exam) => void;
+  onResetFilters: () => void;
   onSortModeChange: (sortMode: SortMode) => void;
   onTaskSelect: (task: Task) => void;
 };
@@ -34,6 +38,7 @@ export function RegistryPane({
   examType,
   filteredExams,
   filteredTasks,
+  highlightTokens,
   isSelectedTaskFilteredOut,
   registryMode,
   selectedExamId,
@@ -42,6 +47,7 @@ export function RegistryPane({
   sortMode,
   taskById,
   onExamSelect,
+  onResetFilters,
   onSortModeChange,
   onTaskSelect,
 }: RegistryPaneProps) {
@@ -78,10 +84,12 @@ export function RegistryPane({
           examById={examById}
           showPart={examType !== "inf03"}
           filteredTasks={filteredTasks}
+          highlightTokens={highlightTokens}
           filteredOutSelectedTask={
             isSelectedTaskFilteredOut ? selectedTask : null
           }
           selectedTaskId={selectedTaskId}
+          onResetFilters={onResetFilters}
           onTaskSelect={onTaskSelect}
         />
       ) : (
@@ -100,19 +108,92 @@ type TaskTableProps = {
   examById: Map<string, Exam>;
   showPart: boolean;
   filteredTasks: Task[];
+  highlightTokens: string[];
   filteredOutSelectedTask: Task | null;
   selectedTaskId: string | null;
+  onResetFilters: () => void;
   onTaskSelect: (task: Task) => void;
 };
+
+function HighlightedSummary({
+  summary,
+  tokens,
+}: {
+  summary: string;
+  tokens: string[];
+}) {
+  const segments = useMemo(() => {
+    const ranges = findHighlightRanges(summary, tokens);
+    if (ranges.length === 0) return null;
+    const parts: { key: number; text: string; highlight: boolean }[] = [];
+    let cursor = 0;
+    ranges.forEach((range, index) => {
+      if (range.start > cursor) {
+        parts.push({
+          key: index * 2,
+          text: summary.slice(cursor, range.start),
+          highlight: false,
+        });
+      }
+      parts.push({
+        key: index * 2 + 1,
+        text: summary.slice(range.start, range.end),
+        highlight: true,
+      });
+      cursor = range.end;
+    });
+    if (cursor < summary.length) {
+      parts.push({
+        key: ranges.length * 2,
+        text: summary.slice(cursor),
+        highlight: false,
+      });
+    }
+    return parts;
+  }, [summary, tokens]);
+
+  if (!segments) return <>{summary}</>;
+  return (
+    <>
+      {segments.map((part) =>
+        part.highlight ? (
+          <mark key={part.key}>{part.text}</mark>
+        ) : (
+          <span key={part.key}>{part.text}</span>
+        ),
+      )}
+    </>
+  );
+}
 
 function TaskTable({
   examById,
   showPart,
   filteredTasks,
+  highlightTokens,
   filteredOutSelectedTask,
   selectedTaskId,
+  onResetFilters,
   onTaskSelect,
 }: TaskTableProps) {
+  if (filteredTasks.length === 0 && !filteredOutSelectedTask) {
+    return (
+      <div className="registry-empty" role="status">
+        <p className="registry-empty-title">Brak pasujących zadań</p>
+        <p className="registry-empty-hint">
+          Nic tu nie ma. Spróbuj wyczyścić wyszukiwanie albo zresetować filtry.
+        </p>
+        <button
+          type="button"
+          className="registry-empty-reset"
+          onClick={onResetFilters}
+        >
+          Resetuj filtry
+        </button>
+      </div>
+    );
+  }
+
   function renderTaskRow(task: Task, isFilteredOutSelection = false) {
     const exam = examById.get(task.examId);
     if (!exam) return null;
@@ -142,7 +223,9 @@ function TaskTable({
         <span className={clsx("type-pill", typeAccent[task.type])}>
           {typeLabels[task.type] ?? task.type}
         </span>
-        <span className="row-summary">{task.summary}</span>
+        <span className="row-summary">
+          <HighlightedSummary summary={task.summary} tokens={highlightTokens} />
+        </span>
         <span className="task-repeat">
           {task.duplicates.length
             ? `${task.duplicates.length + 1} ark.`
