@@ -16,6 +16,13 @@ import {
   examSessionKey,
   formatExamLabel,
 } from "../utils/catalog";
+import {
+  foldDiacritics,
+  matchesFoldedHaystack,
+  parseSearchQuery,
+  scoreSearchFields,
+  type SearchableFields,
+} from "../utils/search";
 import { trackExamOpen, trackTaskOpen } from "../lib/analytics";
 
 function getUrlParam(name: string): string | null {
@@ -35,6 +42,45 @@ type UrlSelection = {
   examId: string | null;
   previewMode?: PreviewMode;
 };
+
+type UrlFilters = {
+  query: string;
+  year: string;
+  season: SeasonFilter;
+  taskType: string;
+  sortMode: SortMode;
+};
+
+function isSortMode(value: string | null): value is SortMode {
+  return (
+    value === "newest" ||
+    value === "oldest" ||
+    value === "type" ||
+    value === "part" ||
+    value === "duplicates"
+  );
+}
+
+function isSeasonFilter(value: string | null): value is SeasonFilter {
+  return value === "winter" || value === "summer";
+}
+
+function resolveUrlFilters(): UrlFilters {
+  const query = getUrlParam("q") ?? "";
+  const yearParam = getUrlParam("year");
+  const year =
+    yearParam && yearParam !== "all" && /^\d{4}$/.test(yearParam)
+      ? yearParam
+      : "all";
+  const seasonParam = getUrlParam("season");
+  const season: SeasonFilter = isSeasonFilter(seasonParam)
+    ? seasonParam
+    : "all";
+  const taskType = getUrlParam("taskType")?.trim() || "all";
+  const sortParam = getUrlParam("sort");
+  const sortMode: SortMode = isSortMode(sortParam) ? sortParam : "newest";
+  return { query, year, season, taskType, sortMode };
+}
 
 function resolveUrlSelection(catalog: Catalog): UrlSelection | null {
   const taskId = getUrlParam("task");
@@ -71,12 +117,18 @@ function syncUrl(
   examId: string | null,
   registryMode: RegistryMode,
   examType: ExamType,
+  filters: UrlFilters,
 ) {
   const params = new URLSearchParams();
   params.set("type", examType);
   params.set("mode", registryMode);
   if (examId) params.set("exam", examId);
   if (registryMode === "tasks" && taskId) params.set("task", taskId);
+  if (filters.query.trim()) params.set("q", filters.query.trim());
+  if (filters.year !== "all") params.set("year", filters.year);
+  if (filters.season !== "all") params.set("season", filters.season);
+  if (filters.taskType !== "all") params.set("taskType", filters.taskType);
+  if (filters.sortMode !== "newest") params.set("sort", filters.sortMode);
   const search = params.toString();
   const newUrl = `${window.location.pathname}?${search}`;
   window.history.replaceState(null, "", newUrl);
@@ -88,15 +140,16 @@ export function useCatalogExplorer() {
     ? urlExamType
     : "inf04";
   const urlMode = getUrlParam("mode");
+  const [initialFilters] = useState<UrlFilters>(() => resolveUrlFilters());
   const [examType, setExamType] = useState<ExamType>(initialExamType);
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [catalogError, setCatalogError] = useState<string | null>(null);
   const [catalogRequest, setCatalogRequest] = useState(0);
-  const [query, setQuery] = useState("");
-  const [year, setYear] = useState("all");
-  const [season, setSeason] = useState<SeasonFilter>("all");
-  const [taskType, setTaskType] = useState("all");
-  const [sortMode, setSortMode] = useState<SortMode>("newest");
+  const [query, setQuery] = useState(initialFilters.query);
+  const [year, setYear] = useState(initialFilters.year);
+  const [season, setSeason] = useState<SeasonFilter>(initialFilters.season);
+  const [taskType, setTaskType] = useState(initialFilters.taskType);
+  const [sortMode, setSortMode] = useState<SortMode>(initialFilters.sortMode);
   const [previewMode, setPreviewMode] = useState<PreviewMode>("task");
   const { theme, setTheme } = useTheme();
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(
@@ -161,8 +214,24 @@ export function useCatalogExplorer() {
   }, [catalogRequest, examType]);
 
   useEffect(() => {
-    syncUrl(selectedTaskId, selectedExamId, registryMode, examType);
-  }, [selectedTaskId, selectedExamId, registryMode, examType]);
+    syncUrl(selectedTaskId, selectedExamId, registryMode, examType, {
+      query,
+      year,
+      season,
+      taskType,
+      sortMode,
+    });
+  }, [
+    selectedTaskId,
+    selectedExamId,
+    registryMode,
+    examType,
+    query,
+    year,
+    season,
+    taskType,
+    sortMode,
+  ]);
 
   const examById = useMemo(() => {
     return new Map(catalog?.exams.map((exam) => [exam.id, exam]) ?? []);
@@ -172,29 +241,50 @@ export function useCatalogExplorer() {
     return new Map(catalog?.tasks.map((task) => [task.id, task]) ?? []);
   }, [catalog]);
 
+  const parsedQuery = useMemo(() => parseSearchQuery(query), [query]);
+
   const filteredTasks = useMemo(() => {
     if (!catalog) return [];
-    const needle = query.trim().toLowerCase();
+    const hasQuery = parsedQuery.include.length > 0;
 
-    const result = catalog.tasks.filter((task) => {
+    const scored = catalog.tasks.flatMap((task) => {
       const exam = examById.get(task.examId);
-      if (!exam) return false;
+      if (!exam) return [];
       const matchesYear = year === "all" || String(exam.year) === year;
       const matchesSeason =
         season === "all" ||
         (season === "winter" && exam.month === "01") ||
         (season === "summer" && exam.month === "06");
       const matchesType = taskType === "all" || task.type === taskType;
+      if (!matchesYear || !matchesSeason || !matchesType) return [];
+
+      const fields: SearchableFields = {
+        heading: foldDiacritics(task.heading),
+        tags: foldDiacritics(task.tags.join(" ")),
+        typeLabel: foldDiacritics(task.typeLabel),
+        summary: foldDiacritics(task.summary),
+        meta: foldDiacritics(
+          `${exam.code} ${formatExamLabel(exam)} ${examFileName(exam)} ${exam.session}`,
+        ),
+        text: foldDiacritics(task.text),
+      };
       const haystack =
-        `${exam.code} ${formatExamLabel(exam)} ${examFileName(exam)} ${exam.session} ${task.typeLabel} ${task.heading} ${task.summary} ${task.tags.join(" ")} ${task.text}`.toLowerCase();
-      const matchesQuery = !needle || haystack.includes(needle);
-      return matchesYear && matchesSeason && matchesType && matchesQuery;
+        `${fields.meta} ${fields.typeLabel} ${fields.heading} ${fields.summary} ${fields.tags} ${fields.text}`;
+      if (hasQuery && !matchesFoldedHaystack(haystack, parsedQuery)) {
+        return [];
+      }
+      const score = hasQuery ? scoreSearchFields(fields, parsedQuery) : 0;
+      return [{ task, score }];
     });
 
-    return result.sort((left, right) =>
-      sortTasks(left, right, examById, sortMode),
-    );
-  }, [catalog, examById, query, season, sortMode, taskType, year]);
+    return scored
+      .sort(
+        (left, right) =>
+          right.score - left.score ||
+          sortTasks(left.task, right.task, examById, sortMode),
+      )
+      .map((entry) => entry.task);
+  }, [catalog, examById, parsedQuery, season, sortMode, taskType, year]);
 
   const filteredExams = useMemo(() => {
     const visibleExamIds = new Set(filteredTasks.map((task) => task.examId));
@@ -383,6 +473,7 @@ export function useCatalogExplorer() {
       examById,
       filteredExams,
       filteredTasks,
+      highlightTokens: parsedQuery.include,
       isSelectedTaskFilteredOut,
       selectedExamId,
       selectedTaskId,

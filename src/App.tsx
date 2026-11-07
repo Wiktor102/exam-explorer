@@ -66,6 +66,7 @@ function CatalogApp() {
           examType={filters.examType}
           filteredExams={registryState.filteredExams}
           filteredTasks={registryState.filteredTasks}
+          highlightTokens={registryState.highlightTokens}
           isSelectedTaskFilteredOut={registryState.isSelectedTaskFilteredOut}
           registryMode={filters.registryMode}
           selectedExamId={registryState.selectedExamId}
@@ -74,6 +75,7 @@ function CatalogApp() {
           sortMode={registryState.sortMode}
           taskById={registryState.taskById}
           onExamSelect={actions.selectExam}
+          onResetFilters={actions.resetFilters}
           onSortModeChange={actions.setSortMode}
           onTaskSelect={actions.selectTask}
         />
@@ -119,9 +121,17 @@ function CatalogApp() {
 function App() {
   const normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
   const params = new URLSearchParams(window.location.search);
-  const hasCatalogLocation = ["type", "task", "exam", "mode"].some((param) =>
-    params.has(param),
-  );
+  const hasCatalogLocation = [
+    "type",
+    "task",
+    "exam",
+    "mode",
+    "q",
+    "year",
+    "season",
+    "taskType",
+    "sort",
+  ].some((param) => params.has(param));
 
   return (
     <>
