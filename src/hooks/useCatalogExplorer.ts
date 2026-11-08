@@ -177,25 +177,16 @@ export function useCatalogExplorer({
   }, []);
 
   useEffect(() => {
-    seedCatalog(
-      readExplorerLocation(new URL(initialPath, SITE_URL), initialCatalog)
-        .examType,
-      initialCatalog,
-    );
     // Query parameters are applied after hydration so the first client render
     // matches the prerendered document exactly.
-    let active = true;
-    void loadCatalog(
-      readExplorerLocation(new URL(initialPath, SITE_URL), initialCatalog)
-        .examType,
-    ).then((data) => {
-      if (active)
-        applyLocation(
-          readExplorerLocation(new URL(window.location.href), data),
-          data,
-          "none",
-        );
-    });
+    const browserLocation = readExplorerLocation(
+      new URL(window.location.href),
+      initialCatalog,
+    );
+    seedCatalog(browserLocation.examType, initialCatalog);
+    // The browser query must update state here, after the prerendered UI hydrates.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    applyLocation(browserLocation, initialCatalog, "none");
     const previousRestoration = window.history.scrollRestoration;
     window.history.scrollRestoration = "manual";
     if (!window.history.state?.explorerKey) {
@@ -218,13 +209,12 @@ export function useCatalogExplorer({
     };
     window.addEventListener("popstate", pop);
     return () => {
-      active = false;
       cancelPending();
       window.removeEventListener("popstate", pop);
       document.removeEventListener("scroll", saveScroll, true);
       window.history.scrollRestoration = previousRestoration;
     };
-  }, [initialCatalog, initialPath, applyLocation, openUrl, cancelPending]);
+  }, [initialCatalog, applyLocation, openUrl, cancelPending]);
 
   function change(
     patch: Partial<ExplorerLocation>,
