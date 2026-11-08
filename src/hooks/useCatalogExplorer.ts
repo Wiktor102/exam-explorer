@@ -172,10 +172,6 @@ export function useCatalogExplorer({
     [applyLocation],
   );
 
-  const cancelPending = useCallback(() => {
-    requestVersion.current += 1;
-  }, []);
-
   useEffect(() => {
     // Query parameters are applied after hydration so the first client render
     // matches the prerendered document exactly.
@@ -209,12 +205,12 @@ export function useCatalogExplorer({
     };
     window.addEventListener("popstate", pop);
     return () => {
-      cancelPending();
+      requestVersion.current += 1;
       window.removeEventListener("popstate", pop);
       document.removeEventListener("scroll", saveScroll, true);
       window.history.scrollRestoration = previousRestoration;
     };
-  }, [initialCatalog, applyLocation, openUrl, cancelPending]);
+  }, [initialCatalog, applyLocation, openUrl]);
 
   function change(
     patch: Partial<ExplorerLocation>,
@@ -233,17 +229,16 @@ export function useCatalogExplorer({
   const setPreviewMode = (previewMode: PreviewMode) => change({ previewMode });
 
   const examById = useMemo(() => {
-    return new Map(catalog?.exams.map((exam) => [exam.id, exam]) ?? []);
+    return new Map(catalog.exams.map((exam) => [exam.id, exam]));
   }, [catalog]);
 
   const taskById = useMemo(() => {
-    return new Map(catalog?.tasks.map((task) => [task.id, task]) ?? []);
+    return new Map(catalog.tasks.map((task) => [task.id, task]));
   }, [catalog]);
 
   const parsedQuery = useMemo(() => parseSearchQuery(query), [query]);
 
   const filteredTasks = useMemo(() => {
-    if (!catalog) return [];
     const hasQuery = parsedQuery.include.length > 0;
 
     const scored = catalog.tasks.flatMap((task) => {
