@@ -1,3 +1,9 @@
+import {
+  catalogPath,
+  examPath,
+  taskPath,
+  parseCatalogPath,
+} from "../lib/routes";
 import { useTheme } from "./useTheme";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { DuplicateTaskRow } from "../components/detail/types";
@@ -26,6 +32,10 @@ import {
 import { trackExamOpen, trackTaskOpen } from "../lib/analytics";
 
 function getUrlParam(name: string): string | null {
+  const route = parseCatalogPath(window.location.pathname);
+  if (name === "type" && route) return route.examType;
+  if (name === "task" && route?.taskId) return route.taskId;
+  if (name === "exam" && route?.examId) return route.examId;
   return new URLSearchParams(window.location.search).get(name);
 }
 
@@ -120,17 +130,24 @@ function syncUrl(
   filters: UrlFilters,
 ) {
   const params = new URLSearchParams();
-  params.set("type", examType);
   params.set("mode", registryMode);
-  if (examId) params.set("exam", examId);
-  if (registryMode === "tasks" && taskId) params.set("task", taskId);
   if (filters.query.trim()) params.set("q", filters.query.trim());
   if (filters.year !== "all") params.set("year", filters.year);
   if (filters.season !== "all") params.set("season", filters.season);
   if (filters.taskType !== "all") params.set("taskType", filters.taskType);
   if (filters.sortMode !== "newest") params.set("sort", filters.sortMode);
   const search = params.toString();
-  const newUrl = `${window.location.pathname}?${search}`;
+  const path =
+    registryMode === "tasks" && taskId
+      ? taskPath(examType, taskId)
+      : examId
+        ? examPath(examType, examId)
+        : catalogPath(examType);
+  const newUrl = path + (search ? `?${search}` : "");
+  if (window.location.pathname !== path) {
+    window.location.assign(newUrl);
+    return;
+  }
   window.history.replaceState(null, "", newUrl);
 }
 
@@ -159,13 +176,7 @@ export function useCatalogExplorer() {
     getUrlParam("exam"),
   );
   const [registryMode, setRegistryMode] = useState<RegistryMode>(
-    initialExamType === "inf03"
-      ? "exams"
-      : isRegistryMode(urlMode)
-        ? urlMode
-        : getUrlParam("task")
-          ? "tasks"
-          : "exams",
+    getUrlParam("task") ? "tasks" : isRegistryMode(urlMode) ? urlMode : "exams",
   );
   const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false);
   const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false);
@@ -214,6 +225,7 @@ export function useCatalogExplorer() {
   }, [catalogRequest, examType]);
 
   useEffect(() => {
+    if (!catalog) return;
     syncUrl(selectedTaskId, selectedExamId, registryMode, examType, {
       query,
       year,
@@ -222,6 +234,7 @@ export function useCatalogExplorer() {
       sortMode,
     });
   }, [
+    catalog,
     selectedTaskId,
     selectedExamId,
     registryMode,
@@ -268,8 +281,7 @@ export function useCatalogExplorer() {
         ),
         text: foldDiacritics(task.text),
       };
-      const haystack =
-        `${fields.meta} ${fields.typeLabel} ${fields.heading} ${fields.summary} ${fields.tags} ${fields.text}`;
+      const haystack = `${fields.meta} ${fields.typeLabel} ${fields.heading} ${fields.summary} ${fields.tags} ${fields.text}`;
       if (hasQuery && !matchesFoldedHaystack(haystack, parsedQuery)) {
         return [];
       }
@@ -398,11 +410,12 @@ export function useCatalogExplorer() {
       return;
     }
 
-    const exam = examById.get(task.examId);
-    if (exam) {
-      trackTaskOpen(task, exam);
+    // Switching parts within an exam stays on its page; other selections
+    // are tracked after the destination page loads.
+    if (registryMode === "exams" && selectedExamId === task.examId) {
+      const exam = examById.get(task.examId);
+      if (exam) trackTaskOpen(task, exam);
     }
-
     setSelectedTaskId(task.id);
     setSelectedExamId(task.examId);
     setPreviewMode(registryMode === "tasks" ? "task" : "exam");
@@ -413,8 +426,6 @@ export function useCatalogExplorer() {
       clearSelection();
       return;
     }
-
-    trackExamOpen(exam);
 
     setSelectedExamId(exam.id);
     setSelectedTaskId(exam.tasks[0] ?? null);

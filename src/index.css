@@ -7,3 +7,14 @@
 @import "./styles/preview.css";
 @import "./styles/privacy.css";
 @import "./styles/responsive.css";
+
+.static-catalog { max-width: 76rem; margin: 0 auto; padding: 2rem; overflow-wrap: anywhere; }
+.static-catalog nav a { display: inline-block; margin: .4rem; }
+.static-catalog article { border-top: 1px solid var(--line); padding-block: 1rem; }
+.static-catalog li { margin-block: .5rem; }
+.task-transcript { white-space: pre-wrap; line-height: 1.6; }
+a.task-row, a.exam-line { color: inherit; text-decoration: none; }
+
+.theme-icon-light { display: none; }
+[data-theme="dark"] .theme-icon-light { display: block; }
+[data-theme="dark"] .theme-icon-dark { display: none; }

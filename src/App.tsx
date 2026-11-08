@@ -4,9 +4,7 @@ import { CookieConsent } from "./components/CookieConsent";
 import { DetailPane } from "./components/DetailPane";
 import { FilterBar } from "./components/FilterBar";
 import { LoadingShell } from "./components/LoadingShell";
-import { LandingPage } from "./components/LandingPage";
 import { PreviewPane } from "./components/PreviewPane";
-import { PrivacyPolicyPage } from "./components/PrivacyPolicyPage";
 import { RegistryPane } from "./components/RegistryPane";
 import { useCatalogExplorer } from "./hooks/useCatalogExplorer";
 
@@ -119,32 +117,11 @@ function CatalogApp() {
 }
 
 function App() {
-  const normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
-  const params = new URLSearchParams(window.location.search);
-  const hasCatalogLocation = [
-    "type",
-    "task",
-    "exam",
-    "mode",
-    "q",
-    "year",
-    "season",
-    "taskType",
-    "sort",
-  ].some((param) => params.has(param));
-
   return (
     <>
-      {normalizedPath === "/polityka-prywatnosci" ? (
-        <PrivacyPolicyPage />
-      ) : hasCatalogLocation ? (
-        <CatalogApp />
-      ) : (
-        <LandingPage />
-      )}
+      <CatalogApp />
       <CookieConsent />
     </>
   );
 }
-
 export default App;

@@ -1,3 +1,4 @@
+import { examPath, taskPath } from "../lib/routes";
 import { ArrowDownAZ } from "lucide-react";
 import clsx from "clsx";
 import { useMemo } from "react";
@@ -81,6 +82,7 @@ export function RegistryPane({
 
       {registryMode === "tasks" ? (
         <TaskTable
+          examType={examType}
           examById={examById}
           showPart={examType !== "inf03"}
           filteredTasks={filteredTasks}
@@ -94,6 +96,7 @@ export function RegistryPane({
         />
       ) : (
         <ExamList
+          examType={examType}
           filteredExams={filteredExams}
           selectedExamId={selectedExamId}
           taskById={taskById}
@@ -105,6 +108,7 @@ export function RegistryPane({
 }
 
 type TaskTableProps = {
+  examType: ExamType;
   examById: Map<string, Exam>;
   showPart: boolean;
   filteredTasks: Task[];
@@ -167,6 +171,7 @@ function HighlightedSummary({
 }
 
 function TaskTable({
+  examType,
   examById,
   showPart,
   filteredTasks,
@@ -199,14 +204,26 @@ function TaskTable({
     if (!exam) return null;
 
     return (
-      <button
+      <a
+        href={taskPath(examType, task.id) + window.location.search}
         key={task.id}
         className={clsx(
           "task-row",
           selectedTaskId === task.id && "selected",
           isFilteredOutSelection && "filtered-out-selected",
         )}
-        onClick={() => onTaskSelect(task)}
+        onClick={(event) => {
+          if (
+            event.button !== 0 ||
+            event.metaKey ||
+            event.ctrlKey ||
+            event.shiftKey ||
+            event.altKey
+          )
+            return;
+          event.preventDefault();
+          onTaskSelect(task);
+        }}
         role="row"
         title={
           isFilteredOutSelection
@@ -231,7 +248,7 @@ function TaskTable({
             ? `${task.duplicates.length + 1} ark.`
             : "unikat"}
         </span>
-      </button>
+      </a>
     );
   }
 
@@ -257,6 +274,7 @@ function TaskTable({
 }
 
 type ExamListProps = {
+  examType: ExamType;
   filteredExams: Exam[];
   selectedExamId: string | null;
   taskById: Map<string, Task>;
@@ -264,6 +282,7 @@ type ExamListProps = {
 };
 
 function ExamList({
+  examType,
   filteredExams,
   selectedExamId,
   taskById,
@@ -277,13 +296,25 @@ function ExamList({
           .filter(Boolean) as Task[];
 
         return (
-          <button
+          <a
+            href={examPath(examType, exam.id) + window.location.search}
             key={exam.id}
             className={clsx(
               "exam-line",
               selectedExamId === exam.id && "selected",
             )}
-            onClick={() => onExamSelect(exam)}
+            onClick={(event) => {
+              if (
+                event.button !== 0 ||
+                event.metaKey ||
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.altKey
+              )
+                return;
+              event.preventDefault();
+              onExamSelect(exam);
+            }}
             title={examFileName(exam)}
           >
             <SeasonExamLabel
@@ -296,7 +327,7 @@ function ExamList({
             <span>
               {examTasks.map((task) => typeLabels[task.type]).join(" / ")}
             </span>
-          </button>
+          </a>
         );
       })}
     </div>

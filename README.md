@@ -1,6 +1,6 @@
 # Eksplorator zadań INF.03 i INF.04
 
-Aplikacja React i Vite do przeglądania archiwalnych arkuszy praktycznych egzaminów zawodowych INF.03 i INF.04. Ułatwia znalezienie konkretnego typu zadania bez przewijania całego arkusza.
+Statyczna witryna Astro z przeglądarką React do przeglądania archiwalnych arkuszy praktycznych egzaminów zawodowych INF.03 i INF.04. Ułatwia znalezienie konkretnego typu zadania bez przewijania całego arkusza.
 
 Materiały egzaminacyjne zebrano z publicznie dostępnych zbiorów. Większość
 materiałów INF.04 pobrano z repozytorium
@@ -56,13 +56,14 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Aplikacja będzie dostępna pod adresem `http://localhost:5173`.
+Aplikacja będzie dostępna pod adresem `http://localhost:4321`.
 
 ## Sprawdzenie i build
 
 ```bash
 pnpm lint
 pnpm build
+pnpm test:seo
 python3 -m unittest discover -s scripts -p 'test_generate_catalog.py'
 pnpm preview
 ```
@@ -72,10 +73,37 @@ Testy katalogu wymagają zależności z `scripts/requirements-catalog.txt`
 `Catalog tests` uruchamia je automatycznie dla każdego pull requesta i po pushu
 do `main`; można go też uruchomić ręcznie w GitHub Actions.
 
+## Strony i SEO
+
+Build generuje pełny HTML strony głównej i polityki prywatności oraz katalogów
+`/inf03/` i `/inf04/`. Każdy arkusz ma adres `/<kwalifikacja>/arkusze/<id>/`,
+a zadanie `/<kwalifikacja>/zadania/<id>/`. Treści zadań, linki do PDF oraz
+nawigacja są dostępne bez JavaScript. React zastępuje statyczną zawartość
+katalogu przeglądarką z filtrami i podglądem PDF. Strona główna i polityka
+ładują tylko mały komponent zgody, bez kodu przeglądarki.
+
+Wspólne funkcje w `src/lib/routes.ts` określają adresy stron. Generowanie stron
+i `sitemap.xml` korzysta z tych samych danych w `src/server/pages.ts`.
+Metadane i adres produkcyjny są wspólne dla wszystkich stron. Sitemap nie
+podaje `lastmod`, ponieważ czas wygenerowania katalogu nie oznacza zmiany treści.
+
+Stare odnośniki `/?type=...&exam=...&task=...` przekierowuje skrypt strony
+głównej przez `location.replace`, z zachowaniem filtrów i fragmentu URL.
+Są to przekierowania w przeglądarce, bez kodu HTTP 301. Wybór arkusza lub
+zadania otwiera wygenerowaną stronę, aby metadane odpowiadały adresowi.
+Filtry pozostają w query string. Hosting musi serwować pliki `index.html`
+z katalogów i zwracać 404 dla nieznanych ścieżek, zgodnie z `public/.htaccess`.
+Nie należy przywracać przekierowania wszystkich ścieżek do strony głównej.
+
+`pnpm test:seo` wymaga wcześniejszego buildu. Sprawdza zgodność sitemap ze
+wszystkimi wpisami katalogów, pełne treści zadań w HTML, metadane, linki
+wewnętrzne i konwersję starych adresów.
+
 ## Układ projektu
 
 ```text
-src/                            aplikacja React
+src/pages/                      strony generowane przez Astro
+src/components/                 komponenty statyczne i przeglądarka React
 public/data/inf03/catalog.json  katalog INF.03
 public/data/inf04/catalog.json  katalog INF.04
 public/pdfs/                    arkusze, zadania i kryteria oceniania

@@ -1,0 +1,14 @@
+---
+import Page from "../layouts/Page.astro";
+import App from "../App";
+import StaticCatalog from "../components/StaticCatalog.astro";
+import { catalogPages, type CatalogPage } from "../server/pages";
+export function getStaticPaths() {
+  return catalogPages().map(page => ({ params: { path: page.path.slice(1, -1) }, props: { page } }));
+}
+interface Props { page: CatalogPage; }
+const { page } = Astro.props;
+---
+<Page title={page.title} description={page.description} path={page.path} consent={false}>
+  <App client:only="react"><StaticCatalog slot="fallback" page={page} /></App>
+</Page>
