@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test as base, expect } from "@playwright/test";
 import { readFileSync } from "node:fs";
 const inf04 = JSON.parse(
   readFileSync("public/data/inf04/catalog.json", "utf8"),
@@ -9,16 +9,61 @@ const inf03 = JSON.parse(
 const examPath = (id) => `/inf04/arkusze/${id}/`;
 const taskPath = (id) => `/inf04/zadania/${id}/`;
 const origin = "https://egzamin-zawodowy.wiktorgolicz.pl";
-async function ready(page) {
-  await page
-    .locator('astro-island[component-url*="/App."]:not([ssr])')
-    .waitFor();
-}
-async function identity(page) {
-  await page.evaluate(() => {
-    window.testShell = document.querySelector(".app-shell");
+const test = base.extend({
+  page: async ({ page }, use) => {
+    await page.addInitScript(() => {
+      if (window !== window.top) return;
+      localStorage.setItem("examExplorer.analyticsConsent", "rejected");
+      localStorage.setItem("exam-explorer-theme", "dark");
+    });
+    await use(page);
+  },
+  archive: async ({ page, baseURL }, use) => {
+    const hydrate = async (target) => {
+      await target
+        .locator('astro-island[component-url*="/App."]:not([ssr])')
+        .waitFor();
+      await target.evaluate(() => {
+        window.testShell = document.querySelector(".app-shell");
+      });
+    };
+    await use({
+      open: async (path = "/inf04/", target = page) => {
+        await target.goto(new URL(path, baseURL).href);
+        await hydrate(target);
+      },
+      reload: async () => {
+        await page.reload();
+        await hydrate(page);
+      },
+    });
+  },
+});
+function captureErrors(page) {
+  const errors = [];
+  page.on("pageerror", (error) => errors.push(error.message));
+  page.on("console", (message) => {
+    if (message.type() === "error") errors.push(message.text());
   });
+  return errors;
 }
+async function scrollTo(page, value) {
+  await page.locator(".detail-pane").evaluate((node, value) => {
+    node.scrollTop = value;
+  }, value);
+  await expectScroll(page, value);
+}
+const expectScroll = (page, value) =>
+  expect
+    .poll(() => page.locator(".detail-pane").evaluate((node) => node.scrollTop))
+    .toBe(value);
+function eventCount(event) {
+  return (window.dataLayer ?? []).filter(
+    (args) => args[0] === "event" && args[1] === event,
+  ).length;
+}
+const expectEventCount = (page, event, count) =>
+  expect.poll(() => page.evaluate(eventCount, event)).toBe(count);
 async function sameShell(page) {
   expect(
     await page.evaluate(
@@ -27,41 +72,23 @@ async function sameShell(page) {
   ).toBe(true);
 }
 async function metadata(page, path) {
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
-    "href",
-    origin + path,
-  );
-  await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
-    "content",
-    origin + path,
-  );
   const title = await page.title();
-  await expect(page.locator('meta[property="og:title"]')).toHaveAttribute(
-    "content",
-    title,
-  );
-  await expect(page.locator('meta[name="twitter:title"]')).toHaveAttribute(
-    "content",
-    title,
-  );
+  for (const [selector, attribute, value] of [
+    ['link[rel="canonical"]', "href", origin + path],
+    ['meta[property="og:url"]', "content", origin + path],
+    ['meta[property="og:title"]', "content", title],
+    ['meta[name="twitter:title"]', "content", title],
+  ])
+    await expect(page.locator(selector)).toHaveAttribute(attribute, value);
 }
-test.beforeEach(async ({ page }) => {
-  await page.addInitScript(() => {
-    localStorage.setItem("examExplorer.analyticsConsent", "rejected");
-    localStorage.setItem("exam-explorer-theme", "dark");
-  });
-});
 
 test("selections, filters, modes and history retain one document and explorer", async ({
   page,
+  archive,
 }) => {
-  const errors = [];
+  const errors = captureErrors(page);
   let documents = 0,
     catalogs = 0;
-  page.on("pageerror", (e) => errors.push(e.message));
-  page.on("console", (msg) => {
-    if (msg.type() === "error") errors.push(msg.text());
-  });
   page.on("request", (request) => {
     if (request.isNavigationRequest() && request.frame() === page.mainFrame())
       documents++;
@@ -71,9 +98,7 @@ test("selections, filters, modes and history retain one document and explorer", 
     )
       catalogs++;
   });
-  await page.goto("/inf04/");
-  await ready(page);
-  await identity(page);
+  await archive.open();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   const first = inf04.exams[0],
     second = inf04.exams[1];
@@ -119,10 +144,9 @@ test("selections, filters, modes and history retain one document and explorer", 
 
 test("qualification loading retains the interface, handles failures and caches successes", async ({
   page,
+  archive,
 }) => {
-  await page.goto("/inf04/");
-  await ready(page);
-  await identity(page);
+  await archive.open();
   let release;
   let requests = 0;
   await page.route("**/data/inf03/catalog.json", async (route) => {
@@ -158,10 +182,9 @@ test("qualification loading retains the interface, handles failures and caches s
 
 test("failed qualification request keeps current view and can retry", async ({
   page,
+  archive,
 }) => {
-  await page.goto("/inf04/");
-  await ready(page);
-  await identity(page);
+  await archive.open();
   let fail = true;
   await page.route("**/data/inf03/catalog.json", (route) =>
     fail ? route.abort() : route.fulfill({ json: inf03 }),
@@ -178,6 +201,7 @@ test("failed qualification request keeps current view and can retry", async ({
 
 test("direct filtered task links hydrate without replacing prerendered UI", async ({
   page,
+  archive,
 }) => {
   const task = inf04.tasks[0];
   await page.addInitScript(() => {
@@ -185,8 +209,7 @@ test("direct filtered task links hydrate without replacing prerendered UI", asyn
       window.beforeHydration = document.querySelector(".app-shell");
     });
   });
-  await page.goto(taskPath(task.id) + "?q=aplikacja&year=2026");
-  await ready(page);
+  await archive.open(taskPath(task.id) + "?q=aplikacja&year=2026");
   await expect(page.getByLabel("Szukaj", { exact: true })).toHaveValue(
     "aplikacja",
   );
@@ -197,8 +220,7 @@ test("direct filtered task links hydrate without replacing prerendered UI", asyn
     ),
   ).toBe(true);
   await metadata(page, taskPath(task.id));
-  await page.reload();
-  await ready(page);
+  await archive.reload();
   await expect(page.getByLabel("Szukaj", { exact: true })).toHaveValue(
     "aplikacja",
   );
@@ -223,54 +245,37 @@ test("no-JS task content and real links remain usable", async ({ browser }) => {
 
 test("expanded transcripts stay scrollable and history restores the latest scroll position", async ({
   page,
+  archive,
 }) => {
   await page.setViewportSize({ width: 1600, height: 1000 });
   const first = inf04.exams[0],
     second = inf04.exams[1];
-  await page.goto(examPath(first.id));
-  await ready(page);
+  await archive.open(examPath(first.id));
   await page.locator(".task-content summary").click();
   expect(
     await page
       .locator(".workspace")
       .evaluate((node) => node.getBoundingClientRect().height),
   ).toBeGreaterThan(100);
-  await page.locator(".detail-pane").evaluate((node) => {
-    node.scrollTop = 350;
-  });
-  await expect
-    .poll(() => page.locator(".detail-pane").evaluate((node) => node.scrollTop))
-    .toBe(350);
+  await scrollTo(page, 350);
   await page.locator(`a.exam-line[href^="${examPath(second.id)}"]`).click();
   await expect(page).toHaveURL(new RegExp(examPath(second.id)));
-  await expect
-    .poll(() => page.locator(".detail-pane").evaluate((node) => node.scrollTop))
-    .toBe(0);
-  await page.locator(".detail-pane").evaluate((node) => {
-    node.scrollTop = 240;
-  });
-  await expect
-    .poll(() => page.locator(".detail-pane").evaluate((node) => node.scrollTop))
-    .toBe(240);
+  await expectScroll(page, 0);
+  await scrollTo(page, 240);
   await page.evaluate(() => history.back());
   await expect(page).toHaveURL(new RegExp(examPath(first.id)));
-  await expect
-    .poll(() => page.locator(".detail-pane").evaluate((node) => node.scrollTop))
-    .toBe(350);
+  await expectScroll(page, 350);
   await page.evaluate(() => history.forward());
   await expect(page).toHaveURL(new RegExp(examPath(second.id)));
-  await expect
-    .poll(() => page.locator(".detail-pane").evaluate((node) => node.scrollTop))
-    .toBe(240);
+  await expectScroll(page, 240);
 });
 
 test("keyboard selections stay client-side and modifier clicks open real detail URLs", async ({
   page,
   context,
+  archive,
 }) => {
-  await page.goto("/inf04/");
-  await ready(page);
-  await identity(page);
+  await archive.open();
   const link = page.locator("a.exam-line").first();
   const href = await link.getAttribute("href");
   await link.focus();
@@ -290,10 +295,9 @@ test("keyboard selections stay client-side and modifier clicks open real detail 
 
 test("a superseded qualification request cannot replace a newer selection", async ({
   page,
+  archive,
 }) => {
-  await page.goto("/inf04/");
-  await ready(page);
-  await identity(page);
+  await archive.open();
   let release;
   await page.route("**/data/inf03/catalog.json", async (route) => {
     await new Promise((resolve) => {
@@ -318,6 +322,7 @@ test("a superseded qualification request cannot replace a newer selection", asyn
 
 test("initial accepted analytics records the selected task once after consent initialization", async ({
   browser,
+  archive,
 }) => {
   const context = await browser.newContext();
   await context.addInitScript(() =>
@@ -327,52 +332,28 @@ test("initial accepted analytics records the selected task once after consent in
     route.fulfill({ contentType: "text/javascript", body: "" }),
   );
   const page = await context.newPage();
-  await page.goto("http://127.0.0.1:4330" + taskPath(inf04.tasks[0].id));
-  await ready(page);
-  await expect
-    .poll(() =>
-      page.evaluate(
-        () =>
-          (window.dataLayer ?? []).filter(
-            (args) => args[0] === "event" && args[1] === "task_open",
-          ).length,
-      ),
-    )
-    .toBe(1);
+  await archive.open(taskPath(inf04.tasks[0].id), page);
+  await expectEventCount(page, "task_open", 1);
   await page
     .locator(`a.task-row[href^="${taskPath(inf04.tasks[1].id)}"]`)
     .click();
-  await expect
-    .poll(() =>
-      page.evaluate(
-        () =>
-          (window.dataLayer ?? []).filter(
-            (args) => args[0] === "event" && args[1] === "task_open",
-          ).length,
-      ),
-    )
-    .toBe(2);
+  await expectEventCount(page, "task_open", 2);
   await context.close();
 });
 
 for (const type of ["inf03", "inf04"]) {
   test(`${type} hydrates and navigates when randomUUID is unavailable`, async ({
     page,
+    archive,
   }) => {
-    const errors = [];
-    page.on("pageerror", (error) => errors.push(error.message));
-    page.on("console", (message) => {
-      if (message.type() === "error") errors.push(message.text());
-    });
+    const errors = captureErrors(page);
     // Mirrors browsers without the secure-context-only UUID API, including
     // archive access through an ordinary HTTP development/preview hostname.
     await page.addInitScript(() => {
       Object.defineProperty(crypto, "randomUUID", { value: undefined });
     });
-    await page.goto(`/${type}/`);
-    await ready(page);
+    await archive.open(`/${type}/`);
     await expect(page.locator(".app-shell")).toBeVisible();
-    await identity(page);
     await page.locator("a.exam-line").first().click();
     await expect(page).toHaveURL(new RegExp(`/${type}/arkusze/`));
     await expect(page.locator("a.exam-line.selected")).toBeVisible();
