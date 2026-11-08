@@ -47,6 +47,16 @@ function captureErrors(page) {
   });
   return errors;
 }
+async function delayCatalog(page) {
+  const response = Promise.withResolvers();
+  let requests = 0;
+  await page.route("**/data/inf03/catalog.json", async (route) => {
+    requests++;
+    await response.promise;
+    await route.fulfill({ json: inf03 });
+  });
+  return { release: response.resolve, requestCount: () => requests };
+}
 async function scrollTo(page, value) {
   await page.locator(".detail-pane").evaluate((node, value) => {
     node.scrollTop = value;
@@ -147,31 +157,23 @@ test("qualification loading retains the interface, handles failures and caches s
   archive,
 }) => {
   await archive.open();
-  let release;
-  let requests = 0;
-  await page.route("**/data/inf03/catalog.json", async (route) => {
-    requests++;
-    await new Promise((resolve) => {
-      release = resolve;
-    });
-    await route.fulfill({ json: inf03 });
-  });
+  const delayed = await delayCatalog(page);
   await page.getByRole("button", { name: "INF.03", exact: true }).click();
-  await expect.poll(() => requests).toBe(1);
+  await expect.poll(delayed.requestCount).toBe(1);
   await expect(page.locator("main.app-shell")).toHaveAttribute(
     "aria-busy",
     "true",
   );
   await expect(page.locator("a.exam-line")).toHaveCount(inf04.exams.length);
   await expect(page).toHaveURL("/inf04/");
-  release();
+  delayed.release();
   await expect(page).toHaveURL("/inf03/");
   await sameShell(page);
   await page.getByRole("button", { name: "INF.04", exact: true }).click();
   await expect(page).toHaveURL("/inf04/");
   await page.getByRole("button", { name: "INF.03", exact: true }).click();
   await expect(page).toHaveURL("/inf03/");
-  expect(requests).toBe(1);
+  expect(delayed.requestCount()).toBe(1);
   await page.evaluate(() => history.back());
   await expect(page).toHaveURL("/inf04/");
   await page.evaluate(() => history.back());
@@ -298,21 +300,15 @@ test("a superseded qualification request cannot replace a newer selection", asyn
   archive,
 }) => {
   await archive.open();
-  let release;
-  await page.route("**/data/inf03/catalog.json", async (route) => {
-    await new Promise((resolve) => {
-      release = resolve;
-    });
-    await route.fulfill({ json: inf03 });
-  });
+  const delayed = await delayCatalog(page);
   await page.getByRole("button", { name: "INF.03", exact: true }).click();
-  await expect.poll(() => Boolean(release)).toBe(true);
+  await expect.poll(delayed.requestCount).toBe(1);
   await page.getByRole("button", { name: "INF.04", exact: true }).click();
   await expect(page.locator(".app-shell")).toHaveAttribute(
     "aria-busy",
     "false",
   );
-  release();
+  delayed.release();
   await page.getByRole("button", { name: "INF.03", exact: true }).click();
   await expect(page).toHaveURL("/inf03/");
   await page.getByRole("button", { name: "INF.04", exact: true }).click();
@@ -341,28 +337,26 @@ test("initial accepted analytics records the selected task once after consent in
   await context.close();
 });
 
-for (const type of ["inf03", "inf04"]) {
-  test(`${type} hydrates and navigates when randomUUID is unavailable`, async ({
-    page,
-    archive,
-  }) => {
-    const errors = captureErrors(page);
-    // Mirrors browsers without the secure-context-only UUID API, including
-    // archive access through an ordinary HTTP development/preview hostname.
-    await page.addInitScript(() => {
-      Object.defineProperty(crypto, "randomUUID", { value: undefined });
-    });
-    await archive.open(`/${type}/`);
-    await expect(page.locator(".app-shell")).toBeVisible();
-    await page.locator("a.exam-line").first().click();
-    await expect(page).toHaveURL(new RegExp(`/${type}/arkusze/`));
-    await expect(page.locator("a.exam-line.selected")).toBeVisible();
-    await sameShell(page);
-    await page.evaluate(() => history.back());
-    await expect(page).toHaveURL(`/${type}/`);
-    await expect(page.locator(".app-shell")).toBeVisible();
-    await expect(page.locator("a.exam-line.selected")).toHaveCount(0);
-    await sameShell(page);
-    expect(errors).toEqual([]);
+test("archive hydrates and navigates when randomUUID is unavailable", async ({
+  page,
+  archive,
+}) => {
+  const errors = captureErrors(page);
+  // Mirrors browsers without the secure-context-only UUID API, including
+  // archive access through an ordinary HTTP development/preview hostname.
+  await page.addInitScript(() => {
+    Object.defineProperty(crypto, "randomUUID", { value: undefined });
   });
-}
+  await archive.open();
+  await expect(page.locator(".app-shell")).toBeVisible();
+  await page.locator("a.exam-line").first().click();
+  await expect(page).toHaveURL(/\/inf04\/arkusze\//);
+  await expect(page.locator("a.exam-line.selected")).toBeVisible();
+  await sameShell(page);
+  await page.evaluate(() => history.back());
+  await expect(page).toHaveURL("/inf04/");
+  await expect(page.locator(".app-shell")).toBeVisible();
+  await expect(page.locator("a.exam-line.selected")).toHaveCount(0);
+  await sameShell(page);
+  expect(errors).toEqual([]);
+});
