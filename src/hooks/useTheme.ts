@@ -1,26 +1,26 @@
-import { useLayoutEffect, useState } from "react";
-
+import { useSyncExternalStore } from "react";
 type Theme = "light" | "dark";
-
-function getPreferredTheme(): Theme {
-  try {
-    const saved = localStorage.getItem("exam-explorer-theme");
-    if (saved === "light" || saved === "dark") return saved;
-  } catch {
-    // Use the system preference when storage is unavailable.
-  }
-  return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-}
-
+const subscribe = (notify: () => void) => {
+  window.addEventListener("exam-theme", notify);
+  window.addEventListener("storage", notify);
+  return () => {
+    window.removeEventListener("exam-theme", notify);
+    window.removeEventListener("storage", notify);
+  };
+};
+const getTheme = (): Theme =>
+  document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+const getServerTheme = (): Theme => "light";
 export function useTheme() {
-  const [theme, setTheme] = useState<Theme>(getPreferredTheme);
-  useLayoutEffect(() => {
-    document.documentElement.dataset.theme = theme;
+  const theme = useSyncExternalStore(subscribe, getTheme, getServerTheme);
+  function setTheme(next: Theme) {
+    document.documentElement.dataset.theme = next;
     try {
-      localStorage.setItem("exam-explorer-theme", theme);
+      localStorage.setItem("exam-explorer-theme", next);
     } catch {
-      // Theme changes still work for this visit.
+      /* Keep the choice for this visit. */
     }
-  }, [theme]);
+    window.dispatchEvent(new Event("exam-theme"));
+  }
   return { theme, setTheme };
 }

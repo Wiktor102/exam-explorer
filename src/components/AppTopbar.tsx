@@ -4,6 +4,7 @@ import clsx from "clsx";
 import type { Catalog, ExamType } from "../types/catalog";
 
 type AppTopbarProps = {
+  isNavigating: boolean;
   catalog: Catalog;
   examType: ExamType;
   theme: "light" | "dark";
@@ -12,6 +13,7 @@ type AppTopbarProps = {
 };
 
 export function AppTopbar({
+  isNavigating,
   catalog,
   examType,
   theme,
@@ -33,6 +35,9 @@ export function AppTopbar({
         </div>
       </a>
       <div className="source-strip">
+        {isNavigating && (
+          <span className="catalog-loading">Wczytywanie katalogu…</span>
+        )}
         <a className="home-link" href="/" aria-label="Wróć do strony głównej">
           <House size={16} strokeWidth={2.5} aria-hidden="true" />
           Start

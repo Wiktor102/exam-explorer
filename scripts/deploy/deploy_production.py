@@ -189,7 +189,7 @@ def main() -> None:
         dist = source / "dist"
         manifest = build_manifest(dist)
         checks = ["index.html", "data/inf03/catalog.json", "data/inf04/catalog.json"]
-        checks.extend(path for path in manifest if path.startswith("assets/"))
+        checks.extend(path for path in manifest if path.startswith(("assets/", "_astro/")))
         for relative in [*checks, ".htaccess"]:
             if relative not in manifest:
                 raise RuntimeError(f"Required build file missing: {relative}")

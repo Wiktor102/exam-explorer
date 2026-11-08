@@ -1,5 +1,4 @@
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
-import { useEffect } from "react";
 
 const GOOGLE_PRIVACY_URL = "https://policies.google.com/privacy?hl=pl";
 const GOOGLE_ANALYTICS_DATA_URL =
@@ -7,16 +6,6 @@ const GOOGLE_ANALYTICS_DATA_URL =
 const UODO_URL = "https://uodo.gov.pl/pl/492/2464";
 
 export function PrivacyPolicyPage() {
-  useEffect(() => {
-    const previousTitle = document.title;
-    document.title =
-      "Polityka prywatności | Eksplorator zadań INF.03 i INF.04";
-
-    return () => {
-      document.title = previousTitle;
-    };
-  }, []);
-
   return (
     <main className="landing-page privacy-page">
       <div className="landing-frame" aria-hidden="true" />

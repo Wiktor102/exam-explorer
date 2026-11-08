@@ -1,3 +1,5 @@
+import { isUnmodifiedLinkClick } from "../utils/navigation";
+import { examPath, taskPath } from "../lib/routes";
 import { ArrowDownAZ } from "lucide-react";
 import clsx from "clsx";
 import { useMemo } from "react";
@@ -15,6 +17,7 @@ import { SeasonExamLabel } from "./SeasonExamLabel";
 import { SelectControl } from "./SelectControl";
 
 type RegistryPaneProps = {
+  linkSearch: string;
   examById: Map<string, Exam>;
   examType: ExamType;
   filteredExams: Exam[];
@@ -34,6 +37,7 @@ type RegistryPaneProps = {
 };
 
 export function RegistryPane({
+  linkSearch,
   examById,
   examType,
   filteredExams,
@@ -81,6 +85,8 @@ export function RegistryPane({
 
       {registryMode === "tasks" ? (
         <TaskTable
+          linkSearch={linkSearch}
+          examType={examType}
           examById={examById}
           showPart={examType !== "inf03"}
           filteredTasks={filteredTasks}
@@ -94,6 +100,8 @@ export function RegistryPane({
         />
       ) : (
         <ExamList
+          linkSearch={linkSearch}
+          examType={examType}
           filteredExams={filteredExams}
           selectedExamId={selectedExamId}
           taskById={taskById}
@@ -105,6 +113,8 @@ export function RegistryPane({
 }
 
 type TaskTableProps = {
+  examType: ExamType;
+  linkSearch: string;
   examById: Map<string, Exam>;
   showPart: boolean;
   filteredTasks: Task[];
@@ -167,6 +177,8 @@ function HighlightedSummary({
 }
 
 function TaskTable({
+  linkSearch,
+  examType,
   examById,
   showPart,
   filteredTasks,
@@ -199,14 +211,19 @@ function TaskTable({
     if (!exam) return null;
 
     return (
-      <button
+      <a
+        href={taskPath(examType, task.id) + linkSearch}
         key={task.id}
         className={clsx(
           "task-row",
           selectedTaskId === task.id && "selected",
           isFilteredOutSelection && "filtered-out-selected",
         )}
-        onClick={() => onTaskSelect(task)}
+        onClick={(event) => {
+          if (!isUnmodifiedLinkClick(event)) return;
+          event.preventDefault();
+          onTaskSelect(task);
+        }}
         role="row"
         title={
           isFilteredOutSelection
@@ -231,7 +248,7 @@ function TaskTable({
             ? `${task.duplicates.length + 1} ark.`
             : "unikat"}
         </span>
-      </button>
+      </a>
     );
   }
 
@@ -257,6 +274,8 @@ function TaskTable({
 }
 
 type ExamListProps = {
+  linkSearch: string;
+  examType: ExamType;
   filteredExams: Exam[];
   selectedExamId: string | null;
   taskById: Map<string, Task>;
@@ -264,6 +283,8 @@ type ExamListProps = {
 };
 
 function ExamList({
+  linkSearch,
+  examType,
   filteredExams,
   selectedExamId,
   taskById,
@@ -277,13 +298,18 @@ function ExamList({
           .filter(Boolean) as Task[];
 
         return (
-          <button
+          <a
+            href={examPath(examType, exam.id) + linkSearch}
             key={exam.id}
             className={clsx(
               "exam-line",
               selectedExamId === exam.id && "selected",
             )}
-            onClick={() => onExamSelect(exam)}
+            onClick={(event) => {
+              if (!isUnmodifiedLinkClick(event)) return;
+              event.preventDefault();
+              onExamSelect(exam);
+            }}
             title={examFileName(exam)}
           >
             <SeasonExamLabel
@@ -296,7 +322,7 @@ function ExamList({
             <span>
               {examTasks.map((task) => typeLabels[task.type]).join(" / ")}
             </span>
-          </button>
+          </a>
         );
       })}
     </div>
