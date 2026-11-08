@@ -28,3 +28,6 @@ __pycache__/
 scripts/deploy/.env
 
 .astro/
+
+test-results/
+playwright-report/

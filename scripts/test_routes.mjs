@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import assert from "node:assert/strict";
 import { createServer } from "vite";
 const server = await createServer({
@@ -41,6 +42,35 @@ try {
   assert.equal(legacy("/?q=sql&sort=oldest"), "/inf04/?q=sql&sort=oldest");
   assert.equal(legacy("/inf04/?q=sql"), null);
   assert.equal(parseCatalogPath("/inf04/arkusze/missing/extra/"), null);
+  const { readExplorerLocation, explorerUrl } = await server.ssrLoadModule(
+    "/src/lib/explorerLocation.ts",
+  );
+  for (const type of ["inf03", "inf04"]) {
+    const catalog = JSON.parse(
+      readFileSync(`public/data/${type}/catalog.json`, "utf8"),
+    );
+    const filters =
+      "?q=C%2B%2B&year=2026&season=summer&taskType=console&sort=oldest";
+    for (const path of [
+      catalogPath(type),
+      examPath(type, catalog.exams[0].id),
+      taskPath(type, catalog.tasks[0].id),
+    ]) {
+      const url = new URL(path + filters, "https://example.com");
+      const state = readExplorerLocation(url, catalog);
+      assert.equal(explorerUrl(state), path + filters);
+      assert.equal(state.query, "C++");
+      assert.equal(state.sortMode, "oldest");
+    }
+    const empty = readExplorerLocation(
+      new URL(
+        catalogPath(type) + "?mode=tasks&year=broken&sort=broken",
+        "https://example.com",
+      ),
+      catalog,
+    );
+    assert.equal(explorerUrl(empty), catalogPath(type) + "?mode=tasks");
+  }
   console.log("Canonical routes and legacy URL conversion passed.");
 } finally {
   await server.close();

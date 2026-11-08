@@ -1,41 +1,73 @@
 import clsx from "clsx";
+import { parseCatalogPath } from "./lib/routes";
+import { explorerUrl } from "./lib/explorerLocation";
 import { AppTopbar } from "./components/AppTopbar";
-import { CookieConsent } from "./components/CookieConsent";
 import { DetailPane } from "./components/DetailPane";
 import { FilterBar } from "./components/FilterBar";
-import { LoadingShell } from "./components/LoadingShell";
 import { PreviewPane } from "./components/PreviewPane";
 import { RegistryPane } from "./components/RegistryPane";
-import { useCatalogExplorer } from "./hooks/useCatalogExplorer";
+import {
+  type ExplorerProps,
+  useCatalogExplorer,
+} from "./hooks/useCatalogExplorer";
 
-function CatalogApp() {
+function App(props: ExplorerProps) {
   const {
     actions,
     catalog,
     catalogError,
+    isNavigating,
+    location,
     detailState,
     filters,
     previewState,
     registryState,
-  } = useCatalogExplorer();
+  } = useCatalogExplorer(props);
   const hasSelection = Boolean(
     detailState.selectedExam || detailState.selectedTask,
   );
 
-  if (!catalog) {
-    return (
-      <LoadingShell
-        examType={filters.examType}
-        error={catalogError}
-        theme={filters.theme}
-        onRetry={actions.retryCatalog}
-      />
-    );
-  }
-
   return (
-    <main className={clsx("app-shell", filters.theme === "dark" && "dark")}>
+    <main
+      className={clsx("app-shell", filters.theme === "dark" && "dark")}
+      aria-busy={isNavigating}
+      onClick={(event) => {
+        if (
+          event.defaultPrevented ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey
+        )
+          return;
+        const link = (event.target as Element).closest("a");
+        if (!link || link.target || link.hasAttribute("download")) return;
+        const url = new URL(link.href);
+        if (
+          url.origin !== window.location.origin ||
+          !parseCatalogPath(url.pathname)
+        )
+          return;
+        event.preventDefault();
+        actions.navigateUrl(url);
+      }}
+    >
+      <div className="navigation-status" role="status" aria-live="polite">
+        {isNavigating
+          ? "Wczytywanie katalogu…"
+          : catalogError
+            ? ""
+            : `Wybrano ${detailState.selectedTask && location.registryMode === "tasks" ? detailState.selectedTask.title : (detailState.selectedExam?.code ?? filters.examType.toUpperCase())}`}
+      </div>
+      {catalogError && (
+        <div className="navigation-error" role="alert">
+          {catalogError}{" "}
+          <button onClick={actions.retryCatalog}>Spróbuj ponownie</button>
+        </div>
+      )}
       <AppTopbar
+        isNavigating={isNavigating}
         catalog={catalog}
         examType={filters.examType}
         theme={filters.theme}
@@ -60,6 +92,9 @@ function CatalogApp() {
 
       <section className={clsx("workspace", !hasSelection && "list-only")}>
         <RegistryPane
+          linkSearch={
+            new URL(explorerUrl(location), "https://local.invalid").search
+          }
           examById={registryState.examById}
           examType={filters.examType}
           filteredExams={registryState.filteredExams}
@@ -80,6 +115,7 @@ function CatalogApp() {
 
         {hasSelection && (
           <DetailPane
+            examType={filters.examType}
             catalog={catalog}
             duplicateTaskRows={detailState.duplicateTaskRows}
             duplicateTasks={detailState.duplicateTasks}
@@ -116,12 +152,4 @@ function CatalogApp() {
   );
 }
 
-function App() {
-  return (
-    <>
-      <CatalogApp />
-      <CookieConsent />
-    </>
-  );
-}
 export default App;

@@ -64,6 +64,8 @@ Aplikacja będzie dostępna pod adresem `http://localhost:4321`.
 pnpm lint
 pnpm build
 pnpm test:seo
+pnpm exec playwright install chromium
+pnpm test:browser
 python3 -m unittest discover -s scripts -p 'test_generate_catalog.py'
 pnpm preview
 ```
@@ -78,8 +80,10 @@ do `main`; można go też uruchomić ręcznie w GitHub Actions.
 Build generuje pełny HTML strony głównej i polityki prywatności oraz katalogów
 `/inf03/` i `/inf04/`. Każdy arkusz ma adres `/<kwalifikacja>/arkusze/<id>/`,
 a zadanie `/<kwalifikacja>/zadania/<id>/`. Treści zadań, linki do PDF oraz
-nawigacja są dostępne bez JavaScript. React zastępuje statyczną zawartość
-katalogu przeglądarką z filtrami i podglądem PDF. Strona główna i polityka
+nawigacja są dostępne bez JavaScript. Astro renderuje przeglądarkę React
+z danymi początkowego katalogu, a React hydratuje ten sam interfejs.
+Nie ma osobnego ekranu ładowania ani ponownego pobierania początkowego
+katalogu. Strona główna i polityka
 ładują tylko mały komponent zgody, bez kodu przeglądarki.
 
 Wspólne funkcje w `src/lib/routes.ts` określają adresy stron. Generowanie stron
@@ -89,15 +93,26 @@ podaje `lastmod`, ponieważ czas wygenerowania katalogu nie oznacza zmiany treś
 
 Stare odnośniki `/?type=...&exam=...&task=...` przekierowuje skrypt strony
 głównej przez `location.replace`, z zachowaniem filtrów i fragmentu URL.
-Są to przekierowania w przeglądarce, bez kodu HTTP 301. Wybór arkusza lub
-zadania otwiera wygenerowaną stronę, aby metadane odpowiadały adresowi.
-Filtry pozostają w query string. Hosting musi serwować pliki `index.html`
+Są to przekierowania w przeglądarce, bez kodu HTTP 301. Wybór arkusza,
+zadania lub kwalifikacji działa w zamontowanej aplikacji przez History API,
+z aktualizacją metadanych. Back i Forward odtwarzają wybór, filtry i pozycję
+przewijania. Filtry pozostają w query string. Katalog drugiej kwalifikacji
+jest pobierany przy pierwszym przełączeniu i zachowywany w pamięci; podczas
+pobierania lub błędu bieżący interfejs pozostaje dostępny. Hosting musi
+serwować pliki `index.html`
 z katalogów i zwracać 404 dla nieznanych ścieżek, zgodnie z `public/.htaccess`.
 Nie należy przywracać przekierowania wszystkich ścieżek do strony głównej.
 
 `pnpm test:seo` wymaga wcześniejszego buildu. Sprawdza zgodność sitemap ze
 wszystkimi wpisami katalogów, pełne treści zadań w HTML, metadane, linki
-wewnętrzne i konwersję starych adresów.
+wewnętrzne i konwersję starych adresów. Testy Playwright sprawdzają brak
+przeładowań i ponownego montowania aplikacji, historię, cache, błędy sieci,
+metadane, hydratację i działanie bez JavaScript.
+
+Początkowy katalog jest serializowany w HTML dla hydratacji. Zwiększa to
+rozmiar wygenerowanych plików, ale zastępuje osobne żądanie JSON i pozwala
+zachować ten sam interfejs od pierwszego renderu. Kolejne wybory w aplikacji
+nie pobierają ponownie dokumentu ani katalogu.
 
 ## Układ projektu
 

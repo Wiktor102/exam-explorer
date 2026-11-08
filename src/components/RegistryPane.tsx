@@ -16,6 +16,7 @@ import { SeasonExamLabel } from "./SeasonExamLabel";
 import { SelectControl } from "./SelectControl";
 
 type RegistryPaneProps = {
+  linkSearch: string;
   examById: Map<string, Exam>;
   examType: ExamType;
   filteredExams: Exam[];
@@ -35,6 +36,7 @@ type RegistryPaneProps = {
 };
 
 export function RegistryPane({
+  linkSearch,
   examById,
   examType,
   filteredExams,
@@ -82,6 +84,7 @@ export function RegistryPane({
 
       {registryMode === "tasks" ? (
         <TaskTable
+          linkSearch={linkSearch}
           examType={examType}
           examById={examById}
           showPart={examType !== "inf03"}
@@ -96,6 +99,7 @@ export function RegistryPane({
         />
       ) : (
         <ExamList
+          linkSearch={linkSearch}
           examType={examType}
           filteredExams={filteredExams}
           selectedExamId={selectedExamId}
@@ -109,6 +113,7 @@ export function RegistryPane({
 
 type TaskTableProps = {
   examType: ExamType;
+  linkSearch: string;
   examById: Map<string, Exam>;
   showPart: boolean;
   filteredTasks: Task[];
@@ -171,6 +176,7 @@ function HighlightedSummary({
 }
 
 function TaskTable({
+  linkSearch,
   examType,
   examById,
   showPart,
@@ -205,7 +211,7 @@ function TaskTable({
 
     return (
       <a
-        href={taskPath(examType, task.id) + window.location.search}
+        href={taskPath(examType, task.id) + linkSearch}
         key={task.id}
         className={clsx(
           "task-row",
@@ -274,6 +280,7 @@ function TaskTable({
 }
 
 type ExamListProps = {
+  linkSearch: string;
   examType: ExamType;
   filteredExams: Exam[];
   selectedExamId: string | null;
@@ -282,6 +289,7 @@ type ExamListProps = {
 };
 
 function ExamList({
+  linkSearch,
   examType,
   filteredExams,
   selectedExamId,
@@ -297,7 +305,7 @@ function ExamList({
 
         return (
           <a
-            href={examPath(examType, exam.id) + window.location.search}
+            href={examPath(examType, exam.id) + linkSearch}
             key={exam.id}
             className={clsx(
               "exam-line",

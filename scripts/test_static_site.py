@@ -1,5 +1,6 @@
 """Verify built SEO pages without running a browser or JavaScript."""
 import json
+import re
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
@@ -20,7 +21,9 @@ class Page(HTMLParser):
         self.h1 = 0
         self.text = []
         self.skip = 0
-        self.feed(source)
+        # Astro serializes the catalog in an attribute for hydration. Inspect
+        # rendered content, without reparsing that large duplicate data payload.
+        self.feed(re.sub(r'\bprops="[^"]*"', 'props=""', source))
 
     def handle_starttag(self, tag, attrs):
         if tag in ("template", "script", "style"):

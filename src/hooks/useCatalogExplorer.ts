@@ -1,16 +1,18 @@
+import { loadCatalog, seedCatalog } from "../lib/catalogCache";
 import {
-  catalogPath,
-  examPath,
-  taskPath,
-  parseCatalogPath,
-} from "../lib/routes";
+  readExplorerLocation,
+  explorerUrl,
+  type ExplorerLocation,
+} from "../lib/explorerLocation";
+import { pageMetadata, updatePageMetadata } from "../lib/pageMetadata";
+import { SITE_URL } from "../lib/site";
+import { parseCatalogPath } from "../lib/routes";
 import { useTheme } from "./useTheme";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { DuplicateTaskRow } from "../components/detail/types";
 import type {
   Catalog,
   Exam,
-  ExamType,
   PreviewMode,
   RegistryMode,
   SeasonFilter,
@@ -29,222 +31,209 @@ import {
   scoreSearchFields,
   type SearchableFields,
 } from "../utils/search";
-import { trackExamOpen, trackTaskOpen } from "../lib/analytics";
+import {
+  isAnalyticsReady,
+  trackExamOpen,
+  trackTaskOpen,
+} from "../lib/analytics";
 
-function getUrlParam(name: string): string | null {
-  const route = parseCatalogPath(window.location.pathname);
-  if (name === "type" && route) return route.examType;
-  if (name === "task" && route?.taskId) return route.taskId;
-  if (name === "exam" && route?.examId) return route.examId;
-  return new URLSearchParams(window.location.search).get(name);
+export type ExplorerProps = { initialCatalog: Catalog; initialPath: string };
+type ScrollPosition = { list: number; detail: number; page: number };
+function scrollPosition(): ScrollPosition {
+  return {
+    list: document.querySelector(".task-table, .exam-list")?.scrollTop ?? 0,
+    detail: document.querySelector(".detail-pane")?.scrollTop ?? 0,
+    page: window.scrollY,
+  };
+}
+function restoreScroll(position: ScrollPosition) {
+  requestAnimationFrame(() => {
+    const list = document.querySelector(".task-table, .exam-list");
+    const detail = document.querySelector(".detail-pane");
+    if (list) list.scrollTop = position.list;
+    if (detail) detail.scrollTop = position.detail;
+    window.scrollTo(0, position.page);
+  });
 }
 
-function isExamType(value: string | null): value is ExamType {
-  return value === "inf03" || value === "inf04";
-}
-
-function isRegistryMode(value: string | null): value is RegistryMode {
-  return value === "exams" || value === "tasks";
-}
-
-type UrlSelection = {
-  taskId: string | null;
-  examId: string | null;
-  previewMode?: PreviewMode;
-};
-
-type UrlFilters = {
-  query: string;
-  year: string;
-  season: SeasonFilter;
-  taskType: string;
-  sortMode: SortMode;
-};
-
-function isSortMode(value: string | null): value is SortMode {
-  return (
-    value === "newest" ||
-    value === "oldest" ||
-    value === "type" ||
-    value === "part" ||
-    value === "duplicates"
-  );
-}
-
-function isSeasonFilter(value: string | null): value is SeasonFilter {
-  return value === "winter" || value === "summer";
-}
-
-function resolveUrlFilters(): UrlFilters {
-  const query = getUrlParam("q") ?? "";
-  const yearParam = getUrlParam("year");
-  const year =
-    yearParam && yearParam !== "all" && /^\d{4}$/.test(yearParam)
-      ? yearParam
-      : "all";
-  const seasonParam = getUrlParam("season");
-  const season: SeasonFilter = isSeasonFilter(seasonParam)
-    ? seasonParam
-    : "all";
-  const taskType = getUrlParam("taskType")?.trim() || "all";
-  const sortParam = getUrlParam("sort");
-  const sortMode: SortMode = isSortMode(sortParam) ? sortParam : "newest";
-  return { query, year, season, taskType, sortMode };
-}
-
-function resolveUrlSelection(catalog: Catalog): UrlSelection | null {
-  const taskId = getUrlParam("task");
-  const examId = getUrlParam("exam");
-
-  if (!taskId && !examId) return null;
-
-  const taskById = new Map(catalog.tasks.map((task) => [task.id, task]));
-  const examById = new Map(catalog.exams.map((exam) => [exam.id, exam]));
-
-  if (taskId && examId) {
-    const task = taskById.get(taskId);
-    const exam = examById.get(examId);
-    return task && exam && task.examId === exam.id
-      ? { taskId: task.id, examId: exam.id, previewMode: "task" }
-      : { taskId: null, examId: null };
-  }
-
-  if (taskId) {
-    const task = taskById.get(taskId);
-    return task
-      ? { taskId: task.id, examId: task.examId, previewMode: "task" }
-      : { taskId: null, examId: null };
-  }
-
-  const exam = examById.get(examId!);
-  return exam
-    ? { taskId: exam.tasks[0] ?? null, examId: exam.id, previewMode: "exam" }
-    : { taskId: null, examId: null };
-}
-
-function syncUrl(
-  taskId: string | null,
-  examId: string | null,
-  registryMode: RegistryMode,
-  examType: ExamType,
-  filters: UrlFilters,
-) {
-  const params = new URLSearchParams();
-  params.set("mode", registryMode);
-  if (filters.query.trim()) params.set("q", filters.query.trim());
-  if (filters.year !== "all") params.set("year", filters.year);
-  if (filters.season !== "all") params.set("season", filters.season);
-  if (filters.taskType !== "all") params.set("taskType", filters.taskType);
-  if (filters.sortMode !== "newest") params.set("sort", filters.sortMode);
-  const search = params.toString();
-  const path =
-    registryMode === "tasks" && taskId
-      ? taskPath(examType, taskId)
-      : examId
-        ? examPath(examType, examId)
-        : catalogPath(examType);
-  const newUrl = path + (search ? `?${search}` : "");
-  if (window.location.pathname !== path) {
-    window.location.assign(newUrl);
-    return;
-  }
-  window.history.replaceState(null, "", newUrl);
-}
-
-export function useCatalogExplorer() {
-  const urlExamType = getUrlParam("type");
-  const initialExamType: ExamType = isExamType(urlExamType)
-    ? urlExamType
-    : "inf04";
-  const urlMode = getUrlParam("mode");
-  const [initialFilters] = useState<UrlFilters>(() => resolveUrlFilters());
-  const [examType, setExamType] = useState<ExamType>(initialExamType);
-  const [catalog, setCatalog] = useState<Catalog | null>(null);
+export function useCatalogExplorer({
+  initialCatalog,
+  initialPath,
+}: ExplorerProps) {
+  const [view, setView] = useState(() => ({
+    catalog: initialCatalog,
+    location: readExplorerLocation(
+      new URL(initialPath, SITE_URL),
+      initialCatalog,
+    ),
+  }));
+  const current = useRef(view);
+  const requestVersion = useRef(0);
+  const pendingUrl = useRef<URL | null>(null);
+  const scrollSnapshots = useRef(new Map<string, ScrollPosition>());
+  const historyKey = useRef("");
   const [catalogError, setCatalogError] = useState<string | null>(null);
-  const [catalogRequest, setCatalogRequest] = useState(0);
-  const [query, setQuery] = useState(initialFilters.query);
-  const [year, setYear] = useState(initialFilters.year);
-  const [season, setSeason] = useState<SeasonFilter>(initialFilters.season);
-  const [taskType, setTaskType] = useState(initialFilters.taskType);
-  const [sortMode, setSortMode] = useState<SortMode>(initialFilters.sortMode);
-  const [previewMode, setPreviewMode] = useState<PreviewMode>("task");
-  const { theme, setTheme } = useTheme();
-  const [selectedTaskId, setSelectedTaskId] = useState<string | null>(
-    getUrlParam("task"),
-  );
-  const [selectedExamId, setSelectedExamId] = useState<string | null>(
-    getUrlParam("exam"),
-  );
-  const [registryMode, setRegistryMode] = useState<RegistryMode>(
-    getUrlParam("task") ? "tasks" : isRegistryMode(urlMode) ? urlMode : "exams",
-  );
-  const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false);
-  const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false);
-  const hasTrackedInitialSelection = useRef(false);
-
-  useEffect(() => {
-    let isCancelled = false;
-
-    fetch(`/data/${examType}/catalog.json`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            `Catalog request failed with status ${response.status}`,
-          );
-        }
-
-        return response.json() as Promise<Catalog>;
-      })
-      .then((data) => {
-        if (isCancelled) return;
-
-        setCatalog(data);
-        setCatalogError(null);
-
-        const selection = resolveUrlSelection(data);
-        if (selection) {
-          setSelectedTaskId(selection.taskId);
-          setSelectedExamId(selection.examId);
-          if (selection.previewMode) {
-            setPreviewMode(selection.previewMode);
-          }
-        }
-      })
-      .catch(() => {
-        if (isCancelled) return;
-
-        setCatalog(null);
-        setCatalogError(
-          "Nie udało się wczytać archiwum. Sprawdź połączenie i spróbuj ponownie.",
-        );
-      });
-
-    return () => {
-      isCancelled = true;
-    };
-  }, [catalogRequest, examType]);
-
-  useEffect(() => {
-    if (!catalog) return;
-    syncUrl(selectedTaskId, selectedExamId, registryMode, examType, {
-      query,
-      year,
-      season,
-      taskType,
-      sortMode,
-    });
-  }, [
-    catalog,
-    selectedTaskId,
-    selectedExamId,
-    registryMode,
+  const [isNavigating, setIsNavigating] = useState(false);
+  const { catalog, location } = view;
+  const {
     examType,
     query,
     year,
     season,
     taskType,
     sortMode,
-  ]);
+    previewMode,
+    registryMode,
+    taskId: selectedTaskId,
+    examId: selectedExamId,
+  } = location;
+  const { theme, setTheme } = useTheme();
+  const [isSheetInfoOpen, setIsSheetInfoOpen] = useState(false);
+  const [isDuplicateInfoOpen, setIsDuplicateInfoOpen] = useState(false);
+
+  const applyLocation = useCallback(
+    (
+      next: ExplorerLocation,
+      data: Catalog,
+      history: "push" | "replace" | "none",
+      scroll?: ScrollPosition,
+    ) => {
+      const url = explorerUrl(next);
+      const position = scrollPosition();
+      if (
+        history === "push" &&
+        window.location.pathname + window.location.search !== url
+      ) {
+        window.history.replaceState(
+          { ...window.history.state, explorerScroll: position },
+          "",
+        );
+        window.history.pushState(
+          {
+            explorerKey: crypto.randomUUID(),
+            explorerScroll: { ...position, detail: 0 },
+          },
+          "",
+          url,
+        );
+      } else if (history === "replace") {
+        window.history.replaceState(window.history.state, "", url);
+      }
+      historyKey.current =
+        window.history.state?.explorerKey ?? historyKey.current;
+      const nextView = { catalog: data, location: next };
+      current.current = nextView;
+      setView(nextView);
+      setCatalogError(null);
+      setIsNavigating(false);
+      const exam = data.exams.find((item) => item.id === next.examId);
+      const task =
+        next.registryMode === "tasks"
+          ? data.tasks.find((item) => item.id === next.taskId)
+          : undefined;
+      updatePageMetadata(
+        new URL(url, SITE_URL).pathname,
+        pageMetadata(next.examType, data, exam, task),
+      );
+      if (scroll) restoreScroll(scroll);
+      else if (history === "push") restoreScroll({ ...position, detail: 0 });
+    },
+    [],
+  );
+
+  const openUrl = useCallback(
+    async (url: URL, history: "push" | "none", scroll?: ScrollPosition) => {
+      const route = parseCatalogPath(url.pathname);
+      if (!route) return;
+      const version = ++requestVersion.current;
+      pendingUrl.current = url;
+      setIsNavigating(true);
+      setCatalogError(null);
+      try {
+        const data = await loadCatalog(route.examType);
+        if (version !== requestVersion.current) return;
+        applyLocation(readExplorerLocation(url, data), data, history, scroll);
+        pendingUrl.current = null;
+      } catch {
+        if (version !== requestVersion.current) return;
+        setIsNavigating(false);
+        setCatalogError(
+          "Nie udało się wczytać katalogu. Bieżący widok jest nadal dostępny.",
+        );
+      }
+    },
+    [applyLocation],
+  );
+
+  const cancelPending = useCallback(() => {
+    requestVersion.current += 1;
+  }, []);
+
+  useEffect(() => {
+    seedCatalog(
+      readExplorerLocation(new URL(initialPath, SITE_URL), initialCatalog)
+        .examType,
+      initialCatalog,
+    );
+    // Query parameters are applied after hydration so the first client render
+    // matches the prerendered document exactly.
+    let active = true;
+    void loadCatalog(
+      readExplorerLocation(new URL(initialPath, SITE_URL), initialCatalog)
+        .examType,
+    ).then((data) => {
+      if (active)
+        applyLocation(
+          readExplorerLocation(new URL(window.location.href), data),
+          data,
+          "none",
+        );
+    });
+    const previousRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
+    if (!window.history.state?.explorerKey) {
+      window.history.replaceState(
+        { ...window.history.state, explorerKey: crypto.randomUUID() },
+        "",
+      );
+    }
+    historyKey.current = window.history.state.explorerKey;
+    const saveScroll = () => {
+      scrollSnapshots.current.set(historyKey.current, scrollPosition());
+    };
+    document.addEventListener("scroll", saveScroll, true);
+    const pop = () => {
+      saveScroll();
+      const saved =
+        scrollSnapshots.current.get(window.history.state?.explorerKey) ??
+        window.history.state?.explorerScroll;
+      void openUrl(new URL(window.location.href), "none", saved);
+    };
+    window.addEventListener("popstate", pop);
+    return () => {
+      active = false;
+      cancelPending();
+      window.removeEventListener("popstate", pop);
+      document.removeEventListener("scroll", saveScroll, true);
+      window.history.scrollRestoration = previousRestoration;
+    };
+  }, [initialCatalog, initialPath, applyLocation, openUrl, cancelPending]);
+
+  function change(
+    patch: Partial<ExplorerLocation>,
+    history: "push" | "replace" = "replace",
+  ) {
+    ++requestVersion.current;
+    pendingUrl.current = null;
+    const { location: previous, catalog: data } = current.current;
+    applyLocation({ ...previous, ...patch }, data, history);
+  }
+  const setQuery = (query: string) => change({ query });
+  const setYear = (year: string) => change({ year });
+  const setSeason = (season: SeasonFilter) => change({ season });
+  const setTaskType = (taskType: string) => change({ taskType });
+  const setSortMode = (sortMode: SortMode) => change({ sortMode });
+  const setPreviewMode = (previewMode: PreviewMode) => change({ previewMode });
 
   const examById = useMemo(() => {
     return new Map(catalog?.exams.map((exam) => [exam.id, exam]) ?? []);
@@ -321,18 +310,19 @@ export function useCatalogExplorer() {
       : null;
 
   useEffect(() => {
-    if (!catalog || hasTrackedInitialSelection.current) return;
-
-    hasTrackedInitialSelection.current = true;
-    if (getUrlParam("task") && selectedTask && selectedExam) {
-      trackTaskOpen(selectedTask, selectedExam);
-      return;
-    }
-
-    if (getUrlParam("exam") && selectedExam) {
-      trackExamOpen(selectedExam);
-    }
-  }, [catalog, selectedExam, selectedTask]);
+    let tracked = false;
+    const trackSelection = () => {
+      if (tracked || !isAnalyticsReady()) return;
+      tracked = true;
+      if (selectedTask && selectedExam && registryMode === "tasks")
+        trackTaskOpen(selectedTask, selectedExam);
+      else if (selectedExam) trackExamOpen(selectedExam);
+    };
+    window.addEventListener("exam-analytics-ready", trackSelection);
+    trackSelection();
+    return () =>
+      window.removeEventListener("exam-analytics-ready", trackSelection);
+  }, [selectedExam, selectedTask, registryMode]);
 
   const sameExamTasks = selectedExam?.tasks
     .map((id) => taskById.get(id))
@@ -392,75 +382,68 @@ export function useCatalogExplorer() {
           : undefined;
 
   function resetFilters() {
-    setQuery("");
-    setYear("all");
-    setSeason("all");
-    setTaskType("all");
-    setSortMode("newest");
+    change({
+      query: "",
+      year: "all",
+      season: "all",
+      taskType: "all",
+      sortMode: "newest",
+    });
   }
-
   function clearSelection() {
-    setSelectedTaskId(null);
-    setSelectedExamId(null);
+    change({ taskId: null, examId: null }, "push");
   }
-
   function selectTask(task: Task) {
     if (selectedTaskId === task.id) {
       clearSelection();
       return;
     }
-
-    // Switching parts within an exam stays on its page; other selections
-    // are tracked after the destination page loads.
-    if (registryMode === "exams" && selectedExamId === task.examId) {
-      const exam = examById.get(task.examId);
-      if (exam) trackTaskOpen(task, exam);
-    }
-    setSelectedTaskId(task.id);
-    setSelectedExamId(task.examId);
-    setPreviewMode(registryMode === "tasks" ? "task" : "exam");
+    change(
+      {
+        taskId: task.id,
+        examId: task.examId,
+        previewMode: registryMode === "tasks" ? "task" : "exam",
+      },
+      "push",
+    );
   }
-
   function selectExam(exam: Exam) {
     if (selectedExamId === exam.id) {
       clearSelection();
       return;
     }
-
-    setSelectedExamId(exam.id);
-    setSelectedTaskId(exam.tasks[0] ?? null);
-    setPreviewMode("exam");
+    change(
+      { examId: exam.id, taskId: exam.tasks[0] ?? null, previewMode: "exam" },
+      "push",
+    );
   }
-
   function handleSetRegistryMode(mode: RegistryMode) {
-    setRegistryMode(mode);
-    if (mode === "exams" && previewMode === "task") {
-      setPreviewMode("exam");
-    }
+    change(
+      { registryMode: mode, previewMode: mode === "exams" ? "exam" : "task" },
+      "push",
+    );
   }
-
-  function handleSetExamType(type: ExamType) {
-    if (type === examType) return;
-    setSelectedTaskId(null);
-    setSelectedExamId(null);
-    setPreviewMode("exam");
-    setCatalog(null);
-    setCatalogError(null);
-    if (type === "inf03") {
-      setRegistryMode("exams");
-    }
-    setExamType(type);
+  function handleSetExamType(type: ExplorerLocation["examType"]) {
+    if (type === examType && !isNavigating) return;
+    const next = {
+      ...current.current.location,
+      examType: type,
+      taskId: null,
+      examId: null,
+      registryMode: "exams" as const,
+      previewMode: "exam" as const,
+    };
+    void openUrl(new URL(explorerUrl(next), SITE_URL), "push");
   }
-
   function retryCatalog() {
-    setCatalog(null);
-    setCatalogError(null);
-    setCatalogRequest((request) => request + 1);
+    if (pendingUrl.current) void openUrl(pendingUrl.current, "push");
   }
 
   return {
     catalog,
     catalogError,
+    isNavigating,
+    location,
     detailState: {
       duplicateTaskRows,
       duplicateTasks,
@@ -499,6 +482,9 @@ export function useCatalogExplorer() {
       selectedTask,
     },
     actions: {
+      navigateUrl: (url: URL) => {
+        void openUrl(url, "push");
+      },
       clearSelection,
       resetFilters,
       retryCatalog,
