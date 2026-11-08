@@ -1,6 +1,6 @@
 import type { Catalog, Exam, ExamType, Task } from "../types/catalog";
 import { formatExamLabel } from "../utils/catalog";
-import { SITE_URL } from "./site";
+import { SITE_URL, pageMetaTags } from "./site";
 
 export function pageMetadata(
   type: ExamType,
@@ -36,13 +36,11 @@ export function updatePageMetadata(
   document
     .querySelector('link[rel="canonical"]')
     ?.setAttribute("href", SITE_URL + path);
-  for (const [selector, content] of [
-    ['meta[name="description"]', metadata.description],
-    ['meta[property="og:title"]', metadata.title],
-    ['meta[property="og:description"]', metadata.description],
-    ['meta[property="og:url"]', SITE_URL + path],
-    ['meta[name="twitter:title"]', metadata.title],
-    ['meta[name="twitter:description"]', metadata.description],
-  ])
-    document.querySelector(selector)?.setAttribute("content", content);
+  for (const tag of pageMetaTags({ ...metadata, path })) {
+    const selector =
+      "property" in tag
+        ? `meta[property="${tag.property}"]`
+        : `meta[name="${tag.name}"]`;
+    document.querySelector(selector)?.setAttribute("content", tag.content);
+  }
 }

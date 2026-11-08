@@ -103,7 +103,8 @@ serwować pliki `index.html`
 z katalogów i zwracać 404 dla nieznanych ścieżek, zgodnie z `public/.htaccess`.
 Nie należy przywracać przekierowania wszystkich ścieżek do strony głównej.
 
-`pnpm test:seo` wymaga wcześniejszego buildu. Sprawdza zgodność sitemap ze
+`pnpm test:seo` działa w Node i wymaga wcześniejszego buildu. Korzysta ze
+wspólnych definicji stron i metadanych aplikacji. Sprawdza zgodność sitemap ze
 wszystkimi wpisami katalogów, pełne treści zadań w HTML, metadane, linki
 wewnętrzne i konwersję starych adresów. Testy Playwright sprawdzają brak
 przeładowań i ponownego montowania aplikacji, historię, cache, błędy sieci,

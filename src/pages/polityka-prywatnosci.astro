@@ -1,5 +1,6 @@
 ---
+import { STATIC_PAGES } from "../lib/site";
 import Page from "../layouts/Page.astro";
 import { PrivacyPolicyPage } from "../components/PrivacyPolicyPage";
 ---
-<Page title="Polityka prywatności | Eksplorator zadań INF.03 i INF.04" description="Informacje o hostingu, cookies, Google Analytics i ustawieniach prywatności w Eksploratorze zadań."><PrivacyPolicyPage /></Page>
+<Page {...STATIC_PAGES.privacy}><PrivacyPolicyPage /></Page>

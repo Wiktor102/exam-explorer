@@ -1,3 +1,4 @@
+import { STATIC_PAGES } from "../lib/site";
 import inf03 from "../../public/data/inf03/catalog.json";
 import inf04 from "../../public/data/inf04/catalog.json";
 import type { Catalog, Exam, ExamType, Task } from "../types/catalog";
@@ -46,4 +47,8 @@ export function catalogPages(): CatalogPage[] {
       }),
     ];
   });
+}
+
+export function sitePages() {
+  return [...Object.values(STATIC_PAGES), ...catalogPages()];
 }

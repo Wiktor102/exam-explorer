@@ -11,7 +11,7 @@
     "generate:catalog": "python3 scripts/generate_catalog.py",
     "lint": "eslint .",
     "preview": "astro preview",
-    "test:seo": "node scripts/test_routes.mjs && python3 scripts/test_static_site.py",
+    "test:seo": "node scripts/test_seo.mjs",
     "test:browser": "playwright test"
   },
   "dependencies": {
@@ -33,6 +33,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "parse5": "^8.1.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
