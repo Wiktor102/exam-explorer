@@ -38,6 +38,13 @@ import {
 } from "../lib/analytics";
 
 export type ExplorerProps = { initialCatalog: Catalog; initialPath: string };
+// History keys only distinguish this document's entries. They do not need
+// cryptographic randomness, which is unavailable in plain HTTP previews.
+let historyKeySequence = 0;
+function createHistoryKey() {
+  return `${Date.now()}-${++historyKeySequence}`;
+}
+
 type ScrollPosition = { list: number; detail: number; page: number };
 function scrollPosition(): ScrollPosition {
   return {
@@ -110,7 +117,7 @@ export function useCatalogExplorer({
         );
         window.history.pushState(
           {
-            explorerKey: crypto.randomUUID(),
+            explorerKey: createHistoryKey(),
             explorerScroll: { ...position, detail: 0 },
           },
           "",
@@ -193,7 +200,7 @@ export function useCatalogExplorer({
     window.history.scrollRestoration = "manual";
     if (!window.history.state?.explorerKey) {
       window.history.replaceState(
-        { ...window.history.state, explorerKey: crypto.randomUUID() },
+        { ...window.history.state, explorerKey: createHistoryKey() },
         "",
       );
     }

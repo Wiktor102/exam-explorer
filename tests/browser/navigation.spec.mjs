@@ -243,7 +243,9 @@ test("expanded transcripts stay scrollable and history restores the latest scrol
     .toBe(350);
   await page.locator(`a.exam-line[href^="${examPath(second.id)}"]`).click();
   await expect(page).toHaveURL(new RegExp(examPath(second.id)));
-  await expect.poll(() => page.locator(".detail-pane").evaluate(node => node.scrollTop)).toBe(0);
+  await expect
+    .poll(() => page.locator(".detail-pane").evaluate((node) => node.scrollTop))
+    .toBe(0);
   await page.locator(".detail-pane").evaluate((node) => {
     node.scrollTop = 240;
   });
@@ -352,3 +354,34 @@ test("initial accepted analytics records the selected task once after consent in
     .toBe(2);
   await context.close();
 });
+
+for (const type of ["inf03", "inf04"]) {
+  test(`${type} hydrates and navigates when randomUUID is unavailable`, async ({
+    page,
+  }) => {
+    const errors = [];
+    page.on("pageerror", (error) => errors.push(error.message));
+    page.on("console", (message) => {
+      if (message.type() === "error") errors.push(message.text());
+    });
+    // Mirrors browsers without the secure-context-only UUID API, including
+    // archive access through an ordinary HTTP development/preview hostname.
+    await page.addInitScript(() => {
+      Object.defineProperty(crypto, "randomUUID", { value: undefined });
+    });
+    await page.goto(`/${type}/`);
+    await ready(page);
+    await expect(page.locator(".app-shell")).toBeVisible();
+    await identity(page);
+    await page.locator("a.exam-line").first().click();
+    await expect(page).toHaveURL(new RegExp(`/${type}/arkusze/`));
+    await expect(page.locator("a.exam-line.selected")).toBeVisible();
+    await sameShell(page);
+    await page.evaluate(() => history.back());
+    await expect(page).toHaveURL(`/${type}/`);
+    await expect(page.locator(".app-shell")).toBeVisible();
+    await expect(page.locator("a.exam-line.selected")).toHaveCount(0);
+    await sameShell(page);
+    expect(errors).toEqual([]);
+  });
+}
