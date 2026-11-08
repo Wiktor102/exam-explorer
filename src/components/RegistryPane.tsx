@@ -1,3 +1,4 @@
+import { isUnmodifiedLinkClick } from "../utils/navigation";
 import { examPath, taskPath } from "../lib/routes";
 import { ArrowDownAZ } from "lucide-react";
 import clsx from "clsx";
@@ -219,14 +220,7 @@ function TaskTable({
           isFilteredOutSelection && "filtered-out-selected",
         )}
         onClick={(event) => {
-          if (
-            event.button !== 0 ||
-            event.metaKey ||
-            event.ctrlKey ||
-            event.shiftKey ||
-            event.altKey
-          )
-            return;
+          if (!isUnmodifiedLinkClick(event)) return;
           event.preventDefault();
           onTaskSelect(task);
         }}
@@ -312,14 +306,7 @@ function ExamList({
               selectedExamId === exam.id && "selected",
             )}
             onClick={(event) => {
-              if (
-                event.button !== 0 ||
-                event.metaKey ||
-                event.ctrlKey ||
-                event.shiftKey ||
-                event.altKey
-              )
-                return;
+              if (!isUnmodifiedLinkClick(event)) return;
               event.preventDefault();
               onExamSelect(exam);
             }}

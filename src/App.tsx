@@ -1,3 +1,4 @@
+import { isUnmodifiedLinkClick } from "./utils/navigation";
 import clsx from "clsx";
 import { parseCatalogPath } from "./lib/routes";
 import { explorerUrl } from "./lib/explorerLocation";
@@ -32,15 +33,7 @@ function App(props: ExplorerProps) {
       className={clsx("app-shell", filters.theme === "dark" && "dark")}
       aria-busy={isNavigating}
       onClick={(event) => {
-        if (
-          event.defaultPrevented ||
-          event.button !== 0 ||
-          event.metaKey ||
-          event.ctrlKey ||
-          event.shiftKey ||
-          event.altKey
-        )
-          return;
+        if (!isUnmodifiedLinkClick(event)) return;
         const link = (event.target as Element).closest("a");
         if (!link || link.target || link.hasAttribute("download")) return;
         const url = new URL(link.href);
