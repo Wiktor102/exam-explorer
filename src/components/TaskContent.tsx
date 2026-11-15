@@ -11,8 +11,8 @@ export function TaskContent({
 }) {
   if (!exam) return null;
   return (
-    <details className="task-content">
-      <summary>Treść zadań i pliki PDF</summary>
+    // Keep transcripts and PDF links in prerendered HTML without exposing UI.
+    <div className="task-content" hidden>
       <p>
         <a href={examPath(type, exam.id)}>{exam.code}</a> ·{" "}
         <a href={exam.pdf}>Pełny arkusz PDF</a>
@@ -35,6 +35,6 @@ export function TaskContent({
           <div className="task-transcript">{task.text}</div>
         </article>
       ))}
-    </details>
+    </div>
   );
 }
