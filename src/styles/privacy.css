@@ -349,7 +349,7 @@
     align-items: flex-start;
   }
 
-  .landing-page ~ .privacy-settings-button {
+  body:has(.landing-page) .privacy-settings-button {
     right: 10px;
     left: auto;
     bottom: 10px;
