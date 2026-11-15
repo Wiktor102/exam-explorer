@@ -106,6 +106,10 @@
   color: var(--muted);
 }
 
+.exam-meta {
+  display: contents;
+}
+
 .row-summary mark {
   padding: 0 1px;
   border-radius: 3px;
