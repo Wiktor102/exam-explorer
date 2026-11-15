@@ -3,9 +3,12 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import sys
 from concurrent.futures import ThreadPoolExecutor
+from http.client import HTTPException
 from pathlib import Path
 from typing import Any
+from urllib.error import URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
@@ -44,7 +47,22 @@ def source_url(
     )
 
 
-def download_resource(url: str, destination: Path) -> None:
+def download_resource(url: str, destination: Path, fallback_url: str | None = None) -> None:
+    try:
+        _download_resource(url, destination)
+    except (URLError, TimeoutError, HTTPException) as error:
+        if not fallback_url:
+            raise RuntimeError(f"Could not download {url}: {error}") from error
+        print(f"Could not download {url}: {error}. Trying {fallback_url}", file=sys.stderr)
+        try:
+            _download_resource(fallback_url, destination)
+        except (URLError, TimeoutError, HTTPException) as fallback_error:
+            raise RuntimeError(
+                f"Could not download {url} or fallback {fallback_url}: {fallback_error}"
+            ) from fallback_error
+
+
+def _download_resource(url: str, destination: Path) -> None:
     request = Request(url, headers={"User-Agent": "exam-explorer-resource-mirror/1.0"})
     temporary = destination.with_name(f".{destination.name}.part")
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -60,7 +78,9 @@ def download_resource(url: str, destination: Path) -> None:
         temporary.unlink(missing_ok=True)
 
 
-def mirror_catalog(public_root: Path, catalog_name: str) -> tuple[int, int]:
+def mirror_catalog(
+    public_root: Path, catalog_name: str, fallback_base_url: str | None = None
+) -> tuple[int, int]:
     catalog_path = public_root / "data" / catalog_name / "catalog.json"
     with catalog_path.open(encoding="utf-8") as input_file:
         catalog = json.load(input_file)
@@ -92,7 +112,14 @@ def mirror_catalog(public_root: Path, catalog_name: str) -> tuple[int, int]:
 
     with ThreadPoolExecutor(max_workers=DOWNLOAD_WORKERS) as executor:
         futures = [
-            executor.submit(download_resource, url, destination)
+            executor.submit(
+                download_resource,
+                url,
+                destination,
+                f"{fallback_base_url.rstrip('/')}/{quote(destination.relative_to(public_root).as_posix())}"
+                if fallback_base_url
+                else None,
+            )
             for url, destination in downloads
         ]
         for future in futures:
@@ -115,13 +142,17 @@ def main() -> None:
     parser.add_argument(
         "--public", default=Path("dist"), type=Path, help="Built public directory"
     )
+    parser.add_argument(
+        "--fallback-base-url",
+        help="Reuse a previously deployed resource if its upstream download fails",
+    )
     args = parser.parse_args()
     public_root = args.public.resolve()
 
     resource_count = 0
     total_bytes = 0
     for catalog_name in CATALOG_NAMES:
-        count, size = mirror_catalog(public_root, catalog_name)
+        count, size = mirror_catalog(public_root, catalog_name, args.fallback_base_url)
         resource_count += count
         total_bytes += size
 

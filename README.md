@@ -156,6 +156,12 @@ arkuszy. Ten sam krok można uruchomić lokalnie po zbudowaniu aplikacji:
 python3 scripts/mirror_resources.py --public dist
 ```
 
+Workflow wdrożenia przekazuje dodatkowo
+`--fallback-base-url https://egzamin-zawodowy.wiktorgolicz.pl`.
+Jeśli źródło załącznika jest niedostępne, skrypt pobiera jego kopię z poprzedniego
+wdrożenia. Jeśli obie próby się nie powiodą, wdrożenie zatrzymuje się przed
+synchronizacją plików produkcyjnych. Błędy pobierania zawierają adres zasobu.
+
 ### INF.04
 
 Generator oczekuje lokalnego klonu repozytorium źródłowego. Kopiuje arkusze, zadania i dostępne kryteria oceniania do `public/pdfs`.

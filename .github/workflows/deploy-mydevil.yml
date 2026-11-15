@@ -37,7 +37,9 @@ jobs:
         run: pnpm build
 
       - name: Mirror exam resources
-        run: python3 scripts/mirror_resources.py --public dist
+        run: >-
+          python3 scripts/mirror_resources.py --public dist
+          --fallback-base-url https://egzamin-zawodowy.wiktorgolicz.pl
 
       - name: Configure SSH
         env:
