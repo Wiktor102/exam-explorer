@@ -14,6 +14,9 @@ The INF.03-02-26.06-SG attachment uses the public file linked by
 catalog currently returns the INF.03-01-26.06-SG file for both exams.
 Most INF.04 materials were downloaded
 from [INF.04-rozwiazania](https://github.com/Technikum-TEB-Edukacja-we-Wroclawiu/INF.04-rozwiazania).
+The two June 2026 INF.04 sheets and their assessment criteria are CKE materials
+hosted by Arkusze.pl and zawodowe.edu.pl. Their exact source URLs, file hashes,
+and task extracts are recorded in the [bundled source inventory](archive-sources/inf04/README.md).
 
 A collection's operator is not necessarily the copyright holder of the exam
 materials. Existing notices within the materials remain relevant regardless

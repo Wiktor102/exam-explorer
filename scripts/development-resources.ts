@@ -1,10 +1,9 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { defineConfig } from "vite";
 import type { Plugin } from "vite";
-import react from "@vitejs/plugin-react";
-import type { Catalog, Exam } from "./src/types/catalog";
-import { resourceFileName, resourceUrl } from "./src/utils/catalog";
+
+import type { Catalog, Exam } from "../src/types/catalog";
+import { resourceFileName, resourceUrl } from "../src/utils/catalog";
 
 const catalogNames = ["inf03", "inf04"] as const;
 
@@ -41,7 +40,7 @@ function sourceResourceUrl(catalog: Catalog, exam: Exam, assetFile: string) {
   );
 }
 
-function developmentResourceDownloads(): Plugin {
+export function developmentResourceDownloads(): Plugin {
   return {
     name: "development-resource-downloads",
     apply: "serve",
@@ -135,8 +134,3 @@ function developmentResourceDownloads(): Plugin {
     },
   };
 }
-
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react(), developmentResourceDownloads()],
-});

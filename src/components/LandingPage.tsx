@@ -7,19 +7,21 @@ import {
   FileSearch,
   Github,
   Scale,
+  Sun,
+  Moon,
 } from "lucide-react";
 
 const catalogs = [
   {
     code: "INF.03",
-    href: "/?type=inf03",
+    href: "/inf03/",
     title:
       "Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych",
     accent: "red",
   },
   {
     code: "INF.04",
-    href: "/?type=inf04",
+    href: "/inf04/",
     title: "Projektowanie, programowanie i testowanie aplikacji",
     accent: "teal",
   },
@@ -60,15 +62,26 @@ export function LandingPage() {
           <img src="/favicon.svg" alt="" aria-hidden="true" />
           <span>Eksplorator zadań INF.03 i INF.04</span>
         </a>
-        <a
-          className="landing-source"
-          href="https://github.com/Wiktor102/exam-explorer"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Github size={17} aria-hidden="true" />
-          Kod źródłowy
-        </a>
+        <div className="landing-nav-actions">
+          <button
+            className="landing-source landing-theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Zmień motyw"
+          >
+            <Sun className="theme-icon-light" size={17} aria-hidden="true" />
+            <Moon className="theme-icon-dark" size={17} aria-hidden="true" />
+          </button>
+          <a
+            className="landing-source"
+            href="https://github.com/Wiktor102/exam-explorer"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Github size={17} aria-hidden="true" />
+            Kod źródłowy
+          </a>
+        </div>
       </header>
 
       <div className="landing-content">
@@ -179,8 +192,9 @@ export function LandingPage() {
             <h2 id="data-title">Materiały egzaminacyjne</h2>
             <p>
               Katalog zawiera arkusze INF.03 i INF.04 z publicznie dostępnych
-              zbiorów. Obok znajdziesz przydatne repozytoria arkuszy i rozwiązań.
-              Opisy zadań służące do wyszukiwania i filtrowania są autorskie.
+              zbiorów. Obok znajdziesz przydatne repozytoria arkuszy i
+              rozwiązań. Opisy zadań służące do wyszukiwania i filtrowania są
+              autorskie.
             </p>
           </div>
 
@@ -215,15 +229,16 @@ export function LandingPage() {
               Brakuje arkusza? Coś nie działa? Zgłoś to.
             </h2>
             <p>
-              Kod aplikacji jest dostępny do wglądu. Możesz sprawdzić, jak powstaje
-              katalog, zaproponować zmianę albo opisać błąd w GitHub Issues.
+              Kod aplikacji jest dostępny do wglądu. Możesz sprawdzić, jak
+              powstaje katalog, zaproponować zmianę albo opisać błąd w GitHub
+              Issues.
             </p>
             <p>
               Możesz modyfikować aplikację i uruchamiać ją dla siebie lub
               zamkniętej grupy, np. znajomych czy kolegów z klasy, z dostępem
               ograniczonym do tej grupy. Publiczne wdrożenia i konkurencyjne
-              usługi wymagają osobnej zgody.
-              Arkusze i pozostałe materiały egzaminacyjne nie są objęte tą licencją.
+              usługi wymagają osobnej zgody. Arkusze i pozostałe materiały
+              egzaminacyjne nie są objęte tą licencją.
             </p>
           </div>
           <div className="landing-project-links">

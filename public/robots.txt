@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://egzamin-zawodowy.wiktorgolicz.pl/sitemap.xml

@@ -1,2 +1,6 @@
 allowBuilds:
   esbuild: true
+
+# Match the Astro WASM bindings to their emnapi 1.x core.
+overrides:
+  "@emnapi/runtime": 1.11.3

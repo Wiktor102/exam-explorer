@@ -1,4 +1,5 @@
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [L]
+# Legacy query links are resolved by the small script on the static homepage.
+# Generated directories serve their own index.html; unknown URLs stay 404s.

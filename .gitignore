@@ -24,3 +24,10 @@ dist-ssr
 *.sw?
 
 __pycache__/
+# Local deployment settings
+scripts/deploy/.env
+
+.astro/
+
+test-results/
+playwright-report/

@@ -8,7 +8,12 @@ const STORAGE_KEY = "examExplorer.analyticsConsent";
 type AnalyticsConsent = "accepted" | "rejected";
 
 function readStoredConsent(): AnalyticsConsent | null {
-  const storedConsent = window.localStorage.getItem(STORAGE_KEY);
+  let storedConsent: string | null = null;
+  try {
+    storedConsent = window.localStorage.getItem(STORAGE_KEY);
+  } catch {
+    /* Use an in-memory choice. */
+  }
   return storedConsent === "accepted" || storedConsent === "rejected"
     ? storedConsent
     : null;
@@ -33,7 +38,11 @@ export function CookieConsent() {
   }, [consent]);
 
   const saveConsent = (nextConsent: AnalyticsConsent) => {
-    window.localStorage.setItem(STORAGE_KEY, nextConsent);
+    try {
+      window.localStorage.setItem(STORAGE_KEY, nextConsent);
+    } catch {
+      /* Keep the choice for this visit. */
+    }
     setConsent(nextConsent);
     setIsPanelOpen(false);
   };

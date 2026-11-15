@@ -391,3 +391,19 @@
 .type-pill.violet {
   color: var(--violet);
 }
+
+.search-clear {
+  flex: 0 0 auto;
+  width: auto;
+  min-height: 0;
+  padding: 6px;
+  border: 0;
+  border-radius: 8px;
+  color: var(--muted);
+}
+
+.search-clear:hover,
+.search-clear:focus-visible {
+  background: transparent;
+  color: var(--ink);
+}

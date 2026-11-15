@@ -1,5 +1,12 @@
+import { TaskContent } from "./TaskContent";
 import { Undo2 } from "lucide-react";
-import type { Catalog, Exam, RegistryMode, Task } from "../types/catalog";
+import type {
+  Catalog,
+  Exam,
+  ExamType,
+  RegistryMode,
+  Task,
+} from "../types/catalog";
 import { examFileName } from "../utils/catalog";
 import { DuplicateInfoBlock } from "./detail/DuplicateInfoBlock";
 import { ResourceMetadata } from "./detail/ResourceMetadata";
@@ -11,6 +18,7 @@ import { SeasonExamLabel } from "./SeasonExamLabel";
 export type { DuplicateTaskRow } from "./detail/types";
 
 type DetailPaneProps = {
+  examType: ExamType;
   catalog: Catalog;
   duplicateTaskRows: DuplicateTaskRow[];
   duplicateTasks: Task[] | undefined;
@@ -28,6 +36,7 @@ type DetailPaneProps = {
 };
 
 export function DetailPane({
+  examType,
   catalog,
   duplicateTaskRows,
   duplicateTasks,
@@ -100,6 +109,15 @@ export function DetailPane({
           )}
         </>
       )}
+      <TaskContent
+        type={examType}
+        exam={selectedExam}
+        tasks={
+          registryMode === "tasks" && selectedTask
+            ? [selectedTask]
+            : (sameExamTasks ?? [])
+        }
+      />
     </aside>
   );
 }

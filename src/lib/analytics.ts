@@ -6,6 +6,10 @@ const GA_COOKIE_NAMES = ["_ga", `_ga_${GA_MEASUREMENT_ID.replace("G-", "")}`];
 
 let isAnalyticsConfigured = false;
 
+export function isAnalyticsReady() {
+  return isAnalyticsConfigured;
+}
+
 type ConsentState = "granted" | "denied";
 
 export type ExamOpenParams = {
@@ -44,11 +48,7 @@ type GtagCommand =
         ad_personalization?: ConsentState;
       },
     ]
-  | [
-      "event",
-      AnalyticsEventName,
-      AnalyticsEventParams[AnalyticsEventName],
-    ];
+  | ["event", AnalyticsEventName, AnalyticsEventParams[AnalyticsEventName]];
 
 declare global {
   interface Window {
@@ -148,6 +148,7 @@ export function loadAnalytics() {
   });
   window.gtag?.("config", GA_MEASUREMENT_ID);
   isAnalyticsConfigured = true;
+  window.dispatchEvent(new Event("exam-analytics-ready"));
 }
 
 export function trackEvent<EventName extends AnalyticsEventName>(

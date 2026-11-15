@@ -24,6 +24,10 @@ export type Exam = {
   pdf: string;
   scoringPdf: string | null;
   sourcePath: string | null;
+  sourceUrl?: string | null;
+  sourceLabel?: string | null;
+  scoringSourceUrl?: string | null;
+  scoringSourceLabel?: string | null;
   solutionFolder: string | null;
   pageCount: number;
   tasks: string[];

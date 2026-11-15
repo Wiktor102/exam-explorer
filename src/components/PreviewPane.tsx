@@ -76,7 +76,10 @@ export function PreviewPane({
       </div>
       {previewPdf ? (
         <div className="preview-frame">
+          {/* New PDFs start a new frame so iframe navigation cannot insert
+              extra Back/Forward entries between explorer selections. */}
           <iframe
+            key={previewPdf}
             title="Podgląd PDF"
             src={`${previewPdf}#toolbar=1&navpanes=0`}
           />
