@@ -171,6 +171,32 @@ function verifyOutput(
     }
     assert.ok(!titles.has(page.title), `${context}: duplicate title`);
     titles.add(page.title);
+    if (page.exam) {
+      const content = elements.filter((element) =>
+        element.attrs.class?.split(" ").includes("task-content"),
+      );
+      assert.equal(content.length, 1, `${context}: task content container`);
+      assert.equal(content[0].tag, "div", `${context}: no disclosure control`);
+      assert.ok("hidden" in content[0].attrs, `${context}: task content hidden`);
+      const tasks = page.task
+        ? [page.task]
+        : page.catalog.tasks.filter((task) => task.examId === page.exam.id);
+      const contentText = normalize(nodeText(content[0].node));
+      for (const task of tasks) {
+        assert.ok(
+          contentText.includes(normalize(task.text)),
+          `${context}: retained transcript ${task.id}`,
+        );
+        assert.ok(links.includes(task.pdf), `${context}: task PDF ${task.id}`);
+      }
+      assert.ok(links.includes(page.exam.pdf), `${context}: exam PDF`);
+      if (page.exam.scoringPdf) {
+        assert.ok(
+          links.includes(page.exam.scoringPdf),
+          `${context}: scoring PDF`,
+        );
+      }
+    }
     if (page.task) {
       assert.ok(
         text.includes(normalize(page.task.text)),

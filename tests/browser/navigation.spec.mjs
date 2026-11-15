@@ -228,13 +228,41 @@ test("direct filtered task links hydrate without replacing prerendered UI", asyn
   );
 });
 
-test("no-JS task content and real links remain usable", async ({ browser }) => {
+test("transcripts and PDF links stay hidden after hydration and client navigation", async ({
+  page,
+  archive,
+}) => {
+  const task = inf04.tasks[0];
+  const exam = inf04.exams.find((exam) => exam.id !== task.examId);
+  await archive.open(examPath(exam.id));
+  await expect(page.locator(".task-content")).toBeHidden();
+  await expect(page.locator(".task-transcript").first()).toBeHidden();
+  await page
+    .locator('.segmented-control[aria-label="Tryb katalogu"]')
+    .getByRole("button", { name: "Zadania", exact: true })
+    .click();
+  await page.locator(`a.task-row[href^="${taskPath(task.id)}"]`).click();
+  await expect(page).toHaveURL(new RegExp(taskPath(task.id)));
+  await expect(page.locator(".task-content")).toBeHidden();
+  await expect(page.locator(".task-transcript")).toHaveText(task.text);
+  await expect(
+    page.locator(".task-content a").filter({ hasText: "Zadanie PDF" }),
+  ).toHaveAttribute("href", task.pdf);
+  await expect(
+    page.getByText("Treść zadań i pliki PDF", { exact: true }),
+  ).toHaveCount(0);
+});
+
+test("no-JS transcripts remain hidden in HTML and registry links remain usable", async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
   const task = inf04.tasks[0];
   await page.goto("http://127.0.0.1:4330" + taskPath(task.id));
   await expect(page.locator(".app-shell")).toBeVisible();
-  await page.locator(".task-content summary").click();
+  await expect(page.locator(".task-content")).toBeHidden();
+  await expect(
+    page.getByText("Treść zadań i pliki PDF", { exact: true }),
+  ).toHaveCount(0);
   await expect(page.locator(".task-transcript")).toContainText(
     task.text.slice(0, 80),
   );
@@ -245,31 +273,40 @@ test("no-JS task content and real links remain usable", async ({ browser }) => {
   await context.close();
 });
 
-test("expanded transcripts stay scrollable and history restores the latest scroll position", async ({
+test("detail history restores the latest scroll position without visible transcripts", async ({
   page,
   archive,
 }) => {
-  await page.setViewportSize({ width: 1600, height: 1000 });
+  await page.setViewportSize({ width: 1600, height: 500 });
   const first = inf04.exams[0],
     second = inf04.exams[1];
   await archive.open(examPath(first.id));
-  await page.locator(".task-content summary").click();
+  await expect(page.locator(".task-content")).toBeHidden();
   expect(
     await page
       .locator(".workspace")
       .evaluate((node) => node.getBoundingClientRect().height),
   ).toBeGreaterThan(100);
-  await scrollTo(page, 350);
+  const scrollPosition = async () => {
+    const value = await page.locator(".detail-pane").evaluate(
+      (node) => Math.floor((node.scrollHeight - node.clientHeight) / 2),
+    );
+    expect(value).toBeGreaterThan(0);
+    return value;
+  };
+  const firstScroll = await scrollPosition();
+  await scrollTo(page, firstScroll);
   await page.locator(`a.exam-line[href^="${examPath(second.id)}"]`).click();
   await expect(page).toHaveURL(new RegExp(examPath(second.id)));
   await expectScroll(page, 0);
-  await scrollTo(page, 240);
+  const secondScroll = await scrollPosition();
+  await scrollTo(page, secondScroll);
   await page.evaluate(() => history.back());
   await expect(page).toHaveURL(new RegExp(examPath(first.id)));
-  await expectScroll(page, 350);
+  await expectScroll(page, firstScroll);
   await page.evaluate(() => history.forward());
   await expect(page).toHaveURL(new RegExp(examPath(second.id)));
-  await expectScroll(page, 240);
+  await expectScroll(page, secondScroll);
 });
 
 test("keyboard selections stay client-side and modifier clicks open real detail URLs", async ({
