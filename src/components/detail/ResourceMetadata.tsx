@@ -56,28 +56,6 @@ export function ResourceMetadata({
             })
           : "brak w katalogu"}
       </strong>
-      {selectedExam.sourceUrl && (
-        <>
-          <span>Źródło arkusza</span>
-          <strong>
-            <a href={selectedExam.sourceUrl} target="_blank" rel="noreferrer">
-              {selectedExam.sourceLabel ?? "źródło zewnętrzne"}
-              <ExternalLink size={13} aria-hidden="true" />
-            </a>
-          </strong>
-        </>
-      )}
-      {selectedExam.scoringSourceUrl && (
-        <>
-          <span>Źródło zasad oceniania</span>
-          <strong>
-            <a href={selectedExam.scoringSourceUrl} target="_blank" rel="noreferrer">
-              {selectedExam.scoringSourceLabel ?? "źródło zewnętrzne"}
-              <ExternalLink size={13} aria-hidden="true" />
-            </a>
-          </strong>
-        </>
-      )}
       <span>Rozwiązania</span>
       <strong>
         {selectedExam.solutionFolder || !selectedExam.sourceUrl ? (
