@@ -390,7 +390,23 @@ function ExamList({
               <span className="exam-page-count">{exam.pageCount} str.</span>
             </span>
             <span className="exam-types">
-              {examTasks.map((task) => typeLabels[task.type]).join(" / ")}
+              {view === "thumbnails" ? (
+                <span className="exam-type-pills">
+                  {examTasks.map((task) => (
+                    <span
+                      className={clsx(
+                        "type-pill",
+                        typeAccent[task.type] ?? "ink",
+                      )}
+                      key={task.id}
+                    >
+                      {typeLabels[task.type] ?? task.type}
+                    </span>
+                  ))}
+                </span>
+              ) : (
+                examTasks.map((task) => typeLabels[task.type]).join(" / ")
+              )}
             </span>
           </a>
         );
