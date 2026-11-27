@@ -201,6 +201,32 @@ test("failed qualification request keeps current view and can retry", async ({
   await sameShell(page);
 });
 
+test("INF.03 exam view persists across reloads and qualification changes", async ({
+  page,
+  archive,
+}) => {
+  await archive.open("/inf03/");
+  const listButton = page.getByRole("button", { name: "Widok listy" });
+  const thumbnailsButton = page.getByRole("button", {
+    name: "Widok miniatur",
+  });
+
+  await expect(listButton).toHaveAttribute("aria-pressed", "true");
+  await thumbnailsButton.click();
+  await expect(thumbnailsButton).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".exam-list")).toHaveClass(/thumbnail-view/);
+
+  await archive.reload();
+  await expect(thumbnailsButton).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".exam-list")).toHaveClass(/thumbnail-view/);
+
+  await page.getByRole("button", { name: "INF.04", exact: true }).click();
+  await expect(page).toHaveURL("/inf04/");
+  await page.getByRole("button", { name: "INF.03", exact: true }).click();
+  await expect(page).toHaveURL("/inf03/");
+  await expect(thumbnailsButton).toHaveAttribute("aria-pressed", "true");
+});
+
 test("direct filtered task links hydrate without replacing prerendered UI", async ({
   page,
   archive,

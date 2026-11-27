@@ -1,8 +1,8 @@
 import { isUnmodifiedLinkClick } from "../utils/navigation";
 import { examPath, taskPath } from "../lib/routes";
-import { ArrowDownAZ } from "lucide-react";
+import { ArrowDownAZ, LayoutGrid, List } from "lucide-react";
 import clsx from "clsx";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { sortLabels, typeAccent, typeLabels } from "../constants/catalog";
 import type {
   Exam,
@@ -36,6 +36,19 @@ type RegistryPaneProps = {
   onTaskSelect: (task: Task) => void;
 };
 
+const INF03_EXAM_VIEW_STORAGE_KEY = "exam-explorer-inf03-exam-view";
+
+function readStoredExamView(): "list" | "thumbnails" {
+  try {
+    const storedView = window.localStorage.getItem(INF03_EXAM_VIEW_STORAGE_KEY);
+    return storedView === "thumbnails" || storedView === "list"
+      ? storedView
+      : "list";
+  } catch {
+    return "list";
+  }
+}
+
 export function RegistryPane({
   linkSearch,
   examById,
@@ -55,6 +68,25 @@ export function RegistryPane({
   onSortModeChange,
   onTaskSelect,
 }: RegistryPaneProps) {
+  const [examView, setExamView] = useState<"list" | "thumbnails">("list");
+  const showExamViewToggle = examType === "inf03" && registryMode === "exams";
+
+  useEffect(() => {
+    const restoreExamView = window.setTimeout(() => {
+      setExamView(readStoredExamView());
+    }, 0);
+    return () => window.clearTimeout(restoreExamView);
+  }, []);
+
+  const changeExamView = (view: "list" | "thumbnails") => {
+    setExamView(view);
+    try {
+      window.localStorage.setItem(INF03_EXAM_VIEW_STORAGE_KEY, view);
+    } catch {
+      // Keep the current session usable when browser storage is unavailable.
+    }
+  };
+
   return (
     <div className="registry-pane">
       <div className="pane-heading">
@@ -68,6 +100,32 @@ export function RegistryPane({
         </div>
 
         <div className="pane-actions">
+          {showExamViewToggle && (
+            <div
+              className="exam-view-toggle"
+              role="group"
+              aria-label="Widok arkuszy"
+            >
+              <button
+                type="button"
+                className={clsx(examView === "list" && "active")}
+                aria-label="Widok listy"
+                aria-pressed={examView === "list"}
+                onClick={() => changeExamView("list")}
+              >
+                <List size={16} aria-hidden="true" />
+              </button>
+              <button
+                type="button"
+                className={clsx(examView === "thumbnails" && "active")}
+                aria-label="Widok miniatur"
+                aria-pressed={examView === "thumbnails"}
+                onClick={() => changeExamView("thumbnails")}
+              >
+                <LayoutGrid size={16} aria-hidden="true" />
+              </button>
+            </div>
+          )}
           <SelectControl
             icon={<ArrowDownAZ size={16} />}
             label="Sortuj"
@@ -105,6 +163,7 @@ export function RegistryPane({
           filteredExams={filteredExams}
           selectedExamId={selectedExamId}
           taskById={taskById}
+          view={showExamViewToggle ? examView : "list"}
           onExamSelect={onExamSelect}
         />
       )}
@@ -279,6 +338,7 @@ type ExamListProps = {
   filteredExams: Exam[];
   selectedExamId: string | null;
   taskById: Map<string, Task>;
+  view: "list" | "thumbnails";
   onExamSelect: (exam: Exam) => void;
 };
 
@@ -288,10 +348,16 @@ function ExamList({
   filteredExams,
   selectedExamId,
   taskById,
+  view,
   onExamSelect,
 }: ExamListProps) {
   return (
-    <div className="exam-list">
+    <div
+      className={clsx(
+        "exam-list",
+        view === "thumbnails" && "thumbnail-view",
+      )}
+    >
       {filteredExams.map((exam) => {
         const examTasks = exam.tasks
           .map((id) => taskById.get(id))
@@ -312,17 +378,69 @@ function ExamList({
             }}
             title={examFileName(exam)}
           >
-            <SeasonExamLabel
-              exam={exam}
-              showSeason={false}
-              showVariant={false}
-            />
-            <span className="exam-meta">
-              <span className="exam-variant">{exam.variant}</span>
-              <span className="exam-page-count">{exam.pageCount} str.</span>
-            </span>
+            {view === "thumbnails" && (
+              <span className="exam-thumbnail" aria-hidden="true">
+                <img
+                  src={`/previews/inf03/${exam.id}.webp`}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  onError={(event) =>
+                    event.currentTarget.parentElement?.classList.add(
+                      "missing-thumbnail",
+                    )
+                  }
+                />
+                <span className="exam-thumbnail-placeholder">
+                  Podgląd niedostępny
+                </span>
+              </span>
+            )}
+            {view === "thumbnails" ? (
+              <span className="exam-card-heading">
+                <SeasonExamLabel
+                  exam={exam}
+                  showSeason={false}
+                  showVariant={false}
+                />
+                <span className="exam-variant">{exam.variant}</span>
+              </span>
+            ) : (
+              <SeasonExamLabel
+                exam={exam}
+                showSeason={false}
+                showVariant={false}
+              />
+            )}
+            {view !== "thumbnails" && (
+              <span className="exam-meta">
+                <span className="exam-variant">{exam.variant}</span>
+                <span className="exam-page-count">{exam.pageCount} str.</span>
+              </span>
+            )}
             <span className="exam-types">
-              {examTasks.map((task) => typeLabels[task.type]).join(" / ")}
+              {view === "thumbnails" ? (
+                <span className="exam-type-row">
+                  <span className="exam-type-pills">
+                    {examTasks.map((task) => (
+                      <span
+                        className={clsx(
+                          "type-pill",
+                          typeAccent[task.type] ?? "ink",
+                        )}
+                        key={task.id}
+                      >
+                        {typeLabels[task.type] ?? task.type}
+                      </span>
+                    ))}
+                  </span>
+                  <span className="exam-page-count">
+                    {exam.pageCount} str.
+                  </span>
+                </span>
+              ) : (
+                examTasks.map((task) => typeLabels[task.type]).join(" / ")
+              )}
             </span>
           </a>
         );

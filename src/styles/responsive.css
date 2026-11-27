@@ -319,9 +319,29 @@
   }
 
   .pane-actions .select-control {
+    width: auto;
+    flex: 1 1 0;
     min-width: 0;
     min-height: 38px;
     border: 1px solid var(--line-strong);
+  }
+
+  .exam-view-toggle {
+    flex: 0 0 auto;
+  }
+
+  .exam-list.thumbnail-view {
+    grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .thumbnail-view .exam-thumbnail {
+    height: 110px;
+  }
+
+  .exam-list.thumbnail-view .exam-line {
+    min-height: 0;
   }
 
   .segmented-control button,
