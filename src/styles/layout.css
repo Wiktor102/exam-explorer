@@ -216,8 +216,53 @@
 
 .pane-actions {
   display: flex;
+  align-items: center;
+  gap: 8px;
   flex: 0 0 auto;
   justify-content: flex-end;
+}
+
+.exam-view-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  border: 1px solid var(--line-strong);
+  background: var(--source-bg);
+}
+
+.exam-view-toggle button {
+  display: inline-flex;
+  width: 36px;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.exam-view-toggle button + button {
+  border-left: 1px solid var(--line);
+}
+
+.exam-view-toggle button.active {
+  background: var(--active-bg);
+  color: var(--active-fg);
+}
+
+.exam-view-toggle button:hover,
+.exam-view-toggle button:focus-visible {
+  background: var(--focus-bg);
+}
+
+.exam-view-toggle button.active:hover,
+.exam-view-toggle button.active:focus-visible {
+  background: var(--active-bg);
+}
+
+.exam-view-toggle button:focus-visible {
+  outline: 2px solid var(--selection-accent);
+  outline-offset: -3px;
 }
 
 @media (min-width: 921px) {

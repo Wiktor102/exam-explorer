@@ -1,8 +1,8 @@
 import { isUnmodifiedLinkClick } from "../utils/navigation";
 import { examPath, taskPath } from "../lib/routes";
-import { ArrowDownAZ } from "lucide-react";
+import { ArrowDownAZ, LayoutGrid, List } from "lucide-react";
 import clsx from "clsx";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { sortLabels, typeAccent, typeLabels } from "../constants/catalog";
 import type {
   Exam,
@@ -55,6 +55,9 @@ export function RegistryPane({
   onSortModeChange,
   onTaskSelect,
 }: RegistryPaneProps) {
+  const [examView, setExamView] = useState<"list" | "thumbnails">("list");
+  const showExamViewToggle = examType === "inf03" && registryMode === "exams";
+
   return (
     <div className="registry-pane">
       <div className="pane-heading">
@@ -68,6 +71,32 @@ export function RegistryPane({
         </div>
 
         <div className="pane-actions">
+          {showExamViewToggle && (
+            <div
+              className="exam-view-toggle"
+              role="group"
+              aria-label="Widok arkuszy"
+            >
+              <button
+                type="button"
+                className={clsx(examView === "list" && "active")}
+                aria-label="Widok listy"
+                aria-pressed={examView === "list"}
+                onClick={() => setExamView("list")}
+              >
+                <List size={16} aria-hidden="true" />
+              </button>
+              <button
+                type="button"
+                className={clsx(examView === "thumbnails" && "active")}
+                aria-label="Widok miniatur"
+                aria-pressed={examView === "thumbnails"}
+                onClick={() => setExamView("thumbnails")}
+              >
+                <LayoutGrid size={16} aria-hidden="true" />
+              </button>
+            </div>
+          )}
           <SelectControl
             icon={<ArrowDownAZ size={16} />}
             label="Sortuj"
@@ -105,6 +134,7 @@ export function RegistryPane({
           filteredExams={filteredExams}
           selectedExamId={selectedExamId}
           taskById={taskById}
+          view={showExamViewToggle ? examView : "list"}
           onExamSelect={onExamSelect}
         />
       )}
@@ -279,6 +309,7 @@ type ExamListProps = {
   filteredExams: Exam[];
   selectedExamId: string | null;
   taskById: Map<string, Task>;
+  view: "list" | "thumbnails";
   onExamSelect: (exam: Exam) => void;
 };
 
@@ -288,10 +319,16 @@ function ExamList({
   filteredExams,
   selectedExamId,
   taskById,
+  view,
   onExamSelect,
 }: ExamListProps) {
   return (
-    <div className="exam-list">
+    <div
+      className={clsx(
+        "exam-list",
+        view === "thumbnails" && "thumbnail-view",
+      )}
+    >
       {filteredExams.map((exam) => {
         const examTasks = exam.tasks
           .map((id) => taskById.get(id))
@@ -312,6 +349,24 @@ function ExamList({
             }}
             title={examFileName(exam)}
           >
+            {view === "thumbnails" && (
+              <span className="exam-thumbnail" aria-hidden="true">
+                <img
+                  src={`/previews/inf03/${exam.id}.webp`}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  onError={(event) =>
+                    event.currentTarget.parentElement?.classList.add(
+                      "missing-thumbnail",
+                    )
+                  }
+                />
+                <span className="exam-thumbnail-placeholder">
+                  Podgląd niedostępny
+                </span>
+              </span>
+            )}
             <SeasonExamLabel
               exam={exam}
               showSeason={false}
