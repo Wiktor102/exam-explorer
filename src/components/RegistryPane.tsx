@@ -367,14 +367,31 @@ function ExamList({
                 </span>
               </span>
             )}
-            <SeasonExamLabel
-              exam={exam}
-              showSeason={false}
-              showVariant={false}
-            />
+            {view === "thumbnails" ? (
+              <span className="exam-card-heading">
+                <SeasonExamLabel
+                  exam={exam}
+                  showSeason={false}
+                  showVariant={false}
+                />
+                <span className="exam-page-count">
+                  {exam.pageCount} str.
+                </span>
+              </span>
+            ) : (
+              <SeasonExamLabel
+                exam={exam}
+                showSeason={false}
+                showVariant={false}
+              />
+            )}
             <span className="exam-meta">
               <span className="exam-variant">{exam.variant}</span>
-              <span className="exam-page-count">{exam.pageCount} str.</span>
+              {view !== "thumbnails" && (
+                <span className="exam-page-count">
+                  {exam.pageCount} str.
+                </span>
+              )}
             </span>
             <span className="exam-types">
               {examTasks.map((task) => typeLabels[task.type]).join(" / ")}

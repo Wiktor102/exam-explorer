@@ -165,11 +165,33 @@
   display: grid;
 }
 
-.thumbnail-view .exam-code {
+.thumbnail-view .exam-card-heading {
+  display: flex;
   min-width: 0;
   width: calc(100% - 18px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   margin-inline: 9px;
+}
+
+.thumbnail-view .exam-code {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
   font-size: 12px;
+}
+
+.thumbnail-view .exam-code > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.thumbnail-view .exam-card-heading .exam-page-count {
+  flex: 0 0 auto;
+  font-size: 11px;
+  white-space: nowrap;
 }
 
 .thumbnail-view .exam-meta {
