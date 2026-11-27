@@ -2,7 +2,7 @@ import { isUnmodifiedLinkClick } from "../utils/navigation";
 import { examPath, taskPath } from "../lib/routes";
 import { ArrowDownAZ, LayoutGrid, List } from "lucide-react";
 import clsx from "clsx";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { sortLabels, typeAccent, typeLabels } from "../constants/catalog";
 import type {
   Exam,
@@ -36,6 +36,19 @@ type RegistryPaneProps = {
   onTaskSelect: (task: Task) => void;
 };
 
+const INF03_EXAM_VIEW_STORAGE_KEY = "exam-explorer-inf03-exam-view";
+
+function readStoredExamView(): "list" | "thumbnails" {
+  try {
+    const storedView = window.localStorage.getItem(INF03_EXAM_VIEW_STORAGE_KEY);
+    return storedView === "thumbnails" || storedView === "list"
+      ? storedView
+      : "list";
+  } catch {
+    return "list";
+  }
+}
+
 export function RegistryPane({
   linkSearch,
   examById,
@@ -57,6 +70,22 @@ export function RegistryPane({
 }: RegistryPaneProps) {
   const [examView, setExamView] = useState<"list" | "thumbnails">("list");
   const showExamViewToggle = examType === "inf03" && registryMode === "exams";
+
+  useEffect(() => {
+    const restoreExamView = window.setTimeout(() => {
+      setExamView(readStoredExamView());
+    }, 0);
+    return () => window.clearTimeout(restoreExamView);
+  }, []);
+
+  const changeExamView = (view: "list" | "thumbnails") => {
+    setExamView(view);
+    try {
+      window.localStorage.setItem(INF03_EXAM_VIEW_STORAGE_KEY, view);
+    } catch {
+      // Keep the current session usable when browser storage is unavailable.
+    }
+  };
 
   return (
     <div className="registry-pane">
@@ -82,7 +111,7 @@ export function RegistryPane({
                 className={clsx(examView === "list" && "active")}
                 aria-label="Widok listy"
                 aria-pressed={examView === "list"}
-                onClick={() => setExamView("list")}
+                onClick={() => changeExamView("list")}
               >
                 <List size={16} aria-hidden="true" />
               </button>
@@ -91,7 +120,7 @@ export function RegistryPane({
                 className={clsx(examView === "thumbnails" && "active")}
                 aria-label="Widok miniatur"
                 aria-pressed={examView === "thumbnails"}
-                onClick={() => setExamView("thumbnails")}
+                onClick={() => changeExamView("thumbnails")}
               >
                 <LayoutGrid size={16} aria-hidden="true" />
               </button>
