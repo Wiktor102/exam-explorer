@@ -383,26 +383,31 @@ function ExamList({
                 showVariant={false}
               />
             )}
-            <span className="exam-meta">
-              {view !== "thumbnails" && (
+            {view !== "thumbnails" && (
+              <span className="exam-meta">
                 <span className="exam-variant">{exam.variant}</span>
-              )}
-              <span className="exam-page-count">{exam.pageCount} str.</span>
-            </span>
+                <span className="exam-page-count">{exam.pageCount} str.</span>
+              </span>
+            )}
             <span className="exam-types">
               {view === "thumbnails" ? (
-                <span className="exam-type-pills">
-                  {examTasks.map((task) => (
-                    <span
-                      className={clsx(
-                        "type-pill",
-                        typeAccent[task.type] ?? "ink",
-                      )}
-                      key={task.id}
-                    >
-                      {typeLabels[task.type] ?? task.type}
-                    </span>
-                  ))}
+                <span className="exam-type-row">
+                  <span className="exam-type-pills">
+                    {examTasks.map((task) => (
+                      <span
+                        className={clsx(
+                          "type-pill",
+                          typeAccent[task.type] ?? "ink",
+                        )}
+                        key={task.id}
+                      >
+                        {typeLabels[task.type] ?? task.type}
+                      </span>
+                    ))}
+                  </span>
+                  <span className="exam-page-count">
+                    {exam.pageCount} str.
+                  </span>
                 </span>
               ) : (
                 examTasks.map((task) => typeLabels[task.type]).join(" / ")

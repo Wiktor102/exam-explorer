@@ -195,14 +195,11 @@
   white-space: nowrap;
 }
 
-.thumbnail-view .exam-meta {
-  display: flex;
-  width: calc(100% - 18px);
-  margin-inline: 9px;
-  justify-content: flex-end;
-  gap: 8px;
-  color: var(--muted);
-  font-size: 11px;
+.exam-type-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 8px;
 }
 
 .thumbnail-view .exam-types {
@@ -225,6 +222,12 @@
   font-size: 10px;
   font-weight: 700;
   line-height: 1;
+}
+
+.exam-type-row .exam-page-count {
+  font-size: 11px;
+  line-height: 18px;
+  white-space: nowrap;
 }
 
 .exam-page-count {
