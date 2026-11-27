@@ -50,3 +50,7 @@ The existing sheet `INF.03-02-23.06-SG` also now has its missing [grading PDF](h
 ## INF.03 June 2026 previews
 
 The twelve June 2026 previews use the first website image embedded on physical page 3 of each matching exam PDF in `public/pdfs/exams`. Each image is fitted within 720 × 450 pixels and saved as WebP under its exam ID in `public/previews/inf03`.
+
+## INF.03 January 2024 previews
+
+The January 2024 preview files use the website image embedded on physical page 3 of each matching exam PDF, including the separate SD variant. Both PNG and WebP files are kept for these entries; the thumbnail view loads the WebP file. Images are resized to fit 720 × 450 pixels while preserving their aspect ratio.
