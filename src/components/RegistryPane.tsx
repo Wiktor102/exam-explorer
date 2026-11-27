@@ -374,9 +374,7 @@ function ExamList({
                   showSeason={false}
                   showVariant={false}
                 />
-                <span className="exam-page-count">
-                  {exam.pageCount} str.
-                </span>
+                <span className="exam-variant">{exam.variant}</span>
               </span>
             ) : (
               <SeasonExamLabel
@@ -386,12 +384,10 @@ function ExamList({
               />
             )}
             <span className="exam-meta">
-              <span className="exam-variant">{exam.variant}</span>
               {view !== "thumbnails" && (
-                <span className="exam-page-count">
-                  {exam.pageCount} str.
-                </span>
+                <span className="exam-variant">{exam.variant}</span>
               )}
+              <span className="exam-page-count">{exam.pageCount} str.</span>
             </span>
             <span className="exam-types">
               {examTasks.map((task) => typeLabels[task.type]).join(" / ")}

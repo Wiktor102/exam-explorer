@@ -188,9 +188,10 @@
   white-space: nowrap;
 }
 
-.thumbnail-view .exam-card-heading .exam-page-count {
+.thumbnail-view .exam-card-heading .exam-variant {
   flex: 0 0 auto;
   font-size: 11px;
+  color: var(--muted);
   white-space: nowrap;
 }
 
@@ -198,7 +199,7 @@
   display: flex;
   width: calc(100% - 18px);
   margin-inline: 9px;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 8px;
   color: var(--muted);
   font-size: 11px;
