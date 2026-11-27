@@ -341,7 +341,7 @@
   }
 
   .exam-list.thumbnail-view .exam-line {
-    min-height: 250px;
+    min-height: 0;
   }
 
   .segmented-control button,
